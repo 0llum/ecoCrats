@@ -3,6 +3,8 @@ package com.ollum.ecoCrats;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -42,6 +44,33 @@ public class MessageDetails extends AppCompatActivity implements View.OnClickLis
         user = userLocalStore.getLoggedInUser();
 
         setUserOnline(user);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.logout:
+                setUserOffline(user);
+                userLocalStore.clearUserData();
+                userLocalStore.setUserLoggedIn(false);
+
+                finish();
+                startActivity(new Intent(this, Login.class));
+                overridePendingTransition(0, 0);
+                break;
+            case R.id.settings:
+                startActivity(new Intent(this, Settings.class));
+                overridePendingTransition(R.anim.settings_in, R.anim.settings_out);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

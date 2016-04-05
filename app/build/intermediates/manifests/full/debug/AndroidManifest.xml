@@ -48,13 +48,25 @@
             android:name="com.ollum.ecoCrats.Countries"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait" />
-        <activity android:name="com.ollum.ecoCrats.Regions" >
+        <activity
+            android:name="com.ollum.ecoCrats.Regions"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.ollum.ecoCrats.NewMessage" >
+        <activity
+            android:name="com.ollum.ecoCrats.NewMessage"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.ollum.ecoCrats.Messages" >
+        <activity
+            android:name="com.ollum.ecoCrats.Messages"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.ollum.ecoCrats.MessageDetails" >
+        <activity
+            android:name="com.ollum.ecoCrats.MessageDetails"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 

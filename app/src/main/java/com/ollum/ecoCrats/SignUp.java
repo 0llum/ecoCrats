@@ -79,7 +79,6 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                     User user = new User(username, password, email);
                     signUpUser(user);
                 }
-
                 break;
 
             case R.id.signup_cancel:

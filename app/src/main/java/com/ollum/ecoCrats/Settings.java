@@ -2,8 +2,11 @@ package com.ollum.ecoCrats;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -44,6 +47,33 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
         user = userLocalStore.getLoggedInUser();
 
         setUserOnline(user);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.logout:
+                setUserOffline(user);
+                userLocalStore.clearUserData();
+                userLocalStore.setUserLoggedIn(false);
+
+                finish();
+                startActivity(new Intent(this, Login.class));
+                overridePendingTransition(0, 0);
+                break;
+            case R.id.settings:
+                finish();
+                overridePendingTransition(R.anim.settings_back_in, R.anim.settings_back_out);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -167,6 +197,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        overridePendingTransition(0, 0);
+        finish();
+        overridePendingTransition(R.anim.settings_back_in, R.anim.settings_back_out);
     }
 }

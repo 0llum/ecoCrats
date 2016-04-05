@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="navDrawerItems">
+        <item>Profile</item>
+        <item>Companies</item>
+        <item>Research</item>
+        <item>World Map</item>
+        <item>Bank</item>
+        <item>Database</item>
+    </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>

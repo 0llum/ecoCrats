@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ecoCrats</string>
+    <string-array name="navDrawerItems">
+        <item>Profile</item>
+        <item>Companies</item>
+        <item>Research</item>
+        <item>World Map</item>
+        <item>Bank</item>
+        <item>Database</item>
+    </string-array>
 </resources>
