@@ -23,9 +23,15 @@ ADDED from C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\src\main\AndroidMan
 		ADDED from C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\src\main\AndroidManifest.xml:6:22-76
 application
 ADDED from C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\src\main\AndroidManifest.xml:8:5-60:19
-MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\src\main\AndroidManifest.xml:11:9-41
 	android:supportsRtl
@@ -130,10 +136,18 @@ ADDED from C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\src\main\AndroidMan
 		ADDED from C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\src\main\AndroidManifest.xml:56:19-49
 uses-sdk
 INJECTED from C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.1.1] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
 		INJECTED from C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\src\main\AndroidManifest.xml

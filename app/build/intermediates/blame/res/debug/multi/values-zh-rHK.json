@@ -1166,13 +1166,13 @@
                     "endOffset": 145
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 233,
+                        "startOffset": 55,
                         "endColumn": 94,
-                        "endOffset": 323
+                        "endOffset": 145
                     }
                 }
             },
@@ -1185,13 +1185,13 @@
                     "endOffset": 252
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 5,
+                        "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 328,
+                        "startOffset": 150,
                         "endColumn": 106,
-                        "endOffset": 430
+                        "endOffset": 252
                     }
                 }
             },
@@ -1204,13 +1204,13 @@
                     "endOffset": 375
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 6,
+                        "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 435,
+                        "startOffset": 257,
                         "endColumn": 122,
-                        "endOffset": 553
+                        "endOffset": 375
                     }
                 }
             },
@@ -1223,13 +1223,13 @@
                     "endOffset": 468
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 7,
+                        "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 558,
+                        "startOffset": 380,
                         "endColumn": 92,
-                        "endOffset": 646
+                        "endOffset": 468
                     }
                 }
             },
@@ -1242,13 +1242,13 @@
                     "endOffset": 568
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 8,
+                        "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 651,
+                        "startOffset": 473,
                         "endColumn": 99,
-                        "endOffset": 746
+                        "endOffset": 568
                     }
                 }
             },
@@ -1261,13 +1261,13 @@
                     "endOffset": 650
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 9,
+                        "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 751,
+                        "startOffset": 573,
                         "endColumn": 81,
-                        "endOffset": 828
+                        "endOffset": 650
                     }
                 }
             },
@@ -1280,13 +1280,13 @@
                     "endOffset": 747
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 10,
+                        "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 833,
+                        "startOffset": 655,
                         "endColumn": 96,
-                        "endOffset": 925
+                        "endOffset": 747
                     }
                 }
             },
@@ -1299,13 +1299,13 @@
                     "endOffset": 855
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 11,
+                        "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 930,
+                        "startOffset": 752,
                         "endColumn": 107,
-                        "endOffset": 1033
+                        "endOffset": 855
                     }
                 }
             },
@@ -1318,13 +1318,13 @@
                     "endOffset": 931
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 12,
+                        "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 1038,
+                        "startOffset": 860,
                         "endColumn": 75,
-                        "endOffset": 1109
+                        "endOffset": 931
                     }
                 }
             },
@@ -1337,13 +1337,13 @@
                     "endOffset": 1007
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 13,
+                        "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 1114,
+                        "startOffset": 936,
                         "endColumn": 75,
-                        "endOffset": 1185
+                        "endOffset": 1007
                     }
                 }
             },
@@ -1356,13 +1356,13 @@
                     "endOffset": 1085
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 14,
+                        "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 1190,
+                        "startOffset": 1012,
                         "endColumn": 77,
-                        "endOffset": 1263
+                        "endOffset": 1085
                     }
                 }
             },
@@ -1375,13 +1375,13 @@
                     "endOffset": 1181
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 15,
+                        "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 1268,
+                        "startOffset": 1090,
                         "endColumn": 95,
-                        "endOffset": 1359
+                        "endOffset": 1181
                     }
                 }
             },
@@ -1394,13 +1394,13 @@
                     "endOffset": 1277
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 16,
+                        "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 1364,
+                        "startOffset": 1186,
                         "endColumn": 95,
-                        "endOffset": 1455
+                        "endOffset": 1277
                     }
                 }
             },
@@ -1413,13 +1413,13 @@
                     "endOffset": 1372
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 17,
+                        "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 1460,
+                        "startOffset": 1282,
                         "endColumn": 94,
-                        "endOffset": 1550
+                        "endOffset": 1372
                     }
                 }
             },
@@ -1432,13 +1432,13 @@
                     "endOffset": 1469
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 18,
+                        "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 1555,
+                        "startOffset": 1377,
                         "endColumn": 96,
-                        "endOffset": 1647
+                        "endOffset": 1469
                     }
                 }
             },
@@ -1451,13 +1451,13 @@
                     "endOffset": 1564
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 19,
+                        "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 1652,
+                        "startOffset": 1474,
                         "endColumn": 94,
-                        "endOffset": 1742
+                        "endOffset": 1564
                     }
                 }
             },
@@ -1470,13 +1470,13 @@
                     "endOffset": 1662
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 20,
+                        "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 1747,
+                        "startOffset": 1569,
                         "endColumn": 97,
-                        "endOffset": 1840
+                        "endOffset": 1662
                     }
                 }
             },
@@ -1489,13 +1489,13 @@
                     "endOffset": 1775
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 21,
+                        "startLine": 19,
                         "startColumn": 4,
-                        "startOffset": 1845,
+                        "startOffset": 1667,
                         "endColumn": 112,
-                        "endOffset": 1953
+                        "endOffset": 1775
                     }
                 }
             },
@@ -1508,13 +1508,13 @@
                     "endOffset": 1869
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 22,
+                        "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 1958,
+                        "startOffset": 1780,
                         "endColumn": 93,
-                        "endOffset": 2047
+                        "endOffset": 1869
                     }
                 }
             },
@@ -1527,13 +1527,13 @@
                     "endOffset": 1971
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
-                        "startLine": 23,
+                        "startLine": 21,
                         "startColumn": 4,
-                        "startOffset": 2052,
+                        "startOffset": 1874,
                         "endColumn": 101,
-                        "endOffset": 2149
+                        "endOffset": 1971
                     }
                 }
             }

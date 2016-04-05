@@ -37,7 +37,20 @@ public class Menu extends AppCompatActivity implements View.OnClickListener, Ada
         listView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, navDrawerItems));
         listView.setOnItemClickListener(this);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        drawerListener = new ActionBarDrawerToggle(this, drawerLayout, R.string.drawer_open, R.string.drawer_close){
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                Toast.makeText(Menu.this, "Drawer Opened", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                Toast.makeText(Menu.this, "Drawer Closed", Toast.LENGTH_LONG).show();
+            }
+        };
         drawerLayout.setDrawerListener(drawerListener);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         actionBar = getSupportActionBar();
         actionBar.setTitle("Menu");
@@ -68,9 +81,16 @@ public class Menu extends AppCompatActivity implements View.OnClickListener, Ada
     }
 
     @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        drawerListener.syncState();
+    }
+
+    @Override
      public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Toast.makeText(this, navDrawerItems[position], Toast.LENGTH_LONG).show();
         selectItem(position);
+
     }
 
     private void selectItem(int position) {
@@ -91,6 +111,9 @@ public class Menu extends AppCompatActivity implements View.OnClickListener, Ada
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if (drawerListener.onOptionsItemSelected(item)) {
+            return true;
+        }
         switch (item.getItemId()) {
             case R.id.logout:
                 setUserOffline(user);
