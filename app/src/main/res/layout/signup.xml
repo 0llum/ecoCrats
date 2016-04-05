@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradientbackground">
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/settings_oldPassword"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:hint="Username"
+        android:inputType="text"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/settings_newPassword"
+        android:layout_below="@+id/settings_oldPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signup_pwconfirm"
+        android:layout_below="@+id/settings_newPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:hint="Password Confirmation"
+        android:inputType="textPassword"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/settings_newEmail"
+        android:layout_below="@+id/signup_pwconfirm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:hint="E-Mail"
+        android:inputType="textEmailAddress"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="Sign Up"
+        android:id="@+id/signup_signup"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/settings_newEmail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="60dp"
+        android:background="@drawable/button_action"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="Cancel"
+        android:id="@+id/signup_cancel"
+        android:layout_below="@+id/settings_newEmail"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_action"
+        style="?android:attr/borderlessButtonStyle"/>
+
+</RelativeLayout>
