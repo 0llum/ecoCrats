@@ -1,6 +1,5 @@
 package com.ollum.ecoCrats;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
@@ -28,7 +27,6 @@ import java.util.ArrayList;
 public class BackgroundTaskFriendlist extends AsyncTask<String, User, Void> {
 
     Context ctx;
-    Activity activity;
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
@@ -36,25 +34,24 @@ public class BackgroundTaskFriendlist extends AsyncTask<String, User, Void> {
     ProgressDialog progressDialog;
     String json_String = "http://0llum.bplaced.net/ecoCrats/DisplayFriends.php";
 
-    public BackgroundTaskFriendlist(Context ctx) {
+    public BackgroundTaskFriendlist(Context ctx, RecyclerView recyclerView) {
         this.ctx = ctx;
-        activity = (Activity) ctx;
+        this.recyclerView = recyclerView;
         progressDialog = new ProgressDialog(ctx);
     }
 
     @Override
     protected void onPreExecute() {
-        recyclerView = (RecyclerView) activity.findViewById(R.id.friendlist_recyclerView);
         layoutManager = new LinearLayoutManager(ctx);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
         adapter = new FriendlistAdapter(arrayList, ctx);
         recyclerView.setAdapter(adapter);
 
-        progressDialog.setCancelable(false);
+        /*progressDialog.setCancelable(false);
         progressDialog.setTitle("Progressing");
         progressDialog.setMessage("Please wait...");
-        progressDialog.show();
+        progressDialog.show();*/
     }
 
     @Override

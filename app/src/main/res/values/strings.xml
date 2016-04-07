@@ -4,6 +4,9 @@
     <string name="drawer_close">Close Navigation Drawer</string>
     <string-array name="navDrawerItems">
         <item>Profile</item>
+        <item>Messages</item>
+        <item>Friendlist</item>
+        <item>Countries</item>
         <item>Companies</item>
         <item>Research</item>
         <item>World Map</item>

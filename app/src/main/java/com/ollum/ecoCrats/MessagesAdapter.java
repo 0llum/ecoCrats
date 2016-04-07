@@ -1,20 +1,21 @@
 package com.ollum.ecoCrats;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.RecyclerViewHolder> {
     ArrayList<Message> arrayList = new ArrayList<>();
     Context ctx;
+    public static Bundle bundle;
 
     public MessagesAdapter(ArrayList<Message> arrayList, Context ctx) {
         this.arrayList = arrayList;
@@ -41,7 +42,7 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.Recycl
         return arrayList.size();
     }
 
-    public static class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public static class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView sender, subject, time;
         ArrayList<Message> messages = new ArrayList<Message>();
         Context ctx;
@@ -61,14 +62,20 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.Recycl
         public void onClick(View v) {
             int position = getAdapterPosition();
             Message message = this.messages.get(position);
-            Intent intent = new Intent(this.ctx, MessageDetails.class);
-            intent.putExtra("sender", message.getSender());
-            intent.putExtra("subject", message.getSubject());
-            intent.putExtra("message", message.getMessage());
-            intent.putExtra("time", message.getTime());
-            this.ctx.startActivity(intent);
-            ((Activity) ctx).overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
+
+            bundle = new Bundle();
+            bundle.putString("sender", message.getSender());
+            bundle.putString("subject", message.getSubject());
+            bundle.putString("message", message.getMessage());
+            bundle.putString("time", message.getTime());
+
+            MessageDetailsFragment messageDetailsFragment = new MessageDetailsFragment();
+            messageDetailsFragment.setArguments(bundle);
+            FragmentTransaction transaction = MainActivity.fragmentManager.beginTransaction();
+            transaction.replace(R.id.mainContent, messageDetailsFragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
         }
     }
-    
+
 }

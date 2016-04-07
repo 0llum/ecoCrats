@@ -12,12 +12,12 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-hdpi\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
-    },
-    {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-hdpi\\abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png",

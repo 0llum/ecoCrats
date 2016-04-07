@@ -3,12 +3,13 @@ package com.ollum.ecoCrats;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ import java.util.Locale;
 public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.RecyclerViewHolder> {
     ArrayList<Country> arrayList = new ArrayList<>();
     Context ctx;
+    public static Bundle bundle;
 
     public CountriesAdapter(ArrayList<Country> arrayList, Context ctx) {
         this.arrayList = arrayList;
@@ -44,7 +46,7 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.Recy
         return arrayList.size();
     }
 
-    public static class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public static class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView country, capital, area, population;
         ArrayList<Country> countries = new ArrayList<Country>();
         Context ctx;
@@ -65,10 +67,16 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.Recy
         public void onClick(View v) {
             int position = getAdapterPosition();
             Country country = this.countries.get(position);
-            Intent intent = new Intent(this.ctx, Regions.class);
-            intent.putExtra("country", country.getName());
-            this.ctx.startActivity(intent);
-            ((Activity) ctx).overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
+
+            bundle = new Bundle();
+            bundle.putString("country", country.getName());
+
+            RegionsFragment regionsFragment = new RegionsFragment();
+            regionsFragment.setArguments(bundle);
+            FragmentTransaction transaction = MainActivity.fragmentManager.beginTransaction();
+            transaction.replace(R.id.mainContent, regionsFragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
         }
     }
 }

@@ -33,10 +33,10 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        progressDialog.setCancelable(false);
+        /*progressDialog.setCancelable(false);
         progressDialog.setTitle("Progressing");
         progressDialog.setMessage("Please wait...");
-        progressDialog.show();
+        progressDialog.show();*/
     }
 
     @Override
@@ -377,84 +377,42 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
         if (progressDialog.isShowing()) {
             progressDialog.dismiss();
         }
+
+        Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
+
         switch (result) {
             case ("Signing up successful"):
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
+                ((Activity) ctx).finish();
                 ctx.startActivity(new Intent(ctx, Login.class));
                 ((Activity) ctx).overridePendingTransition(0, 0);
                 break;
-            case ("Signing up failed"):
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
-                break;
-            case ("Username already exists"):
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
-                break;
-            case ("Email address already exists"):
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
-                break;
             case ("Login successful"):
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
-                ctx.startActivity(new Intent(ctx, Menu.class));
+                ((Activity) ctx).finish();
+                ctx.startActivity(new Intent(ctx, MainActivity.class));
                 ((Activity) ctx).overridePendingTransition(0, 0);
-                break;
-            case ("Login failed, incorrect user data"):
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
                 break;
             case ("Friend added"):
-                ((Activity) ctx).finish();
-                ctx.startActivity(new Intent(ctx, Friendlist.class));
-                ((Activity) ctx).overridePendingTransition(0, 0);
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
-                break;
-            case ("User could not be found"):
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
-                break;
-            case ("User is already your friend"):
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
-                break;
-            case ("You cannot add yourself as a friend"):
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
-                break;
-            case ("Friend could not be added"):
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
+                FriendlistFragment friendlistFragment = new FriendlistFragment();
+                MainActivity.fragmentManager.beginTransaction().replace(R.id.mainContent, friendlistFragment).commit();
                 break;
             case ("Friend removed"):
-                ((Activity) ctx).finish();
-                ctx.startActivity(new Intent(ctx, Friendlist.class));
-                ((Activity) ctx).overridePendingTransition(0, 0);
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
-                break;
-            case ("User is not your friend"):
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
-                break;
-            case ("Friend could not be removed"):
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
+                FriendlistFragment friendlistFragment1 = new FriendlistFragment();
+                MainActivity.fragmentManager.beginTransaction().replace(R.id.mainContent, friendlistFragment1).commit();
                 break;
             case ("Account deleted"):
                 ((Activity) ctx).finish();
                 ctx.startActivity(new Intent(ctx, Login.class));
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
                 break;
             case ("Email address successfully changed"):
-                ((Activity) ctx).finish();
-                ctx.startActivity(new Intent(ctx, Settings.class));
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
+                SettingsFragment settingsFragment = new SettingsFragment();
+                MainActivity.fragmentManager.beginTransaction().replace(R.id.mainContent, settingsFragment).commit();
                 break;
             case ("Password successfully changed"):
                 ((Activity) ctx).finish();
                 ctx.startActivity(new Intent(ctx, Login.class));
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
-                break;
-            case ("Old password is wrong"):
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
                 break;
             case ("Message sent"):
-                ((Activity) ctx).finish();
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
-                break;
-            case ("Message could not be sent"):
-                ((Activity) ctx).finish();
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
+                MainActivity.fragmentManager.popBackStack();
                 break;
         }
     }

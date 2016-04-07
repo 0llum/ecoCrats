@@ -16,10 +16,6 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\fragment_settings.xml"
     },
     {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\regions.xml",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\regions.xml"
-    },
-    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\notification_template_media.xml"
     },
@@ -32,24 +28,24 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\notification_template_big_media.xml"
-    },
-    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_media_action.xml"
     },
     {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_big_media.xml"
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\display_regions_row.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\display_regions_row.xml"
     },
     {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\display_regions_row.xml",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\display_regions_row.xml"
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_big_media.xml"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\chatroom.xml",
@@ -62,6 +58,10 @@
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_message_details.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\fragment_message_details.xml"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
@@ -128,12 +128,12 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
-        "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_big_media_narrow.xml"
-    },
-    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login.xml",
@@ -178,10 +178,6 @@
     {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_popup_menu_item_layout.xml"
-    },
-    {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\message_details.xml",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\message_details.xml"
     },
     {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
@@ -244,12 +240,12 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\menu.xml",
-        "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\layout\\menu.xml"
-    },
-    {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\menu.xml",
+        "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\layout\\menu.xml"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
@@ -272,12 +268,12 @@
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\display_friends_row.xml",
-        "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\layout\\display_friends_row.xml"
-    },
-    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\display_friends_row.xml",
+        "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\layout\\display_friends_row.xml"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
@@ -300,12 +296,12 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\display_friends_header.xml",
-        "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\layout\\display_friends_header.xml"
-    },
-    {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\display_friends_header.xml",
+        "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\layout\\display_friends_header.xml"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
@@ -324,20 +320,16 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login.xml",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\layout\\login.xml"
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\select_dialog_multichoice_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\friendlist.xml",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\friendlist.xml"
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\layout\\login.xml"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
@@ -376,16 +368,16 @@
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_alert_dialog_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_lines.xml"
     },
     {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\menu.xml",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\menu.xml"
+        "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_friendlist.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\fragment_friendlist.xml"
     },
     {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
@@ -408,6 +400,10 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_search_view.xml"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nav_drawer_list_item.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\nav_drawer_list_item.xml"
+    },
+    {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_dialog_title_material.xml"
     },
@@ -416,24 +412,20 @@
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_media.xml"
     },
     {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\signup.xml",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\signup.xml"
-    },
-    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\new_message.xml",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\new_message.xml"
-    },
-    {
-        "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
-        "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_media_cancel_action.xml"
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\signup.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\signup.xml"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
@@ -488,16 +480,20 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
-    },
-    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\signup.xml",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\layout\\signup.xml"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
@@ -520,6 +516,10 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_new_message.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\fragment_new_message.xml"
+    },
+    {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_part_time.xml"
     },
@@ -534,10 +534,6 @@
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_list_menu_item_radio.xml"
-    },
-    {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\settings.xml",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\settings.xml"
     },
     {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
@@ -558,6 +554,10 @@
     {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_regions.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\fragment_regions.xml"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
@@ -592,6 +592,10 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_messages.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\fragment_messages.xml"
+    },
+    {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_list_menu_item_radio.xml"
     },
@@ -608,6 +612,10 @@
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_menu_item_layout.xml"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_countries.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\fragment_countries.xml"
+    },
+    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\display_friends_row.xml",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\display_friends_row.xml"
     },
@@ -620,6 +628,14 @@
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\menu.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\layout\\menu.xml"
+    },
+    {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_part_chronometer.xml"
     },
@@ -628,24 +644,8 @@
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_screen_content_include.xml"
     },
     {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\menu.xml",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\layout\\menu.xml"
-    },
-    {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messages.xml",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\messages.xml"
-    },
-    {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\display_friends_row.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\layout\\display_friends_row.xml"
-    },
-    {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\countries.xml",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\countries.xml"
     },
     {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
@@ -660,12 +660,12 @@
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_activity_chooser_view_list_item.xml"
-    },
-    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\friendlist.xml",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\layout\\friendlist.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
@@ -680,12 +680,12 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
-        "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
-        "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_media_action.xml"
-    },
-    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_media_action.xml"
     },
     {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",

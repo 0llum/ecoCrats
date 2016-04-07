@@ -12,11 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Menu"
+            android:name=".MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
@@ -29,11 +30,6 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Friendlist"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden"/>
-        <activity
             android:name=".Settings"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"/>
@@ -41,19 +37,28 @@
             android:name=".Countries"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Regions"
+        <activity
+            android:name=".Regions"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".NewMessage"
+        <activity
+            android:name=".NewMessage"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".Messages"
+        <activity
+            android:name=".Messages"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".MessageDetails"
+        <activity
+            android:name=".MessageDetails"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Menu"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait">
         </activity>

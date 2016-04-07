@@ -42,7 +42,7 @@ public class RegionsAdapter extends RecyclerView.Adapter<RegionsAdapter.Recycler
         return arrayList.size();
     }
 
-    public static class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public static class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView region, capital, area, population;
         ArrayList<Region> regions = new ArrayList<Region>();
         Context ctx;
@@ -63,7 +63,6 @@ public class RegionsAdapter extends RecyclerView.Adapter<RegionsAdapter.Recycler
         public void onClick(View v) {
             int position = getAdapterPosition();
             Region region = this.regions.get(position);
-            Toast.makeText(ctx, region.getName(), Toast.LENGTH_LONG).show();
         }
     }
 }

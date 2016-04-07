@@ -1,21 +1,22 @@
 package com.ollum.ecoCrats;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class FriendlistAdapter extends RecyclerView.Adapter<FriendlistAdapter.RecyclerViewHolder> {
     ArrayList<User> arrayList = new ArrayList<>();
     Context ctx;
+    public static Bundle bundle;
 
     public FriendlistAdapter(ArrayList<User> arrayList, Context ctx) {
         this.arrayList = arrayList;
@@ -48,7 +49,7 @@ public class FriendlistAdapter extends RecyclerView.Adapter<FriendlistAdapter.Re
         return arrayList.size();
     }
 
-    public static class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public static class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView username, lastOnline;
         ImageView status;
         ArrayList<User> users = new ArrayList<User>();
@@ -69,10 +70,16 @@ public class FriendlistAdapter extends RecyclerView.Adapter<FriendlistAdapter.Re
         public void onClick(View v) {
             int position = getAdapterPosition();
             User user = this.users.get(position);
-            Intent intent = new Intent(ctx, NewMessage.class);
-            intent.putExtra("receiver", user.getUsername());
-            this.ctx.startActivity(intent);
-            ((Activity) ctx).overridePendingTransition(0, 0);
+
+            bundle = new Bundle();
+            bundle.putString("receiver", user.getUsername());
+
+            NewMessageFragment newMessageFragment = new NewMessageFragment();
+            newMessageFragment.setArguments(bundle);
+            FragmentTransaction transaction = MainActivity.fragmentManager.beginTransaction();
+            transaction.replace(R.id.mainContent, newMessageFragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
         }
     }
 }
