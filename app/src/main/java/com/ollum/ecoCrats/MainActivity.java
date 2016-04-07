@@ -12,7 +12,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+
+import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
+import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
+import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
@@ -48,6 +53,32 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         drawerLayout.setDrawerListener(drawerListener);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        ImageView imageView = new ImageView(this);
+        imageView.setImageResource(R.mipmap.ic_launcher);
+
+        FloatingActionButton actionButton = new FloatingActionButton.Builder(this)
+                .setContentView(imageView)
+                .build();
+
+        ImageView messages = new ImageView(this);
+        messages.setImageResource(R.drawable.offline);
+        ImageView transport = new ImageView(this);
+        transport.setImageResource(R.drawable.afk);
+        ImageView friendlist = new ImageView(this);
+        friendlist.setImageResource(R.drawable.online);
+
+        SubActionButton.Builder itemBuilder = new SubActionButton.Builder(this);
+        SubActionButton buttonMessages = itemBuilder.setContentView(messages).build();
+        SubActionButton buttonTransport = itemBuilder.setContentView(transport).build();
+        SubActionButton buttonFriendlist = itemBuilder.setContentView(friendlist).build();
+
+        FloatingActionMenu actionMenu = new FloatingActionMenu.Builder(this)
+                .addSubActionView(buttonMessages)
+                .addSubActionView(buttonTransport)
+                .addSubActionView(buttonFriendlist)
+                .attachTo(actionButton)
+                .build();
 
         userLocalStore = new UserLocalStore(this);
         user = userLocalStore.getLoggedInUser();
