@@ -44,7 +44,7 @@
             android:layout_alignParentBottom="true"
             android:layout_toLeftOf="@+id/message_remove"
             android:layout_toStartOf="@+id/message_remove"
-            android:background="@drawable/button_action"
+            android:background="@drawable/button"
             style="?android:attr/borderlessButtonStyle"
             android:layout_weight="4"/>
 

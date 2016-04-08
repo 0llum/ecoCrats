@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ollum.ecoCrats.Login"
+    tools:context=".Activities.Login"
     android:background="@drawable/gradientbackground">
 
     <EditText
@@ -39,7 +39,7 @@
         android:layout_below="@+id/login_password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
-        android:background="@drawable/button_action"
+        android:background="@drawable/button"
         style="?android:attr/borderlessButtonStyle"/>
 
     <Button
@@ -50,7 +50,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/button_action"
+        android:background="@drawable/button"
         style="?android:attr/borderlessButtonStyle"/>
 
 </RelativeLayout>

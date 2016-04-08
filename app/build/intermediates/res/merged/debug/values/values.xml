@@ -2,7 +2,6 @@
 <resources>
     <string-array name="navDrawerItems">
         <item>Profile</item>
-        <item>Messages</item>
         <item>Friendlist</item>
         <item>Countries</item>
         <item>Companies</item>

@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
-        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
         "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
+        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
         "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_launcher.png",
@@ -16,7 +16,7 @@
         "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
-        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
+        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     }
 ]

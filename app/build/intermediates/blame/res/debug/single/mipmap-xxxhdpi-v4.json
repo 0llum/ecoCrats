@@ -1,5 +1,29 @@
 [
     {
+        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/messages.png",
+        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/src/main/res/mipmap-xxxhdpi/messages.png"
+    },
+    {
+        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/button_pressed.png",
+        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/src/main/res/mipmap-xxxhdpi/button_pressed.png"
+    },
+    {
+        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
+        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/fab.png",
+        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/src/main/res/mipmap-xxxhdpi/fab.png"
+    },
+    {
+        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/online.png",
+        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/src/main/res/mipmap-xxxhdpi/online.png"
+    },
+    {
+        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/button_action_blue.png",
+        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/src/main/res/mipmap-xxxhdpi/button_action_blue.png"
+    },
+    {
         "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
         "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
@@ -8,15 +32,35 @@
         "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
+        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
+        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/contracts.png",
+        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/src/main/res/mipmap-xxxhdpi/contracts.png"
+    },
+    {
+        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/button.png",
+        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/src/main/res/mipmap-xxxhdpi/button.png"
+    },
+    {
+        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/transport.png",
+        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/src/main/res/mipmap-xxxhdpi/transport.png"
+    },
+    {
         "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
         "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
-        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/button_action_blue_touch.png",
+        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/src/main/res/mipmap-xxxhdpi/button_action_blue_touch.png"
     },
     {
-        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
-        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/afk.png",
+        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/src/main/res/mipmap-xxxhdpi/afk.png"
+    },
+    {
+        "merged": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/offline.png",
+        "source": "/Users/Ollum/AndroidStudioProjects/ecoCrats/app/src/main/res/mipmap-xxxhdpi/offline.png"
     }
 ]
