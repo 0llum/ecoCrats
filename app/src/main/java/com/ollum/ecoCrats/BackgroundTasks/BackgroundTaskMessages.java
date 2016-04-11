@@ -92,7 +92,7 @@ public class BackgroundTaskMessages extends AsyncTask<String, Message, Void> {
             while (count < jsonArray.length()) {
                 JSONObject JO = jsonArray.getJSONObject(count);
                 count++;
-                Message message = new Message(JO.getString("Sender"), JO.getString("Subject"), JO.getString("Message"), JO.getString("Time"));
+                Message message = new Message(JO.getInt("ID"), JO.getString("username"), JO.getString("Subject"), JO.getString("Message"), JO.getString("Time"), JO.getInt("Seen"));
                 publishProgress(message);
             }
 

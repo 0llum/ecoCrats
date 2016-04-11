@@ -59,7 +59,7 @@ public class BackgroundTaskFriendlist extends AsyncTask<String, User, Void> {
 
     @Override
     protected Void doInBackground(String... params) {
-        String username_1 = params[0];
+        String username = params[0];
 
         try {
             URL url = new URL(json_String);
@@ -69,7 +69,7 @@ public class BackgroundTaskFriendlist extends AsyncTask<String, User, Void> {
             httpURLConnection.setDoInput(true);
             OutputStream outputStream = httpURLConnection.getOutputStream();
             BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
-            String data = URLEncoder.encode("username_1", "UTF-8") + "=" + URLEncoder.encode(username_1, "UTF-8");
+            String data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8");
             bufferedWriter.write(data);
             bufferedWriter.flush();
             bufferedWriter.close();
@@ -92,7 +92,7 @@ public class BackgroundTaskFriendlist extends AsyncTask<String, User, Void> {
             while (count < jsonArray.length()) {
                 JSONObject JO = jsonArray.getJSONObject(count);
                 count++;
-                User user = new User(JO.getString("username_2"), JO.getInt("status"), JO.getString("lastOnline"));
+                User user = new User(JO.getString("username"), JO.getInt("status"), JO.getString("lastOnline"));
                 publishProgress(user);
             }
 

@@ -46,7 +46,7 @@ public class MessagesFragment extends Fragment implements View.OnClickListener, 
                 NewMessageFragment newMessageFragment = new NewMessageFragment();
                 FragmentTransaction transaction = MainActivity.fragmentManager.beginTransaction();
                 transaction.replace(R.id.mainContent, newMessageFragment, "NewMessageFragment");
-                transaction.addToBackStack(null);
+                transaction.addToBackStack("NewMessageFragment");
                 transaction.commit();
                 break;
         }

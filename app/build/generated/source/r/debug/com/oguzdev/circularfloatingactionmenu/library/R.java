@@ -8,12 +8,12 @@ package com.oguzdev.circularfloatingactionmenu.library;
 
 public final class R {
 	public static final class dimen {
-		public static final int action_button_content_margin = 0x7f080044;
-		public static final int action_button_margin = 0x7f080045;
-		public static final int action_button_size = 0x7f080046;
-		public static final int action_menu_radius = 0x7f080047;
-		public static final int sub_action_button_content_margin = 0x7f080054;
-		public static final int sub_action_button_size = 0x7f080055;
+		public static final int action_button_content_margin = 0x7f090045;
+		public static final int action_button_margin = 0x7f090046;
+		public static final int action_button_size = 0x7f090047;
+		public static final int action_menu_radius = 0x7f090048;
+		public static final int sub_action_button_content_margin = 0x7f09005f;
+		public static final int sub_action_button_size = 0x7f090060;
 	}
 	public static final class drawable {
 		public static final int button_action = 0x7f02004c;

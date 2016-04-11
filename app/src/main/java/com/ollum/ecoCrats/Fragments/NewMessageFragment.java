@@ -2,6 +2,7 @@ package com.ollum.ecoCrats.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,22 +17,24 @@ import com.ollum.ecoCrats.R;
 
 public class NewMessageFragment extends Fragment implements View.OnClickListener {
     EditText etReceiver, etSubject, etMessage;
-    Button send, cancel;
+    Button send;
     String sender, receiver, subject;
+    String current, previous;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        Bundle bundleMessageDetails = MessageDetailsFragment.bundle;
-        Bundle bundleFriendlist = FriendlistAdapter.bundle;
+        super.onCreate(savedInstanceState);
 
-        if (bundleMessageDetails != null) {
-            receiver = bundleMessageDetails.getString("receiver");
-            subject = bundleMessageDetails.getString("subject");
-        } else if (bundleFriendlist != null) {
-            receiver = bundleFriendlist.getString("receiver");
+        FragmentManager.BackStackEntry currentFragment = MainActivity.fragmentManager.getBackStackEntryAt(MainActivity.fragmentManager.getBackStackEntryCount() - 1);
+        current = currentFragment.getName();
+
+        if (current == "FriendlistFragment" && FriendlistAdapter.bundle != null) {
+            receiver = FriendlistAdapter.bundle.getString("receiver");
+        } else if (current == "MessageDetailsFragment" && MessageDetailsFragment.bundle != null) {
+            receiver = MessageDetailsFragment.bundle.getString("receiver");
+            subject = "Re: " + MessageDetailsFragment.bundle.getString("subject");
         }
 
-        super.onCreate(savedInstanceState);
     }
 
     @Override
@@ -45,17 +48,9 @@ public class NewMessageFragment extends Fragment implements View.OnClickListener
         etMessage = (EditText) view.findViewById(R.id.new_message_message);
         send = (Button) view.findViewById(R.id.new_message_send);
         send.setOnClickListener(this);
-        cancel = (Button) view.findViewById(R.id.new_message_cancel);
-        cancel.setOnClickListener(this);
 
-
-        if (!receiver.equals("")) {
-            etReceiver.setText(receiver);
-        }
-        else if (!subject.equals("")) {
-            etSubject.setText("Re: " + subject);
-        }
-
+        etReceiver.setText(receiver);
+        etSubject.setText(subject);
 
         return view;
     }
@@ -81,8 +76,8 @@ public class NewMessageFragment extends Fragment implements View.OnClickListener
                 }
 
                 break;
-            case R.id.new_message_cancel:
-                break;
+            /*case R.id.new_message_cancel:
+                break;*/
         }
     }
 }

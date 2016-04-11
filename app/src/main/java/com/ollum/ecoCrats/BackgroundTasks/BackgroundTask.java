@@ -39,10 +39,10 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        /*progressDialog.setCancelable(false);
+        progressDialog.setCancelable(false);
         progressDialog.setTitle("Progressing");
         progressDialog.setMessage("Please wait...");
-        progressDialog.show();*/
+        progressDialog.show();
     }
 
     @Override
@@ -62,6 +62,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             String username = params[1];
             String password = params[2];
             String email = params[3];
+            String regid = params[4];
 
             try {
                 URL url = new URL(reg_url);
@@ -73,7 +74,8 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
                 String data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8") + "&" +
                         URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(password, "UTF-8") + "&" +
-                        URLEncoder.encode("email", "UTF-8") + "=" + URLEncoder.encode(email, "UTF-8");
+                        URLEncoder.encode("email", "UTF-8") + "=" + URLEncoder.encode(email, "UTF-8") + "&" +
+                        URLEncoder.encode("regid", "UTF-8") + "=" + URLEncoder.encode(regid, "UTF-8");
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -393,6 +395,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                 ((Activity) ctx).overridePendingTransition(0, 0);
                 break;
             case ("Login successful"):
+                Toast.makeText(ctx, "", Toast.LENGTH_LONG).show();
                 ((Activity) ctx).finish();
                 ctx.startActivity(new Intent(ctx, MainActivity.class));
                 ((Activity) ctx).overridePendingTransition(0, 0);

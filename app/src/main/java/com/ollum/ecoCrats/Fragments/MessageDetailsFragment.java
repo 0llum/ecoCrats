@@ -8,13 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.Adapters.MessagesAdapter;
+import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStatus;
 import com.ollum.ecoCrats.R;
 
 public class MessageDetailsFragment extends Fragment implements View.OnClickListener {
     String sender, subject, message, time;
+    int ID;
     TextView tvSender, tvSubject, tvMessage;
     Button reply;
     public static Bundle bundle;
@@ -25,11 +28,18 @@ public class MessageDetailsFragment extends Fragment implements View.OnClickList
 
         Bundle bundle = MessagesAdapter.bundle;
         if (bundle != null) {
+            ID = bundle.getInt("ID");
             sender = bundle.getString("sender");
             subject = bundle.getString("subject");
             message = bundle.getString("message");
             time = bundle.getString("time");
+
+            String method = "seen";
+            BackgroundTaskStatus backgroundTaskStatus = new BackgroundTaskStatus(getContext());
+            backgroundTaskStatus.execute(method, "" + ID);
         }
+
+
     }
 
     @Override

@@ -1,6 +1,6 @@
 package com.ollum.ecoCrats.Activities;
 
-import android.app.Fragment;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,15 +16,18 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
 import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
+import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskLatestMessage;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStatus;
 import com.ollum.ecoCrats.Fragments.CountriesFragment;
 import com.ollum.ecoCrats.Fragments.FriendlistFragment;
 import com.ollum.ecoCrats.Fragments.MessagesFragment;
 import com.ollum.ecoCrats.Fragments.ProfileFragment;
 import com.ollum.ecoCrats.Fragments.SettingsFragment;
+import com.ollum.ecoCrats.GoogleCloudMessaging.GCMNotificationIntentService;
 import com.ollum.ecoCrats.R;
 import com.ollum.ecoCrats.Classes.User;
 import com.ollum.ecoCrats.SharedPrefs.UserLocalStore;
@@ -58,12 +60,23 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         setUserOnline(user);
 
+        String fragment = getIntent().getStringExtra("fragment");
         fragmentManager = getSupportFragmentManager();
-        ProfileFragment profileFragment = new ProfileFragment();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.mainContent, profileFragment, "ProfileFragment");
-        transaction.addToBackStack("ProfileFragment");
-        transaction.commit();
+
+        if (fragment != null) {
+            if (fragment.equals("MessagesFragment")) {
+                MessagesFragment messagesFragment = new MessagesFragment();
+                transaction.replace(R.id.mainContent, messagesFragment, "MessagesFragment");
+                transaction.addToBackStack("MessagesFragment");
+                transaction.commit();
+            }
+        } else {
+            ProfileFragment profileFragment = new ProfileFragment();
+            transaction.replace(R.id.mainContent, profileFragment, "ProfileFragment");
+            transaction.addToBackStack("ProfileFragment");
+            transaction.commit();
+        }
 
         navDrawerItems = getResources().getStringArray(R.array.navDrawerItems);
         listView = (ListView) findViewById(R.id.drawerList);
@@ -104,17 +117,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         SubActionButton buttonContracts = itemBuilder.setContentView(contracts).build();
 
         buttonMessages.setTag("TAG_MESSAGES");
-        buttonTransport.setTag("TAG_TRANSPORT");
         buttonContracts.setTag("TAG_CONTRACTS");
+        buttonTransport.setTag("TAG_TRANSPORT");
 
         buttonMessages.setOnClickListener(this);
         buttonTransport.setOnClickListener(this);
         buttonContracts.setOnClickListener(this);
 
         actionMenu = new FloatingActionMenu.Builder(this)
-                .addSubActionView(buttonMessages)
-                .addSubActionView(buttonTransport)
                 .addSubActionView(buttonContracts)
+                .addSubActionView(buttonTransport)
+                .addSubActionView(buttonMessages)
                 .attachTo(actionButton)
                 .build();
     }
@@ -213,6 +226,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        if (BackgroundTaskLatestMessage.mNotificationManager != null) {
+            BackgroundTaskLatestMessage.mNotificationManager.cancelAll();
+        }
+    }
+
+    @Override
     protected void onRestart() {
         super.onRestart();
         setUserOnline(user);
@@ -226,8 +247,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onBackPressed() {
-        /*FragmentManager.BackStackEntry previousFragment = fragmentManager.getBackStackEntryAt(fragmentManager.getBackStackEntryCount() - 2);
-        String previous = previousFragment.getName();*/
         FragmentManager.BackStackEntry currentFragment = fragmentManager.getBackStackEntryAt(fragmentManager.getBackStackEntryCount() - 1);
         String current = currentFragment.getName();
 
