@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/messages_inbox_swipeRefreshLayout"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_below="@+id/linearLayout5">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/messages_inbox_recyclerView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayout2"
+        android:gravity="center_vertical"
+        android:background="@drawable/gradient">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="New"
+            android:id="@+id/messages_inbox_new_message"
+            android:background="@drawable/button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_weight="4"
+            android:layout_marginLeft="5dp"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout5"
+        android:background="@drawable/gradient"
+        android:gravity="center_vertical">
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="Inbox"
+            android:id="@+id/messages_inbox_button_inbox"
+            android:background="@mipmap/button_pressed"
+            android:layout_weight="4"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"/>
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="Outbox"
+            android:id="@+id/messages_inbox_button_outbox"
+            android:background="@mipmap/button"
+            android:layout_weight="4"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

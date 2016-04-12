@@ -24,6 +24,8 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
+        MainActivity.setTitle("Settings");
+
         oldPassword = (EditText) view.findViewById(R.id.settings_oldPassword);
         newPassword = (EditText) view.findViewById(R.id.settings_newPassword);
         newPWConfirmation = (EditText) view.findViewById(R.id.settings_newPWConfirmation);

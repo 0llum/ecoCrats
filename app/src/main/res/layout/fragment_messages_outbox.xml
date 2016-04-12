@@ -6,13 +6,14 @@
     <android.support.v4.widget.SwipeRefreshLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/messages_swipeRefreshLayout"
-        android:layout_above="@+id/linearLayout2">
+        android:id="@+id/messages_outbox_swipeRefreshLayout"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_below="@+id/linearLayout5">
 
         <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/messages_recyclerView"
+            android:id="@+id/messages_outbox_recyclerView"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -33,10 +34,7 @@
             android:layout_width="fill_parent"
             android:layout_height="40dp"
             android:text="New"
-            android:id="@+id/messages_new_message"
-            android:layout_alignParentBottom="true"
-            android:layout_toLeftOf="@+id/message_remove"
-            android:layout_toStartOf="@+id/message_remove"
+            android:id="@+id/messages_outbox_new_message"
             android:background="@drawable/button"
             style="?android:attr/borderlessButtonStyle"
             android:layout_weight="4"
@@ -49,6 +47,39 @@
             android:layout_weight="1">
         </LinearLayout>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout5"
+        android:background="@drawable/gradient"
+        android:gravity="center_vertical">
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="Inbox"
+            android:id="@+id/messages_outbox_button_inbox"
+            android:background="@drawable/button"
+            android:layout_weight="4"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"/>
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="Outbox"
+            android:id="@+id/messages_outbox_button_outbox"
+            android:background="@mipmap/button_pressed"
+            android:layout_weight="4"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"/>
     </LinearLayout>
 
 </RelativeLayout>

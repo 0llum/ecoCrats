@@ -27,7 +27,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 
-public class BackgroundTaskMessages extends AsyncTask<String, Message, Void> {
+public class BackgroundTaskInbox extends AsyncTask<String, Message, Void> {
 
     Context ctx;
     RecyclerView recyclerView;
@@ -35,9 +35,9 @@ public class BackgroundTaskMessages extends AsyncTask<String, Message, Void> {
     RecyclerView.LayoutManager layoutManager;
     ArrayList<Message> arrayList = new ArrayList<>();
     ProgressDialog progressDialog;
-    String json_String = "http://0llum.bplaced.net/ecoCrats/DisplayMessages.php";
+    String json_String = "http://0llum.bplaced.net/ecoCrats/DisplayInbox.php";
 
-    public BackgroundTaskMessages(Context ctx, RecyclerView recyclerView) {
+    public BackgroundTaskInbox(Context ctx, RecyclerView recyclerView) {
         this.ctx = ctx;
         this.recyclerView = recyclerView;
         progressDialog = new ProgressDialog(ctx);

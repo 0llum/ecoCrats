@@ -2,13 +2,13 @@ package com.ollum.ecoCrats.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.Adapters.MessagesAdapter;
@@ -21,6 +21,7 @@ public class MessageDetailsFragment extends Fragment implements View.OnClickList
     TextView tvSender, tvSubject, tvMessage;
     Button reply;
     public static Bundle bundle;
+    String current;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,17 +35,22 @@ public class MessageDetailsFragment extends Fragment implements View.OnClickList
             message = bundle.getString("message");
             time = bundle.getString("time");
 
-            String method = "seen";
-            BackgroundTaskStatus backgroundTaskStatus = new BackgroundTaskStatus(getContext());
-            backgroundTaskStatus.execute(method, "" + ID);
+            FragmentManager.BackStackEntry currentFragment = MainActivity.fragmentManager.getBackStackEntryAt(MainActivity.fragmentManager.getBackStackEntryCount() - 1);
+            current = currentFragment.getName();
+
+            if (current.equals("MessagesInboxFragment")) {
+                String method = "seen";
+                BackgroundTaskStatus backgroundTaskStatus = new BackgroundTaskStatus(getContext());
+                backgroundTaskStatus.execute(method, "" + ID);
+            }
         }
-
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_message_details, container, false);
+
+        MainActivity.setTitle("Message Details");
 
         tvSender = (TextView) view.findViewById(R.id.message_details_sender);
         tvSubject = (TextView) view.findViewById(R.id.message_details_subject);

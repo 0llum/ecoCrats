@@ -1,22 +1,23 @@
 package com.ollum.ecoCrats.Activities;
 
-import android.app.NotificationManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
-import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
 import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
@@ -24,10 +25,9 @@ import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskLatestMessage;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStatus;
 import com.ollum.ecoCrats.Fragments.CountriesFragment;
 import com.ollum.ecoCrats.Fragments.FriendlistFragment;
-import com.ollum.ecoCrats.Fragments.MessagesFragment;
+import com.ollum.ecoCrats.Fragments.MessagesInboxFragment;
 import com.ollum.ecoCrats.Fragments.ProfileFragment;
 import com.ollum.ecoCrats.Fragments.SettingsFragment;
-import com.ollum.ecoCrats.GoogleCloudMessaging.GCMNotificationIntentService;
 import com.ollum.ecoCrats.R;
 import com.ollum.ecoCrats.Classes.User;
 import com.ollum.ecoCrats.SharedPrefs.UserLocalStore;
@@ -43,11 +43,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private ActionBarDrawerToggle drawerListener;
     FloatingActionButton actionButton;
     FloatingActionMenu actionMenu;
+    public static ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        actionBar = getSupportActionBar();
 
         userLocalStore = new UserLocalStore(this);
         user = userLocalStore.getLoggedInUser();
@@ -65,10 +68,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         FragmentTransaction transaction = fragmentManager.beginTransaction();
 
         if (fragment != null) {
-            if (fragment.equals("MessagesFragment")) {
-                MessagesFragment messagesFragment = new MessagesFragment();
-                transaction.replace(R.id.mainContent, messagesFragment, "MessagesFragment");
-                transaction.addToBackStack("MessagesFragment");
+            if (fragment.equals("MessagesInboxFragment")) {
+                MessagesInboxFragment messagesInboxFragment = new MessagesInboxFragment();
+                transaction.replace(R.id.mainContent, messagesInboxFragment, "MessagesInboxFragment");
+                transaction.addToBackStack("MessagesInboxFragment");
                 transaction.commit();
             }
         } else {
@@ -86,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         drawerListener = new ActionBarDrawerToggle(this, drawerLayout, R.string.drawer_open, R.string.drawer_close) {
             @Override
             public void onDrawerOpened(View drawerView) {
+                actionMenu.close(true);
             }
 
             @Override
@@ -93,8 +97,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         };
         drawerLayout.setDrawerListener(drawerListener);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         ImageView iconFAB = new ImageView(this);
         iconFAB.setImageResource(R.mipmap.fab);
@@ -145,9 +149,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         FragmentTransaction transaction = fragmentManager.beginTransaction();
 
         if (v.getTag().equals("TAG_MESSAGES")) {
-            MessagesFragment messagesFragment = new MessagesFragment();
-            transaction.replace(R.id.mainContent, messagesFragment, "MessagesFragment");
-            transaction.addToBackStack("MessagesFragment");
+            MessagesInboxFragment messagesInboxFragment = new MessagesInboxFragment();
+            transaction.replace(R.id.mainContent, messagesInboxFragment, "MessagesInboxFragment");
+            transaction.addToBackStack("MessagesInboxFragment");
             transaction.commit();
         } else if (v.getTag().equals("TAG_TRANSPORT")) {
 
@@ -162,6 +166,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         closeDrawer();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         switch (navDrawerItems[position]) {
+            case "Profile":
+                ProfileFragment profileFragment = new ProfileFragment();
+                transaction.replace(R.id.mainContent, profileFragment, "ProfileFragment");
+                transaction.addToBackStack("ProfileFragment");
+                transaction.commit();
+                break;
             case "Friendlist":
                 FriendlistFragment friendlistFragment = new FriendlistFragment();
                 transaction.replace(R.id.mainContent, friendlistFragment, "FriendlistFragment");
@@ -179,12 +189,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private void selectItem(int position) {
         listView.setItemChecked(position, true);
-        setTitle(navDrawerItems[position]);
-
     }
 
-    public void setTitle(String title) {
-        getSupportActionBar().setTitle(title);
+    public static void setTitle(String title) {
+        actionBar.setTitle(title);
     }
 
     public void closeDrawer() {
@@ -252,7 +260,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         if (current.equals("ProfileFragment")) {
             return;
-        } else if (current.equals("FriendlistFragment") || current.equals("MessagesFragment") || current.equals("CountriesFragment")) {
+        } else if (current.equals("FriendlistFragment") || current.equals("MessagesInboxFragment") || current.equals("MessagesOutboxFragment") || current.equals("CountriesFragment")) {
             ProfileFragment profileFragment = new ProfileFragment();
             FragmentTransaction transaction = fragmentManager.beginTransaction();
             transaction.replace(R.id.mainContent, profileFragment, "ProfileFragment");

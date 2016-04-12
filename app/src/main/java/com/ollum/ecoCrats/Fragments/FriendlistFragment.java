@@ -25,6 +25,8 @@ public class FriendlistFragment extends Fragment implements View.OnClickListener
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_friendlist, container, false);
 
+        MainActivity.setTitle("Friendlist");
+
         searchBar = (EditText) view.findViewById(R.id.friendlist_searchbar);
         add = (Button) view.findViewById(R.id.friendlist_add);
         add.setOnClickListener(this);

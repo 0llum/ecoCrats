@@ -3,20 +3,15 @@ package com.ollum.ecoCrats.BackgroundTasks;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.support.v4.app.NotificationCompat;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.Classes.Message;
-import com.ollum.ecoCrats.Adapters.MessagesAdapter;
-import com.ollum.ecoCrats.GoogleCloudMessaging.GCMNotificationIntentService;
 import com.ollum.ecoCrats.R;
 
 import org.json.JSONArray;
@@ -113,7 +108,7 @@ public class BackgroundTaskLatestMessage extends AsyncTask<String, Message, Mess
         Log.d("debug", "ID: " + message.getID() + ", Sender: " + message.getSender() + ", Receiver: " + message.getReceiver() + ", Subject: " + message.getSubject() + ", Message: " + message.getMessage());
         final int notifyID = 9001;
         Intent resultIntent = new Intent(ctx, MainActivity.class);
-        resultIntent.putExtra("fragment", "MessagesFragment");
+        resultIntent.putExtra("fragment", "MessagesInboxFragment");
         PendingIntent resultPendingIntent = PendingIntent.getActivity(ctx, 0,
                 resultIntent, PendingIntent.FLAG_ONE_SHOT);
 

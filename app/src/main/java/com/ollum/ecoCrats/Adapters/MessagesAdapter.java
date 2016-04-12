@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
-import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStatus;
 import com.ollum.ecoCrats.Fragments.MessageDetailsFragment;
 import com.ollum.ecoCrats.Classes.Message;
 import com.ollum.ecoCrats.R;

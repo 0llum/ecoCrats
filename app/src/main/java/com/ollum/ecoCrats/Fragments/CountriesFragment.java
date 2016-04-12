@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskCountries;
 import com.ollum.ecoCrats.R;
 
@@ -16,6 +17,8 @@ public class CountriesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_countries, container, false);
+
+        MainActivity.setTitle("Countries");
 
         recyclerView = (RecyclerView) view.findViewById(R.id.countries_recyclerView);
 
