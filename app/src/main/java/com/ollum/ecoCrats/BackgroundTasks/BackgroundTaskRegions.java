@@ -50,10 +50,10 @@ public class BackgroundTaskRegions extends AsyncTask<String, Region, Void> {
         adapter = new RegionsAdapter(arrayList, ctx);
         recyclerView.setAdapter(adapter);
 
-        /*progressDialog.setCancelable(false);
+        progressDialog.setCancelable(true);
         progressDialog.setTitle("Progressing");
         progressDialog.setMessage("Please wait...");
-        progressDialog.show();*/
+        progressDialog.show();
     }
 
     @Override
@@ -91,7 +91,7 @@ public class BackgroundTaskRegions extends AsyncTask<String, Region, Void> {
             while (count < jsonArray.length()) {
                 JSONObject JO = jsonArray.getJSONObject(count);
                 count++;
-                Region region = new Region(JO.getString("Name"), JO.getString("Capital"), JO.getInt("Area"), JO.getInt("Population"));
+                Region region = new Region(JO.getInt("ID"), JO.getString("Name"), JO.getString("Capital"), JO.getInt("Area"), JO.getInt("Population"));
                 publishProgress(region);
             }
 

@@ -47,10 +47,10 @@ public class BackgroundTaskCountries extends AsyncTask<String, Country, Void> {
         adapter = new CountriesAdapter(arrayList, ctx);
         recyclerView.setAdapter(adapter);
 
-        /*progressDialog.setCancelable(false);
+        progressDialog.setCancelable(true);
         progressDialog.setTitle("Progressing");
         progressDialog.setMessage("Please wait...");
-        progressDialog.show();*/
+        progressDialog.show();
     }
 
     @Override

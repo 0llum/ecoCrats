@@ -3,6 +3,7 @@
     <string-array name="navDrawerItems">
         <item>Profile</item>
         <item>Friendlist</item>
+        <item>Stores</item>
         <item>Countries</item>
         <item>Companies</item>
         <item>Research</item>

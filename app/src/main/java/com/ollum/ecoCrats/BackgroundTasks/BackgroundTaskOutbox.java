@@ -51,10 +51,10 @@ public class BackgroundTaskOutbox extends AsyncTask<String, Message, Void> {
         adapter = new MessagesAdapter(arrayList, ctx);
         recyclerView.setAdapter(adapter);
 
-        /*progressDialog.setCancelable(false);
+        progressDialog.setCancelable(true);
         progressDialog.setTitle("Progressing");
         progressDialog.setMessage("Please wait...");
-        progressDialog.show();*/
+        progressDialog.show();
     }
 
     @Override

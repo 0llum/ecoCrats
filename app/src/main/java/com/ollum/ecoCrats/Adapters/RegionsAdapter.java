@@ -1,12 +1,17 @@
 package com.ollum.ecoCrats.Adapters;
 
 import android.content.Context;
+import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.ollum.ecoCrats.Activities.MainActivity;
+import com.ollum.ecoCrats.Fragments.RegionDetailsFragment;
+import com.ollum.ecoCrats.Fragments.RegionsFragment;
 import com.ollum.ecoCrats.R;
 import com.ollum.ecoCrats.Classes.Region;
 
@@ -17,6 +22,7 @@ import java.util.Locale;
 public class RegionsAdapter extends RecyclerView.Adapter<RegionsAdapter.RecyclerViewHolder> {
     ArrayList<Region> arrayList = new ArrayList<>();
     Context ctx;
+    public static Bundle bundle;
 
     public RegionsAdapter(ArrayList<Region> arrayList, Context ctx) {
         this.arrayList = arrayList;
@@ -65,6 +71,20 @@ public class RegionsAdapter extends RecyclerView.Adapter<RegionsAdapter.Recycler
         public void onClick(View v) {
             int position = getAdapterPosition();
             Region region = this.regions.get(position);
+
+            bundle = new Bundle();
+            bundle.putInt("ID", region.getID());
+            bundle.putString("region", region.getName());
+            bundle.putString("capital", region.getCapital());
+            bundle.putInt("area", region.getArea());
+            bundle.putInt("population", region.getPopulation());
+
+            RegionDetailsFragment regionDetailsFragment = new RegionDetailsFragment();
+            regionDetailsFragment.setArguments(bundle);
+            FragmentTransaction transaction = MainActivity.fragmentManager.beginTransaction();
+            transaction.replace(R.id.mainContent, regionDetailsFragment, "RegionDetailsFragment");
+            transaction.addToBackStack("RegionDetailsFragment");
+            transaction.commit();
         }
     }
 }

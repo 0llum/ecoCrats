@@ -12,6 +12,7 @@ import com.ollum.ecoCrats.Activities.Login;
 import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.Fragments.FriendlistFragment;
 import com.ollum.ecoCrats.Fragments.SettingsFragment;
+import com.ollum.ecoCrats.Fragments.StoresFragment;
 import com.ollum.ecoCrats.R;
 
 import java.io.BufferedReader;
@@ -55,6 +56,9 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
         String changeEmail_url = "http://0llum.bplaced.net/ecoCrats/ChangeEmail.php";
         String changePassword_url = "http://0llum.bplaced.net/ecoCrats/ChangePassword.php";
         String sendMessage_url = "http://0llum.bplaced.net/ecoCrats/SendMessage.php";
+        String buyArea_url = "http://0llum.bplaced.net/ecoCrats/BuyArea.php";
+        String buildStore_url = "http://0llum.bplaced.net/ecoCrats/BuildStore.php";
+        String addItem_url = "http://0llum.bplaced.net/ecoCrats/AddItem.php";
         String method = params[0];
 
         if (method.equals("signUp")) {
@@ -363,7 +367,124 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                 inputStream.close();
                 httpURLConnection.disconnect();
 
-                Log.d("debug", response.trim());
+                return response.trim();
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if (method.equals("buyArea")) {
+            String Username = params[1];
+            String Region_ID = params[2];
+            String Area = params[3];
+
+            try {
+                URL url = new URL(buyArea_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                String data = URLEncoder.encode("Username", "UTF-8") + "=" + URLEncoder.encode(Username, "UTF-8") + "&" +
+                        URLEncoder.encode("Region_ID", "UTF-8") + "=" + URLEncoder.encode(Region_ID, "UTF-8")  + "&" +
+                        URLEncoder.encode("Area", "UTF-8") + "=" + URLEncoder.encode(Area, "UTF-8");
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                String response = "";
+                String line = "";
+
+                while ((line = bufferedReader.readLine()) != null) {
+                    response += line;
+                }
+
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+
+                return response.trim();
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if (method.equals("buildStore")) {
+            String username = params[1];
+            String Region_ID = params[2];
+
+            try {
+                URL url = new URL(buildStore_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                String data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8") + "&" +
+                        URLEncoder.encode("Region_ID", "UTF-8") + "=" + URLEncoder.encode(Region_ID, "UTF-8");
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                String response = "";
+                String line = "";
+
+                while ((line = bufferedReader.readLine()) != null) {
+                    response += line;
+                }
+
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+
+                return response.trim();
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else if (method.equals("addItem")) {
+            String Store_ID = params[1];
+            String Item_ID = params[2];
+            String Quantity = params[3];
+
+            try {
+                URL url = new URL(addItem_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                String data = URLEncoder.encode("Store_ID", "UTF-8") + "=" + URLEncoder.encode(Store_ID, "UTF-8") + "&" +
+                        URLEncoder.encode("Item_ID", "UTF-8") + "=" + URLEncoder.encode(Item_ID, "UTF-8")  + "&" +
+                        URLEncoder.encode("Quantity", "UTF-8") + "=" + URLEncoder.encode(Quantity, "UTF-8");
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                String response = "";
+                String line = "";
+
+                while ((line = bufferedReader.readLine()) != null) {
+                    response += line;
+                }
+
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+
                 return response.trim();
 
             } catch (MalformedURLException e) {
@@ -402,11 +523,17 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                 break;
             case ("Friend added"):
                 FriendlistFragment friendlistFragment = new FriendlistFragment();
-                MainActivity.fragmentManager.beginTransaction().replace(R.id.mainContent, friendlistFragment).commit();
+                MainActivity.fragmentManager.beginTransaction()
+                        .replace(R.id.mainContent, friendlistFragment, "FriendlistFragment")
+                        .addToBackStack("FriendlistFragment")
+                        .commit();
                 break;
             case ("Friend removed"):
                 FriendlistFragment friendlistFragment1 = new FriendlistFragment();
-                MainActivity.fragmentManager.beginTransaction().replace(R.id.mainContent, friendlistFragment1).commit();
+                MainActivity.fragmentManager.beginTransaction()
+                        .replace(R.id.mainContent, friendlistFragment1, "FriendlistFragment")
+                        .addToBackStack("FriendlistFragment")
+                        .commit();
                 break;
             case ("Account deleted"):
                 ((Activity) ctx).finish();
@@ -414,7 +541,10 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                 break;
             case ("Email address successfully changed"):
                 SettingsFragment settingsFragment = new SettingsFragment();
-                MainActivity.fragmentManager.beginTransaction().replace(R.id.mainContent, settingsFragment).commit();
+                MainActivity.fragmentManager.beginTransaction()
+                        .replace(R.id.mainContent, settingsFragment, "SettingsFragment")
+                        .addToBackStack("SettingsFragment")
+                        .commit();
                 break;
             case ("Password successfully changed"):
                 ((Activity) ctx).finish();
@@ -423,6 +553,12 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             case ("Message sent"):
                 MainActivity.fragmentManager.popBackStack();
                 break;
+            case ("Store has been built successfully"):
+                StoresFragment storesFragment = new StoresFragment();
+                MainActivity.fragmentManager.beginTransaction()
+                        .replace(R.id.mainContent, storesFragment, "StoresFragment")
+                        .addToBackStack("StoresFragment")
+                        .commit();
         }
     }
 }

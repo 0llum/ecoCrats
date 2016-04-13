@@ -51,10 +51,10 @@ public class BackgroundTaskFriendlist extends AsyncTask<String, User, Void> {
         adapter = new FriendlistAdapter(arrayList, ctx);
         recyclerView.setAdapter(adapter);
 
-        /*progressDialog.setCancelable(false);
+        progressDialog.setCancelable(true);
         progressDialog.setTitle("Progressing");
         progressDialog.setMessage("Please wait...");
-        progressDialog.show();*/
+        progressDialog.show();
     }
 
     @Override

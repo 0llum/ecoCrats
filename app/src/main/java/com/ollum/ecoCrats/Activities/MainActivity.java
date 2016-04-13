@@ -28,6 +28,7 @@ import com.ollum.ecoCrats.Fragments.FriendlistFragment;
 import com.ollum.ecoCrats.Fragments.MessagesInboxFragment;
 import com.ollum.ecoCrats.Fragments.ProfileFragment;
 import com.ollum.ecoCrats.Fragments.SettingsFragment;
+import com.ollum.ecoCrats.Fragments.StoresFragment;
 import com.ollum.ecoCrats.R;
 import com.ollum.ecoCrats.Classes.User;
 import com.ollum.ecoCrats.SharedPrefs.UserLocalStore;
@@ -178,6 +179,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 transaction.addToBackStack("FriendlistFragment");
                 transaction.commit();
                 break;
+            case "Stores":
+                StoresFragment storesFragment = new StoresFragment();
+                transaction.replace(R.id.mainContent, storesFragment, "StoresFragment");
+                transaction.addToBackStack("StoresFragment");
+                transaction.commit();
+                break;
             case "Countries":
                 CountriesFragment countriesFragment = new CountriesFragment();
                 transaction.replace(R.id.mainContent, countriesFragment, "CountriesFragment");
@@ -260,7 +267,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         if (current.equals("ProfileFragment")) {
             return;
-        } else if (current.equals("FriendlistFragment") || current.equals("MessagesInboxFragment") || current.equals("MessagesOutboxFragment") || current.equals("CountriesFragment")) {
+        } else if (current.equals("FriendlistFragment") || current.equals("MessagesInboxFragment") || current.equals("MessagesOutboxFragment") || current.equals("CountriesFragment") || current.equals("StoresFragment")) {
             ProfileFragment profileFragment = new ProfileFragment();
             FragmentTransaction transaction = fragmentManager.beginTransaction();
             transaction.replace(R.id.mainContent, profileFragment, "ProfileFragment");
