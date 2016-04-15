@@ -1,6 +1,9 @@
 package com.ollum.ecoCrats.Activities;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -21,7 +24,9 @@ import android.widget.Toast;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
 import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
+import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskLatestMessage;
+import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskLogout;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStatus;
 import com.ollum.ecoCrats.Fragments.CountriesFragment;
 import com.ollum.ecoCrats.Fragments.FriendlistFragment;
@@ -29,9 +34,22 @@ import com.ollum.ecoCrats.Fragments.MessagesInboxFragment;
 import com.ollum.ecoCrats.Fragments.ProfileFragment;
 import com.ollum.ecoCrats.Fragments.SettingsFragment;
 import com.ollum.ecoCrats.Fragments.StoresFragment;
+import com.ollum.ecoCrats.Fragments.TransportFragment;
 import com.ollum.ecoCrats.R;
 import com.ollum.ecoCrats.Classes.User;
 import com.ollum.ecoCrats.SharedPrefs.UserLocalStore;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLEncoder;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener, View.OnClickListener {
 
@@ -155,7 +173,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             transaction.addToBackStack("MessagesInboxFragment");
             transaction.commit();
         } else if (v.getTag().equals("TAG_TRANSPORT")) {
-
+            TransportFragment transportFragment = new TransportFragment();
+            transaction.replace(R.id.mainContent, transportFragment, "TransportFragment");
+            transaction.addToBackStack("TransportFragment");
+            transaction.commit();
         } else if (v.getTag().equals("TAG_CONTRACTS")) {
 
         }
@@ -220,13 +241,76 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         switch (item.getItemId()) {
             case R.id.logout:
-                setUserOffline(user);
-                userLocalStore.clearUserData();
-                userLocalStore.setUserLoggedIn(false);
+                AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+                dialog.setTitle("Do you really want to logout?");
+                dialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        new AsyncTask() {
 
-                finish();
-                startActivity(new Intent(this, Login.class));
-                overridePendingTransition(0, 0);
+                            @Override
+                            protected Object doInBackground(Object[] params) {
+                                String logout_url = "http://0llum.bplaced.net/ecoCrats/Logout.php";
+                                String username = user.username;
+
+                                try {
+                                    URL url = new URL(logout_url);
+                                    HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                                    httpURLConnection.setRequestMethod("POST");
+                                    httpURLConnection.setDoOutput(true);
+                                    httpURLConnection.setDoInput(true);
+                                    OutputStream outputStream = httpURLConnection.getOutputStream();
+                                    BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                                    String data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8");
+                                    bufferedWriter.write(data);
+                                    bufferedWriter.flush();
+                                    bufferedWriter.close();
+                                    outputStream.close();
+                                    InputStream inputStream = httpURLConnection.getInputStream();
+                                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                                    String response = "";
+                                    String line = "";
+
+                                    while ((line = bufferedReader.readLine()) != null) {
+                                        response += line;
+                                    }
+
+                                    bufferedReader.close();
+                                    inputStream.close();
+                                    httpURLConnection.disconnect();
+
+                                    return response.trim();
+
+                                } catch (MalformedURLException e) {
+                                    e.printStackTrace();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                                return null;
+                            }
+
+                            @Override
+                            protected void onPostExecute(Object o) {
+                                setUserOffline(user);
+                                userLocalStore.clearUserData();
+                                userLocalStore.setUserLoggedIn(false);
+
+                                finish();
+                                startActivity(new Intent(getApplicationContext(), Login.class));
+                                overridePendingTransition(0, 0);
+                            }
+                        }.execute();
+                    }
+                });
+                dialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.create();
+                dialog.show();
+
                 break;
             case R.id.settings:
                 SettingsFragment settingsFragment = new SettingsFragment();
@@ -280,19 +364,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
 
-    private void setUserOnline(User user) {
+    public void setUserOnline(User user) {
         String method = "online";
         BackgroundTaskStatus backgroundTaskStatus = new BackgroundTaskStatus(this);
         backgroundTaskStatus.execute(method, user.username);
     }
 
-    private void setUserOffline(User user) {
+    public void setUserOffline(User user) {
         String method = "offline";
         BackgroundTaskStatus backgroundTaskStatus = new BackgroundTaskStatus(this);
         backgroundTaskStatus.execute(method, user.username);
     }
 
-    private void setUserAFK(User user) {
+    public void setUserAFK(User user) {
         String method = "afk";
         BackgroundTaskStatus backgroundTaskStatus = new BackgroundTaskStatus(this);
         backgroundTaskStatus.execute(method, user.username);

@@ -50,6 +50,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
     protected String doInBackground(String... params) {
         String reg_url = "http://0llum.bplaced.net/ecoCrats/SignUp.php";
         String login_url = "http://0llum.bplaced.net/ecoCrats/Login.php";
+        String logout_url = "http://0llum.bplaced.net/ecoCrats/Logout.php";
         String addFriend_url = "http://0llum.bplaced.net/ecoCrats/AddFriend.php";
         String removeFriend_url = "http://0llum.bplaced.net/ecoCrats/RemoveFriend.php";
         String deleteAccount_url = "http://0llum.bplaced.net/ecoCrats/DeleteAccount.php";
@@ -59,6 +60,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
         String buyArea_url = "http://0llum.bplaced.net/ecoCrats/BuyArea.php";
         String buildStore_url = "http://0llum.bplaced.net/ecoCrats/BuildStore.php";
         String addItem_url = "http://0llum.bplaced.net/ecoCrats/AddItem.php";
+        String transport_url = "http://0llum.bplaced.net/ecoCrats/Transport.php";
         String method = params[0];
 
         if (method.equals("signUp")) {
@@ -66,7 +68,6 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             String username = params[1];
             String password = params[2];
             String email = params[3];
-            String regid = params[4];
 
             try {
                 URL url = new URL(reg_url);
@@ -78,8 +79,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
                 String data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8") + "&" +
                         URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(password, "UTF-8") + "&" +
-                        URLEncoder.encode("email", "UTF-8") + "=" + URLEncoder.encode(email, "UTF-8") + "&" +
-                        URLEncoder.encode("regid", "UTF-8") + "=" + URLEncoder.encode(regid, "UTF-8");
+                        URLEncoder.encode("email", "UTF-8") + "=" + URLEncoder.encode(email, "UTF-8");
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -107,6 +107,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
         } else if (method.equals("login")) {
             String username = params[1];
             String password = params[2];
+            String regid = params[3];
 
             try {
                 URL url = new URL(login_url);
@@ -117,7 +118,44 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
                 String data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8") + "&" +
-                        URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(password, "UTF-8");
+                        URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(password, "UTF-8") + "&" +
+                        URLEncoder.encode("regid", "UTF-8") + "=" + URLEncoder.encode(regid, "UTF-8");
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                String response = "";
+                String line = "";
+
+                while ((line = bufferedReader.readLine()) != null) {
+                    response += line;
+                }
+
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+
+                return response.trim();
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if (method.equals("logout")) {
+            String username = params[1];
+
+            try {
+                URL url = new URL(logout_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                String data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8");
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -492,6 +530,50 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        } else if (method.equals("transport")) {
+            String startStore_ID = params[1];
+            String itemName = params[2];
+            String Quantity = params[3];
+            String username = params[4];
+            String destinationStore_ID = params[5];
+
+            try {
+                URL url = new URL(transport_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                String data = URLEncoder.encode("startStore_ID", "UTF-8") + "=" + URLEncoder.encode(startStore_ID, "UTF-8") + "&" +
+                        URLEncoder.encode("itemName", "UTF-8") + "=" + URLEncoder.encode(itemName, "UTF-8")  + "&" +
+                        URLEncoder.encode("Quantity", "UTF-8") + "=" + URLEncoder.encode(Quantity, "UTF-8") + "&" +
+                        URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8")  + "&" +
+                        URLEncoder.encode("destinationStore_ID", "UTF-8") + "=" + URLEncoder.encode(destinationStore_ID, "UTF-8");
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                String response = "";
+                String line = "";
+
+                while ((line = bufferedReader.readLine()) != null) {
+                    response += line;
+                }
+
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+
+                return response.trim();
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         return null;
     }
@@ -516,7 +598,6 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                 ((Activity) ctx).overridePendingTransition(0, 0);
                 break;
             case ("Login successful"):
-                Toast.makeText(ctx, "", Toast.LENGTH_LONG).show();
                 ((Activity) ctx).finish();
                 ctx.startActivity(new Intent(ctx, MainActivity.class));
                 ((Activity) ctx).overridePendingTransition(0, 0);
@@ -557,6 +638,12 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                 StoresFragment storesFragment = new StoresFragment();
                 MainActivity.fragmentManager.beginTransaction()
                         .replace(R.id.mainContent, storesFragment, "StoresFragment")
+                        .addToBackStack("StoresFragment")
+                        .commit();
+            case ("Transport was successful"):
+                StoresFragment storesFragment1 = new StoresFragment();
+                MainActivity.fragmentManager.beginTransaction()
+                        .replace(R.id.mainContent, storesFragment1, "StoresFragment")
                         .addToBackStack("StoresFragment")
                         .commit();
         }

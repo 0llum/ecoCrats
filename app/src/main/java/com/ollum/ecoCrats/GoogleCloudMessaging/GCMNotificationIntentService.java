@@ -36,15 +36,11 @@ public class GCMNotificationIntentService extends IntentService {
         String messageType = gcm.getMessageType(intent);
 
         if (!extras.isEmpty()) {
-            if (GoogleCloudMessaging.MESSAGE_TYPE_SEND_ERROR
-                    .equals(messageType)) {
+            if (GoogleCloudMessaging.MESSAGE_TYPE_SEND_ERROR.equals(messageType)) {
                 sendNotification("Send error: " + extras.toString());
-            } else if (GoogleCloudMessaging.MESSAGE_TYPE_DELETED
-                    .equals(messageType)) {
-                sendNotification("Deleted messages on server: "
-                        + extras.toString());
-            } else if (GoogleCloudMessaging.MESSAGE_TYPE_MESSAGE
-                    .equals(messageType)) {
+            } else if (GoogleCloudMessaging.MESSAGE_TYPE_DELETED.equals(messageType)) {
+                sendNotification("Deleted messages on server: " + extras.toString());
+            } else if (GoogleCloudMessaging.MESSAGE_TYPE_MESSAGE.equals(messageType)) {
                 sendNotification("" + extras.get(ApplicationConstants.MSG_KEY));
             }
         }

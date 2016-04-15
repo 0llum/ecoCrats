@@ -105,7 +105,6 @@ public class BackgroundTaskLatestMessage extends AsyncTask<String, Message, Mess
 
     @Override
     protected void onPostExecute(Message message) {
-        Log.d("debug", "ID: " + message.getID() + ", Sender: " + message.getSender() + ", Receiver: " + message.getReceiver() + ", Subject: " + message.getSubject() + ", Message: " + message.getMessage());
         final int notifyID = 9001;
         Intent resultIntent = new Intent(ctx, MainActivity.class);
         resultIntent.putExtra("fragment", "MessagesInboxFragment");

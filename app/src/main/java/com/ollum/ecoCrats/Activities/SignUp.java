@@ -19,10 +19,6 @@ import org.apache.commons.validator.routines.EmailValidator;
 import java.io.IOException;
 
 public class SignUp extends AppCompatActivity implements View.OnClickListener {
-    String regid;
-    GoogleCloudMessaging gcm;
-    String PROJECT_NUMBER = "619757806936";
-
     EditText etUsername, etPassword, etPwConfirm, etEmail;
     Button bSignUp, bCancel;
     android.support.v7.app.ActionBar actionBar;
@@ -99,31 +95,9 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void signUpUser(final User user) {
-        new AsyncTask() {
-            @Override
-            protected String doInBackground(Object... params) {
-                String msg = "";
-                try {
-                    if (gcm == null) {
-                        gcm = GoogleCloudMessaging.getInstance(getApplicationContext());
-                    }
-                    regid = gcm.register(PROJECT_NUMBER);
-                    msg = "Device registered, registration ID=" + regid;
-
-                } catch (IOException ex) {
-                    msg = "Error :" + ex.getMessage();
-                }
-                return msg;
-            }
-
-            @Override
-            protected void onPostExecute(Object msg) {
-                Log.i("gcm", msg.toString());
-                String method = "signUp";
-                BackgroundTask backgroundTask = new BackgroundTask(SignUp.this);
-                backgroundTask.execute(method, user.username, user.password, user.email, regid);
-            }
-        }.execute(null, null, null);
+        String method = "signUp";
+        BackgroundTask backgroundTask = new BackgroundTask(SignUp.this);
+        backgroundTask.execute(method, user.username, user.password, user.email);
     }
 
     private boolean isValidMail(String email) {

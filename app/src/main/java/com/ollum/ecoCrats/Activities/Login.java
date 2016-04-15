@@ -1,19 +1,26 @@
 package com.ollum.ecoCrats.Activities;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
+import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStatus;
 import com.ollum.ecoCrats.R;
 import com.ollum.ecoCrats.Classes.User;
 import com.ollum.ecoCrats.SharedPrefs.UserLocalStore;
 
+import java.io.IOException;
+
 public class Login extends AppCompatActivity implements View.OnClickListener {
+    String regid;
+    GoogleCloudMessaging gcm;
+    String PROJECT_NUMBER = "619757806936";
 
     EditText etUsername, etPassword;
     Button bLogin, bSignUp;
@@ -64,10 +71,32 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         }
     }
 
-    private void logUserIn(User user) {
-        String method = "login";
-        BackgroundTask backgroundTask = new BackgroundTask(this);
-        backgroundTask.execute(method, user.username, user.password);
+    private void logUserIn(final User user) {
+        new AsyncTask() {
+            @Override
+            protected String doInBackground(Object... params) {
+                String msg = "";
+                try {
+                    if (gcm == null) {
+                        gcm = GoogleCloudMessaging.getInstance(getApplicationContext());
+                    }
+                    regid = gcm.register(PROJECT_NUMBER);
+                    msg = "Device registered, registration ID=" + regid;
+
+                } catch (IOException ex) {
+                    msg = "Error :" + ex.getMessage();
+                }
+                return msg;
+            }
+
+            @Override
+            protected void onPostExecute(Object msg) {
+                Log.i("gcm", msg.toString());
+                String method = "login";
+                BackgroundTask backgroundTask = new BackgroundTask(Login.this);
+                backgroundTask.execute(method, user.username, user.password, regid);
+            }
+        }.execute(null, null, null);
     }
 
     private void setUserOnline(User user) {
