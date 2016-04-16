@@ -17,7 +17,7 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="fill_parent"
             android:layout_height="40dp"
-            android:text="Buy"
+            android:text="@string/buy"
             android:id="@+id/region_details_buy"
             android:background="@drawable/button"
             android:layout_weight="4"
@@ -27,7 +27,7 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="fill_parent"
             android:layout_height="40dp"
-            android:text="Build"
+            android:text="@string/build"
             android:id="@+id/region_details_build"
             android:background="@drawable/button"
             android:layout_weight="4"
@@ -51,7 +51,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Region:"
+        android:text="@string/region_details_region"
         android:id="@+id/textView5"
         android:layout_below="@+id/imageView"
         android:layout_alignLeft="@+id/imageView"
@@ -60,7 +60,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Capital:"
+        android:text="@string/region_details_capital"
         android:id="@+id/textView6"
         android:layout_below="@+id/textView5"
         android:layout_alignLeft="@+id/textView5"
@@ -69,7 +69,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Area:"
+        android:text="@string/region_details_area"
         android:id="@+id/textView7"
         android:layout_below="@+id/textView6"
         android:layout_alignLeft="@+id/textView6"
@@ -78,7 +78,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Population"
+        android:text="@string/region_details_population"
         android:id="@+id/textView8"
         android:layout_below="@+id/textView7"
         android:layout_alignLeft="@+id/textView7"

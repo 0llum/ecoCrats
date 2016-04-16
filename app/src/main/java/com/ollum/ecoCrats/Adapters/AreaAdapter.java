@@ -5,9 +5,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SpinnerAdapter;
 
-/**
- * Created by 0llum on 12.04.2016.
- */
 public class AreaAdapter implements SpinnerAdapter {
     @Override
     public View getDropDownView(int position, View convertView, ViewGroup parent) {

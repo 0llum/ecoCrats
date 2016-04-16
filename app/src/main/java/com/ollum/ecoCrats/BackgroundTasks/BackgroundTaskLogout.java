@@ -1,18 +1,7 @@
 package com.ollum.ecoCrats.BackgroundTasks;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
-import android.util.Log;
-import android.widget.Toast;
-
-import com.ollum.ecoCrats.Activities.Login;
-import com.ollum.ecoCrats.Activities.MainActivity;
-import com.ollum.ecoCrats.Fragments.FriendlistFragment;
-import com.ollum.ecoCrats.Fragments.SettingsFragment;
-import com.ollum.ecoCrats.Fragments.StoresFragment;
-import com.ollum.ecoCrats.R;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

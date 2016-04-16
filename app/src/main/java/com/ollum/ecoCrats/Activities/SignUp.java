@@ -1,22 +1,17 @@
 package com.ollum.ecoCrats.Activities;
 
 import android.app.AlertDialog;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
-import com.ollum.ecoCrats.R;
 import com.ollum.ecoCrats.Classes.User;
+import com.ollum.ecoCrats.R;
 
 import org.apache.commons.validator.routines.EmailValidator;
-
-import java.io.IOException;
 
 public class SignUp extends AppCompatActivity implements View.OnClickListener {
     EditText etUsername, etPassword, etPwConfirm, etEmail;
@@ -28,13 +23,17 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
 
-        actionBar = getSupportActionBar();
-        actionBar.setTitle("Sign Up");
+        try {
+            actionBar = getSupportActionBar();
+            actionBar.setTitle(R.string.sign_up_title);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-        etUsername = (EditText) findViewById(R.id.settings_oldPassword);
-        etPassword = (EditText) findViewById(R.id.settings_newPassword);
+        etUsername = (EditText) findViewById(R.id.signup_username);
+        etPassword = (EditText) findViewById(R.id.signup_password);
         etPwConfirm = (EditText) findViewById(R.id.signup_pwconfirm);
-        etEmail = (EditText) findViewById(R.id.settings_newEmail);
+        etEmail = (EditText) findViewById(R.id.signup_email);
 
         bSignUp = (Button) findViewById(R.id.signup_signup);
         bCancel = (Button) findViewById(R.id.signup_cancel);
@@ -54,33 +53,33 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
                 if (!(username.length() >= 3)) {
                     AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(SignUp.this);
-                    dialogBuilder.setMessage("Username must be at least 3 characters long");
-                    dialogBuilder.setPositiveButton("OK", null);
+                    dialogBuilder.setMessage(R.string.username_short);
+                    dialogBuilder.setPositiveButton(R.string.ok, null);
                     dialogBuilder.show();
                 } else if (username.contains(" ")) {
                     AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(SignUp.this);
-                    dialogBuilder.setMessage("Username must not contain spaces");
-                    dialogBuilder.setPositiveButton("OK", null);
+                    dialogBuilder.setMessage(R.string.username_spaces);
+                    dialogBuilder.setPositiveButton(R.string.ok, null);
                     dialogBuilder.show();
                 } else if (!(password.length() >= 6)) {
                     AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(SignUp.this);
-                    dialogBuilder.setMessage("Password must be at least 6 characters long");
-                    dialogBuilder.setPositiveButton("OK", null);
+                    dialogBuilder.setMessage(R.string.password_short);
+                    dialogBuilder.setPositiveButton(R.string.ok, null);
                     dialogBuilder.show();
                 } else if (password.contains(" ")) {
                     AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(SignUp.this);
-                    dialogBuilder.setMessage("Password must not contain spaces");
-                    dialogBuilder.setPositiveButton("OK", null);
+                    dialogBuilder.setMessage(R.string.password_spaces);
+                    dialogBuilder.setPositiveButton(R.string.ok, null);
                     dialogBuilder.show();
                 } else if (!(password.equals(pwConfirm))) {
                     AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(SignUp.this);
-                    dialogBuilder.setMessage("The passwords do not match");
-                    dialogBuilder.setPositiveButton("OK", null);
+                    dialogBuilder.setMessage(R.string.password_match);
+                    dialogBuilder.setPositiveButton(R.string.ok, null);
                     dialogBuilder.show();
                 } else if (!(isValidMail(email))) {
                     AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(SignUp.this);
-                    dialogBuilder.setMessage("Please enter a valid email address");
-                    dialogBuilder.setPositiveButton("OK", null);
+                    dialogBuilder.setMessage(R.string.email_valid);
+                    dialogBuilder.setPositiveButton(R.string.ok, null);
                     dialogBuilder.show();
                 } else {
                     User user = new User(username, password, email);

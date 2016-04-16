@@ -504,6 +504,10 @@
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_bank.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\fragment_bank.xml"
+    },
+    {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },

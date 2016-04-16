@@ -9,6 +9,7 @@ import android.util.Log;
 
 import com.ollum.ecoCrats.Adapters.FriendlistAdapter;
 import com.ollum.ecoCrats.Classes.User;
+import com.ollum.ecoCrats.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -52,8 +53,8 @@ public class BackgroundTaskFriendlist extends AsyncTask<String, User, Void> {
         recyclerView.setAdapter(adapter);
 
         progressDialog.setCancelable(true);
-        progressDialog.setTitle("Progressing");
-        progressDialog.setMessage("Please wait...");
+        progressDialog.setTitle(ctx.getResources().getString(R.string.progressing));
+        progressDialog.setMessage(ctx.getResources().getString(R.string.please_wait));
         progressDialog.show();
     }
 

@@ -1,26 +1,32 @@
 package com.ollum.ecoCrats.Adapters;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
+import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
+import com.ollum.ecoCrats.Classes.User;
 import com.ollum.ecoCrats.Fragments.NewMessageFragment;
 import com.ollum.ecoCrats.R;
-import com.ollum.ecoCrats.Classes.User;
 
 import java.util.ArrayList;
 
 public class FriendlistAdapter extends RecyclerView.Adapter<FriendlistAdapter.RecyclerViewHolder> {
+    public static Bundle bundle;
     ArrayList<User> arrayList = new ArrayList<>();
     Context ctx;
-    public static Bundle bundle;
 
     public FriendlistAdapter(ArrayList<User> arrayList, Context ctx) {
         this.arrayList = arrayList;
@@ -73,17 +79,63 @@ public class FriendlistAdapter extends RecyclerView.Adapter<FriendlistAdapter.Re
         @Override
         public void onClick(View v) {
             int position = getAdapterPosition();
-            User user = this.users.get(position);
+            final User user = this.users.get(position);
 
-            bundle = new Bundle();
-            bundle.putString("receiver", user.getUsername());
+            AlertDialog.Builder dialog = new AlertDialog.Builder(ctx);
+            dialog.setItems(R.array.friendlist_options, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    switch (which) {
+                        case 0:
+                            bundle = new Bundle();
+                            bundle.putString("receiver", user.getUsername());
 
-            NewMessageFragment newMessageFragment = new NewMessageFragment();
-            newMessageFragment.setArguments(bundle);
-            FragmentTransaction transaction = MainActivity.fragmentManager.beginTransaction();
-            transaction.replace(R.id.mainContent, newMessageFragment, "NewMessageFragment");
-            transaction.addToBackStack("NewMessageFragment");
-            transaction.commit();
+                            NewMessageFragment newMessageFragment = new NewMessageFragment();
+                            newMessageFragment.setArguments(bundle);
+                            FragmentTransaction transaction = MainActivity.fragmentManager.beginTransaction();
+                            transaction.replace(R.id.mainContent, newMessageFragment, "NewMessageFragment");
+                            transaction.addToBackStack("NewMessageFragment");
+                            transaction.commit();
+                            break;
+                        case 1:
+                            final AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx);
+                            alertDialog.setTitle(R.string.select_ecos);
+                            final EditText input = new EditText(ctx);
+                            input.setInputType(InputType.TYPE_CLASS_NUMBER);
+                            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                                    LinearLayout.LayoutParams.MATCH_PARENT,
+                                    ViewGroup.LayoutParams.MATCH_PARENT);
+                            input.setLayoutParams(lp);
+                            alertDialog.setView(input);
+                            alertDialog.setPositiveButton(R.string.send, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    String method = "sendECOs";
+                                    BackgroundTask backgroundTask = new BackgroundTask(ctx);
+                                    backgroundTask.execute(method, MainActivity.user.getUsername(), user.getUsername(), input.getText().toString());
+                                }
+                            });
+                            alertDialog.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                            alertDialog.create();
+                            alertDialog.show();
+                            break;
+                        case 2:
+                            String method = "removeFriend";
+                            BackgroundTask backgroundTask = new BackgroundTask(ctx);
+                            backgroundTask.execute(method, MainActivity.user.username, user.getUsername());
+                            break;
+                    }
+                }
+            });
+            dialog.create();
+            dialog.show();
+
+
         }
     }
 }

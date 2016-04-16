@@ -16,11 +16,11 @@ import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStatus;
 import com.ollum.ecoCrats.R;
 
 public class MessageDetailsFragment extends Fragment implements View.OnClickListener {
+    public static Bundle bundle;
     String sender, subject, message, time;
     int ID;
     TextView tvSender, tvSubject, tvMessage;
     Button reply;
-    public static Bundle bundle;
     String current;
 
     @Override
@@ -50,7 +50,7 @@ public class MessageDetailsFragment extends Fragment implements View.OnClickList
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_message_details, container, false);
 
-        MainActivity.setTitle("Message Details");
+        MainActivity.actionBar.setTitle(R.string.message_details_title);
 
         tvSender = (TextView) view.findViewById(R.id.message_details_sender);
         tvSubject = (TextView) view.findViewById(R.id.message_details_subject);

@@ -10,18 +10,18 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
-import com.ollum.ecoCrats.Fragments.MessageDetailsFragment;
 import com.ollum.ecoCrats.Classes.Message;
+import com.ollum.ecoCrats.Fragments.MessageDetailsFragment;
 import com.ollum.ecoCrats.R;
 
 import java.util.ArrayList;
 
 public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.RecyclerViewHolder> {
-    ArrayList<Message> arrayList = new ArrayList<>();
     public static final int TYPE_UNREAD = 0;
     public static final int TYPE_READ = 1;
-    Context ctx;
     public static Bundle bundle;
+    ArrayList<Message> arrayList = new ArrayList<>();
+    Context ctx;
 
     public MessagesAdapter(ArrayList<Message> arrayList, Context ctx) {
         this.arrayList = arrayList;
@@ -54,6 +54,17 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.Recycl
     @Override
     public int getItemCount() {
         return arrayList.size();
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        Message message = arrayList.get(position);
+        if (message.getSeen() == 0) {
+            return TYPE_UNREAD;
+        } else if (message.getSeen() == 1) {
+            return TYPE_READ;
+        }
+        return 1;
     }
 
     public static class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -102,17 +113,6 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.Recycl
         }
 
 
-    }
-
-    @Override
-     public int getItemViewType(int position) {
-        Message message = arrayList.get(position);
-        if (message.getSeen() == 0) {
-            return TYPE_UNREAD;
-        } else if (message.getSeen() == 1) {
-            return TYPE_READ;
-        }
-        return 1;
     }
 
 

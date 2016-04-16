@@ -8,11 +8,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStatus;
-import com.ollum.ecoCrats.R;
 import com.ollum.ecoCrats.Classes.User;
+import com.ollum.ecoCrats.R;
 import com.ollum.ecoCrats.SharedPrefs.UserLocalStore;
 
 import java.io.IOException;
@@ -33,7 +34,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.login);
 
         actionBar = getSupportActionBar();
-        actionBar.setTitle("Login");
+        actionBar.setTitle(R.string.login_title);
 
         etUsername = (EditText) findViewById(R.id.login_username);
         etPassword = (EditText) findViewById(R.id.login_password);

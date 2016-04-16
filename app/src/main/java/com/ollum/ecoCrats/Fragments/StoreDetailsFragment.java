@@ -16,8 +16,8 @@ import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStoreDetails;
 import com.ollum.ecoCrats.R;
 
 public class StoreDetailsFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener, View.OnClickListener {
-    String region;
     public static int ID;
+    String region;
     int capacity;
     RecyclerView recyclerView;
     SwipeRefreshLayout swipeRefreshLayout;
@@ -40,7 +40,7 @@ public class StoreDetailsFragment extends Fragment implements SwipeRefreshLayout
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_store_details, container, false);
 
-        MainActivity.setTitle(region);
+        MainActivity.actionBar.setTitle(region);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.store_details_recyclerView);
 

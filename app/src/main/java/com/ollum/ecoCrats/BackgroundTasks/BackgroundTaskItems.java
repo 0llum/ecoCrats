@@ -7,28 +7,21 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
-import com.ollum.ecoCrats.Adapters.FriendlistAdapter;
 import com.ollum.ecoCrats.Adapters.ItemsAdapter;
-import com.ollum.ecoCrats.Adapters.StoresAdapter;
 import com.ollum.ecoCrats.Classes.Item;
-import com.ollum.ecoCrats.Classes.Store;
-import com.ollum.ecoCrats.Classes.User;
+import com.ollum.ecoCrats.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 
 public class BackgroundTaskItems extends AsyncTask<String, Item, Void> {
@@ -56,8 +49,8 @@ public class BackgroundTaskItems extends AsyncTask<String, Item, Void> {
         recyclerView.setAdapter(adapter);
 
         progressDialog.setCancelable(true);
-        progressDialog.setTitle("Progressing");
-        progressDialog.setMessage("Please wait...");
+        progressDialog.setTitle(ctx.getResources().getString(R.string.progressing));
+        progressDialog.setMessage(ctx.getResources().getString(R.string.please_wait));
         progressDialog.show();
     }
 

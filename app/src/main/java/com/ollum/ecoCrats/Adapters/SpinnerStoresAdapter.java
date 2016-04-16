@@ -12,17 +12,17 @@ import com.ollum.ecoCrats.R;
 
 import java.util.ArrayList;
 
-public class SpinnerStoresAdapter extends ArrayAdapter<Store>{
+public class SpinnerStoresAdapter extends ArrayAdapter<Store> {
+    LayoutInflater inflater;
     private Context context;
     private ArrayList<Store> values;
-    LayoutInflater inflater;
 
     public SpinnerStoresAdapter(Context context, int textView, ArrayList<Store> values) {
         super(context, textView, values);
         this.context = context;
         this.values = values;
 
-        inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     public int getCount() {
@@ -40,7 +40,7 @@ public class SpinnerStoresAdapter extends ArrayAdapter<Store>{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = inflater.inflate(R.layout.spinner_layout, parent, false);
-        TextView label = (TextView)row.findViewById(R.id.txt);
+        TextView label = (TextView) row.findViewById(R.id.txt);
         label.setText(values.get(position).getRegion());
         return label;
     }
@@ -48,7 +48,7 @@ public class SpinnerStoresAdapter extends ArrayAdapter<Store>{
     @Override
     public View getDropDownView(int position, View convertView, ViewGroup parent) {
         View row = inflater.inflate(R.layout.spinner_layout, parent, false);
-        TextView label = (TextView)row.findViewById(R.id.txt);
+        TextView label = (TextView) row.findViewById(R.id.txt);
         label.setText(values.get(position).getRegion());
         return label;
     }

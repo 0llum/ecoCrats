@@ -10,19 +10,18 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
-import com.ollum.ecoCrats.Fragments.RegionDetailsFragment;
-import com.ollum.ecoCrats.Fragments.RegionsFragment;
-import com.ollum.ecoCrats.R;
 import com.ollum.ecoCrats.Classes.Region;
+import com.ollum.ecoCrats.Fragments.RegionDetailsFragment;
+import com.ollum.ecoCrats.R;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Locale;
 
 public class RegionsAdapter extends RecyclerView.Adapter<RegionsAdapter.RecyclerViewHolder> {
+    public static Bundle bundle;
     ArrayList<Region> arrayList = new ArrayList<>();
     Context ctx;
-    public static Bundle bundle;
 
     public RegionsAdapter(ArrayList<Region> arrayList, Context ctx) {
         this.arrayList = arrayList;

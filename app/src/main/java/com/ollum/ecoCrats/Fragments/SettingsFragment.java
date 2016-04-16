@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.Activities.MainActivity;
+import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.R;
 
 import org.apache.commons.validator.routines.EmailValidator;
@@ -24,7 +24,7 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
-        MainActivity.setTitle("Settings");
+        MainActivity.actionBar.setTitle(R.string.settings_title);
 
         oldPassword = (EditText) view.findViewById(R.id.settings_oldPassword);
         newPassword = (EditText) view.findViewById(R.id.settings_newPassword);
@@ -52,23 +52,23 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
 
                 if (!(newPasswordToChange.length() >= 6)) {
                     AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
-                    dialogBuilder.setMessage("New password must be at least 6 characters long");
-                    dialogBuilder.setPositiveButton("OK", null);
+                    dialogBuilder.setMessage(R.string.new_password_short);
+                    dialogBuilder.setPositiveButton(R.string.ok, null);
                     dialogBuilder.show();
                 } else if (newPasswordToChange.contains(" ")) {
                     AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
-                    dialogBuilder.setMessage("New password must not contain spaces");
-                    dialogBuilder.setPositiveButton("OK", null);
+                    dialogBuilder.setMessage(R.string.new_password_spaces);
+                    dialogBuilder.setPositiveButton(R.string.ok, null);
                     dialogBuilder.show();
                 } else if (!(newPasswordToChange.equals(newPasswordToConfirm))) {
                     AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
-                    dialogBuilder.setMessage("New passwords do not match");
-                    dialogBuilder.setPositiveButton("OK", null);
+                    dialogBuilder.setMessage(R.string.new_password_match);
+                    dialogBuilder.setPositiveButton(R.string.ok, null);
                     dialogBuilder.show();
                 } else if (newPasswordToChange.equals(oldPasswordToChange)) {
                     AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
-                    dialogBuilder.setMessage("New password cannot be the same as the old password");
-                    dialogBuilder.setPositiveButton("OK", null);
+                    dialogBuilder.setMessage(R.string.new_password_same);
+                    dialogBuilder.setPositiveButton(R.string.ok, null);
                     dialogBuilder.show();
                 } else {
                     changePassword(oldPasswordToChange, newPasswordToChange);
@@ -79,8 +79,8 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
 
                 if (!(isValidMail(emailToChange))) {
                     AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
-                    dialogBuilder.setMessage("Please enter a valid email address");
-                    dialogBuilder.setPositiveButton("OK", null);
+                    dialogBuilder.setMessage(R.string.email_valid);
+                    dialogBuilder.setPositiveButton(R.string.ok, null);
                     dialogBuilder.show();
                 } else {
                     changeEmail(emailToChange);
@@ -88,14 +88,14 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.settings_deleteAccount:
                 AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getContext());
-                dialogBuilder.setMessage("Are you sure that you want to delete your account?");
-                dialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                dialogBuilder.setMessage(R.string.delete_account);
+                dialogBuilder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         deleteAccount();
                     }
                 });
-                dialogBuilder.setNegativeButton("No", null);
+                dialogBuilder.setNegativeButton(R.string.no, null);
                 dialogBuilder.show();
                 break;
         }

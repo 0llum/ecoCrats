@@ -10,14 +10,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskFriendlist;
-import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.R;
 
 public class FriendlistFragment extends Fragment implements View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
     EditText searchBar;
-    Button add, remove;
+    Button add;
     SwipeRefreshLayout swipeRefreshLayout;
     RecyclerView recyclerView;
 
@@ -25,13 +25,13 @@ public class FriendlistFragment extends Fragment implements View.OnClickListener
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_friendlist, container, false);
 
-        MainActivity.setTitle("Friendlist");
+        MainActivity.actionBar.setTitle(R.string.friendlist_title);
 
         searchBar = (EditText) view.findViewById(R.id.friendlist_searchbar);
+
         add = (Button) view.findViewById(R.id.friendlist_add);
         add.setOnClickListener(this);
-        remove = (Button) view.findViewById(R.id.friendlist_remove);
-        remove.setOnClickListener(this);
+
         recyclerView = (RecyclerView) view.findViewById(R.id.friendlist_recyclerView);
 
         BackgroundTaskFriendlist backgroundTaskFriendlist = new BackgroundTaskFriendlist(getContext(), recyclerView);
@@ -54,10 +54,6 @@ public class FriendlistFragment extends Fragment implements View.OnClickListener
                 String friendToAdd = searchBar.getText().toString().trim();
                 addFriend(friendToAdd);
                 break;
-            case R.id.friendlist_remove:
-                String friendToRemove = searchBar.getText().toString().trim();
-                removeFriend(friendToRemove);
-                break;
         }
     }
 
@@ -73,12 +69,6 @@ public class FriendlistFragment extends Fragment implements View.OnClickListener
 
     private void addFriend(final String username_2) {
         String method = "addFriend";
-        BackgroundTask backgroundTask = new BackgroundTask(getContext());
-        backgroundTask.execute(method, MainActivity.user.username, username_2);
-    }
-
-    private void removeFriend(final String username_2) {
-        String method = "removeFriend";
         BackgroundTask backgroundTask = new BackgroundTask(getContext());
         backgroundTask.execute(method, MainActivity.user.username, username_2);
     }

@@ -1,21 +1,13 @@
 package com.ollum.ecoCrats.GoogleCloudMessaging;
 
 import android.app.IntentService;
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
-import android.util.Log;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
-import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskLatestMessage;
 import com.ollum.ecoCrats.Classes.User;
-import com.ollum.ecoCrats.R;
 import com.ollum.ecoCrats.SharedPrefs.UserLocalStore;
 
 public class GCMNotificationIntentService extends IntentService {

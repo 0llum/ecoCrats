@@ -4,19 +4,20 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.Adapters.RegionsAdapter;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.R;
+
+import java.text.NumberFormat;
+import java.util.Locale;
 
 public class RegionDetailsFragment extends Fragment implements View.OnClickListener {
     String region, capital;
@@ -24,6 +25,7 @@ public class RegionDetailsFragment extends Fragment implements View.OnClickListe
     TextView tvRegion, tvCapital, tvArea, tvPopulation;
     Button buy, build;
     int progress = 0;
+    int cost = 0;
 
 
     @Override
@@ -45,7 +47,7 @@ public class RegionDetailsFragment extends Fragment implements View.OnClickListe
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_region_details, container, false);
 
-        MainActivity.setTitle(region);
+        MainActivity.actionBar.setTitle(region);
 
         tvRegion = (TextView) view.findViewById(R.id.region_details_region);
         tvCapital = (TextView) view.findViewById(R.id.region_details_capital);
@@ -72,8 +74,26 @@ public class RegionDetailsFragment extends Fragment implements View.OnClickListe
                 showDialog();
                 break;
             case R.id.region_details_build:
-                BackgroundTask backgroundTask = new BackgroundTask(getContext());
-                backgroundTask.execute("buildStore", MainActivity.user.getUsername(), "" + ID);
+                AlertDialog.Builder dialog = new AlertDialog.Builder(getContext())
+                        .setTitle(R.string.build_store_confirmation)
+                        .setMessage("20.000 ECOs")
+                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                BackgroundTask backgroundTask = new BackgroundTask(getContext());
+                                backgroundTask.execute("buildStore", MainActivity.user.getUsername(), "" + ID);
+                            }
+                        })
+                        .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                dialog.create();
+                dialog.show();
+
+
                 break;
         }
     }
@@ -84,20 +104,20 @@ public class RegionDetailsFragment extends Fragment implements View.OnClickListe
         seekBar.setMax(25);
         seekBar.setKeyProgressIncrement(1);
 
-        dialog.setTitle("Select Area in ha");
-        dialog.setMessage("" + 0);
+        dialog.setTitle(R.string.select_area);
+        dialog.setMessage("" + progress + ", " + getActivity().getResources().getString(R.string.forQuantity) + " " + (int)(progress*(1/Math.sqrt(area+6)*2500000-690)) + " ECOs");
         dialog.setView(seekBar);
 
-        dialog.setPositiveButton("Buy", new DialogInterface.OnClickListener() {
+        dialog.setPositiveButton(R.string.buy, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String method = "buyArea";
                 BackgroundTask backgroundTask = new BackgroundTask(getContext());
-                backgroundTask.execute(method, MainActivity.user.getUsername(), "" + ID, "" + progress);
+                backgroundTask.execute(method, MainActivity.user.getUsername(), "" + ID, "" + progress, "" + cost);
                 dialog.dismiss();
             }
         });
-        dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        dialog.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
@@ -110,7 +130,8 @@ public class RegionDetailsFragment extends Fragment implements View.OnClickListe
             @Override
             public void onProgressChanged(SeekBar seekBar, int progressV, boolean fromUser) {
                 progress = progressV;
-                alertDialog.setMessage("" + progress);
+                cost = (int)(progress*(1/Math.sqrt(area+6)*2500000-690));
+                alertDialog.setMessage("" + progress + ", " + getActivity().getResources().getString(R.string.forQuantity) + " " + NumberFormat.getNumberInstance(Locale.GERMAN).format(cost) + " ECOs");
             }
 
             @Override

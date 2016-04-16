@@ -1,5 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ecoCrats</string>
+
     <string name="drawer_open">Open Navigation Drawer</string>
     <string name="drawer_close">Close Navigation Drawer</string>
     <string-array name="navDrawerItems">
@@ -13,7 +15,91 @@
         <item>Bank</item>
         <item>Database</item>
     </string-array>
+    <string-array name="friendlist_options">
+        <item>Send Message</item>
+        <item>Send ECOs</item>
+        <item>Remove</item>
+    </string-array>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_title">Login</string>
+    <string name="sign_up_title">Sign Up</string>
+    <string name="profile_title">Profile</string>
+    <string name="friendlist_title">Friendlist</string>
+    <string name="stores_title">Stores</string>
+    <string name="countries_title">Countries</string>
+    <string name="items_title">Items</string>
+    <string name="message_details_title">Message Details</string>
+    <string name="inbox_title">Inbox</string>
+    <string name="outbox_title">Outbox</string>
+    <string name="new_message_title">New Message</string>
+    <string name="transport_title">Transport</string>
+    <string name="settings_title">Settings</string>
+    <string name="bank_title">Bank</string>
+
+    <string name="new_password_short">New password must be at least 6 characters long</string>
+    <string name="new_password_spaces">New password must not contain spaces</string>
+    <string name="new_password_match">New passwords do not match</string>
+    <string name="new_password_same">New password cannot be the same as the old password</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="email_valid">Please enter a valid email address</string>
+    <string name="delete_account">Are you sure that you want to delete your account?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="quantity_0">Quantity must be greater than 0</string>
+    <string name="username_short">Username must be at least 3 characters long</string>
+    <string name="username_spaces">Username must not contain spaces</string>
+    <string name="password_short">Password must be at least 6 characters long</string>
+    <string name="password_spaces">Password must not contain spaces</string>
+    <string name="password_match">The passwords do not match</string>
+    <string name="quantity_select">Select quantity</string>
+    <string name="add">Add</string>
+    <string name="please_wait">Please wait&#8230;</string>
+    <string name="progressing">Processing</string>
+    <string name="country">Country</string>
+    <string name="capital">Capital</string>
+    <string name="area">Area</string>
+    <string name="population">Population</string>
+    <string name="remove">Remove</string>
+    <string name="username">Username</string>
+    <string name="sender">Sender</string>
+    <string name="subject">Subject</string>
+    <string name="message">Message</string>
+    <string name="reply">Reply</string>
+    <string name="inbox">Inbox</string>
+    <string name="outbox">Outbox</string>
+    <string name="new_message">New</string>
+    <string name="send">Send</string>
+    <string name="receiver">Receiver</string>
+    <string name="buy">Buy</string>
+    <string name="build">Build</string>
+    <string name="region_details_region">Region:</string>
+    <string name="region_details_capital">Capital:</string>
+    <string name="region_details_area">Area:</string>
+    <string name="region_details_population">Population</string>
+    <string name="region">Region</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="password_confirmation">Password Confirmation</string>
+    <string name="new_email">New Email Address</string>
+    <string name="password_change">Change Password</string>
+    <string name="email_change">Change Email</string>
+    <string name="account_delete">Delete Account</string>
+    <string name="item_select">Select Item</string>
+    <string name="store_select">Select Store</string>
+    <string name="friend_select">Select Friend</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="select_area">Select Area in ha</string>
+    <string name="logout_confirmation">Do you really want to log out?</string>
+    <string name="build_store_confirmation">Do you really want to build a Store in this Region?</string>
+    <string name="forQuantity">for</string>
+    <string name="credit">Credit</string>
+    <string name="depts">Depts:</string>
+    <string name="lend">Lend</string>
+    <string name="credit_confirmation">Do you really want to raise a Loan?</string>
+    <string name="select_ecos">Select ECOs</string>
+
 </resources>

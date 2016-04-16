@@ -19,9 +19,9 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.RecyclerViewHolder> {
+    public static Bundle bundle;
     ArrayList<Country> arrayList = new ArrayList<>();
     Context ctx;
-    public static Bundle bundle;
 
     public CountriesAdapter(ArrayList<Country> arrayList, Context ctx) {
         this.arrayList = arrayList;

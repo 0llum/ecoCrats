@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskInbox;
 import com.ollum.ecoCrats.Activities.MainActivity;
+import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskInbox;
 import com.ollum.ecoCrats.R;
 
 public class MessagesInboxFragment extends Fragment implements View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
@@ -23,7 +23,7 @@ public class MessagesInboxFragment extends Fragment implements View.OnClickListe
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_messages_inbox, container, false);
 
-        MainActivity.setTitle("Inbox");
+        MainActivity.actionBar.setTitle(R.string.inbox_title);
 
         newMessage = (Button) view.findViewById(R.id.messages_inbox_new_message);
         newMessage.setOnClickListener(this);

@@ -7,8 +7,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
-import com.ollum.ecoCrats.Classes.Message;
 import com.ollum.ecoCrats.Adapters.MessagesAdapter;
+import com.ollum.ecoCrats.Classes.Message;
+import com.ollum.ecoCrats.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -52,8 +53,8 @@ public class BackgroundTaskInbox extends AsyncTask<String, Message, Void> {
         recyclerView.setAdapter(adapter);
 
         progressDialog.setCancelable(true);
-        progressDialog.setTitle("Progressing");
-        progressDialog.setMessage("Please wait...");
+        progressDialog.setTitle(ctx.getResources().getString(R.string.progressing));
+        progressDialog.setMessage(ctx.getResources().getString(R.string.please_wait));
         progressDialog.show();
     }
 

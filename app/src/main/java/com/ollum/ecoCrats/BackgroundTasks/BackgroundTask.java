@@ -5,7 +5,6 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.ollum.ecoCrats.Activities.Login;
@@ -40,9 +39,9 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        progressDialog.setCancelable(false);
-        progressDialog.setTitle("Progressing");
-        progressDialog.setMessage("Please wait...");
+        progressDialog.setCancelable(true);
+        progressDialog.setTitle(ctx.getResources().getString(R.string.progressing));
+        progressDialog.setMessage(ctx.getResources().getString(R.string.please_wait));
         progressDialog.show();
     }
 
@@ -61,6 +60,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
         String buildStore_url = "http://0llum.bplaced.net/ecoCrats/BuildStore.php";
         String addItem_url = "http://0llum.bplaced.net/ecoCrats/AddItem.php";
         String transport_url = "http://0llum.bplaced.net/ecoCrats/Transport.php";
+        String sendECOs_url = "http://0llum.bplaced.net/ecoCrats/SendECOs.php";
         String method = params[0];
 
         if (method.equals("signUp")) {
@@ -416,6 +416,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             String Username = params[1];
             String Region_ID = params[2];
             String Area = params[3];
+            String Cost = params[4];
 
             try {
                 URL url = new URL(buyArea_url);
@@ -426,8 +427,9 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
                 String data = URLEncoder.encode("Username", "UTF-8") + "=" + URLEncoder.encode(Username, "UTF-8") + "&" +
-                        URLEncoder.encode("Region_ID", "UTF-8") + "=" + URLEncoder.encode(Region_ID, "UTF-8")  + "&" +
-                        URLEncoder.encode("Area", "UTF-8") + "=" + URLEncoder.encode(Area, "UTF-8");
+                        URLEncoder.encode("Region_ID", "UTF-8") + "=" + URLEncoder.encode(Region_ID, "UTF-8") + "&" +
+                        URLEncoder.encode("Area", "UTF-8") + "=" + URLEncoder.encode(Area, "UTF-8") + "&" +
+                        URLEncoder.encode("Cost", "UTF-8") + "=" + URLEncoder.encode(Cost, "UTF-8");
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -490,7 +492,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }else if (method.equals("addItem")) {
+        } else if (method.equals("addItem")) {
             String Store_ID = params[1];
             String Item_ID = params[2];
             String Quantity = params[3];
@@ -504,7 +506,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
                 String data = URLEncoder.encode("Store_ID", "UTF-8") + "=" + URLEncoder.encode(Store_ID, "UTF-8") + "&" +
-                        URLEncoder.encode("Item_ID", "UTF-8") + "=" + URLEncoder.encode(Item_ID, "UTF-8")  + "&" +
+                        URLEncoder.encode("Item_ID", "UTF-8") + "=" + URLEncoder.encode(Item_ID, "UTF-8") + "&" +
                         URLEncoder.encode("Quantity", "UTF-8") + "=" + URLEncoder.encode(Quantity, "UTF-8");
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
@@ -546,10 +548,52 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
                 String data = URLEncoder.encode("startStore_ID", "UTF-8") + "=" + URLEncoder.encode(startStore_ID, "UTF-8") + "&" +
-                        URLEncoder.encode("itemName", "UTF-8") + "=" + URLEncoder.encode(itemName, "UTF-8")  + "&" +
+                        URLEncoder.encode("itemName", "UTF-8") + "=" + URLEncoder.encode(itemName, "UTF-8") + "&" +
                         URLEncoder.encode("Quantity", "UTF-8") + "=" + URLEncoder.encode(Quantity, "UTF-8") + "&" +
-                        URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8")  + "&" +
+                        URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8") + "&" +
                         URLEncoder.encode("destinationStore_ID", "UTF-8") + "=" + URLEncoder.encode(destinationStore_ID, "UTF-8");
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                String response = "";
+                String line = "";
+
+                while ((line = bufferedReader.readLine()) != null) {
+                    response += line;
+                }
+
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+
+
+
+                return response.trim();
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if (method.equals("sendECOs")) {
+            String sender = params[1];
+            String receiver = params[2];
+            String ECOs = params[3];
+
+            try {
+                URL url = new URL(sendECOs_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                String data = URLEncoder.encode("Sender", "UTF-8") + "=" + URLEncoder.encode(sender, "UTF-8") + "&" +
+                        URLEncoder.encode("Receiver", "UTF-8") + "=" + URLEncoder.encode(receiver, "UTF-8") + "&" +
+                        URLEncoder.encode("ECOs", "UTF-8") + "=" + URLEncoder.encode(ECOs, "UTF-8");
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
                 bufferedWriter.close();

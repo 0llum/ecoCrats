@@ -1,6 +1,5 @@
 package com.ollum.ecoCrats.Fragments;
 
-import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -23,12 +22,12 @@ public class StoresFragment extends Fragment implements View.OnClickListener, Sw
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_stores, container, false);
 
-        MainActivity.setTitle("Stores");
+        MainActivity.actionBar.setTitle(R.string.stores_title);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.stores_recyclerView);
 
-        newStore = (Button) view.findViewById(R.id.stores_button_new);
-        newStore.setOnClickListener(this);
+        /*newStore = (Button) view.findViewById(R.id.stores_button_new);
+        newStore.setOnClickListener(this);*/
 
         BackgroundTaskStores backgroundTaskStores = new BackgroundTaskStores(getContext(), recyclerView);
         backgroundTaskStores.execute(MainActivity.user.getUsername());
@@ -45,10 +44,10 @@ public class StoresFragment extends Fragment implements View.OnClickListener, Sw
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
+        /*switch (v.getId()) {
             case R.id.stores_button_new:
                 break;
-        }
+        }*/
     }
 
     @Override

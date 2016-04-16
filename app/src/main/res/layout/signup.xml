@@ -8,11 +8,11 @@
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/settings_oldPassword"
+        android:id="@+id/signup_username"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:hint="Username"
+        android:hint="@string/username"
         android:inputType="text"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"/>
@@ -20,11 +20,11 @@
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/settings_newPassword"
-        android:layout_below="@+id/settings_oldPassword"
+        android:id="@+id/signup_password"
+        android:layout_below="@+id/signup_username"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"/>
@@ -33,10 +33,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/signup_pwconfirm"
-        android:layout_below="@+id/settings_newPassword"
+        android:layout_below="@+id/signup_password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:hint="Password Confirmation"
+        android:hint="@string/password_confirmation"
         android:inputType="textPassword"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"/>
@@ -44,39 +44,40 @@
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/settings_newEmail"
+        android:id="@+id/signup_email"
         android:layout_below="@+id/signup_pwconfirm"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:hint="E-Mail"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"/>
 
     <Button
-        android:layout_width="80dp"
+        android:layout_width="100dp"
         android:layout_height="40dp"
-        android:text="Sign Up"
+        android:text="@string/sign_up"
         android:id="@+id/signup_signup"
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/settings_newEmail"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="60dp"
         android:background="@drawable/button"
-        style="?android:attr/borderlessButtonStyle"/>
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginRight="60dp"
+        android:layout_below="@+id/signup_email"
+        android:layout_alignRight="@+id/signup_email"
+        android:layout_alignEnd="@+id/signup_email"
+        android:layout_marginTop="40dp"/>
 
     <Button
-        android:layout_width="80dp"
+        android:layout_width="100dp"
         android:layout_height="40dp"
-        android:text="Cancel"
+        android:text="@string/cancel"
         android:id="@+id/signup_cancel"
-        android:layout_below="@+id/settings_newEmail"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="60dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/button"
-        style="?android:attr/borderlessButtonStyle"/>
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_below="@+id/signup_email"
+        android:layout_alignLeft="@+id/signup_email"
+        android:layout_alignStart="@+id/signup_email"
+        android:layout_marginLeft="60dp"
+        />
 
 </RelativeLayout>

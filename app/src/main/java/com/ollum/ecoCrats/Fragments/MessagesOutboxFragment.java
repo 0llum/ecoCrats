@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskInbox;
 import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskOutbox;
 import com.ollum.ecoCrats.R;
@@ -24,7 +23,7 @@ public class MessagesOutboxFragment extends Fragment implements View.OnClickList
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_messages_outbox, container, false);
 
-        MainActivity.setTitle("Outbox");
+        MainActivity.actionBar.setTitle(R.string.outbox_title);
 
         newMessage = (Button) view.findViewById(R.id.messages_outbox_new_message);
         newMessage.setOnClickListener(this);

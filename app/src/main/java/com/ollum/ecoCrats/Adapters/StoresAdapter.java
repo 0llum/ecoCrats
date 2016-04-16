@@ -7,22 +7,19 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.Classes.Store;
-import com.ollum.ecoCrats.Fragments.NewMessageFragment;
 import com.ollum.ecoCrats.Fragments.StoreDetailsFragment;
 import com.ollum.ecoCrats.R;
-import com.ollum.ecoCrats.Classes.User;
 
 import java.util.ArrayList;
 
 public class StoresAdapter extends RecyclerView.Adapter<StoresAdapter.RecyclerViewHolder> {
+    public static Bundle bundle;
     ArrayList<Store> arrayList = new ArrayList<>();
     Context ctx;
-    public static Bundle bundle;
 
     public StoresAdapter(ArrayList<Store> arrayList, Context ctx) {
         this.arrayList = arrayList;

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="friendlist_options">
+        <item>Send Message</item>
+        <item>Send ECOs</item>
+        <item>Remove</item>
+    </string-array>
     <string-array name="navDrawerItems">
         <item>Profile</item>
         <item>Friendlist</item>
@@ -303,9 +308,18 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="accept">Accept</string>
+    <string name="account_delete">Delete Account</string>
+    <string name="add">Add</string>
     <string name="app_name">ecoCrats</string>
+    <string name="area">Area</string>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
+    <string name="bank_title">Bank</string>
+    <string name="build">Build</string>
+    <string name="build_store_confirmation">Do you really want to build a Store in this Region?</string>
+    <string name="buy">Buy</string>
+    <string name="cancel">Cancel</string>
+    <string name="capital">Capital</string>
     <string name="cast_notification_connected_message">Connected to <ns1:g id="name">%1$s</ns1:g></string>
     <string name="cast_notification_connecting_message">Connecting to <ns1:g id="name">%1$s</ns1:g></string>
     <string name="cast_notification_disconnect">Disconnect</string>
@@ -338,12 +352,33 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="countries_title">Countries</string>
+    <string name="country">Country</string>
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
     <string name="create_calendar_title">Create calendar event</string>
+    <string name="credit">Credit</string>
+    <string name="credit_confirmation">Do you really want to raise a Loan?</string>
     <string name="decline">Decline</string>
+    <string name="delete_account">Are you sure that you want to delete your account?</string>
+    <string name="depts">Depts:</string>
     <string name="drawer_close">Close Navigation Drawer</string>
     <string name="drawer_open">Open Navigation Drawer</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">Email</string>
+    <string name="email_change">Change Email</string>
+    <string name="email_valid">Please enter a valid email address</string>
+    <string name="forQuantity">for</string>
+    <string name="friend_select">Select Friend</string>
+    <string name="friendlist_title">Friendlist</string>
+    <string name="inbox">Inbox</string>
+    <string name="inbox_title">Inbox</string>
+    <string name="item_select">Select Item</string>
+    <string name="items_title">Items</string>
+    <string name="lend">Lend</string>
+    <string name="login">Login</string>
+    <string name="login_title">Login</string>
+    <string name="logout_confirmation">Do you really want to log out?</string>
+    <string name="message">Message</string>
+    <string name="message_details_title">Message Details</string>
     <string name="mr_media_route_button_content_description">Cast</string>
     <string name="mr_media_route_chooser_searching">Searching for devices\u2026</string>
     <string name="mr_media_route_chooser_title">Connect to device</string>
@@ -355,12 +390,60 @@
     <string name="mr_media_route_controller_stop">Stop casting</string>
     <string name="mr_system_route_name">System</string>
     <string name="mr_user_route_category_name">Devices</string>
+    <string name="new_email">New Email Address</string>
+    <string name="new_message">New</string>
+    <string name="new_message_title">New Message</string>
+    <string name="new_password">New Password</string>
+    <string name="new_password_match">New passwords do not match</string>
+    <string name="new_password_same">New password cannot be the same as the old password</string>
+    <string name="new_password_short">New password must be at least 6 characters long</string>
+    <string name="new_password_spaces">New password must not contain spaces</string>
+    <string name="no">No</string>
+    <string name="ok">OK</string>
+    <string name="old_password">Old Password</string>
+    <string name="outbox">Outbox</string>
+    <string name="outbox_title">Outbox</string>
+    <string name="password">Password</string>
+    <string name="password_change">Change Password</string>
+    <string name="password_confirmation">Password Confirmation</string>
+    <string name="password_match">The passwords do not match</string>
+    <string name="password_short">Password must be at least 6 characters long</string>
+    <string name="password_spaces">Password must not contain spaces</string>
     <string name="place_autocomplete_clear_button">Clear search</string>
     <string name="place_autocomplete_search_hint">Search</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="population">Population</string>
+    <string name="profile_title">Profile</string>
+    <string name="progressing">Processing</string>
+    <string name="quantity_0">Quantity must be greater than 0</string>
+    <string name="quantity_select">Select quantity</string>
+    <string name="receiver">Receiver</string>
+    <string name="region">Region</string>
+    <string name="region_details_area">Area:</string>
+    <string name="region_details_capital">Capital:</string>
+    <string name="region_details_population">Population</string>
+    <string name="region_details_region">Region:</string>
+    <string name="remove">Remove</string>
+    <string name="reply">Reply</string>
+    <string name="select_area">Select Area in ha</string>
+    <string name="select_ecos">Select ECOs</string>
+    <string name="send">Send</string>
+    <string name="sender">Sender</string>
+    <string name="settings_title">Settings</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_up_title">Sign Up</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
     <string name="store_picture_title">Save image</string>
+    <string name="store_select">Select Store</string>
+    <string name="stores_title">Stores</string>
+    <string name="subject">Subject</string>
+    <string name="transport_title">Transport</string>
+    <string name="username">Username</string>
+    <string name="username_short">Username must be at least 3 characters long</string>
+    <string name="username_spaces">Username must not contain spaces</string>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>
+    <string name="yes">Yes</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

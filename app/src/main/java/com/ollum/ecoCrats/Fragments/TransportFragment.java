@@ -62,6 +62,8 @@ public class TransportFragment extends Fragment implements View.OnClickListener 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_transport, container, false);
 
+        MainActivity.actionBar.setTitle(R.string.transport_title);
+
         tvQuantity = (TextView) view.findViewById(R.id.transport_quantity);
         tvQuantity.setText("" + 0);
 
@@ -177,7 +179,7 @@ public class TransportFragment extends Fragment implements View.OnClickListener 
         switch (v.getId()) {
             case R.id.transport_button_send:
                 if (tvQuantity.getText().equals("0")) {
-                    Toast.makeText(getContext(), "Quantity must be greater than 0", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), R.string.quantity_0, Toast.LENGTH_LONG).show();
                 } else {
                     quantity = tvQuantity.getText().toString();
                     BackgroundTask backgroundTask = new BackgroundTask(getContext());

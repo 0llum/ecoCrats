@@ -14,9 +14,9 @@ import com.ollum.ecoCrats.R;
 import java.util.ArrayList;
 
 public class StoreDetailsAdapter extends RecyclerView.Adapter<StoreDetailsAdapter.RecyclerViewHolder> {
+    public static Bundle bundle;
     ArrayList<Item> arrayList = new ArrayList<>();
     Context ctx;
-    public static Bundle bundle;
 
     public StoreDetailsAdapter(ArrayList<Item> arrayList, Context ctx) {
         this.arrayList = arrayList;

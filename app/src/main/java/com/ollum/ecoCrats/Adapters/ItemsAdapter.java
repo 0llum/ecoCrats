@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,22 +11,17 @@ import android.view.ViewGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
-import com.ollum.ecoCrats.Classes.Country;
 import com.ollum.ecoCrats.Classes.Item;
-import com.ollum.ecoCrats.Fragments.RegionsFragment;
 import com.ollum.ecoCrats.Fragments.StoreDetailsFragment;
 import com.ollum.ecoCrats.R;
 
-import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.RecyclerViewHolder> {
+    public static Bundle bundle;
     ArrayList<Item> arrayList = new ArrayList<>();
     Context ctx;
-    public static Bundle bundle;
 
     public ItemsAdapter(ArrayList<Item> arrayList, Context ctx) {
         this.arrayList = arrayList;
@@ -80,11 +74,11 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.RecyclerView
             seekBar.setMax(100);
             seekBar.setKeyProgressIncrement(1);
 
-            dialog.setTitle("Select Quantity");
+            dialog.setTitle(R.string.quantity_select);
             dialog.setMessage("" + 0);
             dialog.setView(seekBar);
 
-            dialog.setPositiveButton("Add", new DialogInterface.OnClickListener() {
+            dialog.setPositiveButton(R.string.add, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     String method = "addItem";
@@ -93,7 +87,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.RecyclerView
                     dialog.dismiss();
                 }
             });
-            dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            dialog.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.dismiss();

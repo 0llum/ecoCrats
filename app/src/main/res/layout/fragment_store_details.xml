@@ -33,16 +33,16 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="fill_parent"
             android:layout_height="40dp"
-            android:text="Add"
+            android:text="@string/add"
             android:id="@+id/store_details_button_add"
             android:background="@drawable/button"
-            android:layout_weight="8"
+            android:layout_weight="3"
             android:layout_marginLeft="5dp"/>
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2"/>
+            android:layout_weight="1"/>
     </LinearLayout>
 </RelativeLayout>

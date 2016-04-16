@@ -33,7 +33,7 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="40dp"
-            android:text="New"
+            android:text="@string/new_message"
             android:id="@+id/messages_inbox_new_message"
             android:background="@drawable/button"
             style="?android:attr/borderlessButtonStyle"
@@ -63,23 +63,23 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="fill_parent"
             android:layout_height="40dp"
-            android:text="Inbox"
+            android:text="@string/inbox"
             android:id="@+id/messages_inbox_button_inbox"
             android:background="@mipmap/button_pressed"
             android:layout_weight="4"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"/>
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
 
         <Button
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="fill_parent"
             android:layout_height="40dp"
-            android:text="Outbox"
+            android:text="@string/outbox"
             android:id="@+id/messages_inbox_button_outbox"
             android:background="@mipmap/button"
             android:layout_weight="4"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"/>
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
     </LinearLayout>
 
 </RelativeLayout>

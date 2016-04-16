@@ -6,22 +6,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
 import com.ollum.ecoCrats.Classes.User;
 import com.ollum.ecoCrats.R;
 
 import java.util.ArrayList;
 
-public class SpinnerFriendsAdapter extends ArrayAdapter<User>{
+public class SpinnerFriendsAdapter extends ArrayAdapter<User> {
+    LayoutInflater inflater;
     private Context context;
     private ArrayList<User> values;
-    LayoutInflater inflater;
 
     public SpinnerFriendsAdapter(Context context, int textView, ArrayList<User> values) {
         super(context, textView, values);
         this.context = context;
         this.values = values;
 
-        inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     public int getCount() {
@@ -39,7 +40,7 @@ public class SpinnerFriendsAdapter extends ArrayAdapter<User>{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = inflater.inflate(R.layout.spinner_layout, parent, false);
-        TextView label = (TextView)row.findViewById(R.id.txt);
+        TextView label = (TextView) row.findViewById(R.id.txt);
         label.setText(values.get(position).getUsername());
         return label;
     }
@@ -47,7 +48,7 @@ public class SpinnerFriendsAdapter extends ArrayAdapter<User>{
     @Override
     public View getDropDownView(int position, View convertView, ViewGroup parent) {
         View row = inflater.inflate(R.layout.spinner_layout, parent, false);
-        TextView label = (TextView)row.findViewById(R.id.txt);
+        TextView label = (TextView) row.findViewById(R.id.txt);
         label.setText(values.get(position).getUsername());
         return label;
     }

@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
-import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskRegions;
 import com.ollum.ecoCrats.Adapters.CountriesAdapter;
+import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskRegions;
 import com.ollum.ecoCrats.R;
 
 public class RegionsFragment extends Fragment {
@@ -31,7 +31,7 @@ public class RegionsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_regions, container, false);
 
-        MainActivity.setTitle(country);
+        MainActivity.actionBar.setTitle(country);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.regions_recyclerView);
 

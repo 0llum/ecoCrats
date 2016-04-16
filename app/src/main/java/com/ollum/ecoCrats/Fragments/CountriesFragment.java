@@ -18,7 +18,7 @@ public class CountriesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_countries, container, false);
 
-        MainActivity.setTitle("Countries");
+        MainActivity.actionBar.setTitle(R.string.countries_title);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.countries_recyclerView);
 

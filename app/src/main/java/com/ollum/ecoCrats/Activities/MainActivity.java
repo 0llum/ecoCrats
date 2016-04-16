@@ -13,21 +13,19 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
 import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
-import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskLatestMessage;
-import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskLogout;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStatus;
+import com.ollum.ecoCrats.Classes.User;
+import com.ollum.ecoCrats.Fragments.BankFragment;
 import com.ollum.ecoCrats.Fragments.CountriesFragment;
 import com.ollum.ecoCrats.Fragments.FriendlistFragment;
 import com.ollum.ecoCrats.Fragments.MessagesInboxFragment;
@@ -36,7 +34,6 @@ import com.ollum.ecoCrats.Fragments.SettingsFragment;
 import com.ollum.ecoCrats.Fragments.StoresFragment;
 import com.ollum.ecoCrats.Fragments.TransportFragment;
 import com.ollum.ecoCrats.R;
-import com.ollum.ecoCrats.Classes.User;
 import com.ollum.ecoCrats.SharedPrefs.UserLocalStore;
 
 import java.io.BufferedReader;
@@ -55,14 +52,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     public static FragmentManager fragmentManager;
     public static User user;
+    public static ActionBar actionBar;
     UserLocalStore userLocalStore;
+    FloatingActionButton actionButton;
+    FloatingActionMenu actionMenu;
     private DrawerLayout drawerLayout;
     private ListView listView;
     private String[] navDrawerItems;
     private ActionBarDrawerToggle drawerListener;
-    FloatingActionButton actionButton;
-    FloatingActionMenu actionMenu;
-    public static ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -187,29 +184,36 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         selectItem(position);
         closeDrawer();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        switch (navDrawerItems[position]) {
-            case "Profile":
+        switch (position) {
+            case 0:
                 ProfileFragment profileFragment = new ProfileFragment();
                 transaction.replace(R.id.mainContent, profileFragment, "ProfileFragment");
                 transaction.addToBackStack("ProfileFragment");
                 transaction.commit();
                 break;
-            case "Friendlist":
+            case 1:
                 FriendlistFragment friendlistFragment = new FriendlistFragment();
                 transaction.replace(R.id.mainContent, friendlistFragment, "FriendlistFragment");
                 transaction.addToBackStack("FriendlistFragment");
                 transaction.commit();
                 break;
-            case "Stores":
+            case 2:
                 StoresFragment storesFragment = new StoresFragment();
                 transaction.replace(R.id.mainContent, storesFragment, "StoresFragment");
                 transaction.addToBackStack("StoresFragment");
                 transaction.commit();
                 break;
-            case "Countries":
+            case 3:
                 CountriesFragment countriesFragment = new CountriesFragment();
                 transaction.replace(R.id.mainContent, countriesFragment, "CountriesFragment");
                 transaction.addToBackStack("CountriesFragment");
+                transaction.commit();
+                break;
+
+            case 7:
+                BankFragment bankFragment = new BankFragment();
+                transaction.replace(R.id.mainContent, bankFragment, "BankFragment");
+                transaction.addToBackStack("BankFragment");
                 transaction.commit();
                 break;
         }
@@ -217,10 +221,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private void selectItem(int position) {
         listView.setItemChecked(position, true);
-    }
-
-    public static void setTitle(String title) {
-        actionBar.setTitle(title);
     }
 
     public void closeDrawer() {
@@ -242,8 +242,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         switch (item.getItemId()) {
             case R.id.logout:
                 AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-                dialog.setTitle("Do you really want to logout?");
-                dialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                dialog.setTitle(getResources().getString(R.string.logout_confirmation));
+                dialog.setPositiveButton(getResources().getString(R.string.yes), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         new AsyncTask() {
@@ -302,7 +302,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         }.execute();
                     }
                 });
-                dialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                dialog.setNegativeButton(getResources().getString(R.string.no), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
@@ -318,7 +318,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 transaction.replace(R.id.mainContent, settingsFragment, "SettingsFragment");
                 transaction.addToBackStack("SettingsFragment");
                 transaction.commit();
-                setTitle("Settings");
+                actionBar.setTitle(R.string.settings_title);
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -351,7 +351,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         if (current.equals("ProfileFragment")) {
             return;
-        } else if (current.equals("FriendlistFragment") || current.equals("MessagesInboxFragment") || current.equals("MessagesOutboxFragment") || current.equals("CountriesFragment") || current.equals("StoresFragment")) {
+        } else if (current.equals("FriendlistFragment") || current.equals("MessagesInboxFragment") || current.equals("MessagesOutboxFragment") || current.equals("CountriesFragment") || current.equals("StoresFragment") || current.equals("BankFragment")) {
             ProfileFragment profileFragment = new ProfileFragment();
             FragmentTransaction transaction = fragmentManager.beginTransaction();
             transaction.replace(R.id.mainContent, profileFragment, "ProfileFragment");

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="drawer_open">Navigationsleiste offen</string>
+    <string name="drawer_close">Navigationsleiste geschlossen</string>
+    <string-array name="navDrawerItems">
+        <item>Profil</item>
+        <item>Freunde</item>
+        <item>Lager</item>
+        <item>Länder</item>
+        <item>Unternehmen</item>
+        <item>Forschung</item>
+        <item>Weltkarte</item>
+        <item>Bank</item>
+        <item>Datenbank</item>
+    </string-array>
+
+    <string name="login_title">Login</string>
+    <string name="sign_up_title">Registrieren</string>
+    <string name="profile_title">Profil</string>
+    <string name="friendlist_title">Freunde</string>
+    <string name="stores_title">Lager</string>
+    <string name="countries_title">Länder</string>
+    <string name="items_title">Waren</string>
+    <string name="message_details_title">Nachrichtendetails</string>
+    <string name="inbox_title">Posteingang</string>
+    <string name="outbox_title">Postausgang</string>
+    <string name="new_message_title">Neue Nachricht</string>
+    <string name="transport_title">Transport</string>
+    <string name="settings_title">Einstellungen</string>
+    <string name="bank_title">Bank</string>
+
+    <string name="new_password_short">Das neue Passwort muss mindestens 6 Zeichen lang sein</string>
+    <string name="new_password_spaces">Das neue Passwort darf keine Leerzeichen enthalten</string>
+    <string name="new_password_match">Die neuen Passwörter stimmen nicht überein</string>
+    <string name="new_password_same">Das neue Passwort darf nicht das alte sein</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="email_valid">Bitte geben Sie eine gültige Email-Adresse ein</string>
+    <string name="delete_account">Sind Sie sicher, dass Sie ihren Account löschen möchten?</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="quantity_0">Die Menge darf nicht 0 sein</string>
+    <string name="username_short">Der Benutzername muss mindesten 3 Zeichen lang sein</string>
+    <string name="username_spaces">Der Benutzername darf keine Leerzeichen enthalten</string>
+    <string name="password_short">Das Passwort muss mindestens 6 Zeichen lang sein</string>
+    <string name="password_spaces">Das Passwort darf keine Leerzeichen enthalten</string>
+    <string name="password_match">Die Passwörter stimmen nicht überein</string>
+    <string name="quantity_select">Menge wählen</string>
+    <string name="add">Hinzufügen</string>
+    <string name="please_wait">Bitte warten&#8230;</string>
+    <string name="progressing">In Bearbeitung</string>
+    <string name="country">Land</string>
+    <string name="capital">Hauptstadt</string>
+    <string name="area">Fläche</string>
+    <string name="population">Einwohner</string>
+    <string name="remove">Entfernen</string>
+    <string name="username">Benutzername</string>
+    <string name="sender">Absender</string>
+    <string name="subject">Betreff</string>
+    <string name="message">Nachricht</string>
+    <string name="reply">Antworten</string>
+    <string name="inbox">Posteingang</string>
+    <string name="outbox">Postausgang</string>
+    <string name="new_message">Neu</string>
+    <string name="send">Senden</string>
+    <string name="receiver">Empfänger</string>
+    <string name="buy">Kaufen</string>
+    <string name="build">Bauen</string>
+    <string name="region_details_region">Region:</string>
+    <string name="region_details_capital">Hauptstadt:</string>
+    <string name="region_details_area">Fläche:</string>
+    <string name="region_details_population">Einwohner</string>
+    <string name="region">Region</string>
+    <string name="old_password">Altes Passwort</string>
+    <string name="new_password">Neues Passwort</string>
+    <string name="password_confirmation">Passwort bestätigen</string>
+    <string name="new_email">Neue Email-Adresse</string>
+    <string name="password_change">Passwort ändern</string>
+    <string name="email_change">Email-Adresse ändern</string>
+    <string name="account_delete">Konto löschen</string>
+    <string name="item_select">Ware auswählen</string>
+    <string name="store_select">Lager auswählen</string>
+    <string name="friend_select">Freund auswählen</string>
+    <string name="password">Passwort</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Registrieren</string>
+    <string name="email">Email-Adresse</string>
+    <string name="select_area">Bitte Fläche in ha wählen</string>
+    <string name="logout_confirmation">Möchten Sie sich wirklich ausloggen?</string>
+    <string name="build_store_confirmation">Möchten Sie in dieser Region wirklich ein Lager errichten?</string>
+    <string name="forQuantity">für</string>
+    <string name="credit">Kredit</string>
+    <string name="depts">Schulden:</string>
+    <string name="lend">Leihen</string>
+    <string name="credit_confirmation">Möchten Sie wirklich einen Kredit aufnehmen?</string>
+    <string name="select_ecos">Select ECOs</string>
+
+</resources>

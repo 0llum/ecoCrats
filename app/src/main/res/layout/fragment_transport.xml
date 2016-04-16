@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Store"
+        android:text="@string/store_select"
         android:id="@+id/textView9"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -29,7 +29,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Item"
+        android:text="@string/item_select"
         android:id="@+id/textView10"
         android:layout_below="@+id/transport_spinner_start"
         android:layout_centerHorizontal="true"
@@ -48,7 +48,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Friend"
+        android:text="@string/friend_select"
         android:id="@+id/textView11"
         android:layout_below="@+id/transport_seekBar"
         android:layout_centerHorizontal="true"
@@ -67,7 +67,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Store"
+        android:text="@string/store_select"
         android:id="@+id/textView12"
         android:layout_below="@+id/transport_spinner_friend"
         android:layout_centerHorizontal="true"
@@ -97,11 +97,8 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="fill_parent"
             android:layout_height="40dp"
-            android:text="Send"
+            android:text="@string/send"
             android:id="@+id/transport_button_send"
-            android:layout_alignParentBottom="true"
-            android:layout_toLeftOf="@+id/friendlist_remove"
-            android:layout_toStartOf="@+id/friendlist_remove"
             android:background="@drawable/button"
             android:layout_weight="4"
             android:layout_marginLeft="5dp"/>

@@ -7,15 +7,14 @@ import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
-import com.ollum.ecoCrats.Adapters.FriendlistAdapter;
 import com.ollum.ecoCrats.Activities.MainActivity;
+import com.ollum.ecoCrats.Adapters.FriendlistAdapter;
+import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.R;
 
 public class NewMessageFragment extends Fragment implements View.OnClickListener {
@@ -47,7 +46,7 @@ public class NewMessageFragment extends Fragment implements View.OnClickListener
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_new_message, container, false);
 
-        MainActivity.setTitle("New Message");
+        MainActivity.actionBar.setTitle(R.string.new_message_title);
 
         sender = MainActivity.user.username;
 
