@@ -28,6 +28,8 @@ import com.ollum.ecoCrats.Classes.User;
 import com.ollum.ecoCrats.Fragments.BankFragment;
 import com.ollum.ecoCrats.Fragments.CountriesFragment;
 import com.ollum.ecoCrats.Fragments.FriendlistFragment;
+import com.ollum.ecoCrats.Fragments.ItemsFragment;
+import com.ollum.ecoCrats.Fragments.MarketSalesFragment;
 import com.ollum.ecoCrats.Fragments.MessagesInboxFragment;
 import com.ollum.ecoCrats.Fragments.ProfileFragment;
 import com.ollum.ecoCrats.Fragments.SettingsFragment;
@@ -203,17 +205,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 transaction.addToBackStack("StoresFragment");
                 transaction.commit();
                 break;
-            case 3:
-                CountriesFragment countriesFragment = new CountriesFragment();
-                transaction.replace(R.id.mainContent, countriesFragment, "CountriesFragment");
-                transaction.addToBackStack("CountriesFragment");
+            case 5:
+                ItemsFragment itemsFragment = new ItemsFragment();
+                transaction.replace(R.id.mainContent, itemsFragment, "ItemsFragment");
+                transaction.addToBackStack("ItemsFragment");
                 transaction.commit();
                 break;
-
             case 7:
                 BankFragment bankFragment = new BankFragment();
                 transaction.replace(R.id.mainContent, bankFragment, "BankFragment");
                 transaction.addToBackStack("BankFragment");
+                transaction.commit();
+                break;
+            case 8:
+                CountriesFragment countriesFragment = new CountriesFragment();
+                transaction.replace(R.id.mainContent, countriesFragment, "CountriesFragment");
+                transaction.addToBackStack("CountriesFragment");
                 transaction.commit();
                 break;
         }
@@ -313,12 +320,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                 break;
             case R.id.settings:
-                SettingsFragment settingsFragment = new SettingsFragment();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.replace(R.id.mainContent, settingsFragment, "SettingsFragment");
-                transaction.addToBackStack("SettingsFragment");
-                transaction.commit();
-                actionBar.setTitle(R.string.settings_title);
+                FragmentManager.BackStackEntry currentFragment = fragmentManager.getBackStackEntryAt(fragmentManager.getBackStackEntryCount() - 1);
+                String current = currentFragment.getName();
+
+                if (current.equals("SettingsFragment")) {
+                    fragmentManager.popBackStack();
+                } else {
+                    SettingsFragment settingsFragment = new SettingsFragment();
+                    FragmentTransaction transaction = fragmentManager.beginTransaction();
+                    transaction.replace(R.id.mainContent, settingsFragment, "SettingsFragment");
+                    transaction.addToBackStack("SettingsFragment");
+                    transaction.commit();
+                    actionBar.setTitle(R.string.settings_title);
+                }
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -351,14 +365,29 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         if (current.equals("ProfileFragment")) {
             return;
-        } else if (current.equals("FriendlistFragment") || current.equals("MessagesInboxFragment") || current.equals("MessagesOutboxFragment") || current.equals("CountriesFragment") || current.equals("StoresFragment") || current.equals("BankFragment")) {
+        } else if (current.equals("FriendlistFragment") ||
+                current.equals("MessagesInboxFragment") ||
+                current.equals("MessagesOutboxFragment") ||
+                current.equals("CountriesFragment") ||
+                current.equals("StoresFragment") ||
+                current.equals("BankFragment") ||
+                current.equals("ItemsFragment")) {
             ProfileFragment profileFragment = new ProfileFragment();
             FragmentTransaction transaction = fragmentManager.beginTransaction();
             transaction.replace(R.id.mainContent, profileFragment, "ProfileFragment");
             transaction.addToBackStack("ProfileFragment");
             transaction.commit();
             return;
-        } else {
+        } else if (current.equals("MarketSalesFragment") ||
+                current.equals("MarketPurchasesFragment")) {
+            ItemsFragment itemsFragment = new ItemsFragment();
+            FragmentTransaction transaction = fragmentManager.beginTransaction();
+            transaction.replace(R.id.mainContent, itemsFragment, "ItemsFragment");
+            transaction.addToBackStack("ItemsFragment");
+            transaction.commit();
+            return;
+        } else
+         {
             super.onBackPressed();
         }
     }

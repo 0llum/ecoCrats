@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="friendlist_options">
+        <item>Nachricht senden</item>
+        <item>ECOs senden</item>
+        <item>Entfernen</item>
+    </string-array>
     <string-array name="navDrawerItems">
         <item>Profil</item>
         <item>Freunde</item>
         <item>Lager</item>
-        <item>Länder</item>
         <item>Unternehmen</item>
         <item>Forschung</item>
+        <item>Markt</item>
         <item>Weltkarte</item>
         <item>Bank</item>
+        <item>Länder</item>
         <item>Datenbank</item>
     </string-array>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Zur Startseite"</string>
@@ -32,6 +38,7 @@
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Minimieren"</string>
     <string name="account_delete">Konto löschen</string>
     <string name="add">Hinzufügen</string>
+    <string name="app_name">ecoCrats</string>
     <string name="area">Fläche</string>
     <string name="bank_title">Bank</string>
     <string name="build">Bauen</string>
@@ -90,6 +97,7 @@
     <string name="login">Login</string>
     <string name="login_title">Login</string>
     <string name="logout_confirmation">Möchten Sie sich wirklich ausloggen?</string>
+    <string name="market_title">Markt</string>
     <string name="message">Nachricht</string>
     <string name="message_details_title">Nachrichtendetails</string>
     <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"Übertragen"</string>
@@ -126,8 +134,12 @@
     <string msgid="4600782048316473865" name="place_autocomplete_search_hint">"Suche"</string>
     <string name="please_wait">Bitte warten…</string>
     <string name="population">Einwohner</string>
+    <string name="price">Preis</string>
     <string name="profile_title">Profil</string>
     <string name="progressing">In Bearbeitung</string>
+    <string name="purchases">Einkäufe</string>
+    <string name="purchases_title">Verkäufe</string>
+    <string name="quantity">Menge</string>
     <string name="quantity_0">Die Menge darf nicht 0 sein</string>
     <string name="quantity_select">Menge wählen</string>
     <string name="receiver">Empfänger</string>
@@ -138,6 +150,8 @@
     <string name="region_details_region">Region:</string>
     <string name="remove">Entfernen</string>
     <string name="reply">Antworten</string>
+    <string name="sales">Verkäfe</string>
+    <string name="sales_title">Einkäufe</string>
     <string name="select_area">Bitte Fläche in ha wählen</string>
     <string name="select_ecos">Select ECOs</string>
     <string name="send">Senden</string>

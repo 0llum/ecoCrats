@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,8 +12,10 @@ import android.view.ViewGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.Classes.Item;
+import com.ollum.ecoCrats.Fragments.MarketSalesFragment;
 import com.ollum.ecoCrats.Fragments.StoreDetailsFragment;
 import com.ollum.ecoCrats.R;
 
@@ -51,7 +54,6 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.RecyclerView
         TextView name, company;
         ArrayList<Item> items = new ArrayList<Item>();
         Context ctx;
-        int progress = 0;
         Item item;
 
         public RecyclerViewHolder(View view, Context ctx, ArrayList<Item> items) {
@@ -69,52 +71,15 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.RecyclerView
             int position = getAdapterPosition();
             item = this.items.get(position);
 
-            final AlertDialog.Builder dialog = new AlertDialog.Builder(ctx);
-            SeekBar seekBar = new SeekBar(ctx);
-            seekBar.setMax(100);
-            seekBar.setKeyProgressIncrement(1);
+            bundle = new Bundle();
+            bundle.putInt("ID", item.getID());
+            bundle.putString("Name", item.getName());
 
-            dialog.setTitle(R.string.quantity_select);
-            dialog.setMessage("" + 0);
-            dialog.setView(seekBar);
-
-            dialog.setPositiveButton(R.string.add, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    String method = "addItem";
-                    BackgroundTask backgroundTask = new BackgroundTask(ctx);
-                    backgroundTask.execute(method, "" + StoreDetailsFragment.ID, "" + item.getID(), "" + progress);
-                    dialog.dismiss();
-                }
-            });
-            dialog.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.dismiss();
-                }
-            });
-
-            final AlertDialog alertDialog = dialog.create();
-
-            seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-                @Override
-                public void onProgressChanged(SeekBar seekBar, int progressV, boolean fromUser) {
-                    progress = progressV;
-                    alertDialog.setMessage("" + progress);
-                }
-
-                @Override
-                public void onStartTrackingTouch(SeekBar seekBar) {
-
-                }
-
-                @Override
-                public void onStopTrackingTouch(SeekBar seekBar) {
-
-                }
-            });
-
-            alertDialog.show();
+            MarketSalesFragment marketSalesFragment = new MarketSalesFragment();
+            FragmentTransaction transaction = MainActivity.fragmentManager.beginTransaction();
+            transaction.replace(R.id.mainContent, marketSalesFragment, "MarketSalesFragment");
+            transaction.addToBackStack("MarketSalesFragment");
+            transaction.commit();
         }
     }
 }

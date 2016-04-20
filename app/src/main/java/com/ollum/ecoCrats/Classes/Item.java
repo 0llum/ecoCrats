@@ -1,8 +1,8 @@
 package com.ollum.ecoCrats.Classes;
 
 public class Item {
-    String name, company;
-    int ID, quantity;
+    String name, company, username, time, region;
+    int ID, quantity, price;
     double density;
 
     public Item(int ID, String name, String company, int quantity, double density) {
@@ -18,6 +18,16 @@ public class Item {
         this.name = name;
         this.company = company;
         this.density = density;
+    }
+
+    public Item(int ID, String name, String region, String username, int quantity, int price, String time) {
+        this.ID = ID;
+        this.name = name;
+        this.region = region;
+        this.username = username;
+        this.quantity = quantity;
+        this.price = price;
+        this.time = time;
     }
 
     public String getName() {
@@ -38,5 +48,21 @@ public class Item {
 
     public int getQuantity() {
         return quantity;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public int getPrice() {
+        return price;
     }
 }

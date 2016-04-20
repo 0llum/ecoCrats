@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">ecoCrats</string>
+
     <string name="drawer_open">Navigationsleiste offen</string>
     <string name="drawer_close">Navigationsleiste geschlossen</string>
     <string-array name="navDrawerItems">
         <item>Profil</item>
         <item>Freunde</item>
         <item>Lager</item>
-        <item>Länder</item>
         <item>Unternehmen</item>
         <item>Forschung</item>
+        <item>Markt</item>
         <item>Weltkarte</item>
         <item>Bank</item>
+        <item>Länder</item>
         <item>Datenbank</item>
+    </string-array>
+    <string-array name="friendlist_options">
+        <item>Nachricht senden</item>
+        <item>ECOs senden</item>
+        <item>Entfernen</item>
     </string-array>
 
     <string name="login_title">Login</string>
@@ -28,6 +36,9 @@
     <string name="transport_title">Transport</string>
     <string name="settings_title">Einstellungen</string>
     <string name="bank_title">Bank</string>
+    <string name="sales_title">Einkäufe</string>
+    <string name="purchases_title">Verkäufe</string>
+    <string name="market_title">Markt</string>
 
     <string name="new_password_short">Das neue Passwort muss mindestens 6 Zeichen lang sein</string>
     <string name="new_password_spaces">Das neue Passwort darf keine Leerzeichen enthalten</string>
@@ -94,5 +105,9 @@
     <string name="lend">Leihen</string>
     <string name="credit_confirmation">Möchten Sie wirklich einen Kredit aufnehmen?</string>
     <string name="select_ecos">Select ECOs</string>
+    <string name="price">Preis</string>
+    <string name="quantity">Menge</string>
+    <string name="sales">Verkäfe</string>
+    <string name="purchases">Einkäufe</string>
 
 </resources>

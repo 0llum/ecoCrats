@@ -77,11 +77,11 @@ public class StoreDetailsFragment extends Fragment implements SwipeRefreshLayout
                 bundle = new Bundle();
                 bundle.putInt("ID", ID);
 
-                ItemsFragment itemsFragment = new ItemsFragment();
-                itemsFragment.setArguments(bundle);
+                AddItemsFragment addItemsFragment = new AddItemsFragment();
+                addItemsFragment.setArguments(bundle);
                 FragmentTransaction transaction = MainActivity.fragmentManager.beginTransaction();
-                transaction.replace(R.id.mainContent, itemsFragment, "ItemsFragment");
-                transaction.addToBackStack("ItemsFragment");
+                transaction.replace(R.id.mainContent, addItemsFragment, "AddItemsFragment");
+                transaction.addToBackStack("AddItemsFragment");
                 transaction.commit();
                 break;
         }

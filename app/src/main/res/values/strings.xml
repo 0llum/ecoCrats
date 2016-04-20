@@ -8,11 +8,12 @@
         <item>Profile</item>
         <item>Friendlist</item>
         <item>Stores</item>
-        <item>Countries</item>
         <item>Companies</item>
         <item>Research</item>
+        <item>Market</item>
         <item>World Map</item>
         <item>Bank</item>
+        <item>Countries</item>
         <item>Database</item>
     </string-array>
     <string-array name="friendlist_options">
@@ -35,6 +36,9 @@
     <string name="transport_title">Transport</string>
     <string name="settings_title">Settings</string>
     <string name="bank_title">Bank</string>
+    <string name="sales_title">Sales</string>
+    <string name="purchases_title">Purchases</string>
+    <string name="market_title">Market</string>
 
     <string name="new_password_short">New password must be at least 6 characters long</string>
     <string name="new_password_spaces">New password must not contain spaces</string>
@@ -101,5 +105,9 @@
     <string name="lend">Lend</string>
     <string name="credit_confirmation">Do you really want to raise a Loan?</string>
     <string name="select_ecos">Select ECOs</string>
+    <string name="price">Price</string>
+    <string name="quantity">Quantity</string>
+    <string name="sales">Sales</string>
+    <string name="purchases">Purchases</string>
 
 </resources>
