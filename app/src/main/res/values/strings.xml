@@ -21,6 +21,10 @@
         <item>Send ECOs</item>
         <item>Remove</item>
     </string-array>
+    <string-array name="store_details_options">
+        <item>Sell</item>
+        <item>Transport</item>
+    </string-array>
 
     <string name="login_title">Login</string>
     <string name="sign_up_title">Sign Up</string>
@@ -109,5 +113,10 @@
     <string name="quantity">Quantity</string>
     <string name="sales">Sales</string>
     <string name="purchases">Purchases</string>
+    <string name="sell">Sell</string>
+    <string name="quantity_price_select">Select Quantity and Price</string>
+    <string name="receiver_choose">Please choose a Receiver</string>
+    <string name="subject_enter">Please enter a Subject</string>
+    <string name="message_enter">Please enter a Message</string>
 
 </resources>

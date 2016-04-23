@@ -9,12 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.Adapters.ItemsAdapter;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskPurchases;
-import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskSales;
 import com.ollum.ecoCrats.R;
 
 public class MarketPurchasesFragment extends Fragment implements View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {

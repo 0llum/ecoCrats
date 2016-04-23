@@ -4,20 +4,13 @@ import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
-import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
-import com.ollum.ecoCrats.Classes.Store;
 import com.ollum.ecoCrats.R;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

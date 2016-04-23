@@ -3,7 +3,7 @@ package com.ollum.ecoCrats.Classes;
 public class Country {
 
     String name, capital;
-    int area, population;
+    int ID, area, population;
     float latitude, longitude;
 
     public Country(String name, String capital, int area, int population, float latitude, float longitude) {
@@ -15,7 +15,8 @@ public class Country {
         this.longitude = longitude;
     }
 
-    public Country(String name, String capital, int area, int population) {
+    public Country(int ID, String name, String capital, int area, int population) {
+        this.ID = ID;
         this.name = name;
         this.capital = capital;
         this.area = area;
@@ -44,5 +45,9 @@ public class Country {
 
     public float getLongitude() {
         return longitude;
+    }
+
+    public int getID() {
+        return ID;
     }
 }

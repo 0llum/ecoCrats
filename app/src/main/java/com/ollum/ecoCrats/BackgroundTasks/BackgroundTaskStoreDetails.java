@@ -92,7 +92,7 @@ public class BackgroundTaskStoreDetails extends AsyncTask<String, Item, Void> {
             while (count < jsonArray.length()) {
                 JSONObject JO = jsonArray.getJSONObject(count);
                 count++;
-                Item item = new Item(JO.getInt("ID"), JO.getString("Name"), JO.getString("Company"), JO.getInt("Quantity"), JO.getDouble("Density"));
+                Item item = new Item(JO.getInt("ID"), JO.getInt("Item_ID"), JO.getString("Name"), JO.getString("Company"), JO.getInt("Quantity"), JO.getDouble("Density"));
                 publishProgress(item);
             }
 

@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
-import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskAddItems;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskItems;
 import com.ollum.ecoCrats.R;
 

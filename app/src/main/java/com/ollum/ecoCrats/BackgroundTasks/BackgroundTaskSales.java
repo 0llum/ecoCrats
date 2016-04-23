@@ -8,9 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import com.ollum.ecoCrats.Adapters.MarketAdapter;
-import com.ollum.ecoCrats.Adapters.MessagesAdapter;
 import com.ollum.ecoCrats.Classes.Item;
-import com.ollum.ecoCrats.Classes.Message;
 import com.ollum.ecoCrats.R;
 
 import org.json.JSONArray;

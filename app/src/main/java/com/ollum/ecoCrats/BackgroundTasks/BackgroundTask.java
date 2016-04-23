@@ -5,12 +5,13 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.widget.Toast;
+import android.support.design.widget.Snackbar;
 
 import com.ollum.ecoCrats.Activities.Login;
 import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.Fragments.FriendlistFragment;
 import com.ollum.ecoCrats.Fragments.SettingsFragment;
+import com.ollum.ecoCrats.Fragments.StoreDetailsFragment;
 import com.ollum.ecoCrats.Fragments.StoresFragment;
 import com.ollum.ecoCrats.R;
 
@@ -61,6 +62,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
         String addItem_url = "http://0llum.bplaced.net/ecoCrats/AddItem.php";
         String transport_url = "http://0llum.bplaced.net/ecoCrats/Transport.php";
         String sendECOs_url = "http://0llum.bplaced.net/ecoCrats/SendECOs.php";
+        String sellItem_url = "http://0llum.bplaced.net/ecoCrats/SellItem.php";
         String method = params[0];
 
         if (method.equals("signUp")) {
@@ -618,6 +620,46 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        } else if (method.equals("sellItem")) {
+            String Goods_ID = params[1];
+            String Quantity = params[2];
+            String Price = params[3];
+
+            try {
+                URL url = new URL(sellItem_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                String data = URLEncoder.encode("Goods_ID", "UTF-8") + "=" + URLEncoder.encode(Goods_ID, "UTF-8") + "&" +
+                        URLEncoder.encode("Quantity", "UTF-8") + "=" + URLEncoder.encode(Quantity, "UTF-8") + "&" +
+                        URLEncoder.encode("Price", "UTF-8") + "=" + URLEncoder.encode(Price, "UTF-8");
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                String response = "";
+                String line = "";
+
+                while ((line = bufferedReader.readLine()) != null) {
+                    response += line;
+                }
+
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+
+                return response.trim();
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         return null;
     }
@@ -633,7 +675,8 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             progressDialog.dismiss();
         }
 
-        Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
+        Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, result, Snackbar.LENGTH_LONG);
+        snackbar.show();
 
         switch (result) {
             case ("Signing up successful"):
@@ -689,6 +732,12 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                 MainActivity.fragmentManager.beginTransaction()
                         .replace(R.id.mainContent, storesFragment1, "StoresFragment")
                         .addToBackStack("StoresFragment")
+                        .commit();
+            case ("Item has been sold successfully"):
+                StoreDetailsFragment storeDetailsFragment = new StoreDetailsFragment();
+                MainActivity.fragmentManager.beginTransaction()
+                        .replace(R.id.mainContent, storeDetailsFragment, "StoreDetailsFragment")
+                        .addToBackStack("StoreDetailsFragment")
                         .commit();
         }
     }

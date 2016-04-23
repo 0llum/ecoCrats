@@ -591,6 +591,27 @@
                         "endOffset": 457
                     }
                 }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 462,
+                    "endLine": 11,
+                    "endColumn": 12,
+                    "endOffset": 639
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.0.1\\res\\values-land\\values-land.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 275,
+                        "endLine": 7,
+                        "endColumn": 12,
+                        "endOffset": 452
+                    }
+                }
             }
         ]
     },

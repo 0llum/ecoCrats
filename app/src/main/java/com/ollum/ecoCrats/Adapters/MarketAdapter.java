@@ -1,20 +1,14 @@
 package com.ollum.ecoCrats.Adapters;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.Classes.Item;
-import com.ollum.ecoCrats.Fragments.StoreDetailsFragment;
 import com.ollum.ecoCrats.R;
 
 import java.util.ArrayList;
@@ -72,8 +66,6 @@ public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.RecyclerVi
         public void onClick(View v) {
             int position = getAdapterPosition();
             item = this.items.get(position);
-
-            Toast.makeText(ctx, "", Toast.LENGTH_LONG).show();
         }
     }
 }

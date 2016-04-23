@@ -124,7 +124,7 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.Recy
                 holder.imageView.setImageResource(R.mipmap.bulgaria);
                 break;
             case 27:
-                holder.imageView.setImageResource(R.mipmap.burkina_faso);
+                holder.imageView.setImageResource(R.mipmap.burkina_faso1);
                 break;
             case 28:
                 holder.imageView.setImageResource(R.mipmap.afghanistan);

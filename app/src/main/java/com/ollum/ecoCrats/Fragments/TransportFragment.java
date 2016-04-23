@@ -3,6 +3,7 @@ package com.ollum.ecoCrats.Fragments;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,12 +14,12 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.Adapters.SpinnerFriendsAdapter;
 import com.ollum.ecoCrats.Adapters.SpinnerItemsAdapter;
 import com.ollum.ecoCrats.Adapters.SpinnerStoresAdapter;
+import com.ollum.ecoCrats.Adapters.StoreDetailsAdapter;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.Classes.Item;
 import com.ollum.ecoCrats.Classes.Store;
@@ -57,6 +58,19 @@ public class TransportFragment extends Fragment implements View.OnClickListener 
     Button send;
     SeekBar seekBar;
     TextView tvQuantity;
+    int storeID, item_ID;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        Bundle bundle = StoreDetailsAdapter.bundle;
+
+        if (bundle != null) {
+            storeID = bundle.getInt("storeID");
+            item_ID = bundle.getInt("itemID");
+        }
+
+        super.onCreate(savedInstanceState);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -179,7 +193,8 @@ public class TransportFragment extends Fragment implements View.OnClickListener 
         switch (v.getId()) {
             case R.id.transport_button_send:
                 if (tvQuantity.getText().equals("0")) {
-                    Toast.makeText(getContext(), R.string.quantity_0, Toast.LENGTH_LONG).show();
+                    Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.quantity_0, Snackbar.LENGTH_LONG);
+                    snackbar.show();
                 } else {
                     quantity = tvQuantity.getText().toString();
                     BackgroundTask backgroundTask = new BackgroundTask(getContext());
@@ -263,6 +278,12 @@ public class TransportFragment extends Fragment implements View.OnClickListener 
             if (progressDialog.isShowing()) {
                 progressDialog.dismiss();
             }
+
+            for (int i = 0; i<startStores.size(); i++) {
+                if (startStores.get(i).getID() == storeID) {
+                    spinnerStart.setSelection(spinnerStartAdapter.getPosition(startStores.get(i)));
+                }
+            }
         }
     }
 
@@ -340,6 +361,12 @@ public class TransportFragment extends Fragment implements View.OnClickListener 
             super.onPostExecute(aVoid);
             if (progressDialog.isShowing()) {
                 progressDialog.dismiss();
+            }
+
+            for (int i = 0; i<items.size(); i++) {
+                if (items.get(i).getID() == item_ID) {
+                    spinnerItem.setSelection(spinnerItemsAdapter.getPosition(items.get(i)));
+                }
             }
         }
     }

@@ -17,6 +17,10 @@
         <item>Länder</item>
         <item>Datenbank</item>
     </string-array>
+    <string-array name="store_details_options">
+        <item>Verkaufen</item>
+        <item>Transport</item>
+    </string-array>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Zur Startseite"</string>
     <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s: %2$s"</string>
     <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s: %3$s"</string>
@@ -100,6 +104,7 @@
     <string name="market_title">Markt</string>
     <string name="message">Nachricht</string>
     <string name="message_details_title">Nachrichtendetails</string>
+    <string name="message_enter">Bitte Nachricht eingeben</string>
     <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"Übertragen"</string>
     <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"Geräte werden gesucht…"</string>
     <string msgid="7106830097177242655" name="mr_media_route_chooser_title">"Mit Gerät verbinden"</string>
@@ -141,8 +146,10 @@
     <string name="purchases_title">Verkäufe</string>
     <string name="quantity">Menge</string>
     <string name="quantity_0">Die Menge darf nicht 0 sein</string>
+    <string name="quantity_price_select">Menge und Preis wählen</string>
     <string name="quantity_select">Menge wählen</string>
     <string name="receiver">Empfänger</string>
+    <string name="receiver_choose">Bitte Empfänger wählen</string>
     <string name="region">Region</string>
     <string name="region_details_area">Fläche:</string>
     <string name="region_details_capital">Hauptstadt:</string>
@@ -154,6 +161,7 @@
     <string name="sales_title">Einkäufe</string>
     <string name="select_area">Bitte Fläche in ha wählen</string>
     <string name="select_ecos">Select ECOs</string>
+    <string name="sell">Verkaufen</string>
     <string name="send">Senden</string>
     <string name="sender">Absender</string>
     <string name="settings_title">Einstellungen</string>
@@ -163,6 +171,7 @@
     <string name="store_select">Lager auswählen</string>
     <string name="stores_title">Lager</string>
     <string name="subject">Betreff</string>
+    <string name="subject_enter">Bitte Betreff eingeben</string>
     <string name="transport_title">Transport</string>
     <string name="username">Benutzername</string>
     <string name="username_short">Der Benutzername muss mindesten 3 Zeichen lang sein</string>

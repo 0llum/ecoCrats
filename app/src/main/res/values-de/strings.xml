@@ -21,6 +21,10 @@
         <item>ECOs senden</item>
         <item>Entfernen</item>
     </string-array>
+    <string-array name="store_details_options">
+        <item>Verkaufen</item>
+        <item>Transport</item>
+    </string-array>
 
     <string name="login_title">Login</string>
     <string name="sign_up_title">Registrieren</string>
@@ -109,5 +113,10 @@
     <string name="quantity">Menge</string>
     <string name="sales">Verkäfe</string>
     <string name="purchases">Einkäufe</string>
+    <string name="sell">Verkaufen</string>
+    <string name="quantity_price_select">Menge und Preis wählen</string>
+    <string name="receiver_choose">Bitte Empfänger wählen</string>
+    <string name="subject_enter">Bitte Betreff eingeben</string>
+    <string name="message_enter">Bitte Nachricht eingeben</string>
 
 </resources>

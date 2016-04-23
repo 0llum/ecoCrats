@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,10 +13,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
-import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.R;
 
 import java.io.BufferedReader;
@@ -206,7 +205,8 @@ public class BankFragment extends Fragment implements View.OnClickListener {
                 progressDialog.dismiss();
             }
 
-            Toast.makeText(getContext(), result, Toast.LENGTH_LONG).show();
+            Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, result, Snackbar.LENGTH_LONG);
+            snackbar.show();
 
             BackgroundTaskDepts backgroundTaskDepts = new BackgroundTaskDepts();
             backgroundTaskDepts.execute();

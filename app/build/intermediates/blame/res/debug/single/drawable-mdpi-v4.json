@@ -20,6 +20,10 @@
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\fab_add.png",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.github.clans\\fab\\1.6.3\\res\\drawable-mdpi-v4\\fab_add.png"
+    },
+    {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-mdpi\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },

@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
@@ -29,7 +30,6 @@ import com.ollum.ecoCrats.Fragments.BankFragment;
 import com.ollum.ecoCrats.Fragments.CountriesFragment;
 import com.ollum.ecoCrats.Fragments.FriendlistFragment;
 import com.ollum.ecoCrats.Fragments.ItemsFragment;
-import com.ollum.ecoCrats.Fragments.MarketSalesFragment;
 import com.ollum.ecoCrats.Fragments.MessagesInboxFragment;
 import com.ollum.ecoCrats.Fragments.ProfileFragment;
 import com.ollum.ecoCrats.Fragments.SettingsFragment;
@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public static FragmentManager fragmentManager;
     public static User user;
     public static ActionBar actionBar;
+    public static CoordinatorLayout coordinatorLayout;
     UserLocalStore userLocalStore;
     FloatingActionButton actionButton;
     FloatingActionMenu actionMenu;
@@ -68,36 +69,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
+
         actionBar = getSupportActionBar();
-
-        userLocalStore = new UserLocalStore(this);
-        user = userLocalStore.getLoggedInUser();
-
-        if (userLocalStore.getLoggedInUser().getUsername().length() == 0) {
-            finish();
-            startActivity(new Intent(this, Login.class));
-            overridePendingTransition(0, 0);
-        }
-
-        setUserOnline(user);
-
-        String fragment = getIntent().getStringExtra("fragment");
-        fragmentManager = getSupportFragmentManager();
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-
-        if (fragment != null) {
-            if (fragment.equals("MessagesInboxFragment")) {
-                MessagesInboxFragment messagesInboxFragment = new MessagesInboxFragment();
-                transaction.replace(R.id.mainContent, messagesInboxFragment, "MessagesInboxFragment");
-                transaction.addToBackStack("MessagesInboxFragment");
-                transaction.commit();
-            }
-        } else {
-            ProfileFragment profileFragment = new ProfileFragment();
-            transaction.replace(R.id.mainContent, profileFragment, "ProfileFragment");
-            transaction.addToBackStack("ProfileFragment");
-            transaction.commit();
-        }
 
         navDrawerItems = getResources().getStringArray(R.array.navDrawerItems);
         listView = (ListView) findViewById(R.id.drawerList);
@@ -152,6 +126,35 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 .addSubActionView(buttonMessages)
                 .attachTo(actionButton)
                 .build();
+
+        userLocalStore = new UserLocalStore(this);
+        user = userLocalStore.getLoggedInUser();
+
+        if (userLocalStore.getLoggedInUser().getUsername().length() == 0) {
+            finish();
+            startActivity(new Intent(this, Login.class));
+            overridePendingTransition(0, 0);
+        } else {
+            setUserOnline(user);
+
+            String fragment = getIntent().getStringExtra("fragment");
+            fragmentManager = getSupportFragmentManager();
+            FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+            if (fragment != null) {
+                if (fragment.equals("MessagesInboxFragment")) {
+                    MessagesInboxFragment messagesInboxFragment = new MessagesInboxFragment();
+                    transaction.replace(R.id.mainContent, messagesInboxFragment, "MessagesInboxFragment");
+                    transaction.addToBackStack("MessagesInboxFragment");
+                    transaction.commit();
+                }
+            } else {
+                ProfileFragment profileFragment = new ProfileFragment();
+                transaction.replace(R.id.mainContent, profileFragment, "ProfileFragment");
+                transaction.addToBackStack("ProfileFragment");
+                transaction.commit();
+            }
+        }
     }
 
     @Override

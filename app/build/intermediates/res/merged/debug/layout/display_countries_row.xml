@@ -3,7 +3,14 @@
               android:layout_width="fill_parent"
               android:layout_height="50dp"
               android:orientation="horizontal"
-              android:background="@drawable/gradient">
+              android:background="@drawable/gradient"
+              android:gravity="center">
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/countries_row_image"
+        android:layout_marginLeft="5dp"/>
 
     <LinearLayout
         android:orientation="vertical"
@@ -11,7 +18,7 @@
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:gravity="center_vertical"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="10dp"
         >
 
         <TextView

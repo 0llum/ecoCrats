@@ -14,6 +14,10 @@ public class Store {
         this.region = region;
     }
 
+    public Store(int ID) {
+        this.ID = ID;
+    }
+
     public int getID() {
         return ID;
     }

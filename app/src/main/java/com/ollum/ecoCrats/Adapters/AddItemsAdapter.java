@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -40,6 +41,55 @@ public class AddItemsAdapter extends RecyclerView.Adapter<AddItemsAdapter.Recycl
         Item item = arrayList.get(position);
         holder.name.setText(item.getName());
         holder.company.setText(item.getCompany());
+
+        switch (item.getID()) {
+            case 1:
+                holder.imageView.setImageResource(R.mipmap.eisenerz);
+                break;
+            case 2:
+                holder.imageView.setImageResource(R.mipmap.holz);
+                break;
+            case 3:
+                holder.imageView.setImageResource(R.mipmap.erdoel);
+                break;
+            case 4:
+                holder.imageView.setImageResource(R.mipmap.erdgas);
+                break;
+            case 5:
+                holder.imageView.setImageResource(R.mipmap.kautschuk);
+                break;
+            case 6:
+                holder.imageView.setImageResource(R.mipmap.gold);
+                break;
+            case 7:
+                holder.imageView.setImageResource(R.mipmap.kohle);
+                break;
+            case 8:
+                holder.imageView.setImageResource(R.mipmap.sand);
+                break;
+            case 9:
+                holder.imageView.setImageResource(R.mipmap.wasser);
+                break;
+            case 10:
+                holder.imageView.setImageResource(R.mipmap.stein);
+                break;
+            case 11:
+                holder.imageView.setImageResource(R.mipmap.kupfererz);
+                break;
+            case 12:
+                holder.imageView.setImageResource(R.mipmap.baumwolle);
+                break;
+            case 13:
+                holder.imageView.setImageResource(R.mipmap.leder);
+                break;
+            case 14:
+                holder.imageView.setImageResource(R.mipmap.kalkstein);
+                break;
+            case 15:
+                holder.imageView.setImageResource(R.mipmap.ton);
+                break;
+        }
+
     }
 
     @Override
@@ -49,6 +99,7 @@ public class AddItemsAdapter extends RecyclerView.Adapter<AddItemsAdapter.Recycl
 
     public static class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView name, company;
+        ImageView imageView;
         ArrayList<Item> items = new ArrayList<Item>();
         Context ctx;
         int progress = 0;
@@ -62,6 +113,7 @@ public class AddItemsAdapter extends RecyclerView.Adapter<AddItemsAdapter.Recycl
 
             name = (TextView) view.findViewById(R.id.items_row_name);
             company = (TextView) view.findViewById(R.id.items_row_company);
+            imageView = (ImageView) view.findViewById(R.id.items_row_image);
         }
 
         @Override

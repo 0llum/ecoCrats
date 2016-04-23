@@ -40,6 +40,10 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\fragment_items.xml"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.0.1\\res\\layout\\design_layout_snackbar_include.xml"
+    },
+    {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_search_view.xml"
     },
@@ -108,6 +112,10 @@
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\src\\main\\res\\layout\\signup.xml"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.0.1\\res\\layout\\design_layout_snackbar.xml"
+    },
+    {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\login.xml"
     },
@@ -138,6 +146,10 @@
     {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.0.1\\res\\layout\\design_layout_tab_text.xml"
     },
     {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messages.xml",
@@ -308,6 +320,10 @@
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.0.1\\res\\layout\\design_navigation_menu.xml"
+    },
+    {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_dialog_title_material.xml"
     },
@@ -330,6 +346,10 @@
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.0.1\\res\\layout\\design_navigation_item_separator.xml"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
@@ -948,6 +968,10 @@
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_big_media.xml"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.0.1\\res\\layout\\design_navigation_item_subheader.xml"
+    },
+    {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\C:\\Users\\0llum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_list_menu_item_layout.xml"
     },
@@ -1000,6 +1024,10 @@
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\notification_template_media.xml"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.0.1\\res\\layout\\design_layout_tab_icon.xml"
+    },
+    {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_bar_up_container.xml"
     },
@@ -1026,6 +1054,10 @@
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_transport.xml",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\layout\\fragment_transport.xml"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.0.1\\res\\layout\\design_navigation_item.xml"
     },
     {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\Ollum\\AndroidStudioProjects\\Werewolves\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
@@ -1058,6 +1090,10 @@
     {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
         "source": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.0.1\\res\\layout\\design_navigation_item_header.xml"
     },
     {
         "merged": "C:\\Users\\Ollum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\layout\\settings.xml",
