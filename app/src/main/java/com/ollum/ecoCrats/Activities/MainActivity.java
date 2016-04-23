@@ -20,9 +20,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
-import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
-import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
+import com.github.clans.fab.FloatingActionButton;
+import com.github.clans.fab.FloatingActionMenu;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskLatestMessage;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStatus;
 import com.ollum.ecoCrats.Classes.User;
@@ -57,12 +56,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public static ActionBar actionBar;
     public static CoordinatorLayout coordinatorLayout;
     UserLocalStore userLocalStore;
-    FloatingActionButton actionButton;
-    FloatingActionMenu actionMenu;
     private DrawerLayout drawerLayout;
     private ListView listView;
     private String[] navDrawerItems;
     private ActionBarDrawerToggle drawerListener;
+    private FloatingActionMenu fabMenu;
+    private FloatingActionButton fabMessages;
+    private FloatingActionButton fabTransport;
+    private FloatingActionButton fabContracts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +82,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         drawerListener = new ActionBarDrawerToggle(this, drawerLayout, R.string.drawer_open, R.string.drawer_close) {
             @Override
             public void onDrawerOpened(View drawerView) {
-                actionMenu.close(true);
             }
 
             @Override
@@ -92,40 +92,24 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        ImageView iconFAB = new ImageView(this);
-        iconFAB.setImageResource(R.mipmap.fab);
+        fabMenu = (FloatingActionMenu) findViewById(R.id.fabMenu);
 
-        actionButton = new FloatingActionButton.Builder(this)
-                .setContentView(iconFAB)
-                .setBackgroundDrawable(R.drawable.selector_button_blue)
-                .build();
+        fabMessages = (FloatingActionButton) findViewById(R.id.fabMessages);
+        fabTransport = (FloatingActionButton) findViewById(R.id.fabTransport);
+        fabContracts = (FloatingActionButton) findViewById(R.id.fabContracts);
 
-        ImageView messages = new ImageView(this);
-        messages.setImageResource(R.mipmap.messages);
-        ImageView transport = new ImageView(this);
-        transport.setImageResource(R.mipmap.transport);
-        ImageView contracts = new ImageView(this);
-        contracts.setImageResource(R.mipmap.contracts);
+        fabMessages.setOnClickListener(this);
+        fabTransport.setOnClickListener(this);
+        fabContracts.setOnClickListener(this);
 
-        SubActionButton.Builder itemBuilder = new SubActionButton.Builder(this);
-        SubActionButton buttonMessages = itemBuilder.setContentView(messages).build();
-        SubActionButton buttonTransport = itemBuilder.setContentView(transport).build();
-        SubActionButton buttonContracts = itemBuilder.setContentView(contracts).build();
-
-        buttonMessages.setTag("TAG_MESSAGES");
-        buttonContracts.setTag("TAG_CONTRACTS");
-        buttonTransport.setTag("TAG_TRANSPORT");
-
-        buttonMessages.setOnClickListener(this);
-        buttonTransport.setOnClickListener(this);
-        buttonContracts.setOnClickListener(this);
-
-        actionMenu = new FloatingActionMenu.Builder(this)
-                .addSubActionView(buttonContracts)
-                .addSubActionView(buttonTransport)
-                .addSubActionView(buttonMessages)
-                .attachTo(actionButton)
-                .build();
+        fabMenu.showMenuButton(true);
+        fabMenu.setClosedOnTouchOutside(true);
+        fabMenu.setOnMenuButtonClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fabMenu.toggle(true);
+            }
+        });
 
         userLocalStore = new UserLocalStore(this);
         user = userLocalStore.getLoggedInUser();
@@ -165,21 +149,28 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onClick(View v) {
-        actionMenu.close(true);
-
         FragmentTransaction transaction = fragmentManager.beginTransaction();
 
-        if (v.getTag().equals("TAG_MESSAGES")) {
-            MessagesInboxFragment messagesInboxFragment = new MessagesInboxFragment();
-            transaction.replace(R.id.mainContent, messagesInboxFragment, "MessagesInboxFragment");
-            transaction.addToBackStack("MessagesInboxFragment");
-            transaction.commit();
-        } else if (v.getTag().equals("TAG_TRANSPORT")) {
-            TransportFragment transportFragment = new TransportFragment();
-            transaction.replace(R.id.mainContent, transportFragment, "TransportFragment");
-            transaction.addToBackStack("TransportFragment");
-            transaction.commit();
-        } else if (v.getTag().equals("TAG_CONTRACTS")) {
+        if (fabMenu.isOpened()) {
+            fabMenu.close(true);
+        }
+
+        switch (v.getId()) {
+            case R.id.fabMessages:
+                MessagesInboxFragment messagesInboxFragment = new MessagesInboxFragment();
+                transaction.replace(R.id.mainContent, messagesInboxFragment, "MessagesInboxFragment");
+                transaction.addToBackStack("MessagesInboxFragment");
+                transaction.commit();
+                break;
+            case R.id.fabTransport:
+                TransportFragment transportFragment = new TransportFragment();
+                transaction.replace(R.id.mainContent, transportFragment, "TransportFragment");
+                transaction.addToBackStack("TransportFragment");
+                transaction.commit();
+                break;
+            case R.id.fabContracts:
+                break;
+
 
         }
     }

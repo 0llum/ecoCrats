@@ -181,6 +181,7 @@ MERGED from [com.android.support:support-v4:23.2.0] C:\Users\0llum\AndroidStudio
 MERGED from [com.android.support:support-vector-drawable:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-v4:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.github.clans:fab:1.6.3] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.github.clans\fab\1.6.3\AndroidManifest.xml:12:5-20
+MERGED from [com.getbase:floatingactionbutton:1.10.1] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.getbase\floatingactionbutton\1.10.1\AndroidManifest.xml:12:5-20
 	android:label
 		ADDED from C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\src\main\AndroidManifest.xml:19:9-41
 	android:supportsRtl
@@ -400,6 +401,7 @@ MERGED from [com.android.support:support-v4:23.2.0] C:\Users\0llum\AndroidStudio
 MERGED from [com.android.support:support-vector-drawable:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:5:5-43
 MERGED from [com.android.support:support-v4:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
 MERGED from [com.github.clans:fab:1.6.3] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.github.clans\fab\1.6.3\AndroidManifest.xml:8:5-10:41
+MERGED from [com.getbase:floatingactionbutton:1.10.1] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.getbase\floatingactionbutton\1.10.1\AndroidManifest.xml:8:5-10:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:23.2.0] C:\Users\0llum\AndroidStudioProjects\ecoCrats\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
