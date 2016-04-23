@@ -2,6 +2,7 @@ package com.ollum.ecoCrats.Fragments;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
@@ -10,8 +11,6 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
-
 import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.Adapters.FriendlistAdapter;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
@@ -86,11 +85,14 @@ public class NewMessageFragment extends Fragment implements View.OnClickListener
                 String message = etMessage.getText().toString().trim();
 
                 if (receiver.equals("")) {
-                    Toast.makeText(getContext(), "Please choose a receiver", Toast.LENGTH_LONG).show();
+                    Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.receiver_choose, Snackbar.LENGTH_LONG);
+                    snackbar.show();
                 } else if (subject.equals("")) {
-                    Toast.makeText(getContext(), "Please enter a subject", Toast.LENGTH_LONG).show();
+                    Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.subject_enter, Snackbar.LENGTH_LONG);
+                    snackbar.show();
                 } else if (message.equals("")) {
-                    Toast.makeText(getContext(), "Please enter a message", Toast.LENGTH_LONG).show();
+                    Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.message_enter, Snackbar.LENGTH_LONG);
+                    snackbar.show();
                 } else {
                     String method = "sendMessage";
                     BackgroundTask backgroundTask = new BackgroundTask(getContext());

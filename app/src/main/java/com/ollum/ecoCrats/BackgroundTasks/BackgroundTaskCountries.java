@@ -80,7 +80,7 @@ public class BackgroundTaskCountries extends AsyncTask<String, Country, Void> {
             while (count < jsonArray.length()) {
                 JSONObject JO = jsonArray.getJSONObject(count);
                 count++;
-                Country country = new Country(JO.getString("Name"), JO.getString("Capital"), JO.getInt("Area"), JO.getInt("Population"));
+                Country country = new Country(JO.getInt("ID"), JO.getString("Name"), JO.getString("Capital"), JO.getInt("Area"), JO.getInt("Population"));
                 publishProgress(country);
             }
 

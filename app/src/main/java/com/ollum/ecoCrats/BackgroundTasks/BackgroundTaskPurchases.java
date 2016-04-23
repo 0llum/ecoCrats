@@ -8,9 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import com.ollum.ecoCrats.Adapters.MarketAdapter;
-import com.ollum.ecoCrats.Adapters.MessagesAdapter;
 import com.ollum.ecoCrats.Classes.Item;
-import com.ollum.ecoCrats.Classes.Message;
 import com.ollum.ecoCrats.R;
 
 import org.json.JSONArray;
@@ -95,7 +93,7 @@ public class BackgroundTaskPurchases extends AsyncTask<String, Item, Void> {
             while (count < jsonArray.length()) {
                 JSONObject JO = jsonArray.getJSONObject(count);
                 count++;
-                Item item = new Item(JO.getInt("ID"), JO.getString("Name"), JO.getString("Region"), JO.getString("username"), JO.getInt("Quantity"), JO.getInt("Price"), JO.getString("Time"));
+                Item item = new Item(JO.getInt("ID"), JO.getString("Name"), JO.getString("username"), JO.getInt("Quantity"), JO.getInt("Price"), JO.getString("Time"));
                 publishProgress(item);
             }
 
