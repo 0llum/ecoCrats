@@ -13,8 +13,6 @@
         <item>Market</item>
         <item>World Map</item>
         <item>Bank</item>
-        <item>Countries</item>
-        <item>Database</item>
     </string-array>
     <string-array name="friendlist_options">
         <item>Send Message</item>
@@ -118,5 +116,6 @@
     <string name="receiver_choose">Please choose a Receiver</string>
     <string name="subject_enter">Please enter a Subject</string>
     <string name="message_enter">Please enter a Message</string>
+    <string name="username_enter">Enter Username</string>
 
 </resources>

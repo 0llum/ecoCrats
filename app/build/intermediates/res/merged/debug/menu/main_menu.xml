@@ -3,13 +3,50 @@
       xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/settings"
-        android:title="Settings"
-        android:icon="@android:drawable/ic_menu_preferences"
-        app:showAsAction="always"/>
+        android:id="@+id/newMessage"
+        android:title="@string/new_message"
+        android:icon="@mipmap/create"
+        app:showAsAction="always"
+        android:visible="false"/>
     <item
-        android:id="@+id/logout"
-        android:title="Logout"
-        android:icon="@android:drawable/ic_delete"
-        app:showAsAction="always"/>
+        android:id="@+id/send"
+        android:title="@string/send"
+        android:icon="@mipmap/send"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/reply"
+        android:title="@string/reply"
+        android:icon="@mipmap/reply"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/buy"
+        android:title="@string/buy"
+        android:icon="@mipmap/buy_white"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/build"
+        android:title="@string/build"
+        android:icon="@mipmap/stores_white"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/addItem"
+        android:title="@string/add"
+        android:icon="@mipmap/add_white"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/addFriend"
+        android:title="@string/add"
+        android:icon="@mipmap/add_friend_white"
+        app:showAsAction="always"
+        android:visible="false"/>
 </menu>

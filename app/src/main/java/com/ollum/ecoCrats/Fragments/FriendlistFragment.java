@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -15,9 +17,8 @@ import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskFriendlist;
 import com.ollum.ecoCrats.R;
 
-public class FriendlistFragment extends Fragment implements View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
-    EditText searchBar;
-    Button add;
+public class FriendlistFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
+    public static EditText searchBar;
     SwipeRefreshLayout swipeRefreshLayout;
     RecyclerView recyclerView;
 
@@ -25,12 +26,10 @@ public class FriendlistFragment extends Fragment implements View.OnClickListener
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_friendlist, container, false);
 
+        setHasOptionsMenu(true);
         MainActivity.actionBar.setTitle(R.string.friendlist_title);
 
         searchBar = (EditText) view.findViewById(R.id.friendlist_searchbar);
-
-        add = (Button) view.findViewById(R.id.friendlist_add);
-        add.setOnClickListener(this);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.friendlist_recyclerView);
 
@@ -48,16 +47,6 @@ public class FriendlistFragment extends Fragment implements View.OnClickListener
     }
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.friendlist_add:
-                String friendToAdd = searchBar.getText().toString().trim();
-                addFriend(friendToAdd);
-                break;
-        }
-    }
-
-    @Override
     public void onRefresh() {
         BackgroundTaskFriendlist backgroundTaskFriendlist = new BackgroundTaskFriendlist(getContext(), recyclerView);
         backgroundTaskFriendlist.execute(MainActivity.user.username);
@@ -67,9 +56,9 @@ public class FriendlistFragment extends Fragment implements View.OnClickListener
         }
     }
 
-    private void addFriend(final String username_2) {
-        String method = "addFriend";
-        BackgroundTask backgroundTask = new BackgroundTask(getContext());
-        backgroundTask.execute(method, MainActivity.user.username, username_2);
+    @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        MenuItem addFriend = menu.findItem(R.id.addFriend);
+        addFriend.setVisible(true);
     }
 }

@@ -6,32 +6,44 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
+import com.ollum.ecoCrats.Adapters.NavDrawerAdapter;
+import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskLatestMessage;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStatus;
 import com.ollum.ecoCrats.Classes.User;
+import com.ollum.ecoCrats.Fragments.AddItemsFragment;
 import com.ollum.ecoCrats.Fragments.BankFragment;
 import com.ollum.ecoCrats.Fragments.CountriesFragment;
 import com.ollum.ecoCrats.Fragments.FriendlistFragment;
 import com.ollum.ecoCrats.Fragments.ItemsFragment;
+import com.ollum.ecoCrats.Fragments.MessageDetailsFragment;
 import com.ollum.ecoCrats.Fragments.MessagesInboxFragment;
+import com.ollum.ecoCrats.Fragments.NewMessageFragment;
 import com.ollum.ecoCrats.Fragments.ProfileFragment;
+import com.ollum.ecoCrats.Fragments.RegionDetailsFragment;
 import com.ollum.ecoCrats.Fragments.SettingsFragment;
+import com.ollum.ecoCrats.Fragments.StoreDetailsFragment;
 import com.ollum.ecoCrats.Fragments.StoresFragment;
 import com.ollum.ecoCrats.Fragments.TransportFragment;
 import com.ollum.ecoCrats.R;
@@ -48,6 +60,8 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener, View.OnClickListener {
 
@@ -64,6 +78,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private FloatingActionButton fabMessages;
     private FloatingActionButton fabTransport;
     private FloatingActionButton fabContracts;
+    public static Bundle bundle;
+    int progress = 0;
+    int cost = 0;
+    private NavDrawerAdapter navDrawerAdapter;
+    private TextView drawerUsername;
+    private ImageButton settingsButton, logoutButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,14 +94,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         actionBar = getSupportActionBar();
 
+        drawerUsername = (TextView) findViewById(R.id.drawer_username);
+
         navDrawerItems = getResources().getStringArray(R.array.navDrawerItems);
         listView = (ListView) findViewById(R.id.drawerList);
-        listView.setAdapter(new ArrayAdapter<>(this, R.layout.nav_drawer_list_item, navDrawerItems));
+        navDrawerAdapter = new NavDrawerAdapter(this);
+        listView.setAdapter(navDrawerAdapter);
         listView.setOnItemClickListener(this);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         drawerListener = new ActionBarDrawerToggle(this, drawerLayout, R.string.drawer_open, R.string.drawer_close) {
             @Override
             public void onDrawerOpened(View drawerView) {
+                if (fabMenu.isOpened()) {
+                    fabMenu.close(true);
+                }
             }
 
             @Override
@@ -91,6 +117,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         drawerLayout.setDrawerListener(drawerListener);
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+        settingsButton = (ImageButton) findViewById(R.id.settings);
+        settingsButton.setOnClickListener(this);
+
+        logoutButton = (ImageButton) findViewById(R.id.logout);
+        logoutButton.setOnClickListener(this);
 
         fabMenu = (FloatingActionMenu) findViewById(R.id.fabMenu);
 
@@ -108,6 +140,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View v) {
                 fabMenu.toggle(true);
+                    closeDrawer();
             }
         });
 
@@ -120,6 +153,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             overridePendingTransition(0, 0);
         } else {
             setUserOnline(user);
+
+            drawerUsername.setText(user.getUsername());
 
             String fragment = getIntent().getStringExtra("fragment");
             fragmentManager = getSupportFragmentManager();
@@ -149,98 +184,21 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onClick(View v) {
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        closeDrawer();
 
         if (fabMenu.isOpened()) {
             fabMenu.close(true);
         }
 
-        switch (v.getId()) {
-            case R.id.fabMessages:
-                MessagesInboxFragment messagesInboxFragment = new MessagesInboxFragment();
-                transaction.replace(R.id.mainContent, messagesInboxFragment, "MessagesInboxFragment");
-                transaction.addToBackStack("MessagesInboxFragment");
-                transaction.commit();
-                break;
-            case R.id.fabTransport:
-                TransportFragment transportFragment = new TransportFragment();
-                transaction.replace(R.id.mainContent, transportFragment, "TransportFragment");
-                transaction.addToBackStack("TransportFragment");
-                transaction.commit();
-                break;
-            case R.id.fabContracts:
-                break;
-
-
-        }
-    }
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        selectItem(position);
-        closeDrawer();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        switch (position) {
-            case 0:
-                ProfileFragment profileFragment = new ProfileFragment();
-                transaction.replace(R.id.mainContent, profileFragment, "ProfileFragment");
-                transaction.addToBackStack("ProfileFragment");
-                transaction.commit();
-                break;
-            case 1:
-                FriendlistFragment friendlistFragment = new FriendlistFragment();
-                transaction.replace(R.id.mainContent, friendlistFragment, "FriendlistFragment");
-                transaction.addToBackStack("FriendlistFragment");
-                transaction.commit();
-                break;
-            case 2:
-                StoresFragment storesFragment = new StoresFragment();
-                transaction.replace(R.id.mainContent, storesFragment, "StoresFragment");
-                transaction.addToBackStack("StoresFragment");
-                transaction.commit();
-                break;
-            case 5:
-                ItemsFragment itemsFragment = new ItemsFragment();
-                transaction.replace(R.id.mainContent, itemsFragment, "ItemsFragment");
-                transaction.addToBackStack("ItemsFragment");
-                transaction.commit();
-                break;
-            case 7:
-                BankFragment bankFragment = new BankFragment();
-                transaction.replace(R.id.mainContent, bankFragment, "BankFragment");
-                transaction.addToBackStack("BankFragment");
-                transaction.commit();
-                break;
-            case 8:
-                CountriesFragment countriesFragment = new CountriesFragment();
-                transaction.replace(R.id.mainContent, countriesFragment, "CountriesFragment");
-                transaction.addToBackStack("CountriesFragment");
-                transaction.commit();
-                break;
-        }
-    }
 
-    private void selectItem(int position) {
-        listView.setItemChecked(position, true);
-    }
-
-    public void closeDrawer() {
-        drawerLayout.closeDrawers();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(android.view.Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (drawerListener.onOptionsItemSelected(item)) {
-            return true;
-        }
-        switch (item.getItemId()) {
+        switch (v.getId()) {
+            case R.id.settings:
+                SettingsFragment settingsFragment = new SettingsFragment();
+                transaction.replace(R.id.mainContent, settingsFragment, "SettingsFragment");
+                transaction.addToBackStack("SettingsFragment");
+                transaction.commit();
+                break;
             case R.id.logout:
                 AlertDialog.Builder dialog = new AlertDialog.Builder(this);
                 dialog.setTitle(getResources().getString(R.string.logout_confirmation));
@@ -311,22 +269,315 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 });
                 dialog.create();
                 dialog.show();
+                break;
+            case R.id.fabMessages:
+                MessagesInboxFragment messagesInboxFragment = new MessagesInboxFragment();
+                transaction.replace(R.id.mainContent, messagesInboxFragment, "MessagesInboxFragment");
+                transaction.addToBackStack("MessagesInboxFragment");
+                transaction.commit();
+                break;
+            case R.id.fabTransport:
+                TransportFragment transportFragment = new TransportFragment();
+                transaction.replace(R.id.mainContent, transportFragment, "TransportFragment");
+                transaction.addToBackStack("TransportFragment");
+                transaction.commit();
+                break;
+            case R.id.fabContracts:
+                break;
+        }
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        selectItem(position);
+        closeDrawer();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        switch (position) {
+            case 0:
+                ProfileFragment profileFragment = new ProfileFragment();
+                transaction.replace(R.id.mainContent, profileFragment, "ProfileFragment");
+                transaction.addToBackStack("ProfileFragment");
+                transaction.commit();
+                break;
+            case 1:
+                FriendlistFragment friendlistFragment = new FriendlistFragment();
+                transaction.replace(R.id.mainContent, friendlistFragment, "FriendlistFragment");
+                transaction.addToBackStack("FriendlistFragment");
+                transaction.commit();
+                break;
+            case 2:
+                StoresFragment storesFragment = new StoresFragment();
+                transaction.replace(R.id.mainContent, storesFragment, "StoresFragment");
+                transaction.addToBackStack("StoresFragment");
+                transaction.commit();
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                ItemsFragment itemsFragment = new ItemsFragment();
+                transaction.replace(R.id.mainContent, itemsFragment, "ItemsFragment");
+                transaction.addToBackStack("ItemsFragment");
+                transaction.commit();
+                break;
+            case 6:
+                CountriesFragment countriesFragment = new CountriesFragment();
+                transaction.replace(R.id.mainContent, countriesFragment, "CountriesFragment");
+                transaction.addToBackStack("CountriesFragment");
+                transaction.commit();
+                break;
+            case 7:
+                BankFragment bankFragment = new BankFragment();
+                transaction.replace(R.id.mainContent, bankFragment, "BankFragment");
+                transaction.addToBackStack("BankFragment");
+                transaction.commit();
+                break;
+            case 8:
+                SettingsFragment settingsFragment = new SettingsFragment();
+                transaction.replace(R.id.mainContent, settingsFragment, "SettingsFragment");
+                transaction.addToBackStack("SettingsFragment");
+                transaction.commit();
+                break;
+            case 9:
+                AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+                dialog.setTitle(getResources().getString(R.string.logout_confirmation));
+                dialog.setPositiveButton(getResources().getString(R.string.yes), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        new AsyncTask() {
+
+                            @Override
+                            protected Object doInBackground(Object[] params) {
+                                String logout_url = "http://0llum.bplaced.net/ecoCrats/Logout.php";
+                                String username = user.username;
+
+                                try {
+                                    URL url = new URL(logout_url);
+                                    HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                                    httpURLConnection.setRequestMethod("POST");
+                                    httpURLConnection.setDoOutput(true);
+                                    httpURLConnection.setDoInput(true);
+                                    OutputStream outputStream = httpURLConnection.getOutputStream();
+                                    BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                                    String data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8");
+                                    bufferedWriter.write(data);
+                                    bufferedWriter.flush();
+                                    bufferedWriter.close();
+                                    outputStream.close();
+                                    InputStream inputStream = httpURLConnection.getInputStream();
+                                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                                    String response = "";
+                                    String line = "";
+
+                                    while ((line = bufferedReader.readLine()) != null) {
+                                        response += line;
+                                    }
+
+                                    bufferedReader.close();
+                                    inputStream.close();
+                                    httpURLConnection.disconnect();
+
+                                    return response.trim();
+
+                                } catch (MalformedURLException e) {
+                                    e.printStackTrace();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                                return null;
+                            }
+
+                            @Override
+                            protected void onPostExecute(Object o) {
+                                setUserOffline(user);
+                                userLocalStore.clearUserData();
+                                userLocalStore.setUserLoggedIn(false);
+
+                                finish();
+                                startActivity(new Intent(getApplicationContext(), Login.class));
+                                overridePendingTransition(0, 0);
+                            }
+                        }.execute();
+                    }
+                });
+                dialog.setNegativeButton(getResources().getString(R.string.no), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.create();
+                dialog.show();
+                break;
+        }
+    }
+
+    private void selectItem(int position) {
+        listView.setItemChecked(position, true);
+    }
+
+    public void closeDrawer() {
+        drawerLayout.closeDrawers();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (drawerListener.onOptionsItemSelected(item)) {
+            return true;
+        }
+
+        FragmentTransaction transaction = MainActivity.fragmentManager.beginTransaction();
+
+        switch (item.getItemId()) {
+            case R.id.newMessage:
+                NewMessageFragment newMessageFragment = new NewMessageFragment();
+                transaction.replace(R.id.mainContent, newMessageFragment, "NewMessageFragment");
+                transaction.addToBackStack("NewMessageFragment");
+                transaction.commit();
+                break;
+            case R.id.send:
+                String receiver = NewMessageFragment.etReceiver.getText().toString().trim();
+                String subject = NewMessageFragment.etSubject.getText().toString().trim();
+                String message = NewMessageFragment.etMessage.getText().toString().trim();
+
+                if (receiver.equals("")) {
+                    Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.receiver_choose, Snackbar.LENGTH_LONG);
+                    snackbar.show();
+                } else if (subject.equals("")) {
+                    Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.subject_enter, Snackbar.LENGTH_LONG);
+                    snackbar.show();
+                } else if (message.equals("")) {
+                    Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.message_enter, Snackbar.LENGTH_LONG);
+                    snackbar.show();
+                } else {
+                    String method = "sendMessage";
+                    BackgroundTask backgroundTask = new BackgroundTask(this);
+                    backgroundTask.execute(method, NewMessageFragment.sender, receiver, subject, message);
+                }
 
                 break;
-            case R.id.settings:
-                FragmentManager.BackStackEntry currentFragment = fragmentManager.getBackStackEntryAt(fragmentManager.getBackStackEntryCount() - 1);
-                String current = currentFragment.getName();
+            case R.id.reply:
+                bundle = new Bundle();
+                bundle.putString("receiver", MessageDetailsFragment.tvSender.getText().toString());
+                bundle.putString("subject", MessageDetailsFragment.tvSubject.getText().toString());
 
-                if (current.equals("SettingsFragment")) {
-                    fragmentManager.popBackStack();
-                } else {
-                    SettingsFragment settingsFragment = new SettingsFragment();
-                    FragmentTransaction transaction = fragmentManager.beginTransaction();
-                    transaction.replace(R.id.mainContent, settingsFragment, "SettingsFragment");
-                    transaction.addToBackStack("SettingsFragment");
-                    transaction.commit();
-                    actionBar.setTitle(R.string.settings_title);
-                }
+                NewMessageFragment newMessageFragment2 = new NewMessageFragment();
+                newMessageFragment2.setArguments(bundle);
+                transaction.replace(R.id.mainContent, newMessageFragment2, "NewMessageFragment");
+                transaction.addToBackStack("NewMessageFragment");
+                transaction.commit();
+                break;
+            case R.id.buy:
+                final AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+                SeekBar seekBar = new SeekBar(this);
+                seekBar.setMax(25);
+                seekBar.setKeyProgressIncrement(1);
+
+                dialog.setTitle(R.string.select_area);
+                dialog.setMessage("" + progress + ", " + getResources().getString(R.string.forQuantity) + " " + (int) (progress * (1 / Math.sqrt(RegionDetailsFragment.area + 6) * 2500000 - 690)) + " ECOs");
+                dialog.setView(seekBar);
+
+                dialog.setPositiveButton(R.string.buy, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String method = "buyArea";
+                        BackgroundTask backgroundTask = new BackgroundTask(MainActivity.this);
+                        backgroundTask.execute(method, MainActivity.user.getUsername(), "" + RegionDetailsFragment.ID, "" + progress, "" + cost);
+                        dialog.dismiss();
+                    }
+                });
+                dialog.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
+                final AlertDialog alertDialog = dialog.create();
+
+                seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                    @Override
+                    public void onProgressChanged(SeekBar seekBar, int progressV, boolean fromUser) {
+                        progress = progressV;
+                        cost = (int) (progress * (1 / Math.sqrt(RegionDetailsFragment.area + 6) * 2500000 - 690));
+                        alertDialog.setMessage("" + progress + ", " + getResources().getString(R.string.forQuantity) + " " + NumberFormat.getNumberInstance(Locale.GERMAN).format(cost) + " ECOs");
+                    }
+
+                    @Override
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+
+                    }
+
+                    @Override
+                    public void onStopTrackingTouch(SeekBar seekBar) {
+
+                    }
+                });
+
+                alertDialog.show();
+                break;
+            case R.id.build:
+                AlertDialog.Builder buildDialog = new AlertDialog.Builder(this)
+                        .setTitle(R.string.build_store_confirmation)
+                        .setMessage("20.000 ECOs")
+                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                BackgroundTask backgroundTask = new BackgroundTask(MainActivity.this);
+                                backgroundTask.execute("buildStore", MainActivity.user.getUsername(), "" + RegionDetailsFragment.ID);
+                            }
+                        })
+                        .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                buildDialog.create();
+                buildDialog.show();
+                break;
+            case R.id.addItem:
+                bundle = new Bundle();
+                bundle.putInt("ID", StoreDetailsFragment.ID);
+
+                AddItemsFragment addItemsFragment = new AddItemsFragment();
+                addItemsFragment.setArguments(bundle);
+                transaction.replace(R.id.mainContent, addItemsFragment, "AddItemsFragment");
+                transaction.addToBackStack("AddItemsFragment");
+                transaction.commit();
+                break;
+            case R.id.addFriend:
+                final EditText etFriend = new EditText(this);
+                etFriend.setInputType(InputType.TYPE_CLASS_TEXT);
+
+                AlertDialog.Builder addFriendDialog = new AlertDialog.Builder(this)
+                        .setTitle(R.string.username_enter)
+                        .setView(etFriend)
+                        .setPositiveButton(R.string.add, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                String friend = etFriend.getText().toString().trim();
+                                String method = "addFriend";
+                                BackgroundTask backgroundTask = new BackgroundTask(MainActivity.this);
+                                backgroundTask.execute(method, MainActivity.user.username, friend);
+                            }
+                        })
+                        .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                addFriendDialog.create();
+                addFriendDialog.show();
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -354,6 +605,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onBackPressed() {
+        closeDrawer();
+
+        if (fabMenu.isOpened()) {
+            fabMenu.close(true);
+        }
+
         FragmentManager.BackStackEntry currentFragment = fragmentManager.getBackStackEntryAt(fragmentManager.getBackStackEntryCount() - 1);
         String current = currentFragment.getName();
 

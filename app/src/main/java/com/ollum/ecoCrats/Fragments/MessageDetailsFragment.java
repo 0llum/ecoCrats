@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -15,12 +17,11 @@ import com.ollum.ecoCrats.Adapters.MessagesAdapter;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStatus;
 import com.ollum.ecoCrats.R;
 
-public class MessageDetailsFragment extends Fragment implements View.OnClickListener {
+public class MessageDetailsFragment extends Fragment {
     public static Bundle bundle;
     String sender, subject, message, time;
     int ID;
-    TextView tvSender, tvSubject, tvMessage;
-    Button reply;
+    public static TextView tvSender, tvSubject, tvMessage;
     String current;
 
     @Override
@@ -50,13 +51,12 @@ public class MessageDetailsFragment extends Fragment implements View.OnClickList
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_message_details, container, false);
 
+        setHasOptionsMenu(true);
         MainActivity.actionBar.setTitle(R.string.message_details_title);
 
         tvSender = (TextView) view.findViewById(R.id.message_details_sender);
         tvSubject = (TextView) view.findViewById(R.id.message_details_subject);
         tvMessage = (TextView) view.findViewById(R.id.message_details_message);
-        reply = (Button) view.findViewById(R.id.message_details_reply);
-        reply.setOnClickListener(this);
 
         tvSender.setText(sender);
         tvSubject.setText(subject);
@@ -66,19 +66,8 @@ public class MessageDetailsFragment extends Fragment implements View.OnClickList
     }
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.message_details_reply:
-                bundle = new Bundle();
-                bundle.putString("receiver", tvSender.getText().toString());
-                bundle.putString("subject", tvSubject.getText().toString());
-
-                NewMessageFragment newMessageFragment = new NewMessageFragment();
-                newMessageFragment.setArguments(bundle);
-                FragmentTransaction transaction = MainActivity.fragmentManager.beginTransaction();
-                transaction.replace(R.id.mainContent, newMessageFragment, "NewMessageFragment");
-                transaction.addToBackStack("NewMessageFragment");
-                transaction.commit();
-        }
+    public void onPrepareOptionsMenu(Menu menu) {
+        MenuItem reply = menu.findItem(R.id.reply);
+        reply.setVisible(true);
     }
 }

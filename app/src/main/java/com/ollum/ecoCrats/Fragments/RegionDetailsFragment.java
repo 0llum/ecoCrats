@@ -5,6 +5,8 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -19,14 +21,10 @@ import com.ollum.ecoCrats.R;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-public class RegionDetailsFragment extends Fragment implements View.OnClickListener {
+public class RegionDetailsFragment extends Fragment {
     String region, capital;
-    int ID, area, population;
+    public static int ID, area, population;
     TextView tvRegion, tvCapital, tvArea, tvPopulation;
-    Button buy, build;
-    int progress = 0;
-    int cost = 0;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,6 +45,7 @@ public class RegionDetailsFragment extends Fragment implements View.OnClickListe
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_region_details, container, false);
 
+        setHasOptionsMenu(true);
         MainActivity.actionBar.setTitle(region);
 
         tvRegion = (TextView) view.findViewById(R.id.region_details_region);
@@ -59,92 +58,15 @@ public class RegionDetailsFragment extends Fragment implements View.OnClickListe
         tvArea.setText("" + area);
         tvPopulation.setText("" + population);
 
-        buy = (Button) view.findViewById(R.id.region_details_buy);
-        buy.setOnClickListener(this);
-        build = (Button) view.findViewById(R.id.region_details_build);
-        build.setOnClickListener(this);
-
         return view;
     }
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.region_details_buy:
-                showDialog();
-                break;
-            case R.id.region_details_build:
-                AlertDialog.Builder dialog = new AlertDialog.Builder(getContext())
-                        .setTitle(R.string.build_store_confirmation)
-                        .setMessage("20.000 ECOs")
-                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                BackgroundTask backgroundTask = new BackgroundTask(getContext());
-                                backgroundTask.execute("buildStore", MainActivity.user.getUsername(), "" + ID);
-                            }
-                        })
-                        .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        });
-                dialog.create();
-                dialog.show();
+    public void onPrepareOptionsMenu(Menu menu) {
+        MenuItem buy = menu.findItem(R.id.buy);
+        buy.setVisible(true);
 
-
-                break;
-        }
-    }
-
-    public void showDialog() {
-        final AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
-        SeekBar seekBar = new SeekBar(getContext());
-        seekBar.setMax(25);
-        seekBar.setKeyProgressIncrement(1);
-
-        dialog.setTitle(R.string.select_area);
-        dialog.setMessage("" + progress + ", " + getActivity().getResources().getString(R.string.forQuantity) + " " + (int)(progress*(1/Math.sqrt(area+6)*2500000-690)) + " ECOs");
-        dialog.setView(seekBar);
-
-        dialog.setPositiveButton(R.string.buy, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                String method = "buyArea";
-                BackgroundTask backgroundTask = new BackgroundTask(getContext());
-                backgroundTask.execute(method, MainActivity.user.getUsername(), "" + ID, "" + progress, "" + cost);
-                dialog.dismiss();
-            }
-        });
-        dialog.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-
-        final AlertDialog alertDialog = dialog.create();
-
-        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progressV, boolean fromUser) {
-                progress = progressV;
-                cost = (int)(progress*(1/Math.sqrt(area+6)*2500000-690));
-                alertDialog.setMessage("" + progress + ", " + getActivity().getResources().getString(R.string.forQuantity) + " " + NumberFormat.getNumberInstance(Locale.GERMAN).format(cost) + " ECOs");
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-
-        alertDialog.show();
+        MenuItem build = menu.findItem(R.id.build);
+        build.setVisible(true);
     }
 }

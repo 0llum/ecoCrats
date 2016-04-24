@@ -14,8 +14,6 @@
         <item>Markt</item>
         <item>Weltkarte</item>
         <item>Bank</item>
-        <item>Länder</item>
-        <item>Datenbank</item>
     </string-array>
     <string-array name="store_details_options">
         <item>Verkaufen</item>
@@ -174,6 +172,7 @@
     <string name="subject_enter">Bitte Betreff eingeben</string>
     <string name="transport_title">Transport</string>
     <string name="username">Benutzername</string>
+    <string name="username_enter">Benutzername eingeben</string>
     <string name="username_short">Der Benutzername muss mindesten 3 Zeichen lang sein</string>
     <string name="username_spaces">Der Benutzername darf keine Leerzeichen enthalten</string>
     <string msgid="4184147110658930238" name="wallet_buy_button_place_holder">"Mit Google einkaufen"</string>

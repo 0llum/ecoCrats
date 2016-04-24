@@ -3,52 +3,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/messages_outbox_swipeRefreshLayout"
-        android:layout_above="@+id/linearLayout2"
-        android:layout_below="@+id/linearLayout5">
-
-        <android.support.v7.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/messages_outbox_recyclerView"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:focusable="false"
-            android:focusableInTouchMode="false" />
-    </android.support.v4.widget.SwipeRefreshLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/linearLayout2"
-        android:gravity="center_vertical"
-        android:background="@drawable/gradient">
-
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:text="@string/new_message"
-            android:id="@+id/messages_outbox_new_message"
-            android:background="@drawable/button"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_weight="4"
-            android:layout_marginLeft="5dp"/>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-        </LinearLayout>
-
-    </LinearLayout>
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -81,5 +35,22 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"/>
     </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/messages_outbox_swipeRefreshLayout"
+        android:layout_below="@+id/linearLayout5">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/messages_outbox_recyclerView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

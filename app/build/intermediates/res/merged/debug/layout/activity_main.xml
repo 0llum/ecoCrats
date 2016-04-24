@@ -19,13 +19,65 @@
             android:background="@drawable/gradientbackground">
         </FrameLayout>
 
-        <ListView
-            android:background="@drawable/gradient"
-            android:id="@+id/drawerList"
+        <RelativeLayout
+            android:orientation="vertical"
             android:layout_width="240dp"
             android:layout_height="match_parent"
+            android:background="@drawable/gradient"
             android:layout_gravity="left">
-        </ListView>
+
+            <TextView
+                android:id="@+id/drawer_username"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <ListView
+                android:id="@+id/drawerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/drawer_username"
+                android:layout_above="@+id/linearLayout2">
+            </ListView>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/linearLayout2">
+
+                <ImageButton
+                    android:id="@+id/logout"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/power_white"
+                    android:layout_marginLeft="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/settings"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/settings_white"
+                    android:layout_marginRight="5dp"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
     </android.support.v4.widget.DrawerLayout>
 
     <com.github.clans.fab.FloatingActionMenu
@@ -38,36 +90,36 @@
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:paddingLeft="10dp"
-        fab:menu_colorNormal="@color/colorPrimaryDark"
-        fab:menu_colorPressed="@color/colorPrimary"
+        fab:menu_colorNormal="@color/colorAccent"
+        fab:menu_colorPressed="@color/colorAccentPressed"
         fab:menu_backgroundColor="#aaffffff">
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/fabContracts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/contracts"
+            android:src="@mipmap/contracts_white"
             fab:fab_size="mini"
-            fab:fab_colorNormal="@color/colorPrimaryDark"
-            fab:fab_colorPressed="@color/colorPrimary"/>
+            fab:fab_colorNormal="@color/colorAccent"
+            fab:fab_colorPressed="@color/colorAccentPressed"/>
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/fabTransport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/transport"
+            android:src="@mipmap/transport_white"
             fab:fab_size="mini"
-            fab:fab_colorNormal="@color/colorPrimaryDark"
-            fab:fab_colorPressed="@color/colorPrimary"/>
+            fab:fab_colorNormal="@color/colorAccent"
+            fab:fab_colorPressed="@color/colorAccentPressed"/>
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/fabMessages"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/messages"
+            android:src="@mipmap/messages_white"
             fab:fab_size="mini"
-            fab:fab_colorNormal="@color/colorPrimaryDark"
-            fab:fab_colorPressed="@color/colorPrimary"/>
+            fab:fab_colorNormal="@color/colorAccent"
+            fab:fab_colorPressed="@color/colorAccentPressed"/>
 
     </com.github.clans.fab.FloatingActionMenu>
 

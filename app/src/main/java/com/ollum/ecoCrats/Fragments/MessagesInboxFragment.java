@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -15,7 +17,7 @@ import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskInbox;
 import com.ollum.ecoCrats.R;
 
 public class MessagesInboxFragment extends Fragment implements View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
-    Button newMessage, outbox;
+    Button outbox;
     SwipeRefreshLayout swipeRefreshLayout;
     RecyclerView recyclerView;
 
@@ -23,10 +25,9 @@ public class MessagesInboxFragment extends Fragment implements View.OnClickListe
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_messages_inbox, container, false);
 
+        setHasOptionsMenu(true);
         MainActivity.actionBar.setTitle(R.string.inbox_title);
 
-        newMessage = (Button) view.findViewById(R.id.messages_inbox_new_message);
-        newMessage.setOnClickListener(this);
         outbox = (Button) view.findViewById(R.id.messages_inbox_button_outbox);
         outbox.setOnClickListener(this);
         swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.messages_inbox_swipeRefreshLayout);
@@ -46,13 +47,6 @@ public class MessagesInboxFragment extends Fragment implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.messages_inbox_new_message:
-                NewMessageFragment newMessageFragment = new NewMessageFragment();
-                FragmentTransaction transaction = MainActivity.fragmentManager.beginTransaction();
-                transaction.replace(R.id.mainContent, newMessageFragment, "NewMessageFragment");
-                transaction.addToBackStack("NewMessageFragment");
-                transaction.commit();
-                break;
             case R.id.messages_inbox_button_outbox:
                 MessagesOutboxFragment outboxFragment = new MessagesOutboxFragment();
                 FragmentTransaction transaction2 = MainActivity.fragmentManager.beginTransaction();
@@ -70,5 +64,11 @@ public class MessagesInboxFragment extends Fragment implements View.OnClickListe
         if (swipeRefreshLayout.isRefreshing()) {
             swipeRefreshLayout.setRefreshing(false);
         }
+    }
+
+    @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        MenuItem newMessage = menu.findItem(R.id.newMessage);
+        newMessage.setVisible(true);
     }
 }

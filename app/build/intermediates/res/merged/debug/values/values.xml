@@ -14,8 +14,6 @@
         <item>Market</item>
         <item>World Map</item>
         <item>Bank</item>
-        <item>Countries</item>
-        <item>Database</item>
     </string-array>
     <string-array name="store_details_options">
         <item>Sell</item>
@@ -59,7 +57,8 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#ffa500</color>
+    <color name="colorAccentPressed">#ffdc73</color>
     <color name="colorPrimary">#3f51b5</color>
     <color name="colorPrimaryBackground">#e6e9ff</color>
     <color name="colorPrimaryDark">#303f9f</color>
@@ -524,6 +523,7 @@
     <string name="subject_enter">Please enter a Subject</string>
     <string name="transport_title">Transport</string>
     <string name="username">Username</string>
+    <string name="username_enter">Enter Username</string>
     <string name="username_short">Username must be at least 3 characters long</string>
     <string name="username_spaces">Username must not contain spaces</string>
     <string name="wallet_buy_button_place_holder">Buy with Google</string>

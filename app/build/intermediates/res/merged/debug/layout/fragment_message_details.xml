@@ -43,37 +43,9 @@
         android:layout_below="@+id/message_details_subject"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/linearLayout3"
         android:text="@string/message"
         android:paddingLeft="5dp"
-        android:paddingRight="5dp"/>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/gradient"
-        android:id="@+id/linearLayout3"
-        android:gravity="center_vertical">
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:text="@string/reply"
-            android:id="@+id/message_details_reply"
-            android:background="@drawable/button"
-            android:layout_weight="3"
-            android:layout_marginLeft="5dp"/>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-        </LinearLayout>
-    </LinearLayout>
+        android:paddingRight="5dp"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

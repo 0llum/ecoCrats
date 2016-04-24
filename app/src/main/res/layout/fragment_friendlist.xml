@@ -4,44 +4,11 @@
                 android:layout_height="match_parent">
 
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:id="@+id/linearLayout2"
-        android:gravity="center_vertical"
-        android:background="@drawable/gradient"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:id="@+id/friendlist_searchbar"
-            android:hint="@string/username"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:layout_weight="1"
-            android:textColor="#fff"
-            android:textColorHint="#fff"/>
-
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:text="@string/add"
-            android:id="@+id/friendlist_add"
-            android:background="@drawable/button"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_weight="2"/>
-
-    </LinearLayout>
-
     <android.support.v4.widget.SwipeRefreshLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/friendlist_swipeRefreshLayout"
-        android:layout_below="@+id/linearLayout2">
+        android:layout_alignParentBottom="true">
 
         <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"

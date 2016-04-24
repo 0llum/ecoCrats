@@ -13,8 +13,6 @@
         <item>Markt</item>
         <item>Weltkarte</item>
         <item>Bank</item>
-        <item>Länder</item>
-        <item>Datenbank</item>
     </string-array>
     <string-array name="friendlist_options">
         <item>Nachricht senden</item>
@@ -118,5 +116,6 @@
     <string name="receiver_choose">Bitte Empfänger wählen</string>
     <string name="subject_enter">Bitte Betreff eingeben</string>
     <string name="message_enter">Bitte Nachricht eingeben</string>
+    <string name="username_enter">Benutzername eingeben</string>
 
 </resources>

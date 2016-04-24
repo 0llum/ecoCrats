@@ -3,43 +3,6 @@
              android:layout_height="match_parent">
 
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/gradient"
-        android:id="@+id/linearLayout4"
-        android:gravity="center_vertical">
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:text="@string/buy"
-            android:id="@+id/region_details_buy"
-            android:background="@drawable/button"
-            android:layout_weight="4"
-            android:layout_marginLeft="5dp"/>
-
-        <Button
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:text="@string/build"
-            android:id="@+id/region_details_build"
-            android:background="@drawable/button"
-            android:layout_weight="4"
-            android:layout_marginLeft="5dp"/>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2"/>
-    </LinearLayout>
-
     <ImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
@@ -55,7 +18,8 @@
         android:id="@+id/textView5"
         android:layout_below="@+id/imageView"
         android:layout_alignLeft="@+id/imageView"
-        android:layout_alignStart="@+id/imageView"/>
+        android:layout_alignStart="@+id/imageView"
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -90,7 +54,8 @@
         android:id="@+id/region_details_region"
         android:layout_below="@+id/imageView"
         android:layout_alignRight="@+id/imageView"
-        android:layout_alignEnd="@+id/imageView"/>
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
