@@ -25,15 +25,7 @@
                     "endOffset": 560
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 243,
-                        "endLine": 15,
-                        "endColumn": 19,
-                        "endOffset": 540
-                    }
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
                 }
             },
             {
@@ -58,7 +50,7 @@
                     "endOffset": 795
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -70,7 +62,7 @@
                     "endOffset": 903
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -82,7 +74,7 @@
                     "endOffset": 1026
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -94,7 +86,7 @@
                     "endOffset": 1124
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -106,7 +98,7 @@
                     "endOffset": 1236
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -118,7 +110,7 @@
                     "endOffset": 1322
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -130,7 +122,7 @@
                     "endOffset": 1427
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -142,7 +134,7 @@
                     "endOffset": 1542
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -154,7 +146,7 @@
                     "endOffset": 1619
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -166,7 +158,7 @@
                     "endOffset": 1695
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -178,7 +170,7 @@
                     "endOffset": 1777
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -190,7 +182,7 @@
                     "endOffset": 1888
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -202,7 +194,7 @@
                     "endOffset": 1991
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -214,7 +206,7 @@
                     "endOffset": 2090
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -226,7 +218,7 @@
                     "endOffset": 2201
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -238,7 +230,7 @@
                     "endOffset": 2303
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -250,7 +242,7 @@
                     "endOffset": 2410
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -262,7 +254,7 @@
                     "endOffset": 2532
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -274,7 +266,7 @@
                     "endOffset": 2634
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
@@ -294,32 +286,46 @@
                     "startLine": 41,
                     "startColumn": 4,
                     "startOffset": 2696,
-                    "endColumn": 42,
-                    "endOffset": 2734
+                    "endColumn": 64,
+                    "endOffset": 2756
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 161,
+                        "startColumn": 4,
+                        "startOffset": 9332,
+                        "endColumn": 64,
+                        "endOffset": 9392
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 2739,
-                    "endColumn": 45,
-                    "endOffset": 2780
+                    "startOffset": 2761,
+                    "endColumn": 40,
+                    "endOffset": 2797
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 123,
+                        "startColumn": 4,
+                        "startOffset": 6484,
+                        "endColumn": 40,
+                        "endOffset": 6520
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 43,
                     "startColumn": 4,
-                    "startOffset": 2785,
-                    "endColumn": 39,
-                    "endOffset": 2820
+                    "startOffset": 2802,
+                    "endColumn": 68,
+                    "endOffset": 2866
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -329,9 +335,9 @@
                 "to": {
                     "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 2825,
-                    "endColumn": 43,
-                    "endOffset": 2864
+                    "startOffset": 2871,
+                    "endColumn": 42,
+                    "endOffset": 2909
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -341,21 +347,28 @@
                 "to": {
                     "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 2869,
-                    "endColumn": 39,
-                    "endOffset": 2904
+                    "startOffset": 2914,
+                    "endColumn": 91,
+                    "endOffset": 3001
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 153,
+                        "startColumn": 4,
+                        "startOffset": 8718,
+                        "endColumn": 91,
+                        "endOffset": 8805
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 2909,
-                    "endColumn": 111,
-                    "endOffset": 3016
+                    "startOffset": 3006,
+                    "endColumn": 45,
+                    "endOffset": 3047
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -365,9 +378,9 @@
                 "to": {
                     "startLine": 47,
                     "startColumn": 4,
-                    "startOffset": 3021,
-                    "endColumn": 38,
-                    "endOffset": 3055
+                    "startOffset": 3052,
+                    "endColumn": 39,
+                    "endOffset": 3087
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -377,21 +390,28 @@
                 "to": {
                     "startLine": 48,
                     "startColumn": 4,
-                    "startOffset": 3060,
-                    "endColumn": 44,
-                    "endOffset": 3100
+                    "startOffset": 3092,
+                    "endColumn": 78,
+                    "endOffset": 3166
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 146,
+                        "startColumn": 4,
+                        "startOffset": 8166,
+                        "endColumn": 78,
+                        "endOffset": 8240
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 49,
                     "startColumn": 4,
-                    "startOffset": 3105,
-                    "endColumn": 46,
-                    "endOffset": 3147
+                    "startOffset": 3171,
+                    "endColumn": 43,
+                    "endOffset": 3210
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -401,69 +421,69 @@
                 "to": {
                     "startLine": 50,
                     "startColumn": 4,
-                    "startOffset": 3152,
-                    "endColumn": 304,
-                    "endOffset": 3452
+                    "startOffset": 3215,
+                    "endColumn": 39,
+                    "endOffset": 3250
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 51,
                     "startColumn": 4,
-                    "startOffset": 3457,
-                    "endColumn": 130,
-                    "endOffset": 3583
+                    "startOffset": 3255,
+                    "endColumn": 111,
+                    "endOffset": 3362
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 52,
                     "startColumn": 4,
-                    "startOffset": 3588,
-                    "endColumn": 195,
-                    "endOffset": 3779
+                    "startOffset": 3367,
+                    "endColumn": 38,
+                    "endOffset": 3401
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 53,
                     "startColumn": 4,
-                    "startOffset": 3784,
-                    "endColumn": 129,
-                    "endOffset": 3909
+                    "startOffset": 3406,
+                    "endColumn": 44,
+                    "endOffset": 3446
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 54,
                     "startColumn": 4,
-                    "startOffset": 3914,
-                    "endColumn": 133,
-                    "endOffset": 4043
+                    "startOffset": 3451,
+                    "endColumn": 46,
+                    "endOffset": 3493
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 55,
                     "startColumn": 4,
-                    "startOffset": 4048,
-                    "endColumn": 242,
-                    "endOffset": 4286
+                    "startOffset": 3498,
+                    "endColumn": 304,
+                    "endOffset": 3798
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -473,9 +493,9 @@
                 "to": {
                     "startLine": 56,
                     "startColumn": 4,
-                    "startOffset": 4291,
-                    "endColumn": 239,
-                    "endOffset": 4526
+                    "startOffset": 3803,
+                    "endColumn": 130,
+                    "endOffset": 3929
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -485,9 +505,9 @@
                 "to": {
                     "startLine": 57,
                     "startColumn": 4,
-                    "startOffset": 4531,
-                    "endColumn": 132,
-                    "endOffset": 4659
+                    "startOffset": 3934,
+                    "endColumn": 195,
+                    "endOffset": 4125
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -497,9 +517,9 @@
                 "to": {
                     "startLine": 58,
                     "startColumn": 4,
-                    "startOffset": 4664,
-                    "endColumn": 205,
-                    "endOffset": 4865
+                    "startOffset": 4130,
+                    "endColumn": 129,
+                    "endOffset": 4255
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -509,9 +529,9 @@
                 "to": {
                     "startLine": 59,
                     "startColumn": 4,
-                    "startOffset": 4870,
-                    "endColumn": 119,
-                    "endOffset": 4985
+                    "startOffset": 4260,
+                    "endColumn": 133,
+                    "endOffset": 4389
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -521,9 +541,9 @@
                 "to": {
                     "startLine": 60,
                     "startColumn": 4,
-                    "startOffset": 4990,
-                    "endColumn": 204,
-                    "endOffset": 5190
+                    "startOffset": 4394,
+                    "endColumn": 242,
+                    "endOffset": 4632
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -533,9 +553,9 @@
                 "to": {
                     "startLine": 61,
                     "startColumn": 4,
-                    "startOffset": 5195,
-                    "endColumn": 120,
-                    "endOffset": 5311
+                    "startOffset": 4637,
+                    "endColumn": 239,
+                    "endOffset": 4872
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -545,9 +565,9 @@
                 "to": {
                     "startLine": 62,
                     "startColumn": 4,
-                    "startOffset": 5316,
-                    "endColumn": 149,
-                    "endOffset": 5461
+                    "startOffset": 4877,
+                    "endColumn": 132,
+                    "endOffset": 5005
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -557,9 +577,9 @@
                 "to": {
                     "startLine": 63,
                     "startColumn": 4,
-                    "startOffset": 5466,
-                    "endColumn": 185,
-                    "endOffset": 5647
+                    "startOffset": 5010,
+                    "endColumn": 205,
+                    "endOffset": 5211
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -569,9 +589,9 @@
                 "to": {
                     "startLine": 64,
                     "startColumn": 4,
-                    "startOffset": 5652,
-                    "endColumn": 133,
-                    "endOffset": 5781
+                    "startOffset": 5216,
+                    "endColumn": 119,
+                    "endOffset": 5331
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -581,9 +601,9 @@
                 "to": {
                     "startLine": 65,
                     "startColumn": 4,
-                    "startOffset": 5786,
-                    "endColumn": 186,
-                    "endOffset": 5968
+                    "startOffset": 5336,
+                    "endColumn": 204,
+                    "endOffset": 5536
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -593,9 +613,9 @@
                 "to": {
                     "startLine": 66,
                     "startColumn": 4,
-                    "startOffset": 5973,
-                    "endColumn": 131,
-                    "endOffset": 6100
+                    "startOffset": 5541,
+                    "endColumn": 120,
+                    "endOffset": 5657
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -605,21 +625,21 @@
                 "to": {
                     "startLine": 67,
                     "startColumn": 4,
-                    "startOffset": 6105,
-                    "endColumn": 247,
-                    "endOffset": 6348
+                    "startOffset": 5662,
+                    "endColumn": 149,
+                    "endOffset": 5807
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.4.0\\res\\values-de\\common_strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 68,
                     "startColumn": 4,
-                    "startOffset": 6353,
-                    "endColumn": 307,
-                    "endOffset": 6656
+                    "startOffset": 5812,
+                    "endColumn": 185,
+                    "endOffset": 5993
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -629,9 +649,9 @@
                 "to": {
                     "startLine": 69,
                     "startColumn": 4,
-                    "startOffset": 6661,
-                    "endColumn": 122,
-                    "endOffset": 6779
+                    "startOffset": 5998,
+                    "endColumn": 133,
+                    "endOffset": 6127
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -641,9 +661,9 @@
                 "to": {
                     "startLine": 70,
                     "startColumn": 4,
-                    "startOffset": 6784,
-                    "endColumn": 113,
-                    "endOffset": 6893
+                    "startOffset": 6132,
+                    "endColumn": 186,
+                    "endOffset": 6314
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -653,9 +673,9 @@
                 "to": {
                     "startLine": 71,
                     "startColumn": 4,
-                    "startOffset": 6898,
-                    "endColumn": 210,
-                    "endOffset": 7104
+                    "startOffset": 6319,
+                    "endColumn": 131,
+                    "endOffset": 6446
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -665,21 +685,21 @@
                 "to": {
                     "startLine": 72,
                     "startColumn": 4,
-                    "startOffset": 7109,
-                    "endColumn": 132,
-                    "endOffset": 7237
+                    "startOffset": 6451,
+                    "endColumn": 247,
+                    "endOffset": 6694
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.4.0\\res\\values-de\\common_strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 73,
                     "startColumn": 4,
-                    "startOffset": 7242,
-                    "endColumn": 220,
-                    "endOffset": 7458
+                    "startOffset": 6699,
+                    "endColumn": 307,
+                    "endOffset": 7002
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -689,9 +709,9 @@
                 "to": {
                     "startLine": 74,
                     "startColumn": 4,
-                    "startOffset": 7463,
-                    "endColumn": 140,
-                    "endOffset": 7599
+                    "startOffset": 7007,
+                    "endColumn": 122,
+                    "endOffset": 7125
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -701,9 +721,9 @@
                 "to": {
                     "startLine": 75,
                     "startColumn": 4,
-                    "startOffset": 7604,
-                    "endColumn": 205,
-                    "endOffset": 7805
+                    "startOffset": 7130,
+                    "endColumn": 113,
+                    "endOffset": 7239
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -713,9 +733,9 @@
                 "to": {
                     "startLine": 76,
                     "startColumn": 4,
-                    "startOffset": 7810,
-                    "endColumn": 99,
-                    "endOffset": 7905
+                    "startOffset": 7244,
+                    "endColumn": 210,
+                    "endOffset": 7450
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -725,9 +745,9 @@
                 "to": {
                     "startLine": 77,
                     "startColumn": 4,
-                    "startOffset": 7910,
-                    "endColumn": 92,
-                    "endOffset": 7998
+                    "startOffset": 7455,
+                    "endColumn": 132,
+                    "endOffset": 7583
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -737,9 +757,9 @@
                 "to": {
                     "startLine": 78,
                     "startColumn": 4,
-                    "startOffset": 8003,
-                    "endColumn": 109,
-                    "endOffset": 8108
+                    "startOffset": 7588,
+                    "endColumn": 220,
+                    "endOffset": 7804
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
@@ -749,69 +769,69 @@
                 "to": {
                     "startLine": 79,
                     "startColumn": 4,
-                    "startOffset": 8113,
-                    "endColumn": 50,
-                    "endOffset": 8159
+                    "startOffset": 7809,
+                    "endColumn": 140,
+                    "endOffset": 7945
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 80,
                     "startColumn": 4,
-                    "startOffset": 8164,
-                    "endColumn": 40,
-                    "endOffset": 8200
+                    "startOffset": 7950,
+                    "endColumn": 205,
+                    "endOffset": 8151
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 81,
                     "startColumn": 4,
-                    "startOffset": 8205,
-                    "endColumn": 41,
-                    "endOffset": 8242
+                    "startOffset": 8156,
+                    "endColumn": 99,
+                    "endOffset": 8251
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 82,
                     "startColumn": 4,
-                    "startOffset": 8247,
+                    "startOffset": 8256,
                     "endColumn": 92,
-                    "endOffset": 8335
+                    "endOffset": 8344
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 83,
                     "startColumn": 4,
-                    "startOffset": 8340,
-                    "endColumn": 99,
-                    "endOffset": 8435
+                    "startOffset": 8349,
+                    "endColumn": 109,
+                    "endOffset": 8454
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\values-de\\base_strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 84,
                     "startColumn": 4,
-                    "startOffset": 8440,
-                    "endColumn": 43,
-                    "endOffset": 8479
+                    "startOffset": 8459,
+                    "endColumn": 51,
+                    "endOffset": 8506
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -821,9 +841,9 @@
                 "to": {
                     "startLine": 85,
                     "startColumn": 4,
-                    "startOffset": 8484,
-                    "endColumn": 70,
-                    "endOffset": 8550
+                    "startOffset": 8511,
+                    "endColumn": 79,
+                    "endOffset": 8586
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -833,9 +853,9 @@
                 "to": {
                     "startLine": 86,
                     "startColumn": 4,
-                    "startOffset": 8555,
-                    "endColumn": 63,
-                    "endOffset": 8614
+                    "startOffset": 8591,
+                    "endColumn": 50,
+                    "endOffset": 8637
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -845,9 +865,9 @@
                 "to": {
                     "startLine": 87,
                     "startColumn": 4,
-                    "startOffset": 8619,
-                    "endColumn": 47,
-                    "endOffset": 8662
+                    "startOffset": 8642,
+                    "endColumn": 40,
+                    "endOffset": 8678
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -857,9 +877,9 @@
                 "to": {
                     "startLine": 88,
                     "startColumn": 4,
-                    "startOffset": 8667,
-                    "endColumn": 61,
-                    "endOffset": 8724
+                    "startOffset": 8683,
+                    "endColumn": 41,
+                    "endOffset": 8720
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -869,9 +889,9 @@
                 "to": {
                     "startLine": 89,
                     "startColumn": 4,
-                    "startOffset": 8729,
-                    "endColumn": 86,
-                    "endOffset": 8811
+                    "startOffset": 8725,
+                    "endColumn": 92,
+                    "endOffset": 8813
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -881,21 +901,28 @@
                 "to": {
                     "startLine": 90,
                     "startColumn": 4,
-                    "startOffset": 8816,
-                    "endColumn": 43,
-                    "endOffset": 8855
+                    "startOffset": 8818,
+                    "endColumn": 56,
+                    "endOffset": 8870
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 144,
+                        "startColumn": 4,
+                        "startOffset": 8034,
+                        "endColumn": 56,
+                        "endOffset": 8086
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 91,
                     "startColumn": 4,
-                    "startOffset": 8860,
-                    "endColumn": 58,
-                    "endOffset": 8914
+                    "startOffset": 8875,
+                    "endColumn": 99,
+                    "endOffset": 8970
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -905,9 +932,9 @@
                 "to": {
                     "startLine": 92,
                     "startColumn": 4,
-                    "startOffset": 8919,
-                    "endColumn": 52,
-                    "endOffset": 8967
+                    "startOffset": 8975,
+                    "endColumn": 43,
+                    "endOffset": 9014
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -917,9 +944,9 @@
                 "to": {
                     "startLine": 93,
                     "startColumn": 4,
-                    "startOffset": 8972,
-                    "endColumn": 45,
-                    "endOffset": 9013
+                    "startOffset": 9019,
+                    "endColumn": 47,
+                    "endOffset": 9062
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -929,9 +956,9 @@
                 "to": {
                     "startLine": 94,
                     "startColumn": 4,
-                    "startOffset": 9018,
-                    "endColumn": 51,
-                    "endOffset": 9065
+                    "startOffset": 9067,
+                    "endColumn": 70,
+                    "endOffset": 9133
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -941,9 +968,9 @@
                 "to": {
                     "startLine": 95,
                     "startColumn": 4,
-                    "startOffset": 9070,
-                    "endColumn": 54,
-                    "endOffset": 9120
+                    "startOffset": 9138,
+                    "endColumn": 63,
+                    "endOffset": 9197
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -953,9 +980,9 @@
                 "to": {
                     "startLine": 96,
                     "startColumn": 4,
-                    "startOffset": 9125,
-                    "endColumn": 45,
-                    "endOffset": 9166
+                    "startOffset": 9202,
+                    "endColumn": 42,
+                    "endOffset": 9240
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -965,33 +992,47 @@
                 "to": {
                     "startLine": 97,
                     "startColumn": 4,
-                    "startOffset": 9171,
-                    "endColumn": 39,
-                    "endOffset": 9206
+                    "startOffset": 9245,
+                    "endColumn": 74,
+                    "endOffset": 9315
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 137,
+                        "startColumn": 4,
+                        "startOffset": 7477,
+                        "endColumn": 74,
+                        "endOffset": 7547
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 98,
                     "startColumn": 4,
-                    "startOffset": 9211,
-                    "endColumn": 39,
-                    "endOffset": 9246
+                    "startOffset": 9320,
+                    "endColumn": 63,
+                    "endOffset": 9379
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 136,
+                        "startColumn": 4,
+                        "startOffset": 7412,
+                        "endColumn": 63,
+                        "endOffset": 7471
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 99,
                     "startColumn": 4,
-                    "startOffset": 9251,
-                    "endColumn": 45,
-                    "endOffset": 9292
+                    "startOffset": 9384,
+                    "endColumn": 47,
+                    "endOffset": 9427
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1001,9 +1042,9 @@
                 "to": {
                     "startLine": 100,
                     "startColumn": 4,
-                    "startOffset": 9297,
-                    "endColumn": 84,
-                    "endOffset": 9377
+                    "startOffset": 9432,
+                    "endColumn": 61,
+                    "endOffset": 9489
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1013,33 +1054,47 @@
                 "to": {
                     "startLine": 101,
                     "startColumn": 4,
-                    "startOffset": 9382,
-                    "endColumn": 46,
-                    "endOffset": 9424
+                    "startOffset": 9494,
+                    "endColumn": 82,
+                    "endOffset": 9572
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 160,
+                        "startColumn": 4,
+                        "startOffset": 9248,
+                        "endColumn": 82,
+                        "endOffset": 9326
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 102,
                     "startColumn": 4,
-                    "startOffset": 9429,
-                    "endColumn": 45,
-                    "endOffset": 9470
+                    "startOffset": 9577,
+                    "endColumn": 75,
+                    "endOffset": 9648
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 132,
+                        "startColumn": 4,
+                        "startOffset": 7097,
+                        "endColumn": 75,
+                        "endOffset": 7168
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 103,
                     "startColumn": 4,
-                    "startOffset": 9475,
-                    "endColumn": 68,
-                    "endOffset": 9539
+                    "startOffset": 9653,
+                    "endColumn": 86,
+                    "endOffset": 9735
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1049,9 +1104,9 @@
                 "to": {
                     "startLine": 104,
                     "startColumn": 4,
-                    "startOffset": 9544,
-                    "endColumn": 66,
-                    "endOffset": 9606
+                    "startOffset": 9740,
+                    "endColumn": 43,
+                    "endOffset": 9779
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1061,141 +1116,190 @@
                 "to": {
                     "startLine": 105,
                     "startColumn": 4,
-                    "startOffset": 9611,
-                    "endColumn": 110,
-                    "endOffset": 9717
+                    "startOffset": 9784,
+                    "endColumn": 65,
+                    "endOffset": 9845
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 163,
+                        "startColumn": 4,
+                        "startOffset": 9464,
+                        "endColumn": 65,
+                        "endOffset": 9525
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 106,
                     "startColumn": 4,
-                    "startOffset": 9722,
-                    "endColumn": 113,
-                    "endOffset": 9831
+                    "startOffset": 9850,
+                    "endColumn": 83,
+                    "endOffset": 9929
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 154,
+                        "startColumn": 4,
+                        "startOffset": 8811,
+                        "endColumn": 83,
+                        "endOffset": 8890
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 107,
                     "startColumn": 4,
-                    "startOffset": 9836,
-                    "endColumn": 106,
-                    "endOffset": 9938
+                    "startOffset": 9934,
+                    "endColumn": 82,
+                    "endOffset": 10012
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 141,
+                        "startColumn": 4,
+                        "startOffset": 7778,
+                        "endColumn": 82,
+                        "endOffset": 7856
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 108,
                     "startColumn": 4,
-                    "startOffset": 9943,
-                    "endColumn": 113,
-                    "endOffset": 10052
+                    "startOffset": 10017,
+                    "endColumn": 64,
+                    "endOffset": 10077
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 162,
+                        "startColumn": 4,
+                        "startOffset": 9398,
+                        "endColumn": 64,
+                        "endOffset": 9458
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 109,
                     "startColumn": 4,
-                    "startOffset": 10057,
-                    "endColumn": 131,
-                    "endOffset": 10184
+                    "startOffset": 10082,
+                    "endColumn": 58,
+                    "endOffset": 10136
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 110,
                     "startColumn": 4,
-                    "startOffset": 10189,
-                    "endColumn": 95,
-                    "endOffset": 10280
+                    "startOffset": 10141,
+                    "endColumn": 52,
+                    "endOffset": 10189
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 111,
                     "startColumn": 4,
-                    "startOffset": 10285,
-                    "endColumn": 99,
-                    "endOffset": 10380
+                    "startOffset": 10194,
+                    "endColumn": 45,
+                    "endOffset": 10235
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 112,
                     "startColumn": 4,
-                    "startOffset": 10385,
-                    "endColumn": 124,
-                    "endOffset": 10505
+                    "startOffset": 10240,
+                    "endColumn": 51,
+                    "endOffset": 10287
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 113,
                     "startColumn": 4,
-                    "startOffset": 10510,
-                    "endColumn": 108,
-                    "endOffset": 10614
+                    "startOffset": 10292,
+                    "endColumn": 67,
+                    "endOffset": 10355
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 150,
+                        "startColumn": 4,
+                        "startOffset": 8488,
+                        "endColumn": 67,
+                        "endOffset": 8551
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 114,
                     "startColumn": 4,
-                    "startOffset": 10619,
-                    "endColumn": 85,
-                    "endOffset": 10700
+                    "startOffset": 10360,
+                    "endColumn": 79,
+                    "endOffset": 10435
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 151,
+                        "startColumn": 4,
+                        "startOffset": 8557,
+                        "endColumn": 79,
+                        "endOffset": 8632
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 115,
                     "startColumn": 4,
-                    "startOffset": 10705,
-                    "endColumn": 92,
-                    "endOffset": 10793
+                    "startOffset": 10440,
+                    "endColumn": 75,
+                    "endOffset": 10511
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 139,
+                        "startColumn": 4,
+                        "startOffset": 7625,
+                        "endColumn": 75,
+                        "endOffset": 7696
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 116,
                     "startColumn": 4,
-                    "startOffset": 10798,
-                    "endColumn": 56,
-                    "endOffset": 10850
+                    "startOffset": 10516,
+                    "endColumn": 54,
+                    "endOffset": 10566
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1205,21 +1309,28 @@
                 "to": {
                     "startLine": 117,
                     "startColumn": 4,
-                    "startOffset": 10855,
-                    "endColumn": 43,
-                    "endOffset": 10894
+                    "startOffset": 10571,
+                    "endColumn": 63,
+                    "endOffset": 10630
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 155,
+                        "startColumn": 4,
+                        "startOffset": 8896,
+                        "endColumn": 63,
+                        "endOffset": 8955
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 118,
                     "startColumn": 4,
-                    "startOffset": 10899,
-                    "endColumn": 60,
-                    "endOffset": 10955
+                    "startOffset": 10635,
+                    "endColumn": 45,
+                    "endOffset": 10676
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1229,9 +1340,9 @@
                 "to": {
                     "startLine": 119,
                     "startColumn": 4,
-                    "startOffset": 10960,
-                    "endColumn": 55,
-                    "endOffset": 11011
+                    "startOffset": 10681,
+                    "endColumn": 39,
+                    "endOffset": 10716
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1241,33 +1352,47 @@
                 "to": {
                     "startLine": 120,
                     "startColumn": 4,
-                    "startOffset": 11016,
-                    "endColumn": 89,
-                    "endOffset": 11101
+                    "startOffset": 10721,
+                    "endColumn": 78,
+                    "endOffset": 10795
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 129,
+                        "startColumn": 4,
+                        "startOffset": 6866,
+                        "endColumn": 78,
+                        "endOffset": 6940
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 121,
                     "startColumn": 4,
-                    "startOffset": 11106,
-                    "endColumn": 88,
-                    "endOffset": 11190
+                    "startOffset": 10800,
+                    "endColumn": 70,
+                    "endOffset": 10866
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 130,
+                        "startColumn": 4,
+                        "startOffset": 6946,
+                        "endColumn": 70,
+                        "endOffset": 7012
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 122,
                     "startColumn": 4,
-                    "startOffset": 11195,
-                    "endColumn": 100,
-                    "endOffset": 11291
+                    "startOffset": 10871,
+                    "endColumn": 39,
+                    "endOffset": 10906
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1277,45 +1402,66 @@
                 "to": {
                     "startLine": 123,
                     "startColumn": 4,
-                    "startOffset": 11296,
-                    "endColumn": 98,
-                    "endOffset": 11390
+                    "startOffset": 10911,
+                    "endColumn": 88,
+                    "endOffset": 10995
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 143,
+                        "startColumn": 4,
+                        "startOffset": 7944,
+                        "endColumn": 88,
+                        "endOffset": 8028
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 124,
                     "startColumn": 4,
-                    "startOffset": 11395,
-                    "endColumn": 35,
-                    "endOffset": 11426
+                    "startOffset": 11000,
+                    "endColumn": 80,
+                    "endOffset": 11076
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 142,
+                        "startColumn": 4,
+                        "startOffset": 7862,
+                        "endColumn": 80,
+                        "endOffset": 7938
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 125,
                     "startColumn": 4,
-                    "startOffset": 11431,
-                    "endColumn": 33,
-                    "endOffset": 11460
+                    "startOffset": 11081,
+                    "endColumn": 66,
+                    "endOffset": 11143
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 164,
+                        "startColumn": 4,
+                        "startOffset": 9531,
+                        "endColumn": 66,
+                        "endOffset": 9593
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 126,
                     "startColumn": 4,
-                    "startOffset": 11465,
-                    "endColumn": 55,
-                    "endOffset": 11516
+                    "startOffset": 11148,
+                    "endColumn": 45,
+                    "endOffset": 11189
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1325,9 +1471,9 @@
                 "to": {
                     "startLine": 127,
                     "startColumn": 4,
-                    "startOffset": 11521,
-                    "endColumn": 46,
-                    "endOffset": 11563
+                    "startOffset": 11194,
+                    "endColumn": 84,
+                    "endOffset": 11274
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1337,9 +1483,9 @@
                 "to": {
                     "startLine": 128,
                     "startColumn": 4,
-                    "startOffset": 11568,
-                    "endColumn": 52,
-                    "endOffset": 11616
+                    "startOffset": 11279,
+                    "endColumn": 46,
+                    "endOffset": 11321
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1349,9 +1495,9 @@
                 "to": {
                     "startLine": 129,
                     "startColumn": 4,
-                    "startOffset": 11621,
+                    "startOffset": 11326,
                     "endColumn": 45,
-                    "endOffset": 11662
+                    "endOffset": 11367
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1361,9 +1507,9 @@
                 "to": {
                     "startLine": 130,
                     "startColumn": 4,
-                    "startOffset": 11667,
-                    "endColumn": 59,
-                    "endOffset": 11722
+                    "startOffset": 11372,
+                    "endColumn": 68,
+                    "endOffset": 11436
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1373,9 +1519,9 @@
                 "to": {
                     "startLine": 131,
                     "startColumn": 4,
-                    "startOffset": 11727,
-                    "endColumn": 69,
-                    "endOffset": 11792
+                    "startOffset": 11441,
+                    "endColumn": 66,
+                    "endOffset": 11503
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1385,165 +1531,179 @@
                 "to": {
                     "startLine": 132,
                     "startColumn": 4,
-                    "startOffset": 11797,
-                    "endColumn": 79,
-                    "endOffset": 11872
+                    "startOffset": 11508,
+                    "endColumn": 81,
+                    "endOffset": 11585
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 135,
+                        "startColumn": 4,
+                        "startOffset": 7329,
+                        "endColumn": 81,
+                        "endOffset": 7406
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 133,
                     "startColumn": 4,
-                    "startOffset": 11877,
-                    "endColumn": 91,
-                    "endOffset": 11964
+                    "startOffset": 11590,
+                    "endColumn": 59,
+                    "endOffset": 11645
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 158,
+                        "startColumn": 4,
+                        "startOffset": 9105,
+                        "endColumn": 59,
+                        "endOffset": 9160
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 134,
                     "startColumn": 4,
-                    "startOffset": 11969,
-                    "endColumn": 89,
-                    "endOffset": 12054
+                    "startOffset": 11650,
+                    "endColumn": 110,
+                    "endOffset": 11756
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 135,
                     "startColumn": 4,
-                    "startOffset": 12059,
-                    "endColumn": 108,
-                    "endOffset": 12163
+                    "startOffset": 11761,
+                    "endColumn": 113,
+                    "endOffset": 11870
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\values-de\\location_strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 136,
                     "startColumn": 4,
-                    "startOffset": 12168,
-                    "endColumn": 94,
-                    "endOffset": 12258
+                    "startOffset": 11875,
+                    "endColumn": 106,
+                    "endOffset": 11977
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\values-de\\location_strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 137,
                     "startColumn": 4,
-                    "startOffset": 12263,
-                    "endColumn": 53,
-                    "endOffset": 12312
+                    "startOffset": 11982,
+                    "endColumn": 113,
+                    "endOffset": 12091
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 138,
                     "startColumn": 4,
-                    "startOffset": 12317,
-                    "endColumn": 48,
-                    "endOffset": 12361
+                    "startOffset": 12096,
+                    "endColumn": 131,
+                    "endOffset": 12223
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 139,
                     "startColumn": 4,
-                    "startOffset": 12366,
-                    "endColumn": 39,
-                    "endOffset": 12401
+                    "startOffset": 12228,
+                    "endColumn": 95,
+                    "endOffset": 12319
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 140,
                     "startColumn": 4,
-                    "startOffset": 12406,
-                    "endColumn": 48,
-                    "endOffset": 12450
+                    "startOffset": 12324,
+                    "endColumn": 99,
+                    "endOffset": 12419
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 141,
                     "startColumn": 4,
-                    "startOffset": 12455,
-                    "endColumn": 54,
-                    "endOffset": 12505
+                    "startOffset": 12424,
+                    "endColumn": 124,
+                    "endOffset": 12544
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 142,
                     "startColumn": 4,
-                    "startOffset": 12510,
-                    "endColumn": 46,
-                    "endOffset": 12552
+                    "startOffset": 12549,
+                    "endColumn": 108,
+                    "endOffset": 12653
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 143,
                     "startColumn": 4,
-                    "startOffset": 12557,
-                    "endColumn": 52,
-                    "endOffset": 12605
+                    "startOffset": 12658,
+                    "endColumn": 85,
+                    "endOffset": 12739
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 144,
                     "startColumn": 4,
-                    "startOffset": 12610,
-                    "endColumn": 42,
-                    "endOffset": 12648
+                    "startOffset": 12744,
+                    "endColumn": 92,
+                    "endOffset": 12832
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\values-de\\values-de.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 145,
                     "startColumn": 4,
-                    "startOffset": 12653,
-                    "endColumn": 66,
-                    "endOffset": 12715
+                    "startOffset": 12837,
+                    "endColumn": 56,
+                    "endOffset": 12889
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1553,9 +1713,9 @@
                 "to": {
                     "startLine": 146,
                     "startColumn": 4,
-                    "startOffset": 12720,
-                    "endColumn": 72,
-                    "endOffset": 12788
+                    "startOffset": 12894,
+                    "endColumn": 43,
+                    "endOffset": 12933
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1565,9 +1725,9 @@
                 "to": {
                     "startLine": 147,
                     "startColumn": 4,
-                    "startOffset": 12793,
-                    "endColumn": 56,
-                    "endOffset": 12845
+                    "startOffset": 12938,
+                    "endColumn": 60,
+                    "endOffset": 12994
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1577,9 +1737,9 @@
                 "to": {
                     "startLine": 148,
                     "startColumn": 4,
-                    "startOffset": 12850,
-                    "endColumn": 46,
-                    "endOffset": 12892
+                    "startOffset": 12999,
+                    "endColumn": 55,
+                    "endOffset": 13050
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1589,9 +1749,9 @@
                 "to": {
                     "startLine": 149,
                     "startColumn": 4,
-                    "startOffset": 12897,
-                    "endColumn": 66,
-                    "endOffset": 12959
+                    "startOffset": 13055,
+                    "endColumn": 89,
+                    "endOffset": 13140
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1601,9 +1761,9 @@
                 "to": {
                     "startLine": 150,
                     "startColumn": 4,
-                    "startOffset": 12964,
-                    "endColumn": 41,
-                    "endOffset": 13001
+                    "startOffset": 13145,
+                    "endColumn": 88,
+                    "endOffset": 13229
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1613,9 +1773,9 @@
                 "to": {
                     "startLine": 151,
                     "startColumn": 4,
-                    "startOffset": 13006,
-                    "endColumn": 55,
-                    "endOffset": 13057
+                    "startOffset": 13234,
+                    "endColumn": 100,
+                    "endOffset": 13330
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1625,9 +1785,9 @@
                 "to": {
                     "startLine": 152,
                     "startColumn": 4,
-                    "startOffset": 13062,
-                    "endColumn": 62,
-                    "endOffset": 13120
+                    "startOffset": 13335,
+                    "endColumn": 98,
+                    "endOffset": 13429
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1637,9 +1797,9 @@
                 "to": {
                     "startLine": 153,
                     "startColumn": 4,
-                    "startOffset": 13125,
-                    "endColumn": 63,
-                    "endOffset": 13184
+                    "startOffset": 13434,
+                    "endColumn": 57,
+                    "endOffset": 13487
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1649,9 +1809,9 @@
                 "to": {
                     "startLine": 154,
                     "startColumn": 4,
-                    "startOffset": 13189,
-                    "endColumn": 57,
-                    "endOffset": 13242
+                    "startOffset": 13492,
+                    "endColumn": 35,
+                    "endOffset": 13523
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1661,33 +1821,47 @@
                 "to": {
                     "startLine": 155,
                     "startColumn": 4,
-                    "startOffset": 13247,
-                    "endColumn": 44,
-                    "endOffset": 13287
+                    "startOffset": 13528,
+                    "endColumn": 78,
+                    "endOffset": 13602
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 147,
+                        "startColumn": 4,
+                        "startOffset": 8246,
+                        "endColumn": 78,
+                        "endOffset": 8320
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 156,
                     "startColumn": 4,
-                    "startOffset": 13292,
-                    "endColumn": 43,
-                    "endOffset": 13331
+                    "startOffset": 13607,
+                    "endColumn": 70,
+                    "endOffset": 13673
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 138,
+                        "startColumn": 4,
+                        "startOffset": 7553,
+                        "endColumn": 70,
+                        "endOffset": 7619
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 157,
                     "startColumn": 4,
-                    "startOffset": 13336,
-                    "endColumn": 41,
-                    "endOffset": 13373
+                    "startOffset": 13678,
+                    "endColumn": 71,
+                    "endOffset": 13745
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1697,9 +1871,9 @@
                 "to": {
                     "startLine": 158,
                     "startColumn": 4,
-                    "startOffset": 13378,
-                    "endColumn": 48,
-                    "endOffset": 13422
+                    "startOffset": 13750,
+                    "endColumn": 33,
+                    "endOffset": 13779
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1709,9 +1883,9 @@
                 "to": {
                     "startLine": 159,
                     "startColumn": 4,
-                    "startOffset": 13427,
-                    "endColumn": 65,
-                    "endOffset": 13488
+                    "startOffset": 13784,
+                    "endColumn": 55,
+                    "endOffset": 13835
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1721,21 +1895,28 @@
                 "to": {
                     "startLine": 160,
                     "startColumn": 4,
-                    "startOffset": 13493,
-                    "endColumn": 51,
-                    "endOffset": 13540
+                    "startOffset": 13840,
+                    "endColumn": 72,
+                    "endOffset": 13908
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 145,
+                        "startColumn": 4,
+                        "startOffset": 8092,
+                        "endColumn": 72,
+                        "endOffset": 8160
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 161,
                     "startColumn": 4,
-                    "startOffset": 13545,
-                    "endColumn": 42,
-                    "endOffset": 13583
+                    "startOffset": 13913,
+                    "endColumn": 46,
+                    "endOffset": 13955
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1745,9 +1926,9 @@
                 "to": {
                     "startLine": 162,
                     "startColumn": 4,
-                    "startOffset": 13588,
-                    "endColumn": 39,
-                    "endOffset": 13623
+                    "startOffset": 13960,
+                    "endColumn": 52,
+                    "endOffset": 14008
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1757,9 +1938,9 @@
                 "to": {
                     "startLine": 163,
                     "startColumn": 4,
-                    "startOffset": 13628,
-                    "endColumn": 43,
-                    "endOffset": 13667
+                    "startOffset": 14013,
+                    "endColumn": 45,
+                    "endOffset": 14054
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1769,9 +1950,9 @@
                 "to": {
                     "startLine": 164,
                     "startColumn": 4,
-                    "startOffset": 13672,
-                    "endColumn": 56,
-                    "endOffset": 13724
+                    "startOffset": 14059,
+                    "endColumn": 59,
+                    "endOffset": 14114
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1781,21 +1962,28 @@
                 "to": {
                     "startLine": 165,
                     "startColumn": 4,
-                    "startOffset": 13729,
-                    "endColumn": 48,
-                    "endOffset": 13773
+                    "startOffset": 14119,
+                    "endColumn": 80,
+                    "endOffset": 14195
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 159,
+                        "startColumn": 4,
+                        "startOffset": 9166,
+                        "endColumn": 80,
+                        "endOffset": 9242
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 166,
                     "startColumn": 4,
-                    "startOffset": 13778,
-                    "endColumn": 54,
-                    "endOffset": 13828
+                    "startOffset": 14200,
+                    "endColumn": 69,
+                    "endOffset": 14265
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1805,21 +1993,21 @@
                 "to": {
                     "startLine": 167,
                     "startColumn": 4,
-                    "startOffset": 13833,
-                    "endColumn": 100,
-                    "endOffset": 13929
+                    "startOffset": 14270,
+                    "endColumn": 79,
+                    "endOffset": 14345
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\values-de\\values-de.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 168,
                     "startColumn": 4,
-                    "startOffset": 13934,
-                    "endColumn": 56,
-                    "endOffset": 13986
+                    "startOffset": 14350,
+                    "endColumn": 91,
+                    "endOffset": 14437
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1829,9 +2017,9 @@
                 "to": {
                     "startLine": 169,
                     "startColumn": 4,
-                    "startOffset": 13991,
-                    "endColumn": 46,
-                    "endOffset": 14033
+                    "startOffset": 14442,
+                    "endColumn": 89,
+                    "endOffset": 14527
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1841,33 +2029,33 @@
                 "to": {
                     "startLine": 170,
                     "startColumn": 4,
-                    "startOffset": 14038,
-                    "endColumn": 43,
-                    "endOffset": 14077
+                    "startOffset": 14532,
+                    "endColumn": 108,
+                    "endOffset": 14636
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\values-de\\location_strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 171,
                     "startColumn": 4,
-                    "startOffset": 14082,
-                    "endColumn": 64,
-                    "endOffset": 14142
+                    "startOffset": 14641,
+                    "endColumn": 94,
+                    "endOffset": 14731
                 },
                 "from": {
-                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\values-de\\location_strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 172,
                     "startColumn": 4,
-                    "startOffset": 14147,
+                    "startOffset": 14736,
                     "endColumn": 53,
-                    "endOffset": 14196
+                    "endOffset": 14785
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1877,9 +2065,9 @@
                 "to": {
                     "startLine": 173,
                     "startColumn": 4,
-                    "startOffset": 14201,
-                    "endColumn": 49,
-                    "endOffset": 14246
+                    "startOffset": 14790,
+                    "endColumn": 48,
+                    "endOffset": 14834
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1889,9 +2077,9 @@
                 "to": {
                     "startLine": 174,
                     "startColumn": 4,
-                    "startOffset": 14251,
-                    "endColumn": 64,
-                    "endOffset": 14311
+                    "startOffset": 14839,
+                    "endColumn": 39,
+                    "endOffset": 14874
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1901,9 +2089,9 @@
                 "to": {
                     "startLine": 175,
                     "startColumn": 4,
-                    "startOffset": 14316,
-                    "endColumn": 94,
-                    "endOffset": 14406
+                    "startOffset": 14879,
+                    "endColumn": 48,
+                    "endOffset": 14923
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1913,9 +2101,9 @@
                 "to": {
                     "startLine": 176,
                     "startColumn": 4,
-                    "startOffset": 14411,
-                    "endColumn": 93,
-                    "endOffset": 14500
+                    "startOffset": 14928,
+                    "endColumn": 54,
+                    "endOffset": 14978
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
@@ -1925,9 +2113,650 @@
                 "to": {
                     "startLine": 177,
                     "startColumn": 4,
-                    "startOffset": 14505,
+                    "startOffset": 14983,
+                    "endColumn": 46,
+                    "endOffset": 15025
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 178,
+                    "startColumn": 4,
+                    "startOffset": 15030,
+                    "endColumn": 52,
+                    "endOffset": 15078
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 179,
+                    "startColumn": 4,
+                    "startOffset": 15083,
+                    "endColumn": 42,
+                    "endOffset": 15121
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 180,
+                    "startColumn": 4,
+                    "startOffset": 15126,
+                    "endColumn": 66,
+                    "endOffset": 15188
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 181,
+                    "startColumn": 4,
+                    "startOffset": 15193,
+                    "endColumn": 72,
+                    "endOffset": 15261
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 182,
+                    "startColumn": 4,
+                    "startOffset": 15266,
+                    "endColumn": 56,
+                    "endOffset": 15318
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 183,
+                    "startColumn": 4,
+                    "startOffset": 15323,
+                    "endColumn": 46,
+                    "endOffset": 15365
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 184,
+                    "startColumn": 4,
+                    "startOffset": 15370,
+                    "endColumn": 66,
+                    "endOffset": 15432
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 185,
+                    "startColumn": 4,
+                    "startOffset": 15437,
+                    "endColumn": 41,
+                    "endOffset": 15474
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 186,
+                    "startColumn": 4,
+                    "startOffset": 15479,
+                    "endColumn": 55,
+                    "endOffset": 15530
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 187,
+                    "startColumn": 4,
+                    "startOffset": 15535,
+                    "endColumn": 62,
+                    "endOffset": 15593
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 188,
+                    "startColumn": 4,
+                    "startOffset": 15598,
+                    "endColumn": 63,
+                    "endOffset": 15657
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 189,
+                    "startColumn": 4,
+                    "startOffset": 15662,
+                    "endColumn": 57,
+                    "endOffset": 15715
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 190,
+                    "startColumn": 4,
+                    "startOffset": 15720,
+                    "endColumn": 44,
+                    "endOffset": 15760
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 191,
+                    "startColumn": 4,
+                    "startOffset": 15765,
+                    "endColumn": 43,
+                    "endOffset": 15804
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 192,
+                    "startColumn": 4,
+                    "startOffset": 15809,
+                    "endColumn": 41,
+                    "endOffset": 15846
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 193,
+                    "startColumn": 4,
+                    "startOffset": 15851,
+                    "endColumn": 48,
+                    "endOffset": 15895
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 194,
+                    "startColumn": 4,
+                    "startOffset": 15900,
+                    "endColumn": 65,
+                    "endOffset": 15961
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 195,
+                    "startColumn": 4,
+                    "startOffset": 15966,
+                    "endColumn": 51,
+                    "endOffset": 16013
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 196,
+                    "startColumn": 4,
+                    "startOffset": 16018,
+                    "endColumn": 42,
+                    "endOffset": 16056
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 197,
+                    "startColumn": 4,
+                    "startOffset": 16061,
+                    "endColumn": 39,
+                    "endOffset": 16096
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 198,
+                    "startColumn": 4,
+                    "startOffset": 16101,
+                    "endColumn": 43,
+                    "endOffset": 16140
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 199,
+                    "startColumn": 4,
+                    "startOffset": 16145,
+                    "endColumn": 56,
+                    "endOffset": 16197
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 200,
+                    "startColumn": 4,
+                    "startOffset": 16202,
+                    "endColumn": 48,
+                    "endOffset": 16246
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 201,
+                    "startColumn": 4,
+                    "startOffset": 16251,
+                    "endColumn": 71,
+                    "endOffset": 16318
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 133,
+                        "startColumn": 4,
+                        "startOffset": 7174,
+                        "endColumn": 71,
+                        "endOffset": 7241
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 202,
+                    "startColumn": 4,
+                    "startOffset": 16323,
+                    "endColumn": 72,
+                    "endOffset": 16391
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 165,
+                        "startColumn": 4,
+                        "startOffset": 9599,
+                        "endColumn": 72,
+                        "endOffset": 9667
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 203,
+                    "startColumn": 4,
+                    "startOffset": 16396,
+                    "endColumn": 54,
+                    "endOffset": 16446
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 204,
+                    "startColumn": 4,
+                    "startOffset": 16451,
+                    "endColumn": 100,
+                    "endOffset": 16547
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-de\\values-de.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 205,
+                    "startColumn": 4,
+                    "startOffset": 16552,
+                    "endColumn": 67,
+                    "endOffset": 16615
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 157,
+                        "startColumn": 4,
+                        "startOffset": 9036,
+                        "endColumn": 67,
+                        "endOffset": 9099
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 206,
+                    "startColumn": 4,
+                    "startOffset": 16620,
+                    "endColumn": 73,
+                    "endOffset": 16689
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 149,
+                        "startColumn": 4,
+                        "startOffset": 8413,
+                        "endColumn": 73,
+                        "endOffset": 8482
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 207,
+                    "startColumn": 4,
+                    "startOffset": 16694,
+                    "endColumn": 85,
+                    "endOffset": 16775
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 148,
+                        "startColumn": 4,
+                        "startOffset": 8326,
+                        "endColumn": 85,
+                        "endOffset": 8407
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 208,
+                    "startColumn": 4,
+                    "startOffset": 16780,
+                    "endColumn": 56,
+                    "endOffset": 16832
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 209,
+                    "startColumn": 4,
+                    "startOffset": 16837,
+                    "endColumn": 46,
+                    "endOffset": 16879
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 210,
+                    "startColumn": 4,
+                    "startOffset": 16884,
+                    "endColumn": 43,
+                    "endOffset": 16923
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 211,
+                    "startColumn": 4,
+                    "startOffset": 16928,
+                    "endColumn": 64,
+                    "endOffset": 16988
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 212,
+                    "startColumn": 4,
+                    "startOffset": 16993,
+                    "endColumn": 101,
+                    "endOffset": 17090
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 213,
+                    "startColumn": 4,
+                    "startOffset": 17095,
+                    "endColumn": 69,
+                    "endOffset": 17160
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 128,
+                        "startColumn": 4,
+                        "startOffset": 6795,
+                        "endColumn": 69,
+                        "endOffset": 6860
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 214,
+                    "startColumn": 4,
+                    "startOffset": 17165,
+                    "endColumn": 73,
+                    "endOffset": 17234
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 156,
+                        "startColumn": 4,
+                        "startOffset": 8961,
+                        "endColumn": 73,
+                        "endOffset": 9030
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 215,
+                    "startColumn": 4,
+                    "startOffset": 17239,
+                    "endColumn": 53,
+                    "endOffset": 17288
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 216,
+                    "startColumn": 4,
+                    "startOffset": 17293,
+                    "endColumn": 78,
+                    "endOffset": 17367
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 152,
+                        "startColumn": 4,
+                        "startOffset": 8638,
+                        "endColumn": 78,
+                        "endOffset": 8712
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 217,
+                    "startColumn": 4,
+                    "startOffset": 17372,
+                    "endColumn": 80,
+                    "endOffset": 17448
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 134,
+                        "startColumn": 4,
+                        "startOffset": 7247,
+                        "endColumn": 80,
+                        "endOffset": 7323
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 218,
+                    "startColumn": 4,
+                    "startOffset": 17453,
+                    "endColumn": 74,
+                    "endOffset": 17523
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 140,
+                        "startColumn": 4,
+                        "startOffset": 7702,
+                        "endColumn": 74,
+                        "endOffset": 7772
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 219,
+                    "startColumn": 4,
+                    "startOffset": 17528,
+                    "endColumn": 49,
+                    "endOffset": 17573
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 220,
+                    "startColumn": 4,
+                    "startOffset": 17578,
+                    "endColumn": 64,
+                    "endOffset": 17638
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 221,
+                    "startColumn": 4,
+                    "startOffset": 17643,
+                    "endColumn": 77,
+                    "endOffset": 17716
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 131,
+                        "startColumn": 4,
+                        "startOffset": 7018,
+                        "endColumn": 77,
+                        "endOffset": 7091
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 222,
+                    "startColumn": 4,
+                    "startOffset": 17721,
+                    "endColumn": 94,
+                    "endOffset": 17811
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 223,
+                    "startColumn": 4,
+                    "startOffset": 17816,
+                    "endColumn": 93,
+                    "endOffset": 17905
+                },
+                "from": {
+                    "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 224,
+                    "startColumn": 4,
+                    "startOffset": 17910,
                     "endColumn": 109,
-                    "endOffset": 14610
+                    "endOffset": 18015
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-wallet\\8.4.0\\res\\values-de\\wallet_strings.xml"
@@ -1935,11 +2764,11 @@
             },
             {
                 "to": {
-                    "startLine": 178,
+                    "startLine": 225,
                     "startColumn": 4,
-                    "startOffset": 14615,
+                    "startOffset": 18020,
                     "endColumn": 34,
-                    "endOffset": 14645
+                    "endOffset": 18050
                 },
                 "from": {
                     "file": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\values-de\\strings.xml"

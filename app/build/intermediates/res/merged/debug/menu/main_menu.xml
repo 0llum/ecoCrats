@@ -49,4 +49,18 @@
         android:icon="@mipmap/add_friend_white"
         app:showAsAction="always"
         android:visible="false"/>
+
+    <item
+        android:id="@+id/sendTransport"
+        android:title="@string/send"
+        android:icon="@mipmap/send"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/newTransport"
+        android:title="@string/new_transport"
+        android:icon="@mipmap/transport_white"
+        app:showAsAction="always"
+        android:visible="false"/>
 </menu>

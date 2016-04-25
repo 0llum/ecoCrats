@@ -8,61 +8,61 @@ package com.getbase.floatingactionbutton;
 
 public final class R {
 	public static final class attr {
-		public static final int fab_addButtonColorNormal = 0x7f010106;
-		public static final int fab_addButtonColorPressed = 0x7f010105;
-		public static final int fab_addButtonPlusIconColor = 0x7f010108;
-		public static final int fab_addButtonSize = 0x7f010107;
-		public static final int fab_addButtonStrokeVisible = 0x7f010109;
-		public static final int fab_colorDisabled = 0x7f0100c5;
-		public static final int fab_colorNormal = 0x7f0100c6;
-		public static final int fab_colorPressed = 0x7f0100c4;
-		public static final int fab_expandDirection = 0x7f01010c;
-		public static final int fab_icon = 0x7f0100c7;
-		public static final int fab_labelStyle = 0x7f01010a;
-		public static final int fab_labelsPosition = 0x7f01010b;
+		public static final int fab_addButtonColorNormal = 0x7f01010c;
+		public static final int fab_addButtonColorPressed = 0x7f01010b;
+		public static final int fab_addButtonPlusIconColor = 0x7f01010e;
+		public static final int fab_addButtonSize = 0x7f01010d;
+		public static final int fab_addButtonStrokeVisible = 0x7f01010f;
+		public static final int fab_colorDisabled = 0x7f0100ca;
+		public static final int fab_colorNormal = 0x7f0100cb;
+		public static final int fab_colorPressed = 0x7f0100c9;
+		public static final int fab_expandDirection = 0x7f010112;
+		public static final int fab_icon = 0x7f0100cc;
+		public static final int fab_labelStyle = 0x7f010110;
+		public static final int fab_labelsPosition = 0x7f010111;
 		public static final int fab_plusIconColor = 0x7f010027;
-		public static final int fab_size = 0x7f0100c8;
-		public static final int fab_stroke_visible = 0x7f0100ca;
-		public static final int fab_title = 0x7f0100c9;
+		public static final int fab_size = 0x7f0100cd;
+		public static final int fab_stroke_visible = 0x7f0100cf;
+		public static final int fab_title = 0x7f0100ce;
 	}
 	public static final class dimen {
-		public static final int fab_actions_spacing = 0x7f0a0066;
-		public static final int fab_icon_size = 0x7f0a0067;
-		public static final int fab_labels_margin = 0x7f0a0068;
-		public static final int fab_plus_icon_size = 0x7f0a0069;
-		public static final int fab_plus_icon_stroke = 0x7f0a006a;
-		public static final int fab_shadow_offset = 0x7f0a006b;
-		public static final int fab_shadow_radius = 0x7f0a006c;
-		public static final int fab_size_mini = 0x7f0a006d;
-		public static final int fab_size_normal = 0x7f0a006e;
-		public static final int fab_stroke_width = 0x7f0a006f;
+		public static final int fab_actions_spacing = 0x7f0a0069;
+		public static final int fab_icon_size = 0x7f0a006a;
+		public static final int fab_labels_margin = 0x7f0a006b;
+		public static final int fab_plus_icon_size = 0x7f0a006c;
+		public static final int fab_plus_icon_stroke = 0x7f0a006d;
+		public static final int fab_shadow_offset = 0x7f0a006e;
+		public static final int fab_shadow_radius = 0x7f0a006f;
+		public static final int fab_size_mini = 0x7f0a0070;
+		public static final int fab_size_normal = 0x7f0a0071;
+		public static final int fab_stroke_width = 0x7f0a0072;
 	}
 	public static final class drawable {
 		public static final int fab_bg_mini = 0x7f02008a;
 		public static final int fab_bg_normal = 0x7f02008b;
 	}
 	public static final class id {
-		public static final int down = 0x7f0e0036;
+		public static final int down = 0x7f0e0037;
 		public static final int fab_expand_menu_button = 0x7f0e0005;
 		public static final int fab_label = 0x7f0e0006;
-		public static final int left = 0x7f0e0025;
-		public static final int mini = 0x7f0e0033;
+		public static final int left = 0x7f0e0026;
+		public static final int mini = 0x7f0e0034;
 		public static final int normal = 0x7f0e000f;
-		public static final int right = 0x7f0e0026;
+		public static final int right = 0x7f0e0027;
 		public static final int up = 0x7f0e000c;
 	}
 	public static final class styleable {
 		public static final int[] AddFloatingActionButton = { 0x7f010027 };
 		public static final int AddFloatingActionButton_fab_plusIconColor = 0;
-		public static final int[] FloatingActionButton = { 0x010100d4, 0x7f010022, 0x7f0100c4, 0x7f0100c5, 0x7f0100c6, 0x7f0100c7, 0x7f0100c8, 0x7f0100c9, 0x7f0100ca, 0x7f0100cb, 0x7f0100cc, 0x7f0100cd, 0x7f0100ce, 0x7f0100cf, 0x7f0100d0, 0x7f0100d1, 0x7f0100d2, 0x7f0100d3, 0x7f0100d4, 0x7f0100d5, 0x7f0100d6, 0x7f0100d7, 0x7f0100d8, 0x7f0100d9, 0x7f0100da, 0x7f0100db, 0x7f0100dc, 0x7f0100dd, 0x7f0100de, 0x7f010176, 0x7f010177 };
-		public static final int FloatingActionButton_fab_colorDisabled = 3;
-		public static final int FloatingActionButton_fab_colorNormal = 4;
-		public static final int FloatingActionButton_fab_colorPressed = 2;
-		public static final int FloatingActionButton_fab_icon = 5;
-		public static final int FloatingActionButton_fab_size = 6;
-		public static final int FloatingActionButton_fab_stroke_visible = 8;
-		public static final int FloatingActionButton_fab_title = 7;
-		public static final int[] FloatingActionsMenu = { 0x7f010105, 0x7f010106, 0x7f010107, 0x7f010108, 0x7f010109, 0x7f01010a, 0x7f01010b, 0x7f01010c };
+		public static final int[] FloatingActionButton = { 0x7f010022, 0x7f0100c9, 0x7f0100ca, 0x7f0100cb, 0x7f0100cc, 0x7f0100cd, 0x7f0100ce, 0x7f0100cf, 0x7f0100d0, 0x7f0100d1, 0x7f0100d2, 0x7f0100d3, 0x7f0100d4, 0x7f0100d5, 0x7f0100d6, 0x7f0100d7, 0x7f0100d8, 0x7f0100d9, 0x7f0100da, 0x7f0100db, 0x7f0100dc, 0x7f0100dd, 0x7f0100de, 0x7f0100df, 0x7f0100e0, 0x7f0100e1, 0x7f0100e2, 0x7f0100e3, 0x7f0100e4, 0x7f010182, 0x7f010183 };
+		public static final int FloatingActionButton_fab_colorDisabled = 2;
+		public static final int FloatingActionButton_fab_colorNormal = 3;
+		public static final int FloatingActionButton_fab_colorPressed = 1;
+		public static final int FloatingActionButton_fab_icon = 4;
+		public static final int FloatingActionButton_fab_size = 5;
+		public static final int FloatingActionButton_fab_stroke_visible = 7;
+		public static final int FloatingActionButton_fab_title = 6;
+		public static final int[] FloatingActionsMenu = { 0x7f01010b, 0x7f01010c, 0x7f01010d, 0x7f01010e, 0x7f01010f, 0x7f010110, 0x7f010111, 0x7f010112 };
 		public static final int FloatingActionsMenu_fab_addButtonColorNormal = 1;
 		public static final int FloatingActionsMenu_fab_addButtonColorPressed = 0;
 		public static final int FloatingActionsMenu_fab_addButtonPlusIconColor = 3;

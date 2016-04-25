@@ -13,8 +13,7 @@ import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStores;
 import com.ollum.ecoCrats.R;
 
-public class StoresFragment extends Fragment implements View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
-    Button newStore;
+public class StoresFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
     RecyclerView recyclerView;
     SwipeRefreshLayout swipeRefreshLayout;
 
@@ -26,8 +25,6 @@ public class StoresFragment extends Fragment implements View.OnClickListener, Sw
 
         recyclerView = (RecyclerView) view.findViewById(R.id.stores_recyclerView);
 
-        /*newStore = (Button) view.findViewById(R.id.stores_button_new);
-        newStore.setOnClickListener(this);*/
 
         BackgroundTaskStores backgroundTaskStores = new BackgroundTaskStores(getContext(), recyclerView);
         backgroundTaskStores.execute(MainActivity.user.getUsername());
@@ -40,14 +37,6 @@ public class StoresFragment extends Fragment implements View.OnClickListener, Sw
         }
 
         return view;
-    }
-
-    @Override
-    public void onClick(View v) {
-        /*switch (v.getId()) {
-            case R.id.stores_button_new:
-                break;
-        }*/
     }
 
     @Override

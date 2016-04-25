@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.Adapters.StoresAdapter;
+import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStoreDetails;
 import com.ollum.ecoCrats.R;
 
@@ -59,6 +60,10 @@ public class StoreDetailsFragment extends Fragment implements SwipeRefreshLayout
 
     @Override
     public void onRefresh() {
+        String method = "updateTransport";
+        BackgroundTask backgroundTask = new BackgroundTask(getContext());
+        backgroundTask.execute(method);
+
         BackgroundTaskStoreDetails backgroundTaskStoreDetails = new BackgroundTaskStoreDetails(getContext(), recyclerView);
         backgroundTaskStoreDetails.execute("" + ID);
 

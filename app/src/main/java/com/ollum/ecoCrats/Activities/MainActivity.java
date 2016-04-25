@@ -9,6 +9,7 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -18,7 +19,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -32,6 +32,7 @@ import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskLatestMessage;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStatus;
 import com.ollum.ecoCrats.Classes.User;
+import com.ollum.ecoCrats.Fragments.ActiveTransportFragment;
 import com.ollum.ecoCrats.Fragments.AddItemsFragment;
 import com.ollum.ecoCrats.Fragments.BankFragment;
 import com.ollum.ecoCrats.Fragments.CountriesFragment;
@@ -40,12 +41,12 @@ import com.ollum.ecoCrats.Fragments.ItemsFragment;
 import com.ollum.ecoCrats.Fragments.MessageDetailsFragment;
 import com.ollum.ecoCrats.Fragments.MessagesInboxFragment;
 import com.ollum.ecoCrats.Fragments.NewMessageFragment;
+import com.ollum.ecoCrats.Fragments.NewTransportFragment;
 import com.ollum.ecoCrats.Fragments.ProfileFragment;
 import com.ollum.ecoCrats.Fragments.RegionDetailsFragment;
 import com.ollum.ecoCrats.Fragments.SettingsFragment;
 import com.ollum.ecoCrats.Fragments.StoreDetailsFragment;
 import com.ollum.ecoCrats.Fragments.StoresFragment;
-import com.ollum.ecoCrats.Fragments.TransportFragment;
 import com.ollum.ecoCrats.R;
 import com.ollum.ecoCrats.SharedPrefs.UserLocalStore;
 
@@ -277,9 +278,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 transaction.commit();
                 break;
             case R.id.fabTransport:
-                TransportFragment transportFragment = new TransportFragment();
-                transaction.replace(R.id.mainContent, transportFragment, "TransportFragment");
-                transaction.addToBackStack("TransportFragment");
+                ActiveTransportFragment activeTransportFragment = new ActiveTransportFragment();
+                transaction.replace(R.id.mainContent, activeTransportFragment, "ActiveTransportFragment");
+                transaction.addToBackStack("ActiveTransportFragment");
                 transaction.commit();
                 break;
             case R.id.fabContracts:
@@ -579,6 +580,48 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 addFriendDialog.create();
                 addFriendDialog.show();
                 break;
+            case R.id.newTransport:
+                NewTransportFragment newTransportFragment = new NewTransportFragment();
+                transaction.replace(R.id.mainContent, newTransportFragment, "NewTransportFragment");
+                transaction.addToBackStack("NewTransportFragment");
+                transaction.commit();
+                break;
+            case R.id.sendTransport:
+                if (NewTransportFragment.tvQuantity.getText().equals("0")) {
+                    Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.quantity_0, Snackbar.LENGTH_LONG);
+                    snackbar.show();
+                } else {
+                    double startRegionLatitude = Math.toRadians(Double.parseDouble(NewTransportFragment.startRegionLatitude));
+                    double startRegionLongitude = Math.toRadians(Double.parseDouble(NewTransportFragment.startRegionLongitude));
+                    double destinationRegionLatitude = Math.toRadians(Double.parseDouble(NewTransportFragment.destinationRegionLatitude));
+                    double destinationRegionLongitude = Math.toRadians(Double.parseDouble(NewTransportFragment.destinationRegionLongitude));
+
+                    int r = 6371;
+                    int distance = (int)(Math.acos((Math.sin(startRegionLatitude) * Math.sin(destinationRegionLatitude)) + (Math.cos(startRegionLatitude) * Math.cos(destinationRegionLatitude) * Math.cos(destinationRegionLongitude - startRegionLongitude))) * r);
+                    final String duration = "" + distance * 60 / 80;
+
+                    AlertDialog.Builder transportDialog = new AlertDialog.Builder(this)
+                            .setTitle(R.string.transport_confirmation)
+                            .setMessage(getResources().getString(R.string.distance) + ": " + distance + " km\n" + getResources().getString(R.string.duration) + ": " + duration + " min")
+                            .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                    String quantity = NewTransportFragment.tvQuantity.getText().toString();
+                                    BackgroundTask backgroundTask = new BackgroundTask(MainActivity.this);
+                                    backgroundTask.execute("transport", NewTransportFragment.startID, NewTransportFragment.destinationID, NewTransportFragment.itemID, quantity, duration);
+                                }
+                            })
+                            .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                    transportDialog.create();
+                    transportDialog.show();
+                }
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -586,9 +629,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     protected void onResume() {
         super.onResume();
+
         if (BackgroundTaskLatestMessage.mNotificationManager != null) {
             BackgroundTaskLatestMessage.mNotificationManager.cancelAll();
         }
+
+        String method = "updateTransport";
+        BackgroundTask backgroundTask = new BackgroundTask(this);
+        backgroundTask.execute(method);
     }
 
     @Override
@@ -605,44 +653,42 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onBackPressed() {
-        closeDrawer();
-
-        if (fabMenu.isOpened()) {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            closeDrawer();
+        } else if (fabMenu.isOpened()) {
             fabMenu.close(true);
-        }
+        } else {
+            FragmentManager.BackStackEntry currentFragment = fragmentManager.getBackStackEntryAt(fragmentManager.getBackStackEntryCount() - 1);
+            String current = currentFragment.getName();
 
-        FragmentManager.BackStackEntry currentFragment = fragmentManager.getBackStackEntryAt(fragmentManager.getBackStackEntryCount() - 1);
-        String current = currentFragment.getName();
-
-        if (current.equals("ProfileFragment")) {
-            return;
-        } else if (current.equals("FriendlistFragment") ||
-                current.equals("MessagesInboxFragment") ||
-                current.equals("MessagesOutboxFragment") ||
-                current.equals("CountriesFragment") ||
-                current.equals("StoresFragment") ||
-                current.equals("BankFragment") ||
-                current.equals("ItemsFragment")) {
-            ProfileFragment profileFragment = new ProfileFragment();
-            FragmentTransaction transaction = fragmentManager.beginTransaction();
-            transaction.replace(R.id.mainContent, profileFragment, "ProfileFragment");
-            transaction.addToBackStack("ProfileFragment");
-            transaction.commit();
-            return;
-        } else if (current.equals("MarketSalesFragment") ||
-                current.equals("MarketPurchasesFragment")) {
-            ItemsFragment itemsFragment = new ItemsFragment();
-            FragmentTransaction transaction = fragmentManager.beginTransaction();
-            transaction.replace(R.id.mainContent, itemsFragment, "ItemsFragment");
-            transaction.addToBackStack("ItemsFragment");
-            transaction.commit();
-            return;
-        } else
-         {
-            super.onBackPressed();
+            if (current.equals("ProfileFragment")) {
+                return;
+            } else if (current.equals("FriendlistFragment") ||
+                    current.equals("MessagesInboxFragment") ||
+                    current.equals("MessagesOutboxFragment") ||
+                    current.equals("CountriesFragment") ||
+                    current.equals("StoresFragment") ||
+                    current.equals("BankFragment") ||
+                    current.equals("ItemsFragment")) {
+                ProfileFragment profileFragment = new ProfileFragment();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.replace(R.id.mainContent, profileFragment, "ProfileFragment");
+                transaction.addToBackStack("ProfileFragment");
+                transaction.commit();
+                return;
+            } else if (current.equals("MarketSalesFragment") ||
+                    current.equals("MarketPurchasesFragment")) {
+                ItemsFragment itemsFragment = new ItemsFragment();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.replace(R.id.mainContent, itemsFragment, "ItemsFragment");
+                transaction.addToBackStack("ItemsFragment");
+                transaction.commit();
+                return;
+            } else {
+                super.onBackPressed();
+            }
         }
     }
-
 
     public void setUserOnline(User user) {
         String method = "online";

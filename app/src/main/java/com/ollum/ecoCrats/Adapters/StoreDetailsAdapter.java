@@ -19,8 +19,8 @@ import android.widget.TextView;
 import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.Classes.Item;
+import com.ollum.ecoCrats.Fragments.NewTransportFragment;
 import com.ollum.ecoCrats.Fragments.StoreDetailsFragment;
-import com.ollum.ecoCrats.Fragments.TransportFragment;
 import com.ollum.ecoCrats.R;
 
 import java.util.ArrayList;
@@ -194,11 +194,11 @@ public class StoreDetailsAdapter extends RecyclerView.Adapter<StoreDetailsAdapte
                             bundle.putInt("storeID", StoreDetailsFragment.ID);
                             bundle.putInt("itemID", item.getID());
 
-                            TransportFragment transportFragment = new TransportFragment();
-                            transportFragment.setArguments(bundle);
+                            NewTransportFragment newTransportFragment = new NewTransportFragment();
+                            newTransportFragment.setArguments(bundle);
                             FragmentTransaction transaction2 = MainActivity.fragmentManager.beginTransaction();
-                            transaction2.replace(R.id.mainContent, transportFragment, "TransportFragment");
-                            transaction2.addToBackStack("TransportFragment");
+                            transaction2.replace(R.id.mainContent, newTransportFragment, "NewTransportFragment");
+                            transaction2.addToBackStack("NewTransportFragment");
                             transaction2.commit();
                             break;
                     }
