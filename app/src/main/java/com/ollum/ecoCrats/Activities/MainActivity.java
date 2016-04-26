@@ -669,6 +669,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     current.equals("CountriesFragment") ||
                     current.equals("StoresFragment") ||
                     current.equals("BankFragment") ||
+                    current.equals("ActiveTransportFragment") ||
+                    current.equals("CompletedTransportFragment") ||
                     current.equals("ItemsFragment")) {
                 ProfileFragment profileFragment = new ProfileFragment();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();

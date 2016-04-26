@@ -5,20 +5,20 @@
     <item
         android:id="@+id/newMessage"
         android:title="@string/new_message"
-        android:icon="@mipmap/create"
+        android:icon="@mipmap/create_white"
         app:showAsAction="always"
         android:visible="false"/>
     <item
         android:id="@+id/send"
         android:title="@string/send"
-        android:icon="@mipmap/send"
+        android:icon="@mipmap/send_white"
         app:showAsAction="always"
         android:visible="false"/>
 
     <item
         android:id="@+id/reply"
         android:title="@string/reply"
-        android:icon="@mipmap/reply"
+        android:icon="@mipmap/reply_white"
         app:showAsAction="always"
         android:visible="false"/>
 
@@ -53,7 +53,7 @@
     <item
         android:id="@+id/sendTransport"
         android:title="@string/send"
-        android:icon="@mipmap/send"
+        android:icon="@mipmap/send_white"
         app:showAsAction="always"
         android:visible="false"/>
 

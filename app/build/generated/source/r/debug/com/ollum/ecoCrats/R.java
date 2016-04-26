@@ -4010,7 +4010,7 @@ containing a value of this type.
         public static final int contracts_black=0x7f030034;
         public static final int contracts_white=0x7f030035;
         public static final int costa_rica=0x7f030036;
-        public static final int create=0x7f030037;
+        public static final int create_white =0x7f030037;
         public static final int croatia=0x7f030038;
         public static final int cuba=0x7f030039;
         public static final int cyprus=0x7f03003a;
@@ -4053,7 +4053,7 @@ containing a value of this type.
         public static final int holz=0x7f03005f;
         public static final int honduras=0x7f030060;
         public static final int hungary=0x7f030061;
-        public static final int ic_edit=0x7f030062;
+        public static final int create_white =0x7f030062;
         public static final int ic_launcher=0x7f030063;
         public static final int iceland=0x7f030064;
         public static final int india=0x7f030065;
@@ -4074,10 +4074,10 @@ containing a value of this type.
         public static final int power_black=0x7f030074;
         public static final int power_white=0x7f030075;
         public static final int profile_white=0x7f030076;
-        public static final int reply=0x7f030077;
+        public static final int reply_white =0x7f030077;
         public static final int research_white=0x7f030078;
         public static final int sand=0x7f030079;
-        public static final int send=0x7f03007a;
+        public static final int send_white =0x7f03007a;
         public static final int settings_white=0x7f03007b;
         public static final int stein=0x7f03007c;
         public static final int stores_white=0x7f03007d;
