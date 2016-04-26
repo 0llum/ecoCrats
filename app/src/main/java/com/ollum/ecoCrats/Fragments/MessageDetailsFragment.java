@@ -29,7 +29,21 @@ public class MessageDetailsFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         Bundle bundle = MessagesAdapter.bundle;
-        if (bundle != null) {
+        Bundle GCMbundle = MainActivity.GCMbundle;
+
+        if (GCMbundle != null) {
+            ID = GCMbundle.getInt("ID");
+            sender = GCMbundle.getString("sender");
+            subject = GCMbundle.getString("subject");
+            message = GCMbundle.getString("message");
+            time = GCMbundle.getString("time");
+
+            MainActivity.GCMbundle = null;
+
+            String method = "seen";
+            BackgroundTaskStatus backgroundTaskStatus = new BackgroundTaskStatus(getContext());
+            backgroundTaskStatus.execute(method, "" + ID);
+        } else if (bundle != null) {
             ID = bundle.getInt("ID");
             sender = bundle.getString("sender");
             subject = bundle.getString("subject");

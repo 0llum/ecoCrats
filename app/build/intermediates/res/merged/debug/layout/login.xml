@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activities.Login"
-    android:background="@drawable/gradientbackground">
+    android:background="@color/colorPrimaryDark">
 
     <EditText
         android:layout_width="fill_parent"
@@ -17,7 +17,8 @@
         android:hint="@string/username"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        />
+        android:textColor="#fff"
+        android:textColorHint="#fff"/>
 
     <EditText
         android:layout_width="fill_parent"
@@ -29,7 +30,9 @@
         android:inputType="textPassword"
         android:hint="@string/password"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginRight="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"/>
 
     <Button
         android:layout_width="80dp"
@@ -39,8 +42,8 @@
         android:layout_below="@+id/login_password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
-        android:background="@drawable/button"
-        style="?android:attr/borderlessButtonStyle"/>
+        style="?android:attr/borderlessButtonStyle"
+        android:textColor="#fff"/>
 
     <Button
         android:layout_width="120dp"
@@ -50,7 +53,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/button"
-        style="?android:attr/borderlessButtonStyle"/>
+        style="?android:attr/borderlessButtonStyle"
+        android:textColor="#fff"/>
 
 </RelativeLayout>

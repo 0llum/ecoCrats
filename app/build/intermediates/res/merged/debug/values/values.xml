@@ -57,12 +57,11 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <color name="colorAccent">#ffa500</color>
+    <color name="colorAccent">#ffbf00</color>
+    <color name="colorAccentDark">#a67c00</color>
     <color name="colorAccentPressed">#ffdc73</color>
-    <color name="colorPrimary">#3f51b5</color>
-    <color name="colorPrimaryBackground">#e6e9ff</color>
-    <color name="colorPrimaryDark">#303f9f</color>
-    <color name="colorPrimaryDarkBackground">#a3a9cc</color>
+    <color name="colorPrimary">#444444</color>
+    <color name="colorPrimaryDark">#333333</color>
     <color name="common_action_bar_splitter">#d2d2d2</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
     <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>
@@ -594,10 +593,10 @@
         <item name="android:windowEnterAnimation">@anim/design_bottom_sheet_slide_in</item>
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccentDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">

@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private FloatingActionButton fabTransport;
     private FloatingActionButton fabContracts;
     public static Bundle bundle;
+    public static Bundle GCMbundle;
     int progress = 0;
     int cost = 0;
     private NavDrawerAdapter navDrawerAdapter;
@@ -158,14 +159,32 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             drawerUsername.setText(user.getUsername());
 
             String fragment = getIntent().getStringExtra("fragment");
+            int ID = getIntent().getIntExtra("ID", 0);
+            String Sender = getIntent().getStringExtra("Sender");
+            String Subject = getIntent().getStringExtra("Subject");
+            String Message = getIntent().getStringExtra("Message");
+            String Time = getIntent().getStringExtra("Time");
+
             fragmentManager = getSupportFragmentManager();
             FragmentTransaction transaction = fragmentManager.beginTransaction();
 
             if (fragment != null) {
                 if (fragment.equals("MessagesInboxFragment")) {
-                    MessagesInboxFragment messagesInboxFragment = new MessagesInboxFragment();
+                    /*MessagesInboxFragment messagesInboxFragment = new MessagesInboxFragment();
                     transaction.replace(R.id.mainContent, messagesInboxFragment, "MessagesInboxFragment");
-                    transaction.addToBackStack("MessagesInboxFragment");
+                    transaction.addToBackStack("MessagesInboxFragment");*/
+
+                    GCMbundle = new Bundle();
+                    GCMbundle.putInt("ID", ID);
+                    GCMbundle.putString("sender", Sender);
+                    GCMbundle.putString("subject", Subject);
+                    GCMbundle.putString("message", Message);
+                    GCMbundle.putString("time", Time);
+
+                    MessageDetailsFragment messageDetailsFragment = new MessageDetailsFragment();
+                    messageDetailsFragment.setArguments(GCMbundle);
+                    transaction.replace(R.id.mainContent, messageDetailsFragment, "MessageDetailsFragment");
+                    transaction.addToBackStack("MessageDetailsFragment");
                     transaction.commit();
                 }
             } else {
@@ -686,6 +705,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 transaction.addToBackStack("ItemsFragment");
                 transaction.commit();
                 return;
+            } else if (current.equals("MessageDetailsFragment")) {
+                MessagesInboxFragment messagesInboxFragment = new MessagesInboxFragment();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.replace(R.id.mainContent, messagesInboxFragment, "MessagesInboxFragment");
+                transaction.addToBackStack("MessagesInboxFragment");
+                transaction.commit();
             } else {
                 super.onBackPressed();
             }

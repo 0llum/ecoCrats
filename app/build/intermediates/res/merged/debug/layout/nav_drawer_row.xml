@@ -10,7 +10,7 @@
         android:id="@+id/nav_drawer_row_image"
         android:src="@mipmap/power_white"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="5dp"/>
+        android:layout_marginLeft="20dp"/>
 
     <TextView
         android:layout_width="match_parent"

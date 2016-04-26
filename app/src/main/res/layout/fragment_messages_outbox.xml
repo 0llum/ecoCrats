@@ -10,30 +10,25 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/linearLayout5"
-        android:background="@drawable/gradient"
         android:gravity="center_vertical">
 
         <Button
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="fill_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
+            android:background="@color/colorAccentDark"
             android:text="@string/inbox"
             android:id="@+id/messages_outbox_button_inbox"
-            android:background="@drawable/button"
-            android:layout_weight="4"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"/>
+            android:layout_weight="1"/>
 
         <Button
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="fill_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
             android:text="@string/outbox"
             android:id="@+id/messages_outbox_button_outbox"
-            android:background="@mipmap/button_pressed"
-            android:layout_weight="4"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"/>
+            android:layout_weight="1"/>
     </LinearLayout>
 
     <android.support.v4.widget.SwipeRefreshLayout

@@ -12,7 +12,9 @@
         android:id="@+id/textView9"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="16dp"/>
+        android:textSize="16dp"
+        android:textColor="#fff"
+        android:layout_marginTop="10dp"/>
 
     <Spinner
         android:id="@+id/transport_spinner_start"
@@ -34,7 +36,8 @@
         android:layout_below="@+id/transport_spinner_start"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:textSize="16dp"/>
+        android:textSize="16dp"
+        android:textColor="#fff"/>
 
     <Spinner
         android:id="@+id/transport_spinner_item"
@@ -53,7 +56,8 @@
         android:layout_below="@+id/transport_seekBar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:textSize="16dp"/>
+        android:textSize="16dp"
+        android:textColor="#fff"/>
 
     <Spinner
         android:id="@+id/transport_spinner_friend"
@@ -72,7 +76,8 @@
         android:layout_below="@+id/transport_spinner_friend"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:textSize="16dp"/>
+        android:textSize="16dp"
+        android:textColor="#fff"/>
 
     <Spinner
         android:id="@+id/transport_spinner_destination"

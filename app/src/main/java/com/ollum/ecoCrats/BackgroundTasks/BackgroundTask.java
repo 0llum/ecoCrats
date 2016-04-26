@@ -15,6 +15,7 @@ import com.ollum.ecoCrats.Fragments.SettingsFragment;
 import com.ollum.ecoCrats.Fragments.StoreDetailsFragment;
 import com.ollum.ecoCrats.Fragments.StoresFragment;
 import com.ollum.ecoCrats.R;
+import com.ollum.ecoCrats.Utils.Constants;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -49,22 +50,6 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
 
     @Override
     protected String doInBackground(String... params) {
-        String reg_url = "http://0llum.bplaced.net/ecoCrats/SignUp.php";
-        String login_url = "http://0llum.bplaced.net/ecoCrats/Login.php";
-        String logout_url = "http://0llum.bplaced.net/ecoCrats/Logout.php";
-        String addFriend_url = "http://0llum.bplaced.net/ecoCrats/AddFriend.php";
-        String removeFriend_url = "http://0llum.bplaced.net/ecoCrats/RemoveFriend.php";
-        String deleteAccount_url = "http://0llum.bplaced.net/ecoCrats/DeleteAccount.php";
-        String changeEmail_url = "http://0llum.bplaced.net/ecoCrats/ChangeEmail.php";
-        String changePassword_url = "http://0llum.bplaced.net/ecoCrats/ChangePassword.php";
-        String sendMessage_url = "http://0llum.bplaced.net/ecoCrats/SendMessage.php";
-        String buyArea_url = "http://0llum.bplaced.net/ecoCrats/BuyArea.php";
-        String buildStore_url = "http://0llum.bplaced.net/ecoCrats/BuildStore.php";
-        String addItem_url = "http://0llum.bplaced.net/ecoCrats/AddItem.php";
-        String transport_url = "http://0llum.bplaced.net/ecoCrats/Transport.php";
-        String sendECOs_url = "http://0llum.bplaced.net/ecoCrats/SendECOs.php";
-        String sellItem_url = "http://0llum.bplaced.net/ecoCrats/SellItem.php";
-        String updateTransport_url = "http://0llum.bplaced.net/ecoCrats/UpdateTransport.php";
         String method = params[0];
 
         if (method.equals("signUp")) {
@@ -74,7 +59,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             String email = params[3];
 
             try {
-                URL url = new URL(reg_url);
+                URL url = new URL(Constants.reg_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -114,7 +99,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             String regid = params[3];
 
             try {
-                URL url = new URL(login_url);
+                URL url = new URL(Constants.login_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -152,7 +137,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             String username = params[1];
 
             try {
-                URL url = new URL(logout_url);
+                URL url = new URL(Constants.logout_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -189,7 +174,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             String username_2 = params[2];
 
             try {
-                URL url = new URL(addFriend_url);
+                URL url = new URL(Constants.addFriend_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -227,7 +212,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             String username_2 = params[2];
 
             try {
-                URL url = new URL(removeFriend_url);
+                URL url = new URL(Constants.removeFriend_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -264,7 +249,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             String username = params[1];
 
             try {
-                URL url = new URL(deleteAccount_url);
+                URL url = new URL(Constants.deleteAccount_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -301,7 +286,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             String email = params[2];
 
             try {
-                URL url = new URL(changeEmail_url);
+                URL url = new URL(Constants.changeEmail_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -340,7 +325,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             String newPassword = params[3];
 
             try {
-                URL url = new URL(changePassword_url);
+                URL url = new URL(Constants.changePassword_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -381,7 +366,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             String message = params[4];
 
             try {
-                URL url = new URL(sendMessage_url);
+                URL url = new URL(Constants.sendMessage_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -423,7 +408,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             String Cost = params[4];
 
             try {
-                URL url = new URL(buyArea_url);
+                URL url = new URL(Constants.buyArea_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -463,7 +448,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             String Region_ID = params[2];
 
             try {
-                URL url = new URL(buildStore_url);
+                URL url = new URL(Constants.buildStore_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -502,7 +487,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             String Quantity = params[3];
 
             try {
-                URL url = new URL(addItem_url);
+                URL url = new URL(Constants.addItem_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -544,7 +529,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             String duration = params[5];
 
             try {
-                URL url = new URL(transport_url);
+                URL url = new URL(Constants.transport_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -588,7 +573,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             String ECOs = params[3];
 
             try {
-                URL url = new URL(sendECOs_url);
+                URL url = new URL(Constants.sendECOs_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -628,7 +613,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             String Price = params[3];
 
             try {
-                URL url = new URL(sellItem_url);
+                URL url = new URL(Constants.sellItem_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
@@ -664,7 +649,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             }
         } else if (method.equals("updateTransport")) {
             try {
-                URL url = new URL(updateTransport_url);
+                URL url = new URL(Constants.updateTransport_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoInput(true);

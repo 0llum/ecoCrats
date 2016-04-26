@@ -39,7 +39,6 @@
         android:layout_height="40dp"
         android:text="@string/lend"
         android:id="@+id/bank_button_lend"
-        android:background="@drawable/button"
         android:layout_marginTop="40dp"
         android:layout_below="@+id/bank_credit"
         android:layout_centerHorizontal="true"/>

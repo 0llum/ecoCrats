@@ -108,8 +108,12 @@ public class BackgroundTaskLatestMessage extends AsyncTask<String, Message, Mess
         final int notifyID = 9001;
         Intent resultIntent = new Intent(ctx, MainActivity.class);
         resultIntent.putExtra("fragment", "MessagesInboxFragment");
-        PendingIntent resultPendingIntent = PendingIntent.getActivity(ctx, 0,
-                resultIntent, PendingIntent.FLAG_ONE_SHOT);
+        resultIntent.putExtra("ID", message.getID());
+        resultIntent.putExtra("Sender", message.getSender());
+        resultIntent.putExtra("Subject", message.getSubject());
+        resultIntent.putExtra("Message", message.getMessage());
+        resultIntent.putExtra("Time", message.getTime());
+        PendingIntent resultPendingIntent = PendingIntent.getActivity(ctx, 0, resultIntent, PendingIntent.FLAG_ONE_SHOT);
 
         NotificationCompat.Builder mNotifyBuilder;
 

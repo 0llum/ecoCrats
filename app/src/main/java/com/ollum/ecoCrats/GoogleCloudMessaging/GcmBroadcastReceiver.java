@@ -10,8 +10,7 @@ public class GcmBroadcastReceiver extends WakefulBroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        ComponentName comp = new ComponentName(context.getPackageName(),
-                GCMNotificationIntentService.class.getName());
+        ComponentName comp = new ComponentName(context.getPackageName(), GCMNotificationIntentService.class.getName());
         startWakefulService(context, (intent.setComponent(comp)));
         setResultCode(Activity.RESULT_OK);
     }

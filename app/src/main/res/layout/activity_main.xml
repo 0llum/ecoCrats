@@ -16,14 +16,14 @@
             android:id="@+id/mainContent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradientbackground">
+            android:background="@color/colorPrimaryDark">
         </FrameLayout>
 
         <RelativeLayout
             android:orientation="vertical"
             android:layout_width="240dp"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient"
+            android:background="@color/colorPrimary"
             android:layout_gravity="left">
 
             <TextView
@@ -90,15 +90,16 @@
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:paddingLeft="10dp"
+        fab:menu_icon="@mipmap/fab_add_black"
         fab:menu_colorNormal="@color/colorAccent"
         fab:menu_colorPressed="@color/colorAccentPressed"
-        fab:menu_backgroundColor="#aaffffff">
+        fab:menu_backgroundColor="#55ffffff">
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/fabContracts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/contracts_white"
+            android:src="@mipmap/contracts_black"
             fab:fab_size="mini"
             fab:fab_colorNormal="@color/colorAccent"
             fab:fab_colorPressed="@color/colorAccentPressed"/>
@@ -107,7 +108,7 @@
             android:id="@+id/fabTransport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/transport_white"
+            android:src="@mipmap/transport_black"
             fab:fab_size="mini"
             fab:fab_colorNormal="@color/colorAccent"
             fab:fab_colorPressed="@color/colorAccentPressed"/>
@@ -116,7 +117,7 @@
             android:id="@+id/fabMessages"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/messages_white"
+            android:src="@mipmap/messages_black"
             fab:fab_size="mini"
             fab:fab_colorNormal="@color/colorAccent"
             fab:fab_colorPressed="@color/colorAccentPressed"/>
