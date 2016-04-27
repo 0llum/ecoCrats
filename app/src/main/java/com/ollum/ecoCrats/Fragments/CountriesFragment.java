@@ -21,6 +21,17 @@ public class CountriesFragment extends Fragment {
         MainActivity.actionBar.setTitle(R.string.countries_title);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.countries_recyclerView);
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                if (dy > 0) {
+                    MainActivity.fabMenu.hideMenuButton(true);
+                } else {
+                    MainActivity.fabMenu.showMenuButton(true);
+                }
+                super.onScrolled(recyclerView, dx, dy);
+            }
+        });
 
         BackgroundTaskCountries backgroundTaskRecyclerView = new BackgroundTaskCountries(getContext(), recyclerView);
         backgroundTaskRecyclerView.execute();

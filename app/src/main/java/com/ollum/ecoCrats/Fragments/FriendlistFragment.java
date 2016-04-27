@@ -32,6 +32,17 @@ public class FriendlistFragment extends Fragment implements SwipeRefreshLayout.O
         searchBar = (EditText) view.findViewById(R.id.friendlist_searchbar);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.friendlist_recyclerView);
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                if (dy > 0) {
+                    MainActivity.fabMenu.hideMenuButton(true);
+                } else {
+                    MainActivity.fabMenu.showMenuButton(true);
+                }
+                super.onScrolled(recyclerView, dx, dy);
+            }
+        });
 
         BackgroundTaskFriendlist backgroundTaskFriendlist = new BackgroundTaskFriendlist(getContext(), recyclerView);
         backgroundTaskFriendlist.execute(MainActivity.user.username);

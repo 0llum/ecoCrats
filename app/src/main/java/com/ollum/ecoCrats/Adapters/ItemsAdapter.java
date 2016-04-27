@@ -2,6 +2,7 @@ package com.ollum.ecoCrats.Adapters;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -96,7 +97,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.RecyclerView
 
     public static class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView name, company;
-        ImageView imageView;
+        ImageView imageView, info;
         ArrayList<Item> items = new ArrayList<Item>();
         Context ctx;
         Item item;
@@ -110,6 +111,8 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.RecyclerView
             name = (TextView) view.findViewById(R.id.items_row_name);
             company = (TextView) view.findViewById(R.id.items_row_company);
             imageView = (ImageView) view.findViewById(R.id.items_row_image);
+            info = (ImageView) view.findViewById(R.id.items_row_info);
+            info.setOnClickListener(this);
         }
 
         @Override
@@ -117,15 +120,19 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.RecyclerView
             int position = getAdapterPosition();
             item = this.items.get(position);
 
-            bundle = new Bundle();
-            bundle.putInt("ID", item.getID());
-            bundle.putString("Name", item.getName());
+            if (v.getId() == R.id.items_row_info) {
+                Snackbar.make(MainActivity.coordinatorLayout, item.getName(), Snackbar.LENGTH_LONG).show();
+            } else {
+                bundle = new Bundle();
+                bundle.putInt("ID", item.getID());
+                bundle.putString("Name", item.getName());
 
-            MarketSalesFragment marketSalesFragment = new MarketSalesFragment();
-            FragmentTransaction transaction = MainActivity.fragmentManager.beginTransaction();
-            transaction.replace(R.id.mainContent, marketSalesFragment, "MarketSalesFragment");
-            transaction.addToBackStack("MarketSalesFragment");
-            transaction.commit();
+                MarketSalesFragment marketSalesFragment = new MarketSalesFragment();
+                FragmentTransaction transaction = MainActivity.fragmentManager.beginTransaction();
+                transaction.replace(R.id.mainContent, marketSalesFragment, "MarketSalesFragment");
+                transaction.addToBackStack("MarketSalesFragment");
+                transaction.commit();
+            }
         }
     }
 }

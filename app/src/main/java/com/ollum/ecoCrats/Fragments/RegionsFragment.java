@@ -34,6 +34,17 @@ public class RegionsFragment extends Fragment {
         MainActivity.actionBar.setTitle(country);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.regions_recyclerView);
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                if (dy > 0) {
+                    MainActivity.fabMenu.hideMenuButton(true);
+                } else {
+                    MainActivity.fabMenu.showMenuButton(true);
+                }
+                super.onScrolled(recyclerView, dx, dy);
+            }
+        });
 
         BackgroundTaskRegions backgroundTaskRecyclerView = new BackgroundTaskRegions(getContext(), recyclerView);
         backgroundTaskRecyclerView.execute(country);

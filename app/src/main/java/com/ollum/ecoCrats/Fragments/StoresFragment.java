@@ -24,7 +24,17 @@ public class StoresFragment extends Fragment implements SwipeRefreshLayout.OnRef
         MainActivity.actionBar.setTitle(R.string.stores_title);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.stores_recyclerView);
-
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                if (dy > 0) {
+                    MainActivity.fabMenu.hideMenuButton(true);
+                } else {
+                    MainActivity.fabMenu.showMenuButton(true);
+                }
+                super.onScrolled(recyclerView, dx, dy);
+            }
+        });
 
         BackgroundTaskStores backgroundTaskStores = new BackgroundTaskStores(getContext(), recyclerView);
         backgroundTaskStores.execute(MainActivity.user.getUsername());

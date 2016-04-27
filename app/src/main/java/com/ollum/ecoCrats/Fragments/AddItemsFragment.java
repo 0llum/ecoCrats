@@ -21,6 +21,17 @@ public class AddItemsFragment extends Fragment {
         MainActivity.actionBar.setTitle(R.string.items_title);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.items_recyclerView);
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                if (dy > 0) {
+                    MainActivity.fabMenu.hideMenuButton(true);
+                } else {
+                    MainActivity.fabMenu.showMenuButton(true);
+                }
+                super.onScrolled(recyclerView, dx, dy);
+            }
+        });
 
         BackgroundTaskAddItems backgroundTaskAddItems = new BackgroundTaskAddItems(getContext(), recyclerView);
         backgroundTaskAddItems.execute();

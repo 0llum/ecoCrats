@@ -11,7 +11,9 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:inputType="number"
-        android:gravity="right"/>
+        android:gravity="right"
+        android:textColor="#fff"
+        android:textColorHint="#fff"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,7 +23,9 @@
         android:layout_above="@+id/bank_credit"
         android:layout_alignLeft="@+id/bank_credit"
         android:layout_alignStart="@+id/bank_credit"
-        android:layout_marginBottom="40dp"/>
+        android:layout_marginBottom="40dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,7 +35,9 @@
         android:layout_above="@+id/bank_credit"
         android:layout_alignRight="@+id/bank_credit"
         android:layout_alignEnd="@+id/bank_credit"
-        android:layout_marginBottom="40dp"/>
+        android:layout_marginBottom="40dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"/>
 
     <Button
         style="?android:attr/borderlessButtonStyle"
@@ -41,6 +47,8 @@
         android:id="@+id/bank_button_lend"
         android:layout_marginTop="40dp"
         android:layout_below="@+id/bank_credit"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:textColorHint="#fff"/>
 
 </RelativeLayout>

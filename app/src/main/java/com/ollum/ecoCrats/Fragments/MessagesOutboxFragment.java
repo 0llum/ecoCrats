@@ -33,6 +33,17 @@ public class MessagesOutboxFragment extends Fragment implements View.OnClickList
         swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.messages_outbox_swipeRefreshLayout);
         swipeRefreshLayout.setOnRefreshListener(this);
         recyclerView = (RecyclerView) view.findViewById(R.id.messages_outbox_recyclerView);
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                if (dy > 0) {
+                    MainActivity.fabMenu.hideMenuButton(true);
+                } else {
+                    MainActivity.fabMenu.showMenuButton(true);
+                }
+                super.onScrolled(recyclerView, dx, dy);
+            }
+        });
 
         BackgroundTaskOutbox backgroundTaskOutbox = new BackgroundTaskOutbox(getContext(), recyclerView);
         backgroundTaskOutbox.execute(MainActivity.user.username);

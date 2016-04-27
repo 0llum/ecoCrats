@@ -35,6 +35,17 @@ public class CompletedTransportFragment extends Fragment implements View.OnClick
         swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.completed_transport_swipeRefreshLayout);
         swipeRefreshLayout.setOnRefreshListener(this);
         recyclerView = (RecyclerView) view.findViewById(R.id.completed_transport_recyclerView);
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                if (dy > 0) {
+                    MainActivity.fabMenu.hideMenuButton(true);
+                } else {
+                    MainActivity.fabMenu.showMenuButton(true);
+                }
+                super.onScrolled(recyclerView, dx, dy);
+            }
+        });
 
         String method = "updateTransport";
         BackgroundTask backgroundTask = new BackgroundTask(getContext());

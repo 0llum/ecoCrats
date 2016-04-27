@@ -42,6 +42,17 @@ public class MarketPurchasesFragment extends Fragment implements View.OnClickLis
         MainActivity.actionBar.setTitle(name);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.purchases_recyclerView);
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                if (dy > 0) {
+                    MainActivity.fabMenu.hideMenuButton(true);
+                } else {
+                    MainActivity.fabMenu.showMenuButton(true);
+                }
+                super.onScrolled(recyclerView, dx, dy);
+            }
+        });
         swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.purchases_swipeRefreshLayout);
         swipeRefreshLayout.setOnRefreshListener(this);
         sales = (Button) view.findViewById(R.id.purchases_button_sales);

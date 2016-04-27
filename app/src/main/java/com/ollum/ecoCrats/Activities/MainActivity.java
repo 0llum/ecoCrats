@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private ListView listView;
     private String[] navDrawerItems;
     private ActionBarDrawerToggle drawerListener;
-    private FloatingActionMenu fabMenu;
+    public static FloatingActionMenu fabMenu;
     private FloatingActionButton fabMessages;
     private FloatingActionButton fabTransport;
     private FloatingActionButton fabContracts;
@@ -166,6 +166,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             String Time = getIntent().getStringExtra("Time");
 
             fragmentManager = getSupportFragmentManager();
+            fragmentManager.addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
+                @Override
+                public void onBackStackChanged() {
+                    fabMenu.showMenuButton(true);
+                }
+            });
             FragmentTransaction transaction = fragmentManager.beginTransaction();
 
             if (fragment != null) {
