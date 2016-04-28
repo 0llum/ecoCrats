@@ -1,8 +1,6 @@
 package com.ollum.ecoCrats.Fragments;
 
 import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -14,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+
 import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.Adapters.FriendlistAdapter;
 import com.ollum.ecoCrats.R;
@@ -46,7 +45,7 @@ public class NewMessageFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_new_message, container, false);
 
         setHasOptionsMenu(true);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.new_message_title);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.new_message_title);
 
         sender = MainActivity.user.username;
 

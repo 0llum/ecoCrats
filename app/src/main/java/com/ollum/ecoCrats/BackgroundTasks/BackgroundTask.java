@@ -4,8 +4,10 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.support.design.widget.Snackbar;
+import android.widget.TextView;
 
 import com.ollum.ecoCrats.Activities.Login;
 import com.ollum.ecoCrats.Activities.MainActivity;
@@ -559,7 +561,6 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                 httpURLConnection.disconnect();
 
 
-
                 return response.trim();
 
             } catch (MalformedURLException e) {
@@ -691,19 +692,34 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
         if (result != null) {
             switch (result) {
                 case ("Signing up successful"):
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.sign_up_successful, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.sign_up_successful, Snackbar.LENGTH_LONG);
+                    TextView textView = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView.setTextColor(Color.BLACK);
+                    snackbar.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar.show();
+
                     ((Activity) ctx).finish();
                     ctx.startActivity(new Intent(ctx, Login.class));
                     ((Activity) ctx).overridePendingTransition(0, 0);
                     break;
                 case ("Login successful"):
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.login_successful, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar1 = Snackbar.make(MainActivity.coordinatorLayout, R.string.login_successful, Snackbar.LENGTH_LONG);
+                    TextView textView1 = (TextView) snackbar1.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView1.setTextColor(Color.BLACK);
+                    snackbar1.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar1.show();
+
                     ((Activity) ctx).finish();
                     ctx.startActivity(new Intent(ctx, MainActivity.class));
                     ((Activity) ctx).overridePendingTransition(0, 0);
                     break;
                 case ("Friend added"):
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.friend_added, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar2 = Snackbar.make(MainActivity.coordinatorLayout, R.string.friend_added, Snackbar.LENGTH_LONG);
+                    TextView textView2 = (TextView) snackbar2.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView2.setTextColor(Color.BLACK);
+                    snackbar2.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar2.show();
+
                     FriendlistFragment friendlistFragment = new FriendlistFragment();
                     MainActivity.fragmentManager.beginTransaction()
                             .replace(R.id.mainContent, friendlistFragment, "FriendlistFragment")
@@ -711,7 +727,12 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                             .commit();
                     break;
                 case ("Friend removed"):
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.friend_removed, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar3 = Snackbar.make(MainActivity.coordinatorLayout, R.string.friend_removed, Snackbar.LENGTH_LONG);
+                    TextView textView3 = (TextView) snackbar3.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView3.setTextColor(Color.BLACK);
+                    snackbar3.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar3.show();
+
                     FriendlistFragment friendlistFragment1 = new FriendlistFragment();
                     MainActivity.fragmentManager.beginTransaction()
                             .replace(R.id.mainContent, friendlistFragment1, "FriendlistFragment")
@@ -719,12 +740,22 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                             .commit();
                     break;
                 case ("Account deleted"):
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.account_deleted, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar4 = Snackbar.make(MainActivity.coordinatorLayout, R.string.account_deleted, Snackbar.LENGTH_LONG);
+                    TextView textView4 = (TextView) snackbar4.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView4.setTextColor(Color.BLACK);
+                    snackbar4.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar4.show();
+
                     ((Activity) ctx).finish();
                     ctx.startActivity(new Intent(ctx, Login.class));
                     break;
                 case ("Email address successfully changed"):
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.email_changed, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar5 = Snackbar.make(MainActivity.coordinatorLayout, R.string.email_changed, Snackbar.LENGTH_LONG);
+                    TextView textView5 = (TextView) snackbar5.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView5.setTextColor(Color.BLACK);
+                    snackbar5.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar5.show();
+
                     SettingsFragment settingsFragment = new SettingsFragment();
                     MainActivity.fragmentManager.beginTransaction()
                             .replace(R.id.mainContent, settingsFragment, "SettingsFragment")
@@ -732,16 +763,31 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                             .commit();
                     break;
                 case ("Password successfully changed"):
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.password_changed, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar6 = Snackbar.make(MainActivity.coordinatorLayout, R.string.password_changed, Snackbar.LENGTH_LONG);
+                    TextView textView6 = (TextView) snackbar6.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView6.setTextColor(Color.BLACK);
+                    snackbar6.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar6.show();
+
                     ((Activity) ctx).finish();
                     ctx.startActivity(new Intent(ctx, Login.class));
                     break;
                 case ("Message sent"):
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.message_sent, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar7 = Snackbar.make(MainActivity.coordinatorLayout, R.string.message_sent, Snackbar.LENGTH_LONG);
+                    TextView textView7 = (TextView) snackbar7.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView7.setTextColor(Color.BLACK);
+                    snackbar7.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar7.show();
+
                     MainActivity.fragmentManager.popBackStack();
                     break;
                 case ("Store has been built successfully"):
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.store_built, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar8 = Snackbar.make(MainActivity.coordinatorLayout, R.string.store_built, Snackbar.LENGTH_LONG);
+                    TextView textView8 = (TextView) snackbar8.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView8.setTextColor(Color.BLACK);
+                    snackbar8.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar8.show();
+
                     StoresFragment storesFragment = new StoresFragment();
                     MainActivity.fragmentManager.beginTransaction()
                             .replace(R.id.mainContent, storesFragment, "StoresFragment")
@@ -749,7 +795,12 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                             .commit();
                     break;
                 case ("Transport was successful"):
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.transport_sent, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar9 = Snackbar.make(MainActivity.coordinatorLayout, R.string.transport_sent, Snackbar.LENGTH_LONG);
+                    TextView textView9 = (TextView) snackbar9.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView9.setTextColor(Color.BLACK);
+                    snackbar9.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar9.show();
+
                     ActiveTransportFragment activeTransportFragment = new ActiveTransportFragment();
                     MainActivity.fragmentManager.beginTransaction()
                             .replace(R.id.mainContent, activeTransportFragment, "ActiveTransportFragment")
@@ -757,7 +808,12 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                             .commit();
                     break;
                 case ("Item has been sold successfully"):
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.item_sold, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar10 = Snackbar.make(MainActivity.coordinatorLayout, R.string.item_sold, Snackbar.LENGTH_LONG);
+                    TextView textView10 = (TextView) snackbar10.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView10.setTextColor(Color.BLACK);
+                    snackbar10.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar10.show();
+
                     StoreDetailsFragment storeDetailsFragment = new StoreDetailsFragment();
                     MainActivity.fragmentManager.beginTransaction()
                             .replace(R.id.mainContent, storeDetailsFragment, "StoreDetailsFragment")
@@ -765,88 +821,225 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                             .commit();
                     break;
                 case "Friend could not be added":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.friend_not_added, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar11 = Snackbar.make(MainActivity.coordinatorLayout, R.string.friend_not_added, Snackbar.LENGTH_LONG);
+                    TextView textView11 = (TextView) snackbar11.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView11.setTextColor(Color.BLACK);
+                    snackbar11.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar11.show();
+
                     break;
                 case "You cannot add yourself as a friend":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.add_yourself, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar12 = Snackbar.make(MainActivity.coordinatorLayout, R.string.add_yourself, Snackbar.LENGTH_LONG);
+                    TextView textView12 = (TextView) snackbar12.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView12.setTextColor(Color.BLACK);
+                    snackbar12.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar12.show();
+
                     break;
                 case "User is already your friend":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.user_already_friend, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar13 = Snackbar.make(MainActivity.coordinatorLayout, R.string.user_already_friend, Snackbar.LENGTH_LONG);
+                    TextView textView13 = (TextView) snackbar13.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView13.setTextColor(Color.BLACK);
+                    snackbar13.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar13.show();
+
                     break;
                 case "Item could not be added":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.item_not_added, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar14 = Snackbar.make(MainActivity.coordinatorLayout, R.string.item_not_added, Snackbar.LENGTH_LONG);
+                    TextView textView14 = (TextView) snackbar14.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView14.setTextColor(Color.BLACK);
+                    snackbar14.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar14.show();
+
                     break;
                 case "Item has been added successfully":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.item_added, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar15 = Snackbar.make(MainActivity.coordinatorLayout, R.string.item_added, Snackbar.LENGTH_LONG);
+                    TextView textView15 = (TextView) snackbar15.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView15.setTextColor(Color.BLACK);
+                    snackbar15.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar15.show();
+
                     break;
                 case "Store could not be built":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.store_failed, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar16 = Snackbar.make(MainActivity.coordinatorLayout, R.string.store_failed, Snackbar.LENGTH_LONG);
+                    TextView textView16 = (TextView) snackbar16.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView16.setTextColor(Color.BLACK);
+                    snackbar16.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar16.show();
+
                     break;
                 case "You already have a Store in this Region":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.store_region, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar17 = Snackbar.make(MainActivity.coordinatorLayout, R.string.store_region, Snackbar.LENGTH_LONG);
+                    TextView textView17 = (TextView) snackbar17.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView17.setTextColor(Color.BLACK);
+                    snackbar17.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar17.show();
+
                     break;
                 case "You don't own any Area in this Region":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.no_area, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar18 = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_area, Snackbar.LENGTH_LONG);
+                    TextView textView18 = (TextView) snackbar18.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView18.setTextColor(Color.BLACK);
+                    snackbar18.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar18.show();
+
                     break;
                 case "Area could not be bought":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.area_not_bought, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar19 = Snackbar.make(MainActivity.coordinatorLayout, R.string.area_not_bought, Snackbar.LENGTH_LONG);
+                    TextView textView19 = (TextView) snackbar19.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView19.setTextColor(Color.BLACK);
+                    snackbar19.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar19.show();
+
                     break;
                 case "Old password is wrong":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.old_password_wrong, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar20 = Snackbar.make(MainActivity.coordinatorLayout, R.string.old_password_wrong, Snackbar.LENGTH_LONG);
+                    TextView textView20 = (TextView) snackbar20.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView20.setTextColor(Color.BLACK);
+                    snackbar20.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar20.show();
+
                     break;
                 case "DB Connection Error":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.db_error, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar21 = Snackbar.make(MainActivity.coordinatorLayout, R.string.db_error, Snackbar.LENGTH_LONG);
+                    TextView textView21 = (TextView) snackbar21.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView21.setTextColor(Color.BLACK);
+                    snackbar21.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar21.show();
+
                     break;
                 case "Login failed, incorrect user data":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.login_failed, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar22 = Snackbar.make(MainActivity.coordinatorLayout, R.string.login_failed, Snackbar.LENGTH_LONG);
+                    TextView textView22 = (TextView) snackbar22.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView22.setTextColor(Color.BLACK);
+                    snackbar22.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar22.show();
+
                     break;
                 case "Login successful, but device could not be registered for GCM":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.login_gcm, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar23 = Snackbar.make(MainActivity.coordinatorLayout, R.string.login_gcm, Snackbar.LENGTH_LONG);
+                    TextView textView23 = (TextView) snackbar23.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView23.setTextColor(Color.BLACK);
+                    snackbar23.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar23.show();
+
                     break;
                 case "Friend could not be removed":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.friend_not_removed, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar24 = Snackbar.make(MainActivity.coordinatorLayout, R.string.friend_not_removed, Snackbar.LENGTH_LONG);
+                    TextView textView24 = (TextView) snackbar24.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView24.setTextColor(Color.BLACK);
+                    snackbar24.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar24.show();
+
                     break;
                 case "User is not your friend":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.user_not_friend, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar25 = Snackbar.make(MainActivity.coordinatorLayout, R.string.user_not_friend, Snackbar.LENGTH_LONG);
+                    TextView textView25 = (TextView) snackbar25.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView25.setTextColor(Color.BLACK);
+                    snackbar25.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar25.show();
+
                     break;
                 case "Item could not be sold":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.item_not_sold, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar26 = Snackbar.make(MainActivity.coordinatorLayout, R.string.item_not_sold, Snackbar.LENGTH_LONG);
+                    TextView textView26 = (TextView) snackbar26.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView26.setTextColor(Color.BLACK);
+                    snackbar26.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar26.show();
+
                     break;
                 case "You don't have enough ECOs":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.not_enough_ecos, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar27 = Snackbar.make(MainActivity.coordinatorLayout, R.string.not_enough_ecos, Snackbar.LENGTH_LONG);
+                    TextView textView27 = (TextView) snackbar27.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView27.setTextColor(Color.BLACK);
+                    snackbar27.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar27.show();
+
                     break;
                 case "ECOs could not be sent":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.ecos_failed, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar28 = Snackbar.make(MainActivity.coordinatorLayout, R.string.ecos_failed, Snackbar.LENGTH_LONG);
+                    TextView textView28 = (TextView) snackbar28.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView28.setTextColor(Color.BLACK);
+                    snackbar28.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar28.show();
                     break;
                 case "ECOs successfully sent":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.ecos_sent, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar29 = Snackbar.make(MainActivity.coordinatorLayout, R.string.ecos_sent, Snackbar.LENGTH_LONG);
+                    TextView textView29 = (TextView) snackbar29.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView29.setTextColor(Color.BLACK);
+                    snackbar29.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar29.show();
                     break;
                 case "Message could not be sent":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.message_failed, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar30 = Snackbar.make(MainActivity.coordinatorLayout, R.string.message_failed, Snackbar.LENGTH_LONG);
+                    TextView textView30 = (TextView) snackbar30.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView30.setTextColor(Color.BLACK);
+                    snackbar30.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar30.show();
+
                     break;
                 case "User could not be found":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.user_not_found, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar31 = Snackbar.make(MainActivity.coordinatorLayout, R.string.user_not_found, Snackbar.LENGTH_LONG);
+                    TextView textView31 = (TextView) snackbar31.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView31.setTextColor(Color.BLACK);
+                    snackbar31.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar31.show();
+
                     break;
                 case "Signing up failed":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.sign_up_failed, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar32 = Snackbar.make(MainActivity.coordinatorLayout, R.string.sign_up_failed, Snackbar.LENGTH_LONG);
+                    TextView textView32 = (TextView) snackbar32.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView32.setTextColor(Color.BLACK);
+                    snackbar32.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar32.show();
+
                     break;
                 case "Email address already exists":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.email_exists, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar33 = Snackbar.make(MainActivity.coordinatorLayout, R.string.email_exists, Snackbar.LENGTH_LONG);
+                    TextView textView33 = (TextView) snackbar33.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView33.setTextColor(Color.BLACK);
+                    snackbar33.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar33.show();
+
                     break;
                 case "Username already exists":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.username_exists, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar34 = Snackbar.make(MainActivity.coordinatorLayout, R.string.username_exists, Snackbar.LENGTH_LONG);
+                    TextView textView34 = (TextView) snackbar34.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView34.setTextColor(Color.BLACK);
+                    snackbar34.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar34.show();
+
                     break;
                 case "Loan successfully raised":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.loan_raised, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar35 = Snackbar.make(MainActivity.coordinatorLayout, R.string.loan_raised, Snackbar.LENGTH_LONG);
+                    TextView textView35 = (TextView) snackbar35.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView35.setTextColor(Color.BLACK);
+                    snackbar35.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar35.show();
+
                     break;
                 case "Loan could not be raised":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.loan_failed, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar36 = Snackbar.make(MainActivity.coordinatorLayout, R.string.loan_failed, Snackbar.LENGTH_LONG);
+                    TextView textView36 = (TextView) snackbar36.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView36.setTextColor(Color.BLACK);
+                    snackbar36.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar36.show();
+
                     break;
                 case "Transport failed":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.transport_failed, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar37 = Snackbar.make(MainActivity.coordinatorLayout, R.string.transport_failed, Snackbar.LENGTH_LONG);
+                    TextView textView37 = (TextView) snackbar37.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView37.setTextColor(Color.BLACK);
+                    snackbar37.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar37.show();
+
                     break;
                 case "Not enough space in Store":
-                    Snackbar.make(MainActivity.coordinatorLayout, R.string.not_enough_space, Snackbar.LENGTH_LONG).show();
+                    Snackbar snackbar38 = Snackbar.make(MainActivity.coordinatorLayout, R.string.not_enough_space, Snackbar.LENGTH_LONG);
+                    TextView textView38 = (TextView) snackbar38.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView38.setTextColor(Color.BLACK);
+                    snackbar38.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar38.show();
                     break;
                 case "Transports has been updated":
                     break;

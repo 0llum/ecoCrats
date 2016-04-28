@@ -46,7 +46,7 @@ public class MarketPurchasesFragment extends Fragment implements View.OnClickLis
 
         View view = inflater.inflate(R.layout.fragment_market_purchases, container, false);
 
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(name);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(name);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.purchases_recyclerView);
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -73,7 +73,8 @@ public class MarketPurchasesFragment extends Fragment implements View.OnClickLis
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
 
         return view;
     }
@@ -101,7 +102,8 @@ public class MarketPurchasesFragment extends Fragment implements View.OnClickLis
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
 
         if (swipeRefreshLayout.isRefreshing()) {
             swipeRefreshLayout.setRefreshing(false);

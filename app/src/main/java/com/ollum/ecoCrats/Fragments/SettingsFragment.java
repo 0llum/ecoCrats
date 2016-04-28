@@ -31,7 +31,7 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.settings_title);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.settings_title);
 
         oldPassword = (EditText) view.findViewById(R.id.settings_oldPassword);
         newPassword = (EditText) view.findViewById(R.id.settings_newPassword);
@@ -118,7 +118,8 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
     }
 
     private void changeEmail(String newEmail) {
@@ -131,7 +132,8 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
     }
 
     private void deleteAccount() {
@@ -144,7 +146,8 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
     }
 
     private boolean isValidMail(String email) {

@@ -40,7 +40,7 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.profile_title);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.profile_title);
 
         tvWelcome = (TextView) view.findViewById(R.id.welcome);
         tvWelcome.setText(MainActivity.user.username);
@@ -48,19 +48,26 @@ public class ProfileFragment extends Fragment {
         tvECOs = (TextView) view.findViewById(R.id.ECOs);
 
         if (isOnline()) {
-            BackgroundTaskECOs backgroundTaskECOs= new BackgroundTaskECOs();
+            BackgroundTaskECOs backgroundTaskECOs = new BackgroundTaskECOs();
             backgroundTaskECOs.execute();
         } else {
             Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
 
         return view;
     }
 
-    private class BackgroundTaskECOs extends AsyncTask<Void, Void, String>{
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
+    }
+
+    private class BackgroundTaskECOs extends AsyncTask<Void, Void, String> {
         ProgressDialog progressDialog = new ProgressDialog(getContext());
 
         @Override
@@ -124,10 +131,5 @@ public class ProfileFragment extends Fragment {
             }
 
         }
-    }
-    public boolean isOnline() {
-        ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 }

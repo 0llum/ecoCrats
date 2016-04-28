@@ -17,7 +17,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -27,7 +26,6 @@ import com.ollum.ecoCrats.Adapters.SpinnerFriendsAdapter;
 import com.ollum.ecoCrats.Adapters.SpinnerItemsAdapter;
 import com.ollum.ecoCrats.Adapters.SpinnerStoresAdapter;
 import com.ollum.ecoCrats.Adapters.StoreDetailsAdapter;
-import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.Classes.Item;
 import com.ollum.ecoCrats.Classes.Store;
 import com.ollum.ecoCrats.Classes.User;
@@ -52,6 +50,8 @@ import java.util.ArrayList;
 
 public class NewTransportFragment extends Fragment {
 
+    public static String startID, itemID, friendID, destinationID, quantity, startRegionLatitude, startRegionLongitude, destinationRegionLatitude, destinationRegionLongitude;
+    public static TextView tvQuantity;
     ArrayList<Store> startStores = new ArrayList<>();
     ArrayList<Item> items = new ArrayList<>();
     ArrayList<User> friends = new ArrayList<>();
@@ -60,10 +60,8 @@ public class NewTransportFragment extends Fragment {
     SpinnerFriendsAdapter spinnerFriendsAdapter;
     SpinnerItemsAdapter spinnerItemsAdapter;
     Spinner spinnerStart, spinnerItem, spinnerFriend, spinnerDestination;
-    public static String startID, itemID, friendID, destinationID, quantity, startRegionLatitude, startRegionLongitude, destinationRegionLatitude, destinationRegionLongitude;
     int progress;
     SeekBar seekBar;
-    public static TextView tvQuantity;
     int storeID, item_ID;
 
     @Override
@@ -83,7 +81,7 @@ public class NewTransportFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_transport, container, false);
 
         setHasOptionsMenu(true);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.transport_title);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.transport_title);
 
         tvQuantity = (TextView) view.findViewById(R.id.transport_quantity);
         tvQuantity.setText("" + 0);
@@ -139,7 +137,8 @@ public class NewTransportFragment extends Fragment {
                     TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
                     tv.setTextColor(Color.BLACK);
                     snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                    snackbar.show();                }
+                    snackbar.show();
+                }
             }
 
             @Override
@@ -213,7 +212,8 @@ public class NewTransportFragment extends Fragment {
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
 
         return view;
     }
@@ -222,6 +222,12 @@ public class NewTransportFragment extends Fragment {
     public void onPrepareOptionsMenu(Menu menu) {
         MenuItem sendTransport = menu.findItem(R.id.sendTransport);
         sendTransport.setVisible(true);
+    }
+
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 
     private class BackgroundTaskStart extends AsyncTask<String, Store, Void> {
@@ -299,7 +305,7 @@ public class NewTransportFragment extends Fragment {
                 progressDialog.dismiss();
             }
 
-            for (int i = 0; i<startStores.size(); i++) {
+            for (int i = 0; i < startStores.size(); i++) {
                 if (startStores.get(i).getID() == storeID) {
                     spinnerStart.setSelection(spinnerStartAdapter.getPosition(startStores.get(i)));
                 }
@@ -383,7 +389,7 @@ public class NewTransportFragment extends Fragment {
                 progressDialog.dismiss();
             }
 
-            for (int i = 0; i<items.size(); i++) {
+            for (int i = 0; i < items.size(); i++) {
                 if (items.get(i).getID() == item_ID) {
                     spinnerItem.setSelection(spinnerItemsAdapter.getPosition(items.get(i)));
                 }
@@ -544,11 +550,5 @@ public class NewTransportFragment extends Fragment {
                 progressDialog.dismiss();
             }
         }
-    }
-
-    public boolean isOnline() {
-        ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 }

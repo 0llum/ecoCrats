@@ -1,6 +1,5 @@
 package com.ollum.ecoCrats.Fragments;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
@@ -26,7 +25,7 @@ public class CountriesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_countries, container, false);
 
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.countries_title);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.countries_title);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.countries_recyclerView);
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -49,7 +48,8 @@ public class CountriesFragment extends Fragment {
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
 
         return view;
     }

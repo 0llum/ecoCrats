@@ -8,14 +8,12 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
@@ -25,9 +23,9 @@ import com.ollum.ecoCrats.R;
 
 public class MessageDetailsFragment extends Fragment {
     public static Bundle bundle;
+    public static TextView tvSender, tvSubject, tvMessage;
     String sender, subject, message, time;
     int ID;
-    public static TextView tvSender, tvSubject, tvMessage;
     String current;
 
     @Override
@@ -55,7 +53,8 @@ public class MessageDetailsFragment extends Fragment {
                 TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
                 tv.setTextColor(Color.BLACK);
                 snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                snackbar.show();            }
+                snackbar.show();
+            }
 
         } else if (bundle != null) {
             ID = bundle.getInt("ID");
@@ -77,7 +76,8 @@ public class MessageDetailsFragment extends Fragment {
                     TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
                     tv.setTextColor(Color.BLACK);
                     snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                    snackbar.show();                }
+                    snackbar.show();
+                }
 
             }
         }
@@ -88,7 +88,7 @@ public class MessageDetailsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_message_details, container, false);
 
         setHasOptionsMenu(true);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.message_details_title);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.message_details_title);
 
         tvSender = (TextView) view.findViewById(R.id.message_details_sender);
         tvSubject = (TextView) view.findViewById(R.id.message_details_subject);

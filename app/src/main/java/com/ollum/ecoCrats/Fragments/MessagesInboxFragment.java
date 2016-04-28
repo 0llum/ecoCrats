@@ -33,7 +33,7 @@ public class MessagesInboxFragment extends Fragment implements View.OnClickListe
         View view = inflater.inflate(R.layout.fragment_messages_inbox, container, false);
 
         setHasOptionsMenu(true);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.inbox_title);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.inbox_title);
 
         outbox = (Button) view.findViewById(R.id.messages_inbox_button_outbox);
         outbox.setOnClickListener(this);
@@ -60,7 +60,8 @@ public class MessagesInboxFragment extends Fragment implements View.OnClickListe
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
 
         if (swipeRefreshLayout.isRefreshing()) {
             swipeRefreshLayout.setRefreshing(false);
@@ -91,7 +92,8 @@ public class MessagesInboxFragment extends Fragment implements View.OnClickListe
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
 
         if (swipeRefreshLayout.isRefreshing()) {
             swipeRefreshLayout.setRefreshing(false);

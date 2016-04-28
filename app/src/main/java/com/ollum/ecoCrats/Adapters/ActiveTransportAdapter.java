@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import com.ollum.ecoCrats.Classes.Transport;
 import com.ollum.ecoCrats.R;
 

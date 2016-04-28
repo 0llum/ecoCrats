@@ -15,12 +15,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
-import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskFriendlist;
 import com.ollum.ecoCrats.R;
 
@@ -34,7 +32,7 @@ public class FriendlistFragment extends Fragment implements SwipeRefreshLayout.O
         View view = inflater.inflate(R.layout.fragment_friendlist, container, false);
 
         setHasOptionsMenu(true);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.friendlist_title);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.friendlist_title);
 
         searchBar = (EditText) view.findViewById(R.id.friendlist_searchbar);
 
@@ -59,7 +57,8 @@ public class FriendlistFragment extends Fragment implements SwipeRefreshLayout.O
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
 
         swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.friendlist_swipeRefreshLayout);
         swipeRefreshLayout.setOnRefreshListener(this);
@@ -81,7 +80,8 @@ public class FriendlistFragment extends Fragment implements SwipeRefreshLayout.O
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
 
         if (swipeRefreshLayout.isRefreshing()) {
             swipeRefreshLayout.setRefreshing(false);

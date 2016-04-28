@@ -5,7 +5,6 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.AsyncTask;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
@@ -105,7 +104,8 @@ public class BackgroundTaskLatestMessage extends AsyncTask<String, Message, Mess
 
     @Override
     protected void onPostExecute(Message message) {
-        final int notifyID = 9001;
+        int rand = (int) (Math.random() * 1000) + 1;
+        final int notifyID = rand;
         Intent resultIntent = new Intent(ctx, MainActivity.class);
         resultIntent.putExtra("fragment", "MessageDetailsFragment");
         resultIntent.putExtra("ID", message.getID());
@@ -113,7 +113,7 @@ public class BackgroundTaskLatestMessage extends AsyncTask<String, Message, Mess
         resultIntent.putExtra("Subject", message.getSubject());
         resultIntent.putExtra("Message", message.getMessage());
         resultIntent.putExtra("Time", message.getTime());
-        PendingIntent resultPendingIntent = PendingIntent.getActivity(ctx, 0, resultIntent, PendingIntent.FLAG_ONE_SHOT);
+        PendingIntent resultPendingIntent = PendingIntent.getActivity(ctx, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         NotificationCompat.Builder mNotifyBuilder;
 
@@ -121,8 +121,12 @@ public class BackgroundTaskLatestMessage extends AsyncTask<String, Message, Mess
 
         mNotifyBuilder = new NotificationCompat.Builder(ctx)
                 .setContentTitle(message.getSender())
+                .setGroup("ecoCrats")
+                .setGroupSummary(true)
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setSmallIcon(R.mipmap.ic_launcher)
-                .setLights(Color.BLUE, 100, 900);
+                .setLights(ctx.getResources().getColor(R.color.colorAccent), 100, 900);
 
         // Set pending intent
         mNotifyBuilder.setContentIntent(resultPendingIntent);

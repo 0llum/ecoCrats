@@ -1,12 +1,15 @@
 package com.ollum.ecoCrats.Adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
@@ -14,9 +17,7 @@ import com.ollum.ecoCrats.Classes.Region;
 import com.ollum.ecoCrats.Fragments.RegionDetailsFragment;
 import com.ollum.ecoCrats.R;
 
-import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class RegionsAdapter extends RecyclerView.Adapter<RegionsAdapter.RecyclerViewHolder> {
     public static Bundle bundle;
@@ -40,8 +41,8 @@ public class RegionsAdapter extends RecyclerView.Adapter<RegionsAdapter.Recycler
         Region region = arrayList.get(position);
         holder.region.setText(region.getName());
         holder.capital.setText(region.getCapital());
-        holder.area.setText("" + NumberFormat.getNumberInstance(Locale.GERMANY).format(region.getArea()));
-        holder.population.setText("" + NumberFormat.getNumberInstance(Locale.GERMANY).format(region.getPopulation()));
+
+        holder.imageView.setImageResource(R.mipmap.afghanistan);
     }
 
     @Override
@@ -50,7 +51,8 @@ public class RegionsAdapter extends RecyclerView.Adapter<RegionsAdapter.Recycler
     }
 
     public static class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView region, capital, area, population;
+        TextView region, capital;
+        ImageView imageView, info;
         ArrayList<Region> regions = new ArrayList<Region>();
         Context ctx;
 
@@ -60,10 +62,11 @@ public class RegionsAdapter extends RecyclerView.Adapter<RegionsAdapter.Recycler
             this.ctx = ctx;
             view.setOnClickListener(this);
 
-            region = (TextView) view.findViewById(R.id.display_regions_row_region);
-            capital = (TextView) view.findViewById(R.id.display_regions_row_capital);
-            area = (TextView) view.findViewById(R.id.display_regions_row_area);
-            population = (TextView) view.findViewById(R.id.display_regions_row_population);
+            region = (TextView) view.findViewById(R.id.regions_row_region);
+            capital = (TextView) view.findViewById(R.id.regions_row_capital);
+            imageView = (ImageView) view.findViewById(R.id.regions_row_image);
+            info = (ImageView) view.findViewById(R.id.regions_row_info);
+            info.setOnClickListener(this);
         }
 
         @Override
@@ -71,19 +74,27 @@ public class RegionsAdapter extends RecyclerView.Adapter<RegionsAdapter.Recycler
             int position = getAdapterPosition();
             Region region = this.regions.get(position);
 
-            bundle = new Bundle();
-            bundle.putInt("ID", region.getID());
-            bundle.putString("region", region.getName());
-            bundle.putString("capital", region.getCapital());
-            bundle.putInt("area", region.getArea());
-            bundle.putInt("population", region.getPopulation());
+            if (v.getId() == R.id.regions_row_info) {
+                Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, region.getName(), Snackbar.LENGTH_LONG);
+                TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                tv.setTextColor(Color.BLACK);
+                snackbar.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                snackbar.show();
+            } else {
+                bundle = new Bundle();
+                bundle.putInt("ID", region.getID());
+                bundle.putString("region", region.getName());
+                bundle.putString("capital", region.getCapital());
+                bundle.putInt("area", region.getArea());
+                bundle.putInt("population", region.getPopulation());
 
-            RegionDetailsFragment regionDetailsFragment = new RegionDetailsFragment();
-            regionDetailsFragment.setArguments(bundle);
-            FragmentTransaction transaction = MainActivity.fragmentManager.beginTransaction();
-            transaction.replace(R.id.mainContent, regionDetailsFragment, "RegionDetailsFragment");
-            transaction.addToBackStack("RegionDetailsFragment");
-            transaction.commit();
+                RegionDetailsFragment regionDetailsFragment = new RegionDetailsFragment();
+                regionDetailsFragment.setArguments(bundle);
+                FragmentTransaction transaction = MainActivity.fragmentManager.beginTransaction();
+                transaction.replace(R.id.mainContent, regionDetailsFragment, "RegionDetailsFragment");
+                transaction.addToBackStack("RegionDetailsFragment");
+                transaction.commit();
+            }
         }
     }
 }

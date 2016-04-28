@@ -15,7 +15,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -74,22 +73,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public static FragmentManager fragmentManager;
     public static User user;
     public static CoordinatorLayout coordinatorLayout;
+    public static FloatingActionMenu fabMenu;
+    public static Bundle bundle;
+    public static Bundle GCMbundle;
+    public static Toolbar toolbar;
     UserLocalStore userLocalStore;
+    int progress = 0;
+    int cost = 0;
     private DrawerLayout drawerLayout;
     private ListView listView;
     private ActionBarDrawerToggle drawerListener;
-    public static FloatingActionMenu fabMenu;
     private FloatingActionButton fabMessages;
     private FloatingActionButton fabTransport;
     private FloatingActionButton fabContracts;
-    public static Bundle bundle;
-    public static Bundle GCMbundle;
-    int progress = 0;
-    int cost = 0;
     private NavDrawerAdapter navDrawerAdapter;
     private TextView drawerUsername;
     private ImageButton settingsButton, logoutButton;
-    public static Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,7 +145,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View v) {
                 fabMenu.toggle(true);
-                    closeDrawer();
+                closeDrawer();
             }
         });
 
@@ -399,12 +398,21 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                 if (receiver.equals("")) {
                     Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.receiver_choose, Snackbar.LENGTH_LONG);
+                    TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    tv.setTextColor(Color.BLACK);
+                    snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
                     snackbar.show();
                 } else if (subject.equals("")) {
                     Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.subject_enter, Snackbar.LENGTH_LONG);
+                    TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    tv.setTextColor(Color.BLACK);
+                    snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
                     snackbar.show();
                 } else if (message.equals("")) {
                     Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.message_enter, Snackbar.LENGTH_LONG);
+                    TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    tv.setTextColor(Color.BLACK);
+                    snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
                     snackbar.show();
                 } else {
                     if (isOnline()) {
@@ -456,7 +464,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
                             tv.setTextColor(Color.BLACK);
                             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                            snackbar.show();                        }
+                            snackbar.show();
+                        }
 
                     }
                 });
@@ -505,7 +514,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                     TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
                                     tv.setTextColor(Color.BLACK);
                                     snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                                    snackbar.show();                                }
+                                    snackbar.show();
+                                }
                             }
                         })
                         .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
@@ -547,7 +557,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                     TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
                                     tv.setTextColor(Color.BLACK);
                                     snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                                    snackbar.show();                                }
+                                    snackbar.show();
+                                }
                             }
                         })
                         .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
@@ -568,6 +579,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case R.id.sendTransport:
                 if (NewTransportFragment.tvQuantity.getText().equals("0")) {
                     Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.quantity_0, Snackbar.LENGTH_LONG);
+                    TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    tv.setTextColor(Color.BLACK);
+                    snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
                     snackbar.show();
                 } else {
                     double startRegionLatitude = Math.toRadians(Double.parseDouble(NewTransportFragment.startRegionLatitude));
@@ -576,7 +590,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     double destinationRegionLongitude = Math.toRadians(Double.parseDouble(NewTransportFragment.destinationRegionLongitude));
 
                     int r = 6371;
-                    int distance = (int)(Math.acos((Math.sin(startRegionLatitude) * Math.sin(destinationRegionLatitude)) + (Math.cos(startRegionLatitude) * Math.cos(destinationRegionLatitude) * Math.cos(destinationRegionLongitude - startRegionLongitude))) * r);
+                    int distance = (int) (Math.acos((Math.sin(startRegionLatitude) * Math.sin(destinationRegionLatitude)) + (Math.cos(startRegionLatitude) * Math.cos(destinationRegionLatitude) * Math.cos(destinationRegionLongitude - startRegionLongitude))) * r);
                     final String duration = "" + distance * 60 / 80;
 
                     AlertDialog.Builder transportDialog = new AlertDialog.Builder(this)
@@ -595,7 +609,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                         TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
                                         tv.setTextColor(Color.BLACK);
                                         snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                                        snackbar.show();                                    }
+                                        snackbar.show();
+                                    }
                                 }
                             })
                             .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
@@ -629,8 +644,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
-
+            snackbar.show();
+        }
     }
 
     @Override

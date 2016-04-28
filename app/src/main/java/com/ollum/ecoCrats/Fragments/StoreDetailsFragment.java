@@ -48,7 +48,7 @@ public class StoreDetailsFragment extends Fragment implements SwipeRefreshLayout
         View view = inflater.inflate(R.layout.fragment_store_details, container, false);
 
         setHasOptionsMenu(true);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(region);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(region);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.store_details_recyclerView);
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -71,7 +71,8 @@ public class StoreDetailsFragment extends Fragment implements SwipeRefreshLayout
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
 
         swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.store_details_swipeRefreshLayout);
         swipeRefreshLayout.setOnRefreshListener(this);
@@ -97,7 +98,8 @@ public class StoreDetailsFragment extends Fragment implements SwipeRefreshLayout
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
 
 
         if (swipeRefreshLayout.isRefreshing()) {

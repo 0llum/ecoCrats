@@ -1,7 +1,9 @@
 package com.ollum.ecoCrats.Adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,9 +17,7 @@ import com.ollum.ecoCrats.Classes.Country;
 import com.ollum.ecoCrats.Fragments.RegionsFragment;
 import com.ollum.ecoCrats.R;
 
-import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.RecyclerViewHolder> {
     public static Bundle bundle;
@@ -41,8 +41,6 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.Recy
         Country country = arrayList.get(position);
         holder.country.setText(country.getName());
         holder.capital.setText(country.getCapital());
-        holder.area.setText("" + NumberFormat.getNumberInstance(Locale.GERMANY).format(country.getArea()));
-        holder.population.setText("" + NumberFormat.getNumberInstance(Locale.GERMANY).format(country.getPopulation()));
 
         switch (country.getID()) {
             case 1:
@@ -609,8 +607,8 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.Recy
     }
 
     public static class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView country, capital, area, population;
-        ImageView imageView;
+        TextView country, capital;
+        ImageView imageView, info;
         ArrayList<Country> countries = new ArrayList<Country>();
         Context ctx;
 
@@ -620,11 +618,11 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.Recy
             this.ctx = ctx;
             view.setOnClickListener(this);
 
-            country = (TextView) view.findViewById(R.id.display_countries_row_country);
-            capital = (TextView) view.findViewById(R.id.display_countries_row_capital);
-            area = (TextView) view.findViewById(R.id.display_countries_row_area);
-            population = (TextView) view.findViewById(R.id.display_countries_row_population);
+            country = (TextView) view.findViewById(R.id.countries_row_country);
+            capital = (TextView) view.findViewById(R.id.countries_row_capital);
             imageView = (ImageView) view.findViewById(R.id.countries_row_image);
+            info = (ImageView) view.findViewById(R.id.countries_row_info);
+            info.setOnClickListener(this);
         }
 
         @Override
@@ -632,15 +630,24 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.Recy
             int position = getAdapterPosition();
             Country country = this.countries.get(position);
 
-            bundle = new Bundle();
-            bundle.putString("country", country.getName());
+            if (v.getId() == R.id.countries_row_info) {
+                Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, country.getName(), Snackbar.LENGTH_LONG);
+                TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                tv.setTextColor(Color.BLACK);
+                snackbar.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                snackbar.show();
+            } else {
+                bundle = new Bundle();
+                bundle.putString("country", country.getName());
 
-            RegionsFragment regionsFragment = new RegionsFragment();
-            regionsFragment.setArguments(bundle);
-            FragmentTransaction transaction = MainActivity.fragmentManager.beginTransaction();
-            transaction.replace(R.id.mainContent, regionsFragment, "RegionsFragment");
-            transaction.addToBackStack("RegionsFragment");
-            transaction.commit();
+                RegionsFragment regionsFragment = new RegionsFragment();
+                regionsFragment.setArguments(bundle);
+                FragmentTransaction transaction = MainActivity.fragmentManager.beginTransaction();
+                transaction.setCustomAnimations(R.anim.activity_in, R.anim.activity_out, R.anim.activity_back_in, R.anim.activity_back_out);
+                transaction.replace(R.id.mainContent, regionsFragment, "RegionsFragment");
+                transaction.addToBackStack("RegionsFragment");
+                transaction.commit();
+            }
         }
     }
 }

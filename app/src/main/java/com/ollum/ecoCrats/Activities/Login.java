@@ -6,7 +6,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -16,7 +15,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
-import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStatus;
 import com.ollum.ecoCrats.Classes.User;
 import com.ollum.ecoCrats.R;
 import com.ollum.ecoCrats.SharedPrefs.UserLocalStore;

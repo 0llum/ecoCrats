@@ -25,7 +25,7 @@ public class ItemsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_items, container, false);
 
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.market_title);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.market_title);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.items_recyclerView);
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -48,7 +48,8 @@ public class ItemsFragment extends Fragment {
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
 
         return view;
     }

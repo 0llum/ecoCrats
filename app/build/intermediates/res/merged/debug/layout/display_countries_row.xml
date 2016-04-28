@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="fill_parent"
+              android:layout_width="match_parent"
               android:layout_height="50dp"
               android:layout_marginBottom="1dp"
               android:background="@color/colorPrimary"
               android:gravity="center"
               android:orientation="horizontal">
 
-    <ImageView
+    <com.ollum.ecoCrats.Utils.RoundedImageView
         android:id="@+id/countries_row_image"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginLeft="5dp"/>
 
     <LinearLayout
@@ -19,63 +19,35 @@
         android:layout_marginLeft="10dp"
         android:layout_weight="1"
         android:gravity="center_vertical"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/display_countries_row_country"
+            android:id="@+id/countries_row_country"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="1"
-            android:text="Country"
+            android:text="@string/country"
             android:textColor="#fff"
             android:textSize="20dp"/>
 
         <TextView
-            android:id="@+id/display_countries_row_capital"
+            android:id="@+id/countries_row_capital"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:text="Capital"
+            android:text="@string/capital"
             android:textColor="#fff"
             android:textSize="16dp"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+    <ImageView
+        android:id="@+id/countries_row_info"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginRight="5dp"
-        android:layout_weight="2"
-        android:gravity="center_vertical"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/display_countries_row_area"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_margin="0dp"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="350.000"
-            android:textColor="#fff"
-            android:textSize="16dp"/>
-
-        <TextView
-            android:id="@+id/display_countries_row_population"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_margin="0dp"
-            android:layout_marginLeft="10dp"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="80.000.000"
-            android:textColor="#fff"
-            android:textSize="16dp"/>
-    </LinearLayout>
-
+        android:padding="10dp"
+        android:src="@mipmap/info_white"/>
 </LinearLayout>

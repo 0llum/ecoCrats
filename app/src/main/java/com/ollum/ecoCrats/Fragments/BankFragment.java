@@ -46,7 +46,7 @@ public class BankFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_bank, container, false);
 
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.bank_title);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.bank_title);
 
         tvDepts = (TextView) view.findViewById(R.id.bank_depts);
         tvDepts.setText("0");
@@ -63,7 +63,8 @@ public class BankFragment extends Fragment implements View.OnClickListener {
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
 
         return view;
     }
@@ -87,7 +88,8 @@ public class BankFragment extends Fragment implements View.OnClickListener {
                             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
                             tv.setTextColor(Color.BLACK);
                             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                            snackbar.show();                        }
+                            snackbar.show();
+                        }
                     }
                 });
                 dialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
@@ -100,6 +102,12 @@ public class BankFragment extends Fragment implements View.OnClickListener {
                 dialog.show();
                 break;
         }
+    }
+
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 
     private class BackgroundTaskDepts extends AsyncTask<Void, Void, String> {
@@ -225,16 +233,13 @@ public class BankFragment extends Fragment implements View.OnClickListener {
             }
 
             Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, result, Snackbar.LENGTH_LONG);
+            TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+            tv.setTextColor(Color.BLACK);
+            snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
             snackbar.show();
 
             BackgroundTaskDepts backgroundTaskDepts = new BackgroundTaskDepts();
             backgroundTaskDepts.execute();
         }
-    }
-
-    public boolean isOnline() {
-        ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 }

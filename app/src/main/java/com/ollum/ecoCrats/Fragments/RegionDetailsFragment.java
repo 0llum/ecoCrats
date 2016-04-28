@@ -1,10 +1,5 @@
 package com.ollum.ecoCrats.Fragments;
 
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -13,21 +8,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.Adapters.RegionsAdapter;
-import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.R;
 
-import java.text.NumberFormat;
-import java.util.Locale;
-
 public class RegionDetailsFragment extends Fragment {
-    String region, capital;
     public static int ID, area, population;
+    String region, capital;
     TextView tvRegion, tvCapital, tvArea, tvPopulation;
 
     @Override
@@ -50,7 +38,7 @@ public class RegionDetailsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_region_details, container, false);
 
         setHasOptionsMenu(true);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(region);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(region);
 
         tvRegion = (TextView) view.findViewById(R.id.region_details_region);
         tvCapital = (TextView) view.findViewById(R.id.region_details_capital);

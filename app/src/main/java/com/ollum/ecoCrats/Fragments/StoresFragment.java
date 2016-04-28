@@ -13,7 +13,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
@@ -28,7 +27,7 @@ public class StoresFragment extends Fragment implements SwipeRefreshLayout.OnRef
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_stores, container, false);
 
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.stores_title);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.stores_title);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.stores_recyclerView);
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -51,8 +50,8 @@ public class StoresFragment extends Fragment implements SwipeRefreshLayout.OnRef
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
-
+            snackbar.show();
+        }
 
 
         swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.stores_swipeRefreshLayout);
@@ -75,7 +74,8 @@ public class StoresFragment extends Fragment implements SwipeRefreshLayout.OnRef
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
 
         if (swipeRefreshLayout.isRefreshing()) {
             swipeRefreshLayout.setRefreshing(false);

@@ -10,19 +10,19 @@ import android.widget.TextView;
 
 import com.ollum.ecoCrats.R;
 
-public class NavDrawerAdapter extends BaseAdapter{
-    private Context ctx;
+public class NavDrawerAdapter extends BaseAdapter {
     String[] items;
     int[] images = {
-        R.mipmap.profile_white,
-        R.mipmap.friendlist_white,
-        R.mipmap.stores_white,
-        R.mipmap.companies_white,
-        R.mipmap.research_white,
-        R.mipmap.market_white,
-        R.mipmap.world_map_white,
-        R.mipmap.bank_white
+            R.mipmap.profile_white,
+            R.mipmap.friendlist_white,
+            R.mipmap.stores_white,
+            R.mipmap.companies_white,
+            R.mipmap.research_white,
+            R.mipmap.market_white,
+            R.mipmap.world_map_white,
+            R.mipmap.bank_white
     };
+    private Context ctx;
 
     public NavDrawerAdapter(Context ctx) {
         this.ctx = ctx;

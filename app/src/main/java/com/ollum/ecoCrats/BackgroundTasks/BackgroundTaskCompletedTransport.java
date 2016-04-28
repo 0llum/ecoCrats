@@ -7,7 +7,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
-import com.ollum.ecoCrats.Adapters.ActiveTransportAdapter;
 import com.ollum.ecoCrats.Adapters.CompletedTransportAdapter;
 import com.ollum.ecoCrats.Classes.Transport;
 import com.ollum.ecoCrats.R;

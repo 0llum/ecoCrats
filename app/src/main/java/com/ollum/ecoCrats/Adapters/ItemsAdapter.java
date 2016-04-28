@@ -1,6 +1,7 @@
 package com.ollum.ecoCrats.Adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
@@ -121,7 +122,11 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.RecyclerView
             item = this.items.get(position);
 
             if (v.getId() == R.id.items_row_info) {
-                Snackbar.make(MainActivity.coordinatorLayout, item.getName(), Snackbar.LENGTH_LONG).show();
+                Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, item.getName(), Snackbar.LENGTH_LONG);
+                TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                tv.setTextColor(Color.BLACK);
+                snackbar.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                snackbar.show();
             } else {
                 bundle = new Bundle();
                 bundle.putInt("ID", item.getID());

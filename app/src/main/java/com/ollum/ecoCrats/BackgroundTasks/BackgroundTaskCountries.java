@@ -9,7 +9,6 @@ import android.util.Log;
 
 import com.ollum.ecoCrats.Adapters.CountriesAdapter;
 import com.ollum.ecoCrats.Classes.Country;
-import com.ollum.ecoCrats.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -48,10 +47,10 @@ public class BackgroundTaskCountries extends AsyncTask<String, Country, Void> {
         adapter = new CountriesAdapter(arrayList, ctx);
         recyclerView.setAdapter(adapter);
 
-        progressDialog.setCancelable(true);
+        /*progressDialog.setCancelable(true);
         progressDialog.setTitle(ctx.getResources().getString(R.string.progressing));
         progressDialog.setMessage(ctx.getResources().getString(R.string.please_wait));
-        progressDialog.show();
+        progressDialog.show();*/
     }
 
     @Override

@@ -22,7 +22,6 @@ import android.widget.TextView;
 import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskCompletedTransport;
-import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskInbox;
 import com.ollum.ecoCrats.R;
 
 public class CompletedTransportFragment extends Fragment implements View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
@@ -35,7 +34,7 @@ public class CompletedTransportFragment extends Fragment implements View.OnClick
         View view = inflater.inflate(R.layout.fragment_completed_transport, container, false);
 
         setHasOptionsMenu(true);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.completed_transport_title);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.completed_transport_title);
 
         completed = (Button) view.findViewById(R.id.completed_transport_button_active);
         completed.setOnClickListener(this);
@@ -66,7 +65,8 @@ public class CompletedTransportFragment extends Fragment implements View.OnClick
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
 
         if (swipeRefreshLayout.isRefreshing()) {
             swipeRefreshLayout.setRefreshing(false);
@@ -101,7 +101,8 @@ public class CompletedTransportFragment extends Fragment implements View.OnClick
             TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
             tv.setTextColor(Color.BLACK);
             snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            snackbar.show();        }
+            snackbar.show();
+        }
 
         if (swipeRefreshLayout.isRefreshing()) {
             swipeRefreshLayout.setRefreshing(false);
