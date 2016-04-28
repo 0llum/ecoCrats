@@ -2,11 +2,16 @@ package com.ollum.ecoCrats.Fragments;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,7 +46,7 @@ public class BankFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_bank, container, false);
 
-        MainActivity.actionBar.setTitle(R.string.bank_title);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.bank_title);
 
         tvDepts = (TextView) view.findViewById(R.id.bank_depts);
         tvDepts.setText("0");
@@ -50,8 +55,15 @@ public class BankFragment extends Fragment implements View.OnClickListener {
         lend = (Button) view.findViewById(R.id.bank_button_lend);
         lend.setOnClickListener(this);
 
-        BackgroundTaskDepts backgroundTaskDepts = new BackgroundTaskDepts();
-        backgroundTaskDepts.execute();
+        if (isOnline()) {
+            BackgroundTaskDepts backgroundTaskDepts = new BackgroundTaskDepts();
+            backgroundTaskDepts.execute();
+        } else {
+            Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+            TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+            tv.setTextColor(Color.BLACK);
+            snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            snackbar.show();        }
 
         return view;
     }
@@ -67,8 +79,15 @@ public class BankFragment extends Fragment implements View.OnClickListener {
                     public void onClick(DialogInterface dialog, int which) {
                         Credit = etCredit.getText().toString();
 
-                        BackgroundTaskCredit backgroundTaskCredit = new BackgroundTaskCredit();
-                        backgroundTaskCredit.execute();
+                        if (isOnline()) {
+                            BackgroundTaskCredit backgroundTaskCredit = new BackgroundTaskCredit();
+                            backgroundTaskCredit.execute();
+                        } else {
+                            Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+                            TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                            tv.setTextColor(Color.BLACK);
+                            snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                            snackbar.show();                        }
                     }
                 });
                 dialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
@@ -211,5 +230,11 @@ public class BankFragment extends Fragment implements View.OnClickListener {
             BackgroundTaskDepts backgroundTaskDepts = new BackgroundTaskDepts();
             backgroundTaskDepts.execute();
         }
+    }
+
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 }

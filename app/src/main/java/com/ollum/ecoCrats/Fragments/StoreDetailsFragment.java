@@ -1,14 +1,21 @@
 package com.ollum.ecoCrats.Fragments;
 
+import android.content.Context;
+import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.Adapters.StoresAdapter;
@@ -41,7 +48,7 @@ public class StoreDetailsFragment extends Fragment implements SwipeRefreshLayout
         View view = inflater.inflate(R.layout.fragment_store_details, container, false);
 
         setHasOptionsMenu(true);
-        MainActivity.actionBar.setTitle(region);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(region);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.store_details_recyclerView);
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -56,8 +63,15 @@ public class StoreDetailsFragment extends Fragment implements SwipeRefreshLayout
             }
         });
 
-        BackgroundTaskStoreDetails backgroundTaskStoreDetails = new BackgroundTaskStoreDetails(getContext(), recyclerView);
-        backgroundTaskStoreDetails.execute("" + ID);
+        if (isOnline()) {
+            BackgroundTaskStoreDetails backgroundTaskStoreDetails = new BackgroundTaskStoreDetails(getContext(), recyclerView);
+            backgroundTaskStoreDetails.execute("" + ID);
+        } else {
+            Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+            TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+            tv.setTextColor(Color.BLACK);
+            snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            snackbar.show();        }
 
         swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.store_details_swipeRefreshLayout);
         swipeRefreshLayout.setOnRefreshListener(this);
@@ -71,12 +85,20 @@ public class StoreDetailsFragment extends Fragment implements SwipeRefreshLayout
 
     @Override
     public void onRefresh() {
-        String method = "updateTransport";
-        BackgroundTask backgroundTask = new BackgroundTask(getContext());
-        backgroundTask.execute(method);
+        if (isOnline()) {
+            String method = "updateTransport";
+            BackgroundTask backgroundTask = new BackgroundTask(getContext());
+            backgroundTask.execute(method);
 
-        BackgroundTaskStoreDetails backgroundTaskStoreDetails = new BackgroundTaskStoreDetails(getContext(), recyclerView);
-        backgroundTaskStoreDetails.execute("" + ID);
+            BackgroundTaskStoreDetails backgroundTaskStoreDetails = new BackgroundTaskStoreDetails(getContext(), recyclerView);
+            backgroundTaskStoreDetails.execute("" + ID);
+        } else {
+            Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+            TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+            tv.setTextColor(Color.BLACK);
+            snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            snackbar.show();        }
+
 
         if (swipeRefreshLayout.isRefreshing()) {
             swipeRefreshLayout.setRefreshing(false);
@@ -87,5 +109,11 @@ public class StoreDetailsFragment extends Fragment implements SwipeRefreshLayout
     public void onPrepareOptionsMenu(Menu menu) {
         MenuItem addItem = menu.findItem(R.id.addItem);
         addItem.setVisible(true);
+    }
+
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 }

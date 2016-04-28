@@ -1,14 +1,21 @@
 package com.ollum.ecoCrats.Fragments;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
@@ -24,7 +31,7 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
-        MainActivity.actionBar.setTitle(R.string.settings_title);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.settings_title);
 
         oldPassword = (EditText) view.findViewById(R.id.settings_oldPassword);
         newPassword = (EditText) view.findViewById(R.id.settings_newPassword);
@@ -102,21 +109,42 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
     }
 
     private void changePassword(String oldPassword, String newPassword) {
-        String method = "changePassword";
-        BackgroundTask backgroundTask = new BackgroundTask(getActivity());
-        backgroundTask.execute(method, MainActivity.user.username, oldPassword, newPassword);
+        if (isOnline()) {
+            String method = "changePassword";
+            BackgroundTask backgroundTask = new BackgroundTask(getActivity());
+            backgroundTask.execute(method, MainActivity.user.username, oldPassword, newPassword);
+        } else {
+            Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+            TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+            tv.setTextColor(Color.BLACK);
+            snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            snackbar.show();        }
     }
 
     private void changeEmail(String newEmail) {
-        String method = "changeEmail";
-        BackgroundTask backgroundTask = new BackgroundTask(getActivity());
-        backgroundTask.execute(method, MainActivity.user.username, newEmail);
+        if (isOnline()) {
+            String method = "changeEmail";
+            BackgroundTask backgroundTask = new BackgroundTask(getActivity());
+            backgroundTask.execute(method, MainActivity.user.username, newEmail);
+        } else {
+            Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+            TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+            tv.setTextColor(Color.BLACK);
+            snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            snackbar.show();        }
     }
 
     private void deleteAccount() {
-        String method = "deleteAccount";
-        BackgroundTask backgroundTask = new BackgroundTask(getActivity());
-        backgroundTask.execute(method, MainActivity.user.username);
+        if (isOnline()) {
+            String method = "deleteAccount";
+            BackgroundTask backgroundTask = new BackgroundTask(getActivity());
+            backgroundTask.execute(method, MainActivity.user.username);
+        } else {
+            Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+            TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+            tv.setTextColor(Color.BLACK);
+            snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            snackbar.show();        }
     }
 
     private boolean isValidMail(String email) {
@@ -128,5 +156,11 @@ public class SettingsFragment extends Fragment implements View.OnClickListener {
 
         EmailValidator ev = EmailValidator.getInstance();
         return ev.isValid(email);
+    }
+
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 }

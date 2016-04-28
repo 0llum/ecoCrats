@@ -1,8 +1,12 @@
 package com.ollum.ecoCrats.Activities;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
@@ -14,6 +18,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.InputType;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -68,12 +73,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     public static FragmentManager fragmentManager;
     public static User user;
-    public static ActionBar actionBar;
     public static CoordinatorLayout coordinatorLayout;
     UserLocalStore userLocalStore;
     private DrawerLayout drawerLayout;
     private ListView listView;
-    private String[] navDrawerItems;
     private ActionBarDrawerToggle drawerListener;
     public static FloatingActionMenu fabMenu;
     private FloatingActionButton fabMessages;
@@ -86,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private NavDrawerAdapter navDrawerAdapter;
     private TextView drawerUsername;
     private ImageButton settingsButton, logoutButton;
+    public static Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,11 +98,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
 
-        actionBar = getSupportActionBar();
+        toolbar = (Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         drawerUsername = (TextView) findViewById(R.id.drawer_username);
 
-        navDrawerItems = getResources().getStringArray(R.array.navDrawerItems);
         listView = (ListView) findViewById(R.id.drawerList);
         navDrawerAdapter = new NavDrawerAdapter(this);
         listView.setAdapter(navDrawerAdapter);
@@ -117,8 +123,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         };
         drawerLayout.setDrawerListener(drawerListener);
-        actionBar.setHomeButtonEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
 
         settingsButton = (ImageButton) findViewById(R.id.settings);
         settingsButton.setOnClickListener(this);
@@ -175,11 +179,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             FragmentTransaction transaction = fragmentManager.beginTransaction();
 
             if (fragment != null) {
-                if (fragment.equals("MessagesInboxFragment")) {
-                    /*MessagesInboxFragment messagesInboxFragment = new MessagesInboxFragment();
-                    transaction.replace(R.id.mainContent, messagesInboxFragment, "MessagesInboxFragment");
-                    transaction.addToBackStack("MessagesInboxFragment");*/
-
+                if (fragment.equals("MessageDetailsFragment")) {
                     GCMbundle = new Bundle();
                     GCMbundle.putInt("ID", ID);
                     GCMbundle.putString("sender", Sender);
@@ -359,83 +359,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 transaction.addToBackStack("BankFragment");
                 transaction.commit();
                 break;
-            case 8:
-                SettingsFragment settingsFragment = new SettingsFragment();
-                transaction.replace(R.id.mainContent, settingsFragment, "SettingsFragment");
-                transaction.addToBackStack("SettingsFragment");
-                transaction.commit();
-                break;
-            case 9:
-                AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-                dialog.setTitle(getResources().getString(R.string.logout_confirmation));
-                dialog.setPositiveButton(getResources().getString(R.string.yes), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        new AsyncTask() {
-
-                            @Override
-                            protected Object doInBackground(Object[] params) {
-                                String logout_url = "http://0llum.bplaced.net/ecoCrats/Logout.php";
-                                String username = user.username;
-
-                                try {
-                                    URL url = new URL(logout_url);
-                                    HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                                    httpURLConnection.setRequestMethod("POST");
-                                    httpURLConnection.setDoOutput(true);
-                                    httpURLConnection.setDoInput(true);
-                                    OutputStream outputStream = httpURLConnection.getOutputStream();
-                                    BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
-                                    String data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8");
-                                    bufferedWriter.write(data);
-                                    bufferedWriter.flush();
-                                    bufferedWriter.close();
-                                    outputStream.close();
-                                    InputStream inputStream = httpURLConnection.getInputStream();
-                                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
-                                    String response = "";
-                                    String line = "";
-
-                                    while ((line = bufferedReader.readLine()) != null) {
-                                        response += line;
-                                    }
-
-                                    bufferedReader.close();
-                                    inputStream.close();
-                                    httpURLConnection.disconnect();
-
-                                    return response.trim();
-
-                                } catch (MalformedURLException e) {
-                                    e.printStackTrace();
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                }
-                                return null;
-                            }
-
-                            @Override
-                            protected void onPostExecute(Object o) {
-                                setUserOffline(user);
-                                userLocalStore.clearUserData();
-                                userLocalStore.setUserLoggedIn(false);
-
-                                finish();
-                                startActivity(new Intent(getApplicationContext(), Login.class));
-                                overridePendingTransition(0, 0);
-                            }
-                        }.execute();
-                    }
-                });
-                dialog.setNegativeButton(getResources().getString(R.string.no), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-                dialog.create();
-                dialog.show();
-                break;
         }
     }
 
@@ -484,9 +407,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.message_enter, Snackbar.LENGTH_LONG);
                     snackbar.show();
                 } else {
-                    String method = "sendMessage";
-                    BackgroundTask backgroundTask = new BackgroundTask(this);
-                    backgroundTask.execute(method, NewMessageFragment.sender, receiver, subject, message);
+                    if (isOnline()) {
+                        String method = "sendMessage";
+                        BackgroundTask backgroundTask = new BackgroundTask(this);
+                        backgroundTask.execute(method, NewMessageFragment.sender, receiver, subject, message);
+                    } else {
+                        Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+                        TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                        tv.setTextColor(Color.BLACK);
+                        snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                        snackbar.show();
+                    }
+
                 }
 
                 break;
@@ -514,10 +446,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 dialog.setPositiveButton(R.string.buy, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String method = "buyArea";
-                        BackgroundTask backgroundTask = new BackgroundTask(MainActivity.this);
-                        backgroundTask.execute(method, MainActivity.user.getUsername(), "" + RegionDetailsFragment.ID, "" + progress, "" + cost);
-                        dialog.dismiss();
+                        if (isOnline()) {
+                            String method = "buyArea";
+                            BackgroundTask backgroundTask = new BackgroundTask(MainActivity.this);
+                            backgroundTask.execute(method, MainActivity.user.getUsername(), "" + RegionDetailsFragment.ID, "" + progress, "" + cost);
+                            dialog.dismiss();
+                        } else {
+                            Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+                            TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                            tv.setTextColor(Color.BLACK);
+                            snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                            snackbar.show();                        }
+
                     }
                 });
                 dialog.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
@@ -557,8 +497,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                BackgroundTask backgroundTask = new BackgroundTask(MainActivity.this);
-                                backgroundTask.execute("buildStore", MainActivity.user.getUsername(), "" + RegionDetailsFragment.ID);
+                                if (isOnline()) {
+                                    BackgroundTask backgroundTask = new BackgroundTask(MainActivity.this);
+                                    backgroundTask.execute("buildStore", MainActivity.user.getUsername(), "" + RegionDetailsFragment.ID);
+                                } else {
+                                    Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+                                    TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                                    tv.setTextColor(Color.BLACK);
+                                    snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                                    snackbar.show();                                }
                             }
                         })
                         .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
@@ -590,10 +537,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         .setPositiveButton(R.string.add, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                String friend = etFriend.getText().toString().trim();
-                                String method = "addFriend";
-                                BackgroundTask backgroundTask = new BackgroundTask(MainActivity.this);
-                                backgroundTask.execute(method, MainActivity.user.username, friend);
+                                if (isOnline()) {
+                                    String friend = etFriend.getText().toString().trim();
+                                    String method = "addFriend";
+                                    BackgroundTask backgroundTask = new BackgroundTask(MainActivity.this);
+                                    backgroundTask.execute(method, MainActivity.user.username, friend);
+                                } else {
+                                    Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+                                    TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                                    tv.setTextColor(Color.BLACK);
+                                    snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                                    snackbar.show();                                }
                             }
                         })
                         .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
@@ -631,10 +585,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
-                                    String quantity = NewTransportFragment.tvQuantity.getText().toString();
-                                    BackgroundTask backgroundTask = new BackgroundTask(MainActivity.this);
-                                    backgroundTask.execute("transport", NewTransportFragment.startID, NewTransportFragment.destinationID, NewTransportFragment.itemID, quantity, duration);
+                                    if (isOnline()) {
+                                        dialog.dismiss();
+                                        String quantity = NewTransportFragment.tvQuantity.getText().toString();
+                                        BackgroundTask backgroundTask = new BackgroundTask(MainActivity.this);
+                                        backgroundTask.execute("transport", NewTransportFragment.startID, NewTransportFragment.destinationID, NewTransportFragment.itemID, quantity, duration);
+                                    } else {
+                                        Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+                                        TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                                        tv.setTextColor(Color.BLACK);
+                                        snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                                        snackbar.show();                                    }
                                 }
                             })
                             .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
@@ -659,9 +620,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             BackgroundTaskLatestMessage.mNotificationManager.cancelAll();
         }
 
-        String method = "updateTransport";
-        BackgroundTask backgroundTask = new BackgroundTask(this);
-        backgroundTask.execute(method);
+        if (isOnline()) {
+            String method = "updateTransport";
+            BackgroundTask backgroundTask = new BackgroundTask(this);
+            backgroundTask.execute(method);
+        } else {
+            Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+            TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+            tv.setTextColor(Color.BLACK);
+            snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            snackbar.show();        }
+
     }
 
     @Override
@@ -741,4 +710,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         backgroundTaskStatus.execute(method, user.username);
     }
 
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
+    }
 }

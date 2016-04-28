@@ -1,11 +1,16 @@
 package com.ollum.ecoCrats.Activities;
 
 import android.app.AlertDialog;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.Classes.User;
@@ -16,19 +21,11 @@ import org.apache.commons.validator.routines.EmailValidator;
 public class SignUp extends AppCompatActivity implements View.OnClickListener {
     EditText etUsername, etPassword, etPwConfirm, etEmail;
     Button bSignUp, bCancel;
-    android.support.v7.app.ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
-
-        try {
-            actionBar = getSupportActionBar();
-            actionBar.setTitle(R.string.sign_up_title);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
         etUsername = (EditText) findViewById(R.id.signup_username);
         etPassword = (EditText) findViewById(R.id.signup_password);
@@ -94,9 +91,13 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void signUpUser(final User user) {
-        String method = "signUp";
-        BackgroundTask backgroundTask = new BackgroundTask(SignUp.this);
-        backgroundTask.execute(method, user.username, user.password, user.email);
+        if (isOnline()) {
+            String method = "signUp";
+            BackgroundTask backgroundTask = new BackgroundTask(SignUp.this);
+            backgroundTask.execute(method, user.username, user.password, user.email);
+        } else {
+            Toast.makeText(this, R.string.no_internet, Toast.LENGTH_LONG).show();
+        }
     }
 
     private boolean isValidMail(String email) {
@@ -114,5 +115,11 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     public void onBackPressed() {
         super.onBackPressed();
         overridePendingTransition(0, 0);
+    }
+
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 }

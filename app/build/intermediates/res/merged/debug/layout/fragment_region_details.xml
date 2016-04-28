@@ -1,98 +1,98 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:id="@+id/imageView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:background="@mipmap/ic_launcher"/>
 
     <TextView
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/region_details_region"
-        android:id="@+id/textView5"
-        android:layout_below="@+id/imageView"
         android:layout_alignLeft="@+id/imageView"
         android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/imageView"
         android:layout_marginTop="10dp"
+        android:text="@string/region_details_region"
         android:textColor="#fff"
         android:textColorHint="#fff"/>
 
     <TextView
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/region_details_capital"
-        android:id="@+id/textView6"
-        android:layout_below="@+id/textView5"
         android:layout_alignLeft="@+id/textView5"
         android:layout_alignStart="@+id/textView5"
+        android:layout_below="@+id/textView5"
+        android:text="@string/region_details_capital"
         android:textColor="#fff"
         android:textColorHint="#fff"/>
 
     <TextView
+        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/region_details_area"
-        android:id="@+id/textView7"
-        android:layout_below="@+id/textView6"
         android:layout_alignLeft="@+id/textView6"
         android:layout_alignStart="@+id/textView6"
+        android:layout_below="@+id/textView6"
+        android:text="@string/region_details_area"
         android:textColor="#fff"
         android:textColorHint="#fff"/>
 
     <TextView
+        android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/region_details_population"
-        android:id="@+id/textView8"
-        android:layout_below="@+id/textView7"
         android:layout_alignLeft="@+id/textView7"
         android:layout_alignStart="@+id/textView7"
+        android:layout_below="@+id/textView7"
+        android:text="@string/region_details_population"
         android:textColor="#fff"
         android:textColorHint="#fff"/>
 
     <TextView
+        android:id="@+id/region_details_region"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/region_details_region"
-        android:layout_below="@+id/imageView"
-        android:layout_alignRight="@+id/imageView"
         android:layout_alignEnd="@+id/imageView"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_below="@+id/imageView"
         android:layout_marginTop="10dp"
         android:textColor="#fff"
         android:textColorHint="#fff"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/region_details_capital"
-        android:layout_below="@+id/region_details_region"
-        android:layout_alignRight="@+id/region_details_region"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/region_details_region"
+        android:layout_alignRight="@+id/region_details_region"
+        android:layout_below="@+id/region_details_region"
         android:textColor="#fff"
         android:textColorHint="#fff"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/region_details_area"
-        android:layout_below="@+id/region_details_capital"
-        android:layout_alignRight="@+id/region_details_capital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/region_details_capital"
+        android:layout_alignRight="@+id/region_details_capital"
+        android:layout_below="@+id/region_details_capital"
         android:textColor="#fff"
         android:textColorHint="#fff"/>
 
     <TextView
+        android:id="@+id/region_details_population"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/region_details_population"
-        android:layout_below="@+id/region_details_area"
         android:layout_alignRight="@+id/region_details_area"
+        android:layout_below="@+id/region_details_area"
         android:textColor="#fff"
         android:textColorHint="#fff"/>
 </RelativeLayout>

@@ -1,6 +1,7 @@
 package com.ollum.ecoCrats.Utils;
 
 public class Constants {
+    public static final String PROJECT_NUMBER = "619757806936";
     public static final String reg_url = "http://0llum.bplaced.net/ecoCrats/SignUp.php";
     public static final String login_url = "http://0llum.bplaced.net/ecoCrats/Login.php";
     public static final String logout_url = "http://0llum.bplaced.net/ecoCrats/Logout.php";

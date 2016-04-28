@@ -1,9 +1,15 @@
 package com.ollum.ecoCrats.Fragments;
 
+import android.content.Context;
+import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -40,9 +46,17 @@ public class MessageDetailsFragment extends Fragment {
 
             MainActivity.GCMbundle = null;
 
-            String method = "seen";
-            BackgroundTaskStatus backgroundTaskStatus = new BackgroundTaskStatus(getContext());
-            backgroundTaskStatus.execute(method, "" + ID);
+            if (isOnline()) {
+                String method = "seen";
+                BackgroundTaskStatus backgroundTaskStatus = new BackgroundTaskStatus(getContext());
+                backgroundTaskStatus.execute(method, "" + ID);
+            } else {
+                Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+                TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                tv.setTextColor(Color.BLACK);
+                snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                snackbar.show();            }
+
         } else if (bundle != null) {
             ID = bundle.getInt("ID");
             sender = bundle.getString("sender");
@@ -54,9 +68,17 @@ public class MessageDetailsFragment extends Fragment {
             current = currentFragment.getName();
 
             if (current.equals("MessagesInboxFragment")) {
-                String method = "seen";
-                BackgroundTaskStatus backgroundTaskStatus = new BackgroundTaskStatus(getContext());
-                backgroundTaskStatus.execute(method, "" + ID);
+                if (isOnline()) {
+                    String method = "seen";
+                    BackgroundTaskStatus backgroundTaskStatus = new BackgroundTaskStatus(getContext());
+                    backgroundTaskStatus.execute(method, "" + ID);
+                } else {
+                    Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+                    TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    tv.setTextColor(Color.BLACK);
+                    snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                    snackbar.show();                }
+
             }
         }
     }
@@ -66,7 +88,7 @@ public class MessageDetailsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_message_details, container, false);
 
         setHasOptionsMenu(true);
-        MainActivity.actionBar.setTitle(R.string.message_details_title);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.message_details_title);
 
         tvSender = (TextView) view.findViewById(R.id.message_details_sender);
         tvSubject = (TextView) view.findViewById(R.id.message_details_subject);
@@ -83,5 +105,11 @@ public class MessageDetailsFragment extends Fragment {
     public void onPrepareOptionsMenu(Menu menu) {
         MenuItem reply = menu.findItem(R.id.reply);
         reply.setVisible(true);
+    }
+
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 }

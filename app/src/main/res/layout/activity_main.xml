@@ -1,127 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                 xmlns:fab="http://schemas.android.com/apk/res-auto"
-                                                 xmlns:tools="http://schemas.android.com/tools"
-                                                 android:id="@+id/coordinatorLayout"
-                                                 android:layout_width="match_parent"
-                                                 android:layout_height="match_parent"
-                                                 tools:context=".MainActivity">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-    <android.support.v4.widget.DrawerLayout android:id="@+id/drawerLayout"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent">
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"/>
 
-        <FrameLayout
-            android:id="@+id/mainContent"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimaryDark">
-        </FrameLayout>
-
-        <RelativeLayout
-            android:orientation="vertical"
-            android:layout_width="240dp"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimary"
-            android:layout_gravity="left">
-
-            <TextView
-                android:id="@+id/drawer_username"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:textSize="20dp"
-                android:textColor="#fff"
-                android:layout_marginLeft="5dp"
-                android:gravity="center_vertical|center_horizontal"/>
-
-            <ListView
-                android:id="@+id/drawerList"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/drawer_username"
-                android:layout_above="@+id/linearLayout2">
-            </ListView>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:gravity="center_vertical"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/linearLayout2">
-
-                <ImageButton
-                    android:id="@+id/logout"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@mipmap/power_white"
-                    android:layout_marginLeft="5dp"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-                </LinearLayout>
-
-                <ImageButton
-                    android:id="@+id/settings"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@mipmap/settings_white"
-                    android:layout_marginRight="5dp"/>
-
-            </LinearLayout>
-        </RelativeLayout>
-
-    </android.support.v4.widget.DrawerLayout>
-
-    <com.github.clans.fab.FloatingActionMenu
-        app:layout_behavior=".Behaviour.FloatingActionMenuBehaviour"
-        android:id="@+id/fabMenu"
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:paddingLeft="10dp"
-        fab:menu_icon="@mipmap/fab_add_black"
-        fab:menu_colorNormal="@color/colorAccent"
-        fab:menu_colorPressed="@color/colorAccentPressed"
-        fab:menu_backgroundColor="#55ffffff">
+        android:layout_below="@+id/app_bar">
 
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/fabContracts"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/contracts_black"
-            fab:fab_size="mini"
-            fab:fab_colorNormal="@color/colorAccent"
-            fab:fab_colorPressed="@color/colorAccentPressed"/>
 
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/fabTransport"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/transport_black"
-            fab:fab_size="mini"
-            fab:fab_colorNormal="@color/colorAccent"
-            fab:fab_colorPressed="@color/colorAccentPressed"/>
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_bar">
 
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/fabMessages"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/messages_black"
-            fab:fab_size="mini"
-            fab:fab_colorNormal="@color/colorAccent"
-            fab:fab_colorPressed="@color/colorAccentPressed"/>
 
-    </com.github.clans.fab.FloatingActionMenu>
+            <FrameLayout
+                android:id="@+id/mainContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark">
 
-</android.support.design.widget.CoordinatorLayout>
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="240dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/drawer_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="#fff"
+                    android:textSize="20dp"/>
+
+                <ListView
+                    android:id="@+id/drawerList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/linearLayout2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/drawer_username">
+                </ListView>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/logout"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@mipmap/power_white"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/settings"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@mipmap/settings_white"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </android.support.v4.widget.DrawerLayout>
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fabMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_behavior=".Behaviour.FloatingActionMenuBehaviour"
+            fab:menu_backgroundColor="#55ffffff"
+            fab:menu_colorNormal="@color/colorAccent"
+            fab:menu_colorPressed="@color/colorAccentPressed"
+            fab:menu_icon="@mipmap/fab_add_black">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabContracts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/contracts_black"
+                fab:fab_colorNormal="@color/colorAccent"
+                fab:fab_colorPressed="@color/colorAccentPressed"
+                fab:fab_size="mini"/>
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabTransport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/transport_black"
+                fab:fab_colorNormal="@color/colorAccent"
+                fab:fab_colorPressed="@color/colorAccentPressed"
+                fab:fab_size="mini"/>
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabMessages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/messages_black"
+                fab:fab_colorNormal="@color/colorAccent"
+                fab:fab_colorPressed="@color/colorAccentPressed"
+                fab:fab_size="mini"/>
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>

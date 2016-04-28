@@ -1,86 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".Fragments.SettingsFragment">
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".Fragments.SettingsFragment">
 
     <EditText
+        android:id="@+id/settings_oldPassword"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/settings_oldPassword"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:hint="@string/old_password"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:inputType="textPassword" />
+        android:layout_marginTop="40dp"
+        android:hint="@string/old_password"
+        android:inputType="textPassword"
+        android:textColor="#fff"
+        android:textColorHint="#fff"/>
 
     <EditText
+        android:id="@+id/settings_newPassword"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/settings_newPassword"
         android:layout_below="@+id/settings_oldPassword"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_marginTop="40dp"
         android:hint="@string/new_password"
         android:inputType="textPassword"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp" />
+        android:textColor="#fff"
+        android:textColorHint="#fff"/>
 
     <EditText
+        android:id="@+id/settings_newEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/settings_newEmail"
-        android:hint="@string/new_email"
-        android:inputType="textEmailAddress"
-        android:layout_marginTop="40dp"
+        android:layout_below="@+id/settings_changePassword"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_below="@+id/settings_changePassword" />
+        android:layout_marginTop="40dp"
+        android:hint="@string/new_email"
+        android:inputType="textEmailAddress"
+        android:textColor="#fff"
+        android:textColorHint="#fff"/>
 
     <Button
-        android:layout_width="180dp"
-        android:layout_height="40dp"
-        android:text="@string/password_change"
         android:id="@+id/settings_changePassword"
         style="?android:attr/borderlessButtonStyle"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/settings_newPWConfirmation"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:text="@string/password_change"
+        android:textColor="#fff"
+        android:textColorHint="#fff"/>
 
     <Button
+        android:id="@+id/settings_changeEmail"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="180dp"
         android:layout_height="40dp"
-        android:text="@string/email_change"
-        android:id="@+id/settings_changeEmail"
         android:layout_below="@+id/settings_newEmail"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="@string/email_change"
+        android:textColor="#fff"
+        android:textColorHint="#fff"/>
 
     <Button
+        android:id="@+id/settings_deleteAccount"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="160dp"
         android:layout_height="40dp"
-        android:text="@string/account_delete"
-        android:id="@+id/settings_deleteAccount"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignParentStart="true"
+        android:text="@string/account_delete"
+        android:textColor="#fff"
+        android:textColorHint="#fff"/>
 
     <EditText
+        android:id="@+id/settings_newPWConfirmation"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/settings_newPWConfirmation"
-        android:hint="@string/password_confirmation"
-        android:inputType="textPassword"
         android:layout_below="@+id/settings_newPassword"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="40dp"
+        android:hint="@string/password_confirmation"
+        android:inputType="textPassword"
+        android:textColor="#fff"
+        android:textColorHint="#fff"/>
 
 </RelativeLayout>

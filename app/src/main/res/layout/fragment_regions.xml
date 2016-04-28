@@ -5,11 +5,11 @@
               android:orientation="vertical">
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/regions_recyclerView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/regions_recyclerView"
         android:focusable="false"
-        android:focusableInTouchMode="false" />
+        android:focusableInTouchMode="false"/>
 
 
 </LinearLayout>

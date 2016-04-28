@@ -1,13 +1,18 @@
 package com.ollum.ecoCrats.Activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
@@ -15,26 +20,22 @@ import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStatus;
 import com.ollum.ecoCrats.Classes.User;
 import com.ollum.ecoCrats.R;
 import com.ollum.ecoCrats.SharedPrefs.UserLocalStore;
+import com.ollum.ecoCrats.Utils.Constants;
 
 import java.io.IOException;
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
     String regid;
     GoogleCloudMessaging gcm;
-    String PROJECT_NUMBER = "619757806936";
 
     EditText etUsername, etPassword;
     Button bLogin, bSignUp;
     UserLocalStore userLocalStore;
-    android.support.v7.app.ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-
-        actionBar = getSupportActionBar();
-        actionBar.setTitle(R.string.login_title);
 
         etUsername = (EditText) findViewById(R.id.login_username);
         etPassword = (EditText) findViewById(R.id.login_password);
@@ -60,8 +61,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 String password = etPassword.getText().toString();
                 User user = new User(username, password);
 
-                logUserIn(user);
-                userLocalStore.storeUserData(user);
+                if (isOnline()) {
+                    logUserIn(user);
+                    userLocalStore.storeUserData(user);
+                } else {
+                    Toast.makeText(this, R.string.no_internet, Toast.LENGTH_LONG).show();
+                }
 
                 break;
 
@@ -81,7 +86,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                     if (gcm == null) {
                         gcm = GoogleCloudMessaging.getInstance(getApplicationContext());
                     }
-                    regid = gcm.register(PROJECT_NUMBER);
+                    regid = gcm.register(Constants.PROJECT_NUMBER);
                     msg = "Device registered, registration ID=" + regid;
 
                 } catch (IOException ex) {
@@ -100,9 +105,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         }.execute(null, null, null);
     }
 
-    private void setUserOnline(User user) {
-        String method = "online";
-        BackgroundTaskStatus backgroundTaskStatus = new BackgroundTaskStatus(this);
-        backgroundTaskStatus.execute(method, user.username);
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 }

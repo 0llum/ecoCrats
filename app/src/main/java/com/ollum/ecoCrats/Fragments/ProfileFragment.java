@@ -1,9 +1,15 @@
 package com.ollum.ecoCrats.Fragments;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,15 +40,22 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        MainActivity.actionBar.setTitle(R.string.profile_title);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.profile_title);
 
         tvWelcome = (TextView) view.findViewById(R.id.welcome);
         tvWelcome.setText(MainActivity.user.username);
 
         tvECOs = (TextView) view.findViewById(R.id.ECOs);
 
-        BackgroundTaskECOs backgroundTaskECOs= new BackgroundTaskECOs();
-        backgroundTaskECOs.execute();
+        if (isOnline()) {
+            BackgroundTaskECOs backgroundTaskECOs= new BackgroundTaskECOs();
+            backgroundTaskECOs.execute();
+        } else {
+            Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+            TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+            tv.setTextColor(Color.BLACK);
+            snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            snackbar.show();        }
 
         return view;
     }
@@ -105,9 +118,16 @@ public class ProfileFragment extends Fragment {
                 progressDialog.dismiss();
             }
 
-            ECOs = result;
-            tvECOs.setText(NumberFormat.getNumberInstance(Locale.GERMAN).format(Integer.parseInt(ECOs)));
+            if (result != null) {
+                ECOs = result;
+                tvECOs.setText(NumberFormat.getNumberInstance(Locale.GERMAN).format(Integer.parseInt(ECOs)));
+            }
+
         }
     }
-
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
+    }
 }

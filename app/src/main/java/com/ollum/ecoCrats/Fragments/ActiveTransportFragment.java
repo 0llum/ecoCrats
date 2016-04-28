@@ -1,9 +1,15 @@
 package com.ollum.ecoCrats.Fragments;
 
+import android.content.Context;
+import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -11,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.ollum.ecoCrats.Activities.MainActivity;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
@@ -28,7 +35,7 @@ public class ActiveTransportFragment extends Fragment implements View.OnClickLis
         View view = inflater.inflate(R.layout.fragment_active_transport, container, false);
 
         setHasOptionsMenu(true);
-        MainActivity.actionBar.setTitle(R.string.active_transport_title);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.active_transport_title);
 
         completed = (Button) view.findViewById(R.id.active_transport_button_completed);
         completed.setOnClickListener(this);
@@ -47,12 +54,19 @@ public class ActiveTransportFragment extends Fragment implements View.OnClickLis
             }
         });
 
-        String method = "updateTransport";
-        BackgroundTask backgroundTask = new BackgroundTask(getContext());
-        backgroundTask.execute(method);
+        if (isOnline()) {
+            String method = "updateTransport";
+            BackgroundTask backgroundTask = new BackgroundTask(getContext());
+            backgroundTask.execute(method);
 
-        BackgroundTaskActiveTransport backgroundTaskActiveTransport = new BackgroundTaskActiveTransport(getContext(), recyclerView);
-        backgroundTaskActiveTransport.execute(MainActivity.user.username);
+            BackgroundTaskActiveTransport backgroundTaskActiveTransport = new BackgroundTaskActiveTransport(getContext(), recyclerView);
+            backgroundTaskActiveTransport.execute(MainActivity.user.username);
+        } else {
+            Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+            TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+            tv.setTextColor(Color.BLACK);
+            snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            snackbar.show();        }
 
         if (swipeRefreshLayout.isRefreshing()) {
             swipeRefreshLayout.setRefreshing(false);
@@ -75,12 +89,19 @@ public class ActiveTransportFragment extends Fragment implements View.OnClickLis
 
     @Override
     public void onRefresh() {
-        String method = "updateTransport";
-        BackgroundTask backgroundTask = new BackgroundTask(getContext());
-        backgroundTask.execute(method);
+        if (isOnline()) {
+            String method = "updateTransport";
+            BackgroundTask backgroundTask = new BackgroundTask(getContext());
+            backgroundTask.execute(method);
 
-        BackgroundTaskActiveTransport backgroundTaskActiveTransport = new BackgroundTaskActiveTransport(getContext(), recyclerView);
-        backgroundTaskActiveTransport.execute(MainActivity.user.username);
+            BackgroundTaskActiveTransport backgroundTaskActiveTransport = new BackgroundTaskActiveTransport(getContext(), recyclerView);
+            backgroundTaskActiveTransport.execute(MainActivity.user.username);
+        } else {
+            Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+            TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+            tv.setTextColor(Color.BLACK);
+            snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            snackbar.show();        }
 
         if (swipeRefreshLayout.isRefreshing()) {
             swipeRefreshLayout.setRefreshing(false);
@@ -91,5 +112,11 @@ public class ActiveTransportFragment extends Fragment implements View.OnClickLis
     public void onPrepareOptionsMenu(Menu menu) {
         MenuItem newTransport = menu.findItem(R.id.newTransport);
         newTransport.setVisible(true);
+    }
+
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 }

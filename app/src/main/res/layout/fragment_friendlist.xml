@@ -5,21 +5,21 @@
 
 
     <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/friendlist_swipeRefreshLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/friendlist_swipeRefreshLayout"
         android:layout_alignParentBottom="true">
 
         <android.support.v7.widget.RecyclerView
+            android:id="@+id/friendlist_recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/friendlist_recyclerView"
-            android:layout_alignParentTop="true"
+            android:layout_above="@+id/friendlist_searchbar"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_above="@+id/friendlist_searchbar"
+            android:layout_alignParentTop="true"
             android:focusable="false"
-            android:focusableInTouchMode="false" />
+            android:focusableInTouchMode="false"/>
     </android.support.v4.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

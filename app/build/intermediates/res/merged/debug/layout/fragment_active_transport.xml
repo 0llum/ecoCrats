@@ -4,49 +4,49 @@
                 android:layout_height="match_parent">
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/linearLayout5"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <Button
+            android:id="@+id/active_transport_button_active"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
+            android:layout_weight="1"
             android:background="@color/colorAccent"
             android:text="@string/active"
-            android:id="@+id/active_transport_button_active"
-            android:layout_weight="1"
             />
 
         <Button
+            android:id="@+id/active_transport_button_completed"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
+            android:layout_weight="1"
             android:background="@color/colorAccentDark"
-            android:text="@string/completed"
-            android:id="@+id/active_transport_button_completed"
-            android:layout_weight="1"/>
+            android:text="@string/completed"/>
     </LinearLayout>
 
     <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/active_transport_swipeRefreshLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/active_transport_swipeRefreshLayout"
         android:layout_below="@+id/linearLayout5">
 
         <android.support.v7.widget.RecyclerView
+            android:id="@+id/active_transport_recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/active_transport_recyclerView"
-            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:focusable="false"
-            android:focusableInTouchMode="false" />
+            android:focusableInTouchMode="false"/>
     </android.support.v4.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

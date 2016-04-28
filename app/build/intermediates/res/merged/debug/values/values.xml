@@ -514,6 +514,7 @@
     <string name="new_transport">New Transport</string>
     <string name="no">No</string>
     <string name="no_area">You don\'t own any area in the region</string>
+    <string name="no_internet">No internet connection</string>
     <string name="not_enough_ecos">You don\'t have enough ECOs</string>
     <string name="not_enough_space">Not enough space in Store</string>
     <string name="ok">OK</string>
@@ -594,7 +595,10 @@
         <item name="android:windowEnterAnimation">@anim/design_bottom_sheet_slide_in</item>
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
-    <style name="AppTheme" parent="Theme.AppCompat.Light">
+    <style name="AppTheme" parent="AppTheme.Base">
+
+    </style>
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorAccent</item>
         <item name="colorPrimaryDark">@color/colorAccentDark</item>

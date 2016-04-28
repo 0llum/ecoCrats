@@ -1,9 +1,12 @@
 package com.ollum.ecoCrats.Fragments;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -43,7 +46,7 @@ public class NewMessageFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_new_message, container, false);
 
         setHasOptionsMenu(true);
-        MainActivity.actionBar.setTitle(R.string.new_message_title);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.new_message_title);
 
         sender = MainActivity.user.username;
 

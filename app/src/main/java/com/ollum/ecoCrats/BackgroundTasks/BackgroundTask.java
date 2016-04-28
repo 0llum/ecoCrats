@@ -688,167 +688,169 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             progressDialog.dismiss();
         }
 
-        switch (result) {
-            case ("Signing up successful"):
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.sign_up_successful, Snackbar.LENGTH_LONG).show();
-                ((Activity) ctx).finish();
-                ctx.startActivity(new Intent(ctx, Login.class));
-                ((Activity) ctx).overridePendingTransition(0, 0);
-                break;
-            case ("Login successful"):
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.login_successful, Snackbar.LENGTH_LONG).show();
-                ((Activity) ctx).finish();
-                ctx.startActivity(new Intent(ctx, MainActivity.class));
-                ((Activity) ctx).overridePendingTransition(0, 0);
-                break;
-            case ("Friend added"):
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.friend_added, Snackbar.LENGTH_LONG).show();
-                FriendlistFragment friendlistFragment = new FriendlistFragment();
-                MainActivity.fragmentManager.beginTransaction()
-                        .replace(R.id.mainContent, friendlistFragment, "FriendlistFragment")
-                        .addToBackStack("FriendlistFragment")
-                        .commit();
-                break;
-            case ("Friend removed"):
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.friend_removed, Snackbar.LENGTH_LONG).show();
-                FriendlistFragment friendlistFragment1 = new FriendlistFragment();
-                MainActivity.fragmentManager.beginTransaction()
-                        .replace(R.id.mainContent, friendlistFragment1, "FriendlistFragment")
-                        .addToBackStack("FriendlistFragment")
-                        .commit();
-                break;
-            case ("Account deleted"):
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.account_deleted, Snackbar.LENGTH_LONG).show();
-                ((Activity) ctx).finish();
-                ctx.startActivity(new Intent(ctx, Login.class));
-                break;
-            case ("Email address successfully changed"):
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.email_changed, Snackbar.LENGTH_LONG).show();
-                SettingsFragment settingsFragment = new SettingsFragment();
-                MainActivity.fragmentManager.beginTransaction()
-                        .replace(R.id.mainContent, settingsFragment, "SettingsFragment")
-                        .addToBackStack("SettingsFragment")
-                        .commit();
-                break;
-            case ("Password successfully changed"):
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.password_changed, Snackbar.LENGTH_LONG).show();
-                ((Activity) ctx).finish();
-                ctx.startActivity(new Intent(ctx, Login.class));
-                break;
-            case ("Message sent"):
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.message_sent, Snackbar.LENGTH_LONG).show();
-                MainActivity.fragmentManager.popBackStack();
-                break;
-            case ("Store has been built successfully"):
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.store_built, Snackbar.LENGTH_LONG).show();
-                StoresFragment storesFragment = new StoresFragment();
-                MainActivity.fragmentManager.beginTransaction()
-                        .replace(R.id.mainContent, storesFragment, "StoresFragment")
-                        .addToBackStack("StoresFragment")
-                        .commit();
-                break;
-            case ("Transport was successful"):
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.transport_sent, Snackbar.LENGTH_LONG).show();
-                ActiveTransportFragment activeTransportFragment = new ActiveTransportFragment();
-                MainActivity.fragmentManager.beginTransaction()
-                        .replace(R.id.mainContent, activeTransportFragment, "ActiveTransportFragment")
-                        .addToBackStack("ActiveTransportFragment")
-                        .commit();
-                break;
-            case ("Item has been sold successfully"):
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.item_sold, Snackbar.LENGTH_LONG).show();
-                StoreDetailsFragment storeDetailsFragment = new StoreDetailsFragment();
-                MainActivity.fragmentManager.beginTransaction()
-                        .replace(R.id.mainContent, storeDetailsFragment, "StoreDetailsFragment")
-                        .addToBackStack("StoreDetailsFragment")
-                        .commit();
-                break;
-            case "Friend could not be added":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.friend_not_added, Snackbar.LENGTH_LONG).show();
-                break;
-            case "You cannot add yourself as a friend":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.add_yourself, Snackbar.LENGTH_LONG).show();
-                break;
-            case "User is already your friend":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.user_already_friend, Snackbar.LENGTH_LONG).show();
-                break;
-            case "Item could not be added":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.item_not_added, Snackbar.LENGTH_LONG).show();
-                break;
-            case "Item has been added successfully":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.item_added, Snackbar.LENGTH_LONG).show();
-                break;
-            case "Store could not be built":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.store_failed, Snackbar.LENGTH_LONG).show();
-                break;
-            case "You already have a Store in this Region":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.store_region, Snackbar.LENGTH_LONG).show();
-                break;
-            case "You don't own any Area in this Region":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.no_area, Snackbar.LENGTH_LONG).show();
-                break;
-            case "Area could not be bought":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.area_not_bought, Snackbar.LENGTH_LONG).show();
-                break;
-            case "Old password is wrong":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.old_password_wrong, Snackbar.LENGTH_LONG).show();
-                break;
-            case "DB Connection Error":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.db_error, Snackbar.LENGTH_LONG).show();
-                break;
-            case "Login failed, incorrect user data":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.login_failed, Snackbar.LENGTH_LONG).show();
-                break;
-            case "Login successful, but device could not be registered for GCM":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.login_gcm, Snackbar.LENGTH_LONG).show();
-                break;
-            case "Friend could not be removed":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.friend_not_removed, Snackbar.LENGTH_LONG).show();
-                break;
-            case "User is not your friend":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.user_not_friend, Snackbar.LENGTH_LONG).show();
-                break;
-            case "Item could not be sold":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.item_not_sold, Snackbar.LENGTH_LONG).show();
-                break;
-            case "You don't have enough ECOs":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.not_enough_ecos, Snackbar.LENGTH_LONG).show();
-                break;
-            case "ECOs could not be sent":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.ecos_failed, Snackbar.LENGTH_LONG).show();
-                break;
-            case "ECOs successfully sent":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.ecos_sent, Snackbar.LENGTH_LONG).show();
-                break;
-            case "Message could not be sent":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.message_failed, Snackbar.LENGTH_LONG).show();
-                break;
-            case "User could not be found":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.user_not_found, Snackbar.LENGTH_LONG).show();
-                break;
-            case "Signing up failed":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.sign_up_failed, Snackbar.LENGTH_LONG).show();
-                break;
-            case "Email address already exists":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.email_exists, Snackbar.LENGTH_LONG).show();
-                break;
-            case "Username already exists":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.username_exists, Snackbar.LENGTH_LONG).show();
-                break;
-            case "Loan successfully raised":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.loan_raised, Snackbar.LENGTH_LONG).show();
-                break;
-            case "Loan could not be raised":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.loan_failed, Snackbar.LENGTH_LONG).show();
-                break;
-            case "Transport failed":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.transport_failed, Snackbar.LENGTH_LONG).show();
-                break;
-            case "Not enough space in Store":
-                Snackbar.make(MainActivity.coordinatorLayout, R.string.not_enough_space, Snackbar.LENGTH_LONG).show();
-                break;
-            case "Transports has been updated":
-                break;
+        if (result != null) {
+            switch (result) {
+                case ("Signing up successful"):
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.sign_up_successful, Snackbar.LENGTH_LONG).show();
+                    ((Activity) ctx).finish();
+                    ctx.startActivity(new Intent(ctx, Login.class));
+                    ((Activity) ctx).overridePendingTransition(0, 0);
+                    break;
+                case ("Login successful"):
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.login_successful, Snackbar.LENGTH_LONG).show();
+                    ((Activity) ctx).finish();
+                    ctx.startActivity(new Intent(ctx, MainActivity.class));
+                    ((Activity) ctx).overridePendingTransition(0, 0);
+                    break;
+                case ("Friend added"):
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.friend_added, Snackbar.LENGTH_LONG).show();
+                    FriendlistFragment friendlistFragment = new FriendlistFragment();
+                    MainActivity.fragmentManager.beginTransaction()
+                            .replace(R.id.mainContent, friendlistFragment, "FriendlistFragment")
+                            .addToBackStack("FriendlistFragment")
+                            .commit();
+                    break;
+                case ("Friend removed"):
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.friend_removed, Snackbar.LENGTH_LONG).show();
+                    FriendlistFragment friendlistFragment1 = new FriendlistFragment();
+                    MainActivity.fragmentManager.beginTransaction()
+                            .replace(R.id.mainContent, friendlistFragment1, "FriendlistFragment")
+                            .addToBackStack("FriendlistFragment")
+                            .commit();
+                    break;
+                case ("Account deleted"):
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.account_deleted, Snackbar.LENGTH_LONG).show();
+                    ((Activity) ctx).finish();
+                    ctx.startActivity(new Intent(ctx, Login.class));
+                    break;
+                case ("Email address successfully changed"):
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.email_changed, Snackbar.LENGTH_LONG).show();
+                    SettingsFragment settingsFragment = new SettingsFragment();
+                    MainActivity.fragmentManager.beginTransaction()
+                            .replace(R.id.mainContent, settingsFragment, "SettingsFragment")
+                            .addToBackStack("SettingsFragment")
+                            .commit();
+                    break;
+                case ("Password successfully changed"):
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.password_changed, Snackbar.LENGTH_LONG).show();
+                    ((Activity) ctx).finish();
+                    ctx.startActivity(new Intent(ctx, Login.class));
+                    break;
+                case ("Message sent"):
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.message_sent, Snackbar.LENGTH_LONG).show();
+                    MainActivity.fragmentManager.popBackStack();
+                    break;
+                case ("Store has been built successfully"):
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.store_built, Snackbar.LENGTH_LONG).show();
+                    StoresFragment storesFragment = new StoresFragment();
+                    MainActivity.fragmentManager.beginTransaction()
+                            .replace(R.id.mainContent, storesFragment, "StoresFragment")
+                            .addToBackStack("StoresFragment")
+                            .commit();
+                    break;
+                case ("Transport was successful"):
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.transport_sent, Snackbar.LENGTH_LONG).show();
+                    ActiveTransportFragment activeTransportFragment = new ActiveTransportFragment();
+                    MainActivity.fragmentManager.beginTransaction()
+                            .replace(R.id.mainContent, activeTransportFragment, "ActiveTransportFragment")
+                            .addToBackStack("ActiveTransportFragment")
+                            .commit();
+                    break;
+                case ("Item has been sold successfully"):
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.item_sold, Snackbar.LENGTH_LONG).show();
+                    StoreDetailsFragment storeDetailsFragment = new StoreDetailsFragment();
+                    MainActivity.fragmentManager.beginTransaction()
+                            .replace(R.id.mainContent, storeDetailsFragment, "StoreDetailsFragment")
+                            .addToBackStack("StoreDetailsFragment")
+                            .commit();
+                    break;
+                case "Friend could not be added":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.friend_not_added, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "You cannot add yourself as a friend":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.add_yourself, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "User is already your friend":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.user_already_friend, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "Item could not be added":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.item_not_added, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "Item has been added successfully":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.item_added, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "Store could not be built":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.store_failed, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "You already have a Store in this Region":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.store_region, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "You don't own any Area in this Region":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.no_area, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "Area could not be bought":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.area_not_bought, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "Old password is wrong":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.old_password_wrong, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "DB Connection Error":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.db_error, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "Login failed, incorrect user data":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.login_failed, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "Login successful, but device could not be registered for GCM":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.login_gcm, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "Friend could not be removed":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.friend_not_removed, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "User is not your friend":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.user_not_friend, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "Item could not be sold":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.item_not_sold, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "You don't have enough ECOs":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.not_enough_ecos, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "ECOs could not be sent":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.ecos_failed, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "ECOs successfully sent":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.ecos_sent, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "Message could not be sent":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.message_failed, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "User could not be found":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.user_not_found, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "Signing up failed":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.sign_up_failed, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "Email address already exists":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.email_exists, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "Username already exists":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.username_exists, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "Loan successfully raised":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.loan_raised, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "Loan could not be raised":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.loan_failed, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "Transport failed":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.transport_failed, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "Not enough space in Store":
+                    Snackbar.make(MainActivity.coordinatorLayout, R.string.not_enough_space, Snackbar.LENGTH_LONG).show();
+                    break;
+                case "Transports has been updated":
+                    break;
+            }
         }
     }
 }

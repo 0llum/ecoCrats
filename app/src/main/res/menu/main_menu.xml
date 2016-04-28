@@ -4,63 +4,63 @@
 
     <item
         android:id="@+id/newMessage"
-        android:title="@string/new_message"
         android:icon="@mipmap/create_black"
-        app:showAsAction="always"
-        android:visible="false"/>
+        android:title="@string/new_message"
+        android:visible="false"
+        app:showAsAction="always"/>
     <item
         android:id="@+id/send"
-        android:title="@string/send"
         android:icon="@mipmap/send_black"
-        app:showAsAction="always"
-        android:visible="false"/>
+        android:title="@string/send"
+        android:visible="false"
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/reply"
-        android:title="@string/reply"
         android:icon="@mipmap/reply_black"
-        app:showAsAction="always"
-        android:visible="false"/>
+        android:title="@string/reply"
+        android:visible="false"
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/buy"
-        android:title="@string/buy"
         android:icon="@mipmap/buy_black"
-        app:showAsAction="always"
-        android:visible="false"/>
+        android:title="@string/buy"
+        android:visible="false"
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/build"
-        android:title="@string/build"
         android:icon="@mipmap/stores_black"
-        app:showAsAction="always"
-        android:visible="false"/>
+        android:title="@string/build"
+        android:visible="false"
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/addItem"
-        android:title="@string/add"
         android:icon="@mipmap/add_black"
-        app:showAsAction="always"
-        android:visible="false"/>
+        android:title="@string/add"
+        android:visible="false"
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/addFriend"
-        android:title="@string/add"
         android:icon="@mipmap/add_friend_black"
-        app:showAsAction="always"
-        android:visible="false"/>
+        android:title="@string/add"
+        android:visible="false"
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/sendTransport"
-        android:title="@string/send"
         android:icon="@mipmap/send_black"
-        app:showAsAction="always"
-        android:visible="false"/>
+        android:title="@string/send"
+        android:visible="false"
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/newTransport"
-        android:title="@string/new_transport"
         android:icon="@mipmap/transport_black"
-        app:showAsAction="always"
-        android:visible="false"/>
+        android:title="@string/new_transport"
+        android:visible="false"
+        app:showAsAction="always"/>
 </menu>

@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Activities.Login"
-    android:background="@color/colorPrimaryDark">
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark"
+                tools:context=".Activities.Login">
 
     <EditText
+        android:id="@+id/login_username"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/login_username"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:inputType="text"
-        android:hint="@string/username"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:layout_marginTop="60dp"
+        android:hint="@string/username"
+        android:inputType="text"
         android:textColor="#fff"
         android:textColorHint="#fff"/>
 
     <EditText
+        android:id="@+id/login_password"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/login_password"
         android:layout_below="@+id/login_username"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:inputType="textPassword"
-        android:hint="@string/password"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:layout_marginTop="60dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
         android:textColor="#fff"
         android:textColorHint="#fff"/>
 
     <Button
+        android:id="@+id/login_login"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="80dp"
         android:layout_height="40dp"
-        android:text="@string/login"
-        android:id="@+id/login_login"
         android:layout_below="@+id/login_password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
-        style="?android:attr/borderlessButtonStyle"
+        android:text="@string/login"
         android:textColor="#fff"/>
 
     <Button
+        android:id="@+id/login_signup"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:text="@string/sign_up"
-        android:id="@+id/login_signup"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        style="?android:attr/borderlessButtonStyle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/sign_up"
         android:textColor="#fff"/>
 
 </RelativeLayout>

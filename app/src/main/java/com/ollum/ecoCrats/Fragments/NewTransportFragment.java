@@ -1,10 +1,15 @@
 package com.ollum.ecoCrats.Fragments;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -78,7 +83,7 @@ public class NewTransportFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_transport, container, false);
 
         setHasOptionsMenu(true);
-        MainActivity.actionBar.setTitle(R.string.transport_title);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.transport_title);
 
         tvQuantity = (TextView) view.findViewById(R.id.transport_quantity);
         tvQuantity.setText("" + 0);
@@ -126,8 +131,15 @@ public class NewTransportFragment extends Fragment {
                 startRegionLatitude = "" + store.getRegionLatitude();
                 startRegionLongitude = "" + store.getRegionLongitude();
 
-                BackgroundTaskItem backgroundTaskItem = new BackgroundTaskItem();
-                backgroundTaskItem.execute(startID);
+                if (isOnline()) {
+                    BackgroundTaskItem backgroundTaskItem = new BackgroundTaskItem();
+                    backgroundTaskItem.execute(startID);
+                } else {
+                    Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+                    TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    tv.setTextColor(Color.BLACK);
+                    snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                    snackbar.show();                }
             }
 
             @Override
@@ -157,8 +169,16 @@ public class NewTransportFragment extends Fragment {
                 User user = spinnerFriendsAdapter.getItem(position);
                 friendID = user.getUsername();
 
-                BackgroundTaskDestination backgroundTaskDestination = new BackgroundTaskDestination();
-                backgroundTaskDestination.execute(friendID);
+                if (isOnline()) {
+                    BackgroundTaskDestination backgroundTaskDestination = new BackgroundTaskDestination();
+                    backgroundTaskDestination.execute(friendID);
+                } else {
+                    Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+                    TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    tv.setTextColor(Color.BLACK);
+                    snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                    snackbar.show();
+                }
             }
 
             @Override
@@ -182,11 +202,18 @@ public class NewTransportFragment extends Fragment {
             }
         });
 
-        BackgroundTaskStart backgroundTaskStart = new BackgroundTaskStart();
-        backgroundTaskStart.execute(MainActivity.user.getUsername());
+        if (isOnline()) {
+            BackgroundTaskStart backgroundTaskStart = new BackgroundTaskStart();
+            backgroundTaskStart.execute(MainActivity.user.getUsername());
 
-        BackgroundTaskFriend backgroundTaskFriend = new BackgroundTaskFriend();
-        backgroundTaskFriend.execute(MainActivity.user.getUsername());
+            BackgroundTaskFriend backgroundTaskFriend = new BackgroundTaskFriend();
+            backgroundTaskFriend.execute(MainActivity.user.getUsername());
+        } else {
+            Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+            TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+            tv.setTextColor(Color.BLACK);
+            snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            snackbar.show();        }
 
         return view;
     }
@@ -517,5 +544,11 @@ public class NewTransportFragment extends Fragment {
                 progressDialog.dismiss();
             }
         }
+    }
+
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 }

@@ -1,120 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="horizontal"
               android:layout_width="match_parent"
               android:layout_height="70dp"
               android:layout_marginBottom="1dp"
-              android:background="@color/colorPrimary">
+              android:background="@color/colorPrimary"
+              android:orientation="horizontal">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2"
         android:layout_marginLeft="5dp"
-        android:gravity="center_vertical">
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="startRegion"
             android:id="@+id/completed_transport_row_start"
-            android:textColor="#fff"
-            android:textSize="20dp"
-            android:maxLines="1"
-            android:ellipsize="end"/>
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sender"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="startRegion"
+            android:textColor="#fff"
+            android:textSize="20dp"/>
+
+        <TextView
             android:id="@+id/completed_transport_row_sender"
-            android:textColor="#fff"
-            android:textSize="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:ellipsize="end"
             android:maxLines="1"
-            android:ellipsize="end"/>
+            android:text="Sender"
+            android:textColor="#fff"
+            android:textSize="16dp"/>
 
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:gravity="center_vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="destinationRegion"
-            android:id="@+id/completed_transport_row_destination"
-            android:textColor="#fff"
-            android:textSize="20dp"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Receiver"
-            android:id="@+id/completed_transport_row_receiver"
-            android:textColor="#fff"
-            android:textSize="16dp"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:layout_gravity="center_horizontal"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:gravity="center_vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Item"
-            android:id="@+id/completed_transport_row_item"
-            android:textColor="#fff"
-            android:textSize="20dp"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Quantity"
-            android:id="@+id/completed_transport_row_quantity"
-            android:textColor="#fff"
-            android:textSize="16dp"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:layout_gravity="center_horizontal"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="2"
         android:gravity="center_vertical"
-        android:layout_marginRight="5dp">
+        android:orientation="vertical">
 
         <TextView
+            android:id="@+id/completed_transport_row_destination"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2016-05-03 20:13:45"
-            android:id="@+id/completed_transport_row_time"
-            android:textColor="#fff"
-            android:textSize="16dp"
-            android:maxLines="2"
             android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"/>
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="destinationRegion"
+            android:textColor="#fff"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/completed_transport_row_receiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Receiver"
+            android:textColor="#fff"
+            android:textSize="16dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/completed_transport_row_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Item"
+            android:textColor="#fff"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/completed_transport_row_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Quantity"
+            android:textColor="#fff"
+            android:textSize="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="5dp"
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/completed_transport_row_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:maxLines="2"
+            android:text="2016-05-03 20:13:45"
+            android:textColor="#fff"
+            android:textSize="16dp"/>
     </LinearLayout>
 </LinearLayout>

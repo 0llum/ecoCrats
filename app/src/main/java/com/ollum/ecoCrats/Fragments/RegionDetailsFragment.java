@@ -1,9 +1,13 @@
 package com.ollum.ecoCrats.Fragments;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -46,7 +50,7 @@ public class RegionDetailsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_region_details, container, false);
 
         setHasOptionsMenu(true);
-        MainActivity.actionBar.setTitle(region);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(region);
 
         tvRegion = (TextView) view.findViewById(R.id.region_details_region);
         tvCapital = (TextView) view.findViewById(R.id.region_details_capital);

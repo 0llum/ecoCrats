@@ -4,48 +4,48 @@
                 android:layout_height="match_parent">
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/linearLayout5"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <Button
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:background="@color/colorAccent"
-            android:text="@string/inbox"
             android:id="@+id/messages_inbox_button_inbox"
-            android:layout_weight="1"/>
-
-        <Button
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
-            android:background="@color/colorAccentDark"
-            android:text="@string/outbox"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:text="@string/inbox"/>
+
+        <Button
             android:id="@+id/messages_inbox_button_outbox"
-            android:layout_weight="1"/>
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/colorAccentDark"
+            android:text="@string/outbox"/>
     </LinearLayout>
 
     <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/messages_inbox_swipeRefreshLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/messages_inbox_swipeRefreshLayout"
         android:layout_below="@+id/linearLayout5">
 
         <android.support.v7.widget.RecyclerView
+            android:id="@+id/messages_inbox_recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/messages_inbox_recyclerView"
-            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:focusable="false"
-            android:focusableInTouchMode="false" />
+            android:focusableInTouchMode="false"/>
     </android.support.v4.widget.SwipeRefreshLayout>
 
 </RelativeLayout>
