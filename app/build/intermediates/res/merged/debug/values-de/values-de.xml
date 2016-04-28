@@ -184,6 +184,7 @@
     <string name="quantity_select">Menge wählen</string>
     <string name="receiver">Empfänger</string>
     <string name="receiver_choose">Bitte Empfänger wählen</string>
+    <string name="receiver_multiple">Empfänger, Empfänger, …</string>
     <string name="region">Region</string>
     <string name="region_details_area">Fläche:</string>
     <string name="region_details_capital">Hauptstadt:</string>

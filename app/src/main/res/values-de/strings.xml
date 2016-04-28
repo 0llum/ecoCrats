@@ -165,4 +165,5 @@
     <string name="login_successful">Anmeldung erfolgreich</string>
     <string name="sign_up_successful">Registrierung erfolgreich</string>
     <string name="no_internet">Kein Internetverbindung</string>
+    <string name="receiver_multiple">Empfänger, Empfänger, &#8230;</string>
 </resources>

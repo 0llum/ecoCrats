@@ -66,6 +66,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener, View.OnClickListener {
@@ -416,9 +419,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     snackbar.show();
                 } else {
                     if (isOnline()) {
-                        String method = "sendMessage";
-                        BackgroundTask backgroundTask = new BackgroundTask(this);
-                        backgroundTask.execute(method, NewMessageFragment.sender, receiver, subject, message);
+                        List<String> receiverList = Arrays.asList(receiver.split(","));
+                        for (int i = 0; i<receiverList.size(); i++) {
+                            String method = "sendMessage";
+                            BackgroundTask backgroundTask = new BackgroundTask(this);
+                            backgroundTask.execute(method, NewMessageFragment.sender, receiverList.get(i).trim(), subject, message);
+                        }
+
                     } else {
                         Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
                         TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);

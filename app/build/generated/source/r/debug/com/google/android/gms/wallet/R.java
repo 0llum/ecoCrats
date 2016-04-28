@@ -229,12 +229,12 @@ public final class R {
 		public static final int gtm_analytics = 0x7f060000;
 	}
 	public static final class string {
-		public static final int accept = 0x7f0700ce;
-		public static final int auth_google_play_services_client_facebook_display_name = 0x7f0700d0;
-		public static final int auth_google_play_services_client_google_display_name = 0x7f0700d1;
-		public static final int cast_notification_connected_message = 0x7f0700d3;
-		public static final int cast_notification_connecting_message = 0x7f0700d4;
-		public static final int cast_notification_disconnect = 0x7f0700d5;
+		public static final int accept = 0x7f0700cf;
+		public static final int auth_google_play_services_client_facebook_display_name = 0x7f0700d1;
+		public static final int auth_google_play_services_client_google_display_name = 0x7f0700d2;
+		public static final int cast_notification_connected_message = 0x7f0700d4;
+		public static final int cast_notification_connecting_message = 0x7f0700d5;
+		public static final int cast_notification_disconnect = 0x7f0700d6;
 		public static final int common_google_play_services_api_unavailable_text = 0x7f070013;
 		public static final int common_google_play_services_enable_button = 0x7f070014;
 		public static final int common_google_play_services_enable_text = 0x7f070015;
@@ -264,9 +264,9 @@ public final class R {
 		public static final int common_open_on_phone = 0x7f07002d;
 		public static final int common_signin_button_text = 0x7f07002e;
 		public static final int common_signin_button_text_long = 0x7f07002f;
-		public static final int create_calendar_message = 0x7f0700d7;
-		public static final int create_calendar_title = 0x7f0700d8;
-		public static final int decline = 0x7f0700d9;
+		public static final int create_calendar_message = 0x7f0700d8;
+		public static final int create_calendar_title = 0x7f0700d9;
+		public static final int decline = 0x7f0700da;
 		public static final int place_autocomplete_clear_button = 0x7f07003b;
 		public static final int place_autocomplete_search_hint = 0x7f07003c;
 		public static final int store_picture_message = 0x7f0700db;
