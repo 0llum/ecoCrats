@@ -153,7 +153,7 @@
     <string name="new_password_spaces">Das neue Passwort darf keine Leerzeichen enthalten</string>
     <string name="new_transport">Neuer Transport</string>
     <string name="no">Nein</string>
-    <string name="no_area">Sie besitzen keine Fläche in dieser Region</string>
+    <string name="no_area">Sie besitzen nicht genug Fläche in dieser Region</string>
     <string name="no_internet">Kein Internetverbindung</string>
     <string name="not_enough_ecos">Sie haben nicht genug ECOs</string>
     <string name="not_enough_space">Nicht genug Platz im Lager</string>

@@ -125,7 +125,7 @@ public class BackgroundTaskLatestMessage extends AsyncTask<String, Message, Mess
                 .setGroupSummary(true)
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .setSmallIcon(R.mipmap.ic_launcher)
+                .setSmallIcon(R.mipmap.notification_white)
                 .setLights(ctx.getResources().getColor(R.color.colorAccent), 100, 900);
 
         // Set pending intent

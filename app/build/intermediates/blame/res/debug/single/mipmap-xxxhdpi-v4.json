@@ -4,12 +4,12 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\australia.png"
     },
     {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\leder.jpg",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\leder.jpg"
-    },
-    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\albania.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\albania.png"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\leder.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\leder.jpg"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\costa_rica.png",
@@ -24,16 +24,16 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\chile.png"
     },
     {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\germany.png",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\germany.png"
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\info_white.png",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\info_white.png"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\greece.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\greece.png"
     },
     {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\info_white.png",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\info_white.png"
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\germany.png",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\germany.png"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\benin.png",
@@ -226,6 +226,10 @@
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\messages_white.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\messages_white.png"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\notification_white.png",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\notification_white.png"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\east_timor.png",

@@ -145,7 +145,7 @@
     <string name="db_error">DB connection error</string>
     <string name="old_password_wrong">Altes Passwort ist falsch</string>
     <string name="area_not_bought">Fläche konnte nicht gekauft werden</string>
-    <string name="no_area">Sie besitzen keine Fläche in dieser Region</string>
+    <string name="no_area">Sie besitzen nicht genug Fläche in dieser Region</string>
     <string name="store_region">Sie haben bereits ein Lager in dieser Region</string>
     <string name="store_failed">Lager konnte nicht gebaut werden</string>
     <string name="item_added">Ware erfolgreich hinzugefügt</string>
