@@ -55,10 +55,10 @@ public class RegionDetailsFragment extends Fragment {
 
     @Override
     public void onPrepareOptionsMenu(Menu menu) {
-        MenuItem buy = menu.findItem(R.id.buy);
+        MenuItem buy = menu.findItem(R.id.buyArea);
         buy.setVisible(true);
 
-        MenuItem build = menu.findItem(R.id.build);
-        build.setVisible(true);
+        /*MenuItem build = menu.findItem(R.id.build);
+        build.setVisible(true);*/
     }
 }

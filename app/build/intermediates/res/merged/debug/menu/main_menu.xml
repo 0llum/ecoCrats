@@ -23,23 +23,16 @@
         app:showAsAction="always"/>
 
     <item
-        android:id="@+id/buy"
-        android:icon="@mipmap/buy_black"
-        android:title="@string/buy"
+        android:id="@+id/buyArea"
+        android:icon="@mipmap/area_black"
+        android:title="@string/buy_area"
         android:visible="false"
         app:showAsAction="always"/>
 
     <item
-        android:id="@+id/build"
-        android:icon="@mipmap/stores_black"
-        android:title="@string/build"
-        android:visible="false"
-        app:showAsAction="always"/>
-
-    <item
-        android:id="@+id/addItem"
-        android:icon="@mipmap/add_black"
-        android:title="@string/add"
+        android:id="@+id/upgradeStore"
+        android:icon="@mipmap/upgrade_black"
+        android:title="@string/upgrade_store"
         android:visible="false"
         app:showAsAction="always"/>
 
@@ -61,6 +54,27 @@
         android:id="@+id/newTransport"
         android:icon="@mipmap/transport_black"
         android:title="@string/new_transport"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/addStore"
+        android:icon="@mipmap/add_black"
+        android:title="@string/add_store"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/addCompany"
+        android:icon="@mipmap/add_black"
+        android:title="@string/add_company"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/upgradeCompany"
+        android:icon="@mipmap/upgrade_black"
+        android:title="@string/upgrade_company"
         android:visible="false"
         app:showAsAction="always"/>
 </menu>

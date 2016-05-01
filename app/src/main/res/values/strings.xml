@@ -41,6 +41,9 @@
     <string name="sales_title">Sales</string>
     <string name="purchases_title">Purchases</string>
     <string name="market_title">Market</string>
+    <string name="companies_title">Companies</string>
+    <string name="active_transport_title">Active Transports</string>
+    <string name="completed_transport_title">Completed Transports</string>
 
     <string name="new_password_short">New password must be at least 6 characters long</string>
     <string name="new_password_spaces">New password must not contain spaces</string>
@@ -117,9 +120,7 @@
     <string name="subject_enter">Please enter a Subject</string>
     <string name="message_enter">Please enter a Message</string>
     <string name="username_enter">Enter Username</string>
-    <string name="active_transport_title">Active Transports</string>
     <string name="new_transport">New Transport</string>
-    <string name="completed_transport_title">Completed Transports</string>
     <string name="completed">Completed</string>
     <string name="active">Active</string>
     <string name="transport_confirmation">Do you really want to send this transport?</string>
@@ -166,4 +167,18 @@
     <string name="sign_up_successful">Signing up successful</string>
     <string name="no_internet">No internet connection</string>
     <string name="receiver_multiple">Receiver, Receiver, &#8230;</string>
+    <string name="add_store">Add Store</string>
+    <string name="store_add">Where do you want to build a store?</string>
+    <string name="upgrade_store">Upgrade store</string>
+    <string name="store_upgrade_confirmation">Do you really want to upgrade this store?</string>
+    <string name="cost">Cost</string>
+    <string name="capacity">Capacity</string>
+    <string name="store_upgraded">Store has been upgraded successfully</string>
+    <string name="store_upgrade_failed">Store could not be upgraded</string>
+    <string name="area_bought">Area has been bought successfully</string>
+    <string name="add_company">Add company</string>
+    <string name="upgrade_company">Upgrade company</string>
+    <string name="company">Company</string>
+    <string name="plant">Plant</string>
+    <string name="buy_area">Buy area</string>
 </resources>

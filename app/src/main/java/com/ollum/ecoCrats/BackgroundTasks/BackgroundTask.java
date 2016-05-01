@@ -674,6 +674,42 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        } else if (method.equals("upgradeStore")) {
+            String storeID = params[1];
+
+            try {
+                URL url = new URL(Constants.upgradeStore_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                String data = URLEncoder.encode("Store_ID", "UTF-8") + "=" + URLEncoder.encode(storeID, "UTF-8");
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                String response = "";
+                String line = "";
+
+                while ((line = bufferedReader.readLine()) != null) {
+                    response += line;
+                }
+
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+
+                return response.trim();
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         return null;
     }
@@ -1042,6 +1078,27 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                     snackbar38.show();
                     break;
                 case "Transports has been updated":
+                    break;
+                case "Store has been upgraded successfully":
+                    Snackbar snackbar39 = Snackbar.make(MainActivity.coordinatorLayout, R.string.store_upgraded, Snackbar.LENGTH_LONG);
+                    TextView textView39 = (TextView) snackbar39.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView39.setTextColor(Color.BLACK);
+                    snackbar39.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar39.show();
+                    break;
+                case "Store could not be upgraded":
+                    Snackbar snackbar40 = Snackbar.make(MainActivity.coordinatorLayout, R.string.store_upgrade_failed, Snackbar.LENGTH_LONG);
+                    TextView textView40 = (TextView) snackbar40.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView40.setTextColor(Color.BLACK);
+                    snackbar40.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar40.show();
+                    break;
+                case "Area has been bought successfully":
+                    Snackbar snackbar41 = Snackbar.make(MainActivity.coordinatorLayout, R.string.area_bought, Snackbar.LENGTH_LONG);
+                    TextView textView41 = (TextView) snackbar41.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    textView41.setTextColor(Color.BLACK);
+                    snackbar41.getView().setBackgroundColor(ctx.getResources().getColor(R.color.colorAccent));
+                    snackbar41.show();
                     break;
             }
         }

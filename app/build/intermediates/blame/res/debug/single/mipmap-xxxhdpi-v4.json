@@ -4,16 +4,24 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\australia.png"
     },
     {
-        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\albania.png",
-        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\albania.png"
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\mine.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\mine.jpg"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\leder.jpg",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\leder.jpg"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\albania.png",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\albania.png"
+    },
+    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\costa_rica.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\costa_rica.png"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\upgrade_black.png",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\upgrade_black.png"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\china.png",
@@ -36,6 +44,10 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\germany.png"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\upgrade_white.png",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\upgrade_white.png"
+    },
+    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\benin.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\benin.png"
     },
@@ -46,6 +58,10 @@
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\france.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\france.png"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\kokerei.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\kokerei.jpg"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\market_white.png",
@@ -88,6 +104,14 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\kohle.jpg"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\gesenkschmiede.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\gesenkschmiede.jpg"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\windkraftanlage.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\windkraftanlage.jpg"
+    },
+    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\button_action_blue.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\button_action_blue.png"
     },
@@ -116,6 +140,10 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\ethiopia.png"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\kran.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\kran.jpg"
+    },
+    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\cambodia.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\cambodia.png"
     },
@@ -128,6 +156,18 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\estonia.png"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\brennofen.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\brennofen.jpg"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\lichtbogenofen.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\lichtbogenofen.jpg"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\konverter.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\konverter.jpg"
+    },
+    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\gold.jpg",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\gold.jpg"
     },
@@ -136,8 +176,16 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\offline.png"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\wasserkraftwerk.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\wasserkraftwerk.jpg"
+    },
+    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\holz.jpg",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\holz.jpg"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\agrarbetrieb.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\agrarbetrieb.jpg"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\baumwolle.jpg",
@@ -168,12 +216,24 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\bulgaria.png"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\solarkraftwerk.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\solarkraftwerk.jpg"
+    },
+    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\guinea_bissau.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\guinea_bissau.png"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\afghanistan.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\afghanistan.png"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\wasseraufbereitungsanlage.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\wasseraufbereitungsanlage.jpg"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\walzwerk.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\walzwerk.jpg"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\botswana.png",
@@ -198,6 +258,14 @@
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\button_pressed.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\button_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\saegewerk.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\saegewerk.jpg"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\raffinerie.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\raffinerie.jpg"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\barbados.png",
@@ -284,6 +352,10 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\stores_white.png"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\stahlgiesserei.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\stahlgiesserei.jpg"
+    },
+    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\kupfererz.jpg",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\kupfererz.jpg"
     },
@@ -344,6 +416,10 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\cancel_white.png"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\strassenwalze.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\strassenwalze.jpg"
+    },
+    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\gabon.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\gabon.png"
     },
@@ -364,6 +440,10 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\ghana.png"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\recyclinganlage.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\recyclinganlage.jpg"
+    },
+    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\fab.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\fab.png"
     },
@@ -380,6 +460,10 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\settings_black.png"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\gleisbaumaschine.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\gleisbaumaschine.jpg"
+    },
+    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\button.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\button.png"
     },
@@ -394,6 +478,10 @@
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\afk.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\afk.png"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\galvanikanlage.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\galvanikanlage.jpg"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\dominican_republic.png",
@@ -428,6 +516,14 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\azerbaijan.png"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\bohrturm.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\bohrturm.jpg"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\hochofen.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\hochofen.jpg"
+    },
+    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\bank_black.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\bank_black.png"
     },
@@ -436,12 +532,24 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\send_white.png"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\area_white.png",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\area_white.png"
+    },
+    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\send_black.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\send_black.png"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\sand.jpg",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\sand.jpg"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\industrieroboter.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\industrieroboter.jpg"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\area_black.png",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\area_black.png"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\cameroon.png",
@@ -478,6 +586,14 @@
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\bahrain.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\bahrain.png"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\aetzanlage.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\aetzanlage.jpg"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\werkstatt.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\werkstatt.jpg"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\erdoel.jpg",
@@ -524,12 +640,24 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\croatia.png"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\tagebau.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\tagebau.jpg"
+    },
+    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\fab_add_black.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\fab_add_black.png"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\bandsaege.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\bandsaege.jpg"
+    },
+    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\angola.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\angola.png"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\gattersaege.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\gattersaege.jpg"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\buy_white.png",
@@ -572,8 +700,16 @@
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\burundi.png"
     },
     {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\stahlwerk.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\stahlwerk.jpg"
+    },
+    {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\equatorial_guinea.png",
         "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\equatorial_guinea.png"
+    },
+    {
+        "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\bestueckungsautomat.jpg",
+        "source": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\src\\main\\res\\mipmap-xxxhdpi\\bestueckungsautomat.jpg"
     },
     {
         "merged": "C:\\Users\\0llum\\AndroidStudioProjects\\ecoCrats\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\kautschuk.jpg",

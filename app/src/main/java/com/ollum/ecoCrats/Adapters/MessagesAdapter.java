@@ -111,9 +111,5 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.Recycl
             transaction.addToBackStack("MessageDetailsFragment");
             transaction.commit();
         }
-
-
     }
-
-
 }

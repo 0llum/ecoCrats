@@ -109,8 +109,8 @@ public class StoreDetailsFragment extends Fragment implements SwipeRefreshLayout
 
     @Override
     public void onPrepareOptionsMenu(Menu menu) {
-        MenuItem addItem = menu.findItem(R.id.addItem);
-        addItem.setVisible(true);
+        MenuItem upgradeStore = menu.findItem(R.id.upgradeStore);
+        upgradeStore.setVisible(true);
     }
 
     public boolean isOnline() {

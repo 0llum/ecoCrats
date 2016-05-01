@@ -95,7 +95,9 @@
         android:layout_below="@+id/transport_quantity"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:indeterminate="false"/>
+        android:indeterminate="false"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
 
     <TextView
         android:id="@+id/transport_quantity"
@@ -104,7 +106,9 @@
         android:layout_below="@+id/transport_spinner_item"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:textSize="16dp"/>
+        android:textSize="16dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"/>
 
 
 </RelativeLayout>

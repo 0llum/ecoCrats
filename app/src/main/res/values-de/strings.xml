@@ -41,6 +41,9 @@
     <string name="sales_title">Einkäufe</string>
     <string name="purchases_title">Verkäufe</string>
     <string name="market_title">Markt</string>
+    <string name="companies_title">Unternehmen</string>
+    <string name="active_transport_title">Aktive Transporte</string>
+    <string name="completed_transport_title">Abgeschlossene Transporte</string>
 
     <string name="new_password_short">Das neue Passwort muss mindestens 6 Zeichen lang sein</string>
     <string name="new_password_spaces">Das neue Passwort darf keine Leerzeichen enthalten</string>
@@ -117,9 +120,7 @@
     <string name="subject_enter">Bitte Betreff eingeben</string>
     <string name="message_enter">Bitte Nachricht eingeben</string>
     <string name="username_enter">Benutzername eingeben</string>
-    <string name="active_transport_title">Aktive Transporte</string>
     <string name="new_transport">Neuer Transport</string>
-    <string name="completed_transport_title">Abgeschlossene Transporte</string>
     <string name="completed">Abgeschlossen</string>
     <string name="active">Aktiv</string>
     <string name="transport_confirmation">Möchten Sie wirklich diesen Transport durchführen?</string>
@@ -142,7 +143,7 @@
     <string name="friend_not_removed">Freund konnte nicht entfernt werden</string>
     <string name="login_gcm">Anmeldung erfolgreich, GCM nicht verfügbar</string>
     <string name="login_failed">Anmeldung fehlgeschlagen, falsche Benutzerdaten</string>
-    <string name="db_error">DB connection error</string>
+    <string name="db_error">DB Verbindungsfehler</string>
     <string name="old_password_wrong">Altes Passwort ist falsch</string>
     <string name="area_not_bought">Fläche konnte nicht gekauft werden</string>
     <string name="no_area">Sie besitzen nicht genug Fläche in dieser Region</string>
@@ -166,4 +167,17 @@
     <string name="sign_up_successful">Registrierung erfolgreich</string>
     <string name="no_internet">Kein Internetverbindung</string>
     <string name="receiver_multiple">Empfänger, Empfänger, &#8230;</string>
+    <string name="add_store">Lager hinzufügen</string>
+    <string name="store_add">Wo möchten Sie ein Lager errichten?</string>
+    <string name="upgrade_store">Lager aufwerten</string>
+    <string name="store_upgrade_confirmation">Möchten Sie dieses Lager wirklich aufwerten?</string>
+    <string name="cost">Kosten</string>
+    <string name="capacity">Kapazität</string>
+    <string name="store_upgraded">Lager erfolgreich aufgewertet</string>
+    <string name="store_upgrade_failed">Lager konnte nicht aufgewertet werden</string>
+    <string name="area_bought">Fläche erfolgreich gekauft</string>
+    <string name="add_company">Unternehmen hinzufügen</string>
+    <string name="upgrade_company">Unternehmen aufwerten</string>
+    <string name="plant">Anlage</string>
+    <string name="buy_area">Fläche kaufen</string>
 </resources>

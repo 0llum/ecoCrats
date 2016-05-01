@@ -1,6 +1,7 @@
 package com.ollum.ecoCrats.Activities;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -19,6 +20,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.InputType;
+import android.util.Log;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,18 +29,21 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SeekBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
 import com.ollum.ecoCrats.Adapters.NavDrawerAdapter;
+import com.ollum.ecoCrats.Adapters.SpinnerAreaAdapter;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTask;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskLatestMessage;
 import com.ollum.ecoCrats.BackgroundTasks.BackgroundTaskStatus;
+import com.ollum.ecoCrats.Classes.Area;
 import com.ollum.ecoCrats.Classes.User;
 import com.ollum.ecoCrats.Fragments.ActiveTransportFragment;
-import com.ollum.ecoCrats.Fragments.AddItemsFragment;
 import com.ollum.ecoCrats.Fragments.BankFragment;
+import com.ollum.ecoCrats.Fragments.CompaniesFragment;
 import com.ollum.ecoCrats.Fragments.CountriesFragment;
 import com.ollum.ecoCrats.Fragments.FriendlistFragment;
 import com.ollum.ecoCrats.Fragments.ItemsFragment;
@@ -53,6 +58,10 @@ import com.ollum.ecoCrats.Fragments.StoreDetailsFragment;
 import com.ollum.ecoCrats.Fragments.StoresFragment;
 import com.ollum.ecoCrats.R;
 import com.ollum.ecoCrats.SharedPrefs.UserLocalStore;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -92,6 +101,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private NavDrawerAdapter navDrawerAdapter;
     private TextView drawerUsername;
     private ImageButton settingsButton, logoutButton;
+    int areaID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -340,6 +350,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 transaction.commit();
                 break;
             case 3:
+                CompaniesFragment companiesFragment = new CompaniesFragment();
+                transaction.replace(R.id.mainContent, companiesFragment, "CompaniesFragment");
+                transaction.addToBackStack("CompaniesFragment");
+                transaction.commit();
                 break;
             case 4:
                 break;
@@ -397,7 +411,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case R.id.send:
                 String receiver = NewMessageFragment.etReceiver.getText().toString().trim();
                 String subject = NewMessageFragment.etSubject.getText().toString().trim();
-                String message = NewMessageFragment.etMessage.getText().toString().trim();
+                final String message = NewMessageFragment.etMessage.getText().toString().trim();
 
                 if (receiver.equals("")) {
                     Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.receiver_choose, Snackbar.LENGTH_LONG);
@@ -448,7 +462,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 transaction.addToBackStack("NewMessageFragment");
                 transaction.commit();
                 break;
-            case R.id.buy:
+            case R.id.buyArea:
                 final AlertDialog.Builder dialog = new AlertDialog.Builder(this);
                 SeekBar seekBar = new SeekBar(this);
                 seekBar.setMax(25);
@@ -506,7 +520,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                 alertDialog.show();
                 break;
-            case R.id.build:
+            /*case R.id.build:
                 AlertDialog.Builder buildDialog = new AlertDialog.Builder(this)
                         .setTitle(R.string.build_store_confirmation)
                         .setMessage("20.000 ECOs")
@@ -533,8 +547,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         });
                 buildDialog.create();
                 buildDialog.show();
-                break;
-            case R.id.addItem:
+                break;*/
+            /*case R.id.addItem:
                 bundle = new Bundle();
                 bundle.putInt("ID", StoreDetailsFragment.ID);
 
@@ -543,7 +557,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 transaction.replace(R.id.mainContent, addItemsFragment, "AddItemsFragment");
                 transaction.addToBackStack("AddItemsFragment");
                 transaction.commit();
-                break;
+                break;*/
             case R.id.addFriend:
                 final EditText etFriend = new EditText(this);
                 etFriend.setInputType(InputType.TYPE_CLASS_TEXT);
@@ -630,6 +644,179 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     transportDialog.show();
                 }
                 break;
+            case R.id.addStore:
+                final ArrayList<Area> areas = new ArrayList<>();
+                Spinner spinner = new Spinner(this);
+                final SpinnerAreaAdapter areaAdapter = new SpinnerAreaAdapter(this, R.id.txt, areas);
+                spinner.setAdapter(areaAdapter);
+                spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        Area area = areaAdapter.getItem(position);
+                        areaID = area.getRegionID();
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+                class BackgroundTaskArea extends AsyncTask<String, Area, Void> {
+                    ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
+
+                    @Override
+                    protected void onPreExecute() {
+                        progressDialog.setCancelable(true);
+                        progressDialog.setTitle("Progressing");
+                        progressDialog.setMessage("Please wait...");
+                        progressDialog.show();
+                    }
+
+                    @Override
+                    protected Void doInBackground(String... params) {
+                        String username = params[0];
+
+                        try {
+                            URL url = new URL("http://0llum.bplaced.net/ecoCrats/DisplayArea.php");
+                            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                            httpURLConnection.setRequestMethod("POST");
+                            httpURLConnection.setDoOutput(true);
+                            httpURLConnection.setDoInput(true);
+                            OutputStream outputStream = httpURLConnection.getOutputStream();
+                            BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                            String data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8");
+                            bufferedWriter.write(data);
+                            bufferedWriter.flush();
+                            bufferedWriter.close();
+                            outputStream.close();
+                            InputStream inputStream = httpURLConnection.getInputStream();
+                            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                            StringBuilder stringBuilder = new StringBuilder();
+                            String line;
+
+                            while ((line = bufferedReader.readLine()) != null) {
+                                stringBuilder.append(line + "\n");
+                            }
+
+                            httpURLConnection.disconnect();
+                            String json_string = stringBuilder.toString().trim();
+                            JSONObject jsonObject = new JSONObject(json_string);
+                            JSONArray jsonArray = jsonObject.getJSONArray("server_response");
+                            int count = 0;
+
+                            while (count < jsonArray.length()) {
+                                JSONObject JO = jsonArray.getJSONObject(count);
+                                count++;
+                                Area area = new Area(JO.getInt("ID"), JO.getInt("Region_ID"), JO.getString("Region"), JO.getInt("Area"));
+                                publishProgress(area);
+                            }
+
+                            Log.d("JSON-STRING", json_string);
+
+                        } catch (MalformedURLException e) {
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                        return null;
+                    }
+
+                    @Override
+                    protected void onProgressUpdate(Area... values) {
+                        areas.add(values[0]);
+                        areaAdapter.notifyDataSetChanged();
+                    }
+
+                    @Override
+                    protected void onPostExecute(Void aVoid) {
+                        super.onPostExecute(aVoid);
+                        if (progressDialog.isShowing()) {
+                            progressDialog.dismiss();
+                        }
+                    }
+                }
+
+                if (isOnline()) {
+                    BackgroundTaskArea backgroundTaskArea = new BackgroundTaskArea();
+                    backgroundTaskArea.execute(user.getUsername());
+                } else {
+                    Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+                    TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                    tv.setTextColor(Color.BLACK);
+                    snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                    snackbar.show();
+                }
+
+                AlertDialog.Builder addStoreDialog = new AlertDialog.Builder(this)
+                        .setTitle(R.string.store_add)
+                        .setView(spinner)
+                        .setPositiveButton(R.string.build, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                AlertDialog.Builder buildDialog = new AlertDialog.Builder(MainActivity.this)
+                                        .setTitle(R.string.build_store_confirmation)
+                                        .setMessage(getResources().getString(R.string.cost) + ": 20.000 ECOs")
+                                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                if (isOnline()) {
+                                                    BackgroundTask backgroundTask = new BackgroundTask(MainActivity.this);
+                                                    backgroundTask.execute("buildStore", MainActivity.user.getUsername(), "" + areaID);
+                                                } else {
+                                                    Snackbar snackbar = Snackbar.make(MainActivity.coordinatorLayout, R.string.no_internet, Snackbar.LENGTH_LONG);
+                                                    TextView tv = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+                                                    tv.setTextColor(Color.BLACK);
+                                                    snackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                                                    snackbar.show();
+                                                }
+                                            }
+                                        })
+                                        .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                dialog.dismiss();
+                                            }
+                                        });
+                                buildDialog.create();
+                                buildDialog.show();
+                            }
+                        })
+                        .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                addStoreDialog.create();
+                addStoreDialog.show();
+                break;
+            case R.id.upgradeStore:
+                AlertDialog.Builder upgradeStoreDialog = new AlertDialog.Builder(this)
+                        .setTitle(R.string.store_upgrade_confirmation)
+                        .setMessage(getResources().getString(R.string.cost) + ": 20.000 ECOs + 1 ha\n" + getResources().getString(R.string.capacity) + ": +1000")
+                                .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        if (isOnline()) {
+                                            dialog.dismiss();
+                                            String method = "upgradeStore";
+                                            BackgroundTask backgroundTask = new BackgroundTask(MainActivity.this);
+                                            backgroundTask.execute(method, "" + StoreDetailsFragment.ID);
+                                        }
+
+                                    }
+                                })
+                                .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                });
+                upgradeStoreDialog.create();
+                upgradeStoreDialog.show();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -687,6 +874,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     current.equals("BankFragment") ||
                     current.equals("ActiveTransportFragment") ||
                     current.equals("CompletedTransportFragment") ||
+                    current.equals("CompaniesFragment") ||
                     current.equals("ItemsFragment")) {
                 ProfileFragment profileFragment = new ProfileFragment();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();

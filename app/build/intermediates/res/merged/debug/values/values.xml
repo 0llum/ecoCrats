@@ -391,10 +391,13 @@
     <string name="active">Active</string>
     <string name="active_transport_title">Active Transports</string>
     <string name="add">Add</string>
+    <string name="add_company">Add company</string>
+    <string name="add_store">Add Store</string>
     <string name="add_yourself">You cannot add yourself as a friend</string>
     <string name="app_name">ecoCrats</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="area">Area</string>
+    <string name="area_bought">Area has been bought successfully</string>
     <string name="area_not_bought">Area could not be bought</string>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
@@ -403,7 +406,9 @@
     <string name="build">Build</string>
     <string name="build_store_confirmation">Do you really want to build a Store in this Region?</string>
     <string name="buy">Buy</string>
+    <string name="buy_area">Buy area</string>
     <string name="cancel">Cancel</string>
+    <string name="capacity">Capacity</string>
     <string name="capital">Capital</string>
     <string name="cast_notification_connected_message">Connected to <ns1:g id="name">%1$s</ns1:g></string>
     <string name="cast_notification_connecting_message">Connecting to <ns1:g id="name">%1$s</ns1:g></string>
@@ -438,8 +443,11 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="companies_title">Companies</string>
+    <string name="company">Company</string>
     <string name="completed">Completed</string>
     <string name="completed_transport_title">Completed Transports</string>
+    <string name="cost">Cost</string>
     <string name="countries_title">Countries</string>
     <string name="country">Country</string>
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
@@ -530,6 +538,7 @@
     <string name="password_spaces">Password must not contain spaces</string>
     <string name="place_autocomplete_clear_button">Clear search</string>
     <string name="place_autocomplete_search_hint">Search</string>
+    <string name="plant">Plant</string>
     <string name="please_wait">Please wait…</string>
     <string name="population">Population</string>
     <string name="price">Price</string>
@@ -564,12 +573,16 @@
     <string name="sign_up_successful">Signing up successful</string>
     <string name="sign_up_title">Sign Up</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="store_add">Where do you want to build a store?</string>
     <string name="store_built">Store has been built successfully</string>
     <string name="store_failed">Store could not be built</string>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
     <string name="store_picture_title">Save image</string>
     <string name="store_region">You already have a store in this region</string>
     <string name="store_select">Select Store</string>
+    <string name="store_upgrade_confirmation">Do you really want to upgrade this store?</string>
+    <string name="store_upgrade_failed">Store could not be upgraded</string>
+    <string name="store_upgraded">Store has been upgraded successfully</string>
     <string name="stores_title">Stores</string>
     <string name="subject">Subject</string>
     <string name="subject_enter">Please enter a Subject</string>
@@ -577,6 +590,8 @@
     <string name="transport_failed">Transport failed</string>
     <string name="transport_sent">Transport has been sent</string>
     <string name="transport_title">Transport</string>
+    <string name="upgrade_company">Upgrade company</string>
+    <string name="upgrade_store">Upgrade store</string>
     <string name="user_already_friend">User is already your friend</string>
     <string name="user_not_found">User could not be found</string>
     <string name="user_not_friend">User is not your friend</string>

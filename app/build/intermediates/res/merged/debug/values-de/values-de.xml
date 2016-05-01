@@ -43,15 +43,20 @@
     <string name="active">Aktiv</string>
     <string name="active_transport_title">Aktive Transporte</string>
     <string name="add">Hinzufügen</string>
+    <string name="add_company">Unternehmen hinzufügen</string>
+    <string name="add_store">Lager hinzufügen</string>
     <string name="add_yourself">Sie können sich nicht selbst als Freund hinzufügen</string>
     <string name="app_name">ecoCrats</string>
     <string name="area">Fläche</string>
+    <string name="area_bought">Fläche erfolgreich gekauft</string>
     <string name="area_not_bought">Fläche konnte nicht gekauft werden</string>
     <string name="bank_title">Bank</string>
     <string name="build">Bauen</string>
     <string name="build_store_confirmation">Möchten Sie in dieser Region wirklich ein Lager errichten?</string>
     <string name="buy">Kaufen</string>
+    <string name="buy_area">Fläche kaufen</string>
     <string name="cancel">Abbrechen</string>
+    <string name="capacity">Kapazität</string>
     <string name="capital">Hauptstadt</string>
     <string msgid="2785372108150982144" name="common_google_play_services_api_unavailable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> erfordert einen oder mehrere Google Play-Dienste, der bzw. die derzeit nicht verfügbar sind. Bitte wenden Sie sich an den Entwickler, um Unterstützung zu erhalten."</string>
     <string msgid="7334167077229901382" name="common_google_play_services_enable_button">"Google Play-Dienste aktivieren"</string>
@@ -82,13 +87,15 @@
     <string msgid="311697239335516384" name="common_open_on_phone">"Auf Smartphone öffnen"</string>
     <string msgid="3156914698180786012" name="common_signin_button_text">"Anmelden"</string>
     <string msgid="1483290677806110088" name="common_signin_button_text_long">"Über Google anmelden"</string>
+    <string name="companies_title">Unternehmen</string>
     <string name="completed">Abgeschlossen</string>
     <string name="completed_transport_title">Abgeschlossene Transporte</string>
+    <string name="cost">Kosten</string>
     <string name="countries_title">Länder</string>
     <string name="country">Land</string>
     <string name="credit">Kredit</string>
     <string name="credit_confirmation">Möchten Sie wirklich einen Kredit aufnehmen?</string>
-    <string name="db_error">DB connection error</string>
+    <string name="db_error">DB Verbindungsfehler</string>
     <string name="delete_account">Sind Sie sicher, dass Sie ihren Account löschen möchten?</string>
     <string name="depts">Schulden:</string>
     <string name="distance">Entfernung</string>
@@ -171,6 +178,7 @@
     <string name="password_spaces">Das Passwort darf keine Leerzeichen enthalten</string>
     <string msgid="2132213647576279742" name="place_autocomplete_clear_button">"Suche zurücksetzen"</string>
     <string msgid="4600782048316473865" name="place_autocomplete_search_hint">"Suche"</string>
+    <string name="plant">Anlage</string>
     <string name="please_wait">Bitte warten…</string>
     <string name="population">Einwohner</string>
     <string name="price">Preis</string>
@@ -205,10 +213,14 @@
     <string name="sign_up_successful">Registrierung erfolgreich</string>
     <string name="sign_up_title">Registrieren</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="store_add">Wo möchten Sie ein Lager errichten?</string>
     <string name="store_built">Lager erfolgreich errichtet</string>
     <string name="store_failed">Lager konnte nicht gebaut werden</string>
     <string name="store_region">Sie haben bereits ein Lager in dieser Region</string>
     <string name="store_select">Lager auswählen</string>
+    <string name="store_upgrade_confirmation">Möchten Sie dieses Lager wirklich aufwerten?</string>
+    <string name="store_upgrade_failed">Lager konnte nicht aufgewertet werden</string>
+    <string name="store_upgraded">Lager erfolgreich aufgewertet</string>
     <string name="stores_title">Lager</string>
     <string name="subject">Betreff</string>
     <string name="subject_enter">Bitte Betreff eingeben</string>
@@ -216,6 +228,8 @@
     <string name="transport_failed">Transport fehlgeschlagen</string>
     <string name="transport_sent">Transport erfolgreich versandt</string>
     <string name="transport_title">Transport</string>
+    <string name="upgrade_company">Unternehmen aufwerten</string>
+    <string name="upgrade_store">Lager aufwerten</string>
     <string name="user_already_friend">Benutzer ist bereit Ihr Freund</string>
     <string name="user_not_found">Benutzer konnte nicht gefunden werden</string>
     <string name="user_not_friend">Benutzer ist nicht dein Freund</string>
