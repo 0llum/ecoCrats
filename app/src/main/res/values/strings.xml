@@ -181,4 +181,5 @@
     <string name="company">Company</string>
     <string name="plant">Plant</string>
     <string name="buy_area">Buy area</string>
+    <string name="enter_price">Please enter a price</string>
 </resources>

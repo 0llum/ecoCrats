@@ -109,6 +109,7 @@
     <string name="email_changed">Email-Adresse wurde erfolgreich geändert</string>
     <string name="email_exists">Email-Adresse ist bereits vergeben</string>
     <string name="email_valid">Bitte geben Sie eine gültige Email-Adresse ein</string>
+    <string name="enter_price">Please enter a price</string>
     <string name="forQuantity">für</string>
     <string name="friend_added">Freund wurde hinzugefügt</string>
     <string name="friend_not_added">Freund konnte nicht hinzugefügt werden</string>

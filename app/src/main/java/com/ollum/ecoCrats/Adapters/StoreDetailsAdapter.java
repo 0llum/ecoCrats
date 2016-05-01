@@ -3,7 +3,11 @@ package com.ollum.ecoCrats.Adapters;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
 import android.text.InputType;
@@ -153,12 +157,25 @@ public class StoreDetailsAdapter extends RecyclerView.Adapter<StoreDetailsAdapte
                             sellDialog.setPositiveButton(R.string.sell, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    price = Integer.parseInt(etPrice.getText().toString());
+                                    if (etPrice.getText().toString().equals("")) {
+                                        AlertDialog.Builder builder = new AlertDialog.Builder(ctx)
+                                                .setTitle(R.string.enter_price)
+                                                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(DialogInterface dialog, int which) {
+                                                        dialog.dismiss();
+                                                    }
+                                                });
+                                        builder.create();
+                                        builder.show();
+                                    } else {
+                                        price = Integer.parseInt(etPrice.getText().toString());
 
-                                    String method = "sellItem";
-                                    BackgroundTask backgroundTask = new BackgroundTask(ctx);
-                                    backgroundTask.execute(method, "" + item.getID(), "" + progress, "" + price);
-                                    dialog.dismiss();
+                                        String method = "sellItem";
+                                        BackgroundTask backgroundTask = new BackgroundTask(ctx);
+                                        backgroundTask.execute(method, "" + item.getID(), "" + progress, "" + price);
+                                        dialog.dismiss();
+                                    }
                                 }
                             });
                             sellDialog.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
@@ -207,5 +224,11 @@ public class StoreDetailsAdapter extends RecyclerView.Adapter<StoreDetailsAdapte
             dialog.create();
             dialog.show();
         }
+    }
+
+    public boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) ctx.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 }

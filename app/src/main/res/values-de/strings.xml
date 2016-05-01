@@ -180,4 +180,5 @@
     <string name="upgrade_company">Unternehmen aufwerten</string>
     <string name="plant">Anlage</string>
     <string name="buy_area">Fläche kaufen</string>
+    <string name="enter_price">Please enter a price</string>
 </resources>

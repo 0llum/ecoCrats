@@ -469,6 +469,7 @@
     <string name="email_changed">Email address has been changed successfully</string>
     <string name="email_exists">Email address already exists</string>
     <string name="email_valid">Please enter a valid email address</string>
+    <string name="enter_price">Please enter a price</string>
     <string name="forQuantity">for</string>
     <string name="friend_added">Friend has been added</string>
     <string name="friend_not_added">Friend could not be added</string>
