@@ -181,4 +181,6 @@
     <string name="plant">Anlage</string>
     <string name="buy_area">Fläche kaufen</string>
     <string name="enter_price">Please enter a price</string>
+    <string name="item_bought">Ware erfolgreich gekauft</string>
+    <string name="item_bought_failed">Ware konnte nicht gekauft werden</string>
 </resources>

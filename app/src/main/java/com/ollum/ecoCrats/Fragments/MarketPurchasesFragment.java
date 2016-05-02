@@ -12,6 +12,8 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -46,6 +48,7 @@ public class MarketPurchasesFragment extends Fragment implements View.OnClickLis
 
         View view = inflater.inflate(R.layout.fragment_market_purchases, container, false);
 
+        setHasOptionsMenu(true);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(name);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.purchases_recyclerView);
@@ -108,6 +111,12 @@ public class MarketPurchasesFragment extends Fragment implements View.OnClickLis
         if (swipeRefreshLayout.isRefreshing()) {
             swipeRefreshLayout.setRefreshing(false);
         }
+    }
+
+    @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        MenuItem buyItem = menu.findItem(R.id.buyItem);
+        buyItem.setVisible(true);
     }
 
     public boolean isOnline() {

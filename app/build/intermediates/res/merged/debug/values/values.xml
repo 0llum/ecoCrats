@@ -480,6 +480,8 @@
     <string name="inbox">Inbox</string>
     <string name="inbox_title">Inbox</string>
     <string name="item_added">Item has been added successfully</string>
+    <string name="item_bought">Item has been bought successfully</string>
+    <string name="item_bought_failed">Item could not be bought</string>
     <string name="item_not_added">Item could not be added</string>
     <string name="item_not_sold">Item could not be sold</string>
     <string name="item_select">Select Item</string>

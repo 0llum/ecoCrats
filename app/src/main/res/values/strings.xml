@@ -182,4 +182,6 @@
     <string name="plant">Plant</string>
     <string name="buy_area">Buy area</string>
     <string name="enter_price">Please enter a price</string>
+    <string name="item_bought">Item has been bought successfully</string>
+    <string name="item_bought_failed">Item could not be bought</string>
 </resources>

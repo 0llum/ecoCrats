@@ -77,4 +77,18 @@
         android:title="@string/upgrade_company"
         android:visible="false"
         app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/sellItem"
+        android:icon="@mipmap/buy_black"
+        android:title="@string/sell"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/buyItem"
+        android:icon="@mipmap/buy_black"
+        android:title="@string/buy"
+        android:visible="false"
+        app:showAsAction="always"/>
 </menu>

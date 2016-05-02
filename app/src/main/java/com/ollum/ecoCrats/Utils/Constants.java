@@ -19,4 +19,5 @@ public class Constants {
     public static final String sellItem_url = "http://0llum.bplaced.net/ecoCrats/SellItem.php";
     public static final String updateTransport_url = "http://0llum.bplaced.net/ecoCrats/UpdateTransport.php";
     public static final String upgradeStore_url = "http://0llum.bplaced.net/ecoCrats/UpgradeStore.php";
+    public static final String buyItem_url = "http://0llum.bplaced.net/ecoCrats/BuyItem.php";
 }

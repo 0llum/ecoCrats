@@ -7,7 +7,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
-import com.ollum.ecoCrats.Adapters.MarketAdapter;
+import com.ollum.ecoCrats.Adapters.MarketPurchasesAdapter;
+import com.ollum.ecoCrats.Adapters.MarketSalesAdapter;
 import com.ollum.ecoCrats.Classes.Item;
 import com.ollum.ecoCrats.R;
 
@@ -49,7 +50,7 @@ public class BackgroundTaskPurchases extends AsyncTask<String, Item, Void> {
         layoutManager = new LinearLayoutManager(ctx);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
-        adapter = new MarketAdapter(arrayList, ctx);
+        adapter = new MarketPurchasesAdapter(arrayList, ctx);
         recyclerView.setAdapter(adapter);
 
         progressDialog.setCancelable(true);

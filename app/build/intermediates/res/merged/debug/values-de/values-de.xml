@@ -120,6 +120,8 @@
     <string name="inbox">Posteingang</string>
     <string name="inbox_title">Posteingang</string>
     <string name="item_added">Ware erfolgreich hinzugefügt</string>
+    <string name="item_bought">Ware erfolgreich gekauft</string>
+    <string name="item_bought_failed">Ware konnte nicht gekauft werden</string>
     <string name="item_not_added">Ware konnte nicht hinzugefügt werden</string>
     <string name="item_not_sold">Ware konnte nicht verkauft werden</string>
     <string name="item_select">Ware auswählen</string>
